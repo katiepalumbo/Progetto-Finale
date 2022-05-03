@@ -50,9 +50,6 @@
                             @endif
                         @else
                             <div class="nav-item">
-                                <a class="nav-link" href="/home" role="button" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
 
                                 <div>
                                     <a href="{{ route('logout') }}"
