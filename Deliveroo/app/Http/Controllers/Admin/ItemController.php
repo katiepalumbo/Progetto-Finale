@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Category;
 use App\Http\Controllers\Controller;
+use App\Item;
+use App\Tag;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class ItemController extends Controller
 {
@@ -14,7 +18,9 @@ class ItemController extends Controller
      */
     public function index()
     {
-        //
+        $items = Item::all();
+
+        return view('admin.items.index', compact('items'));
     }
 
     /**
@@ -24,7 +30,9 @@ class ItemController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::all();
+        $tags = Tag::all();
+        return view('admin.items.create', compact('categories', 'tags'));
     }
 
     /**
@@ -35,7 +43,52 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(
+            [
+                'item_name' => 'required|min:2',
+                'category_id' => 'nullable|exists:categories,id',
+                'tags' => 'nullable|exists:tags,id',
+                'price' => 'required',
+                'description' => 'nullable',
+                'image' => 'nullable|max:2048|mimes:jpeg,jpg,png,bmp,gif,svg',
+
+                //
+
+            ]
+        );
+
+        $data = $request->all();
+
+        /* VALIDAZIONE IMAGINE
+        
+        if (isset($data['image'])) {
+            $cover_path = Storage::put('post_covers', $data['image']);
+            $data['cover'] = $cover_path;
+        }
+        
+        */
+
+        $slug = Str::slug($data['item_name']);
+
+        $counter = 1;
+
+        while(Item::where('slug', $slug)->first()){
+            $slug = Str::slug($data['item_name']) . '-' . $counter;
+            $counter++;
+            
+        }
+
+        $data['slug'] = $slug;
+
+        $post = new Item();
+
+        $post->fill($data);
+
+        $post->save();
+
+        $post->tags()->sync($data['tags']);
+
+        return redirect()->route('admin.items.index');
     }
 
     /**
@@ -44,9 +97,9 @@ class ItemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Item $item)
     {
-        //
+        return view('admin.items.show', compact('item'));
     }
 
     /**
@@ -55,9 +108,12 @@ class ItemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Item $item)
     {
-        //
+        $categories = Category::all();
+        $tags = Tag::all();
+
+        return view('admin.items.edit', compact('item', 'categories', 'tags'));
     }
 
     /**
@@ -67,9 +123,59 @@ class ItemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Item $item)
     {
-        //
+        $request->validate(
+            [
+                'item_name' => 'required|min:2',
+                'category_id' => 'nullable|exists:categories,id',
+                'tags' => 'nullable|exists:tags,id',
+                'price' => 'required',
+                'description' => 'nullable',
+                'image' => 'nullable|max:2048|mimes:jpeg,jpg,png,bmp,gif,svg',
+
+                //
+
+            ]
+        );
+
+        $data = $request->all();
+
+        /*if (isset($data['image'])) {
+
+            if ($post->cover) {
+                Storage::delete($post->cover);
+            }
+
+            $cover_path = Storage::put('post_covers', $data['image']);
+            $data['cover'] = $cover_path;
+        }*/
+
+        $slug = Str::slug($data['item_name']);
+
+        if ($item->slug != $slug) {
+            $counter = 1;
+
+            while(Item::where('slug', $slug)->first()){
+                $slug = Str::slug($data['item_name']) . '-' . $counter;
+                $counter++;
+            }
+            $data['slug'] = $slug;
+            
+        }
+
+        $item->update($data);
+        $item->save();
+
+        if (isset($data['tags'])) {
+            $item->tags()->sync($data['tags']);
+        }
+
+        return redirect()->route('admin.items.index');
+
+
+
+
     }
 
     /**
@@ -78,8 +184,14 @@ class ItemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Item $item)
     {
-        //
+        /*if ($item->cover) {
+            Storage::delete($post->cover);
+        }*/
+        
+        $item->delete();
+
+        return redirect()->route('admin.items.index');
     }
 }
