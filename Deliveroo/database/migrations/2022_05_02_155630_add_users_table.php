@@ -18,7 +18,7 @@ class AddUsersTable extends Migration
             $table->string('user_cover')->nullable();
             $table->string('user_last_name')->required();
             $table->integer('user_cell_number')->required();
-            $table->string('user_tax_code')->required();
+            $table->decimal('user_tax_code', 11, 0)->required();
             $table->string('user_street')->required();
             $table->string('user_city')->required();
             $table->integer('user_zip_code')->required();
