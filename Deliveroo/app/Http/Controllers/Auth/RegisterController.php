@@ -54,11 +54,11 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'user_last_name' => ['required', 'string', 'max:30'],
-            'user_cell_number' => ['required', 'numeric', 'max:9999999999'],
+            'user_cell_number' => ['required', 'numeric'],
             'user_tax_code' => ['required', 'numeric'],
             'user_street' => ['required', 'string', 'max:50'],
             'user_city' => ['required', 'string', 'max:30'],
-            'user_zip_code' => ['required', 'numeric', 'max:99999'],
+            'user_zip_code' => ['required', 'numeric'],
             'restaurant_name' => ['required', 'string', 'max:30']
         ]);
     }
