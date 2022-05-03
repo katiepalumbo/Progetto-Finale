@@ -17,11 +17,11 @@ class AddUsersTable extends Migration
 
             $table->string('user_cover')->nullable();
             $table->string('user_last_name')->required();
-            $table->tinyInteger('user_cell_number')->required();
+            $table->integer('user_cell_number')->required();
             $table->string('user_tax_code')->required();
             $table->string('user_street')->required();
             $table->string('user_city')->required();
-            $table->tinyInteger('user_zip_code')->required();
+            $table->integer('user_zip_code')->required();
             $table->string('restaurant_name')->required();
 
         });
