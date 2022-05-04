@@ -56,6 +56,27 @@
                     </div>
                     @enderror
 
+                    {{-- scelta di pubblicazione --}}
+                    <div class="mt-4 mb-1 form-group">
+                        <span>Vuoi rendere visibile questo piatto nel menù?</span>
+
+                        <span class="ms_input_yes">
+                            <input class="d-none" id="visible" {{(old("visible") == "yes") ? "checked" : ""}} value="yes" type="radio" name="visible">
+                            <label class="visible" for="visible">SI</label>
+                        </span>
+
+                        <span class="ms_input_no">
+                            <input class="d-none" id="not-visible" {{(old("visible") == "no") ? "checked" : ""}} value="no" type="radio" name="visible">
+                            <label class="not-visible" for="not-visible">NO</label>
+                        </span>
+
+                        @error('visible')
+                        <div class="alert alert-danger">
+                            {{$message}}
+                        </div>
+                    @enderror
+                </div>
+
                     <button type="submit" class="btn btn-primary">Salva</button>
 
 

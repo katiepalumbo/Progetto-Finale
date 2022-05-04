@@ -53,20 +53,20 @@ class ItemController extends Controller
                 'description' => 'nullable',
                 'image' => 'nullable|max:2048|'
 
-                
+
 
             ]
         );
 
         $data = $request->all();
 
-        
-        
+
+
         if (isset($data['image'])) {
             $cover_path = Storage::put('image', $data['image']);
             $data['image'] = $cover_path;
         }
-    
+
 
         $slug = Str::slug($data['item_name']);
 
@@ -75,7 +75,7 @@ class ItemController extends Controller
         while(Item::where('slug', $slug)->first()){
             $slug = Str::slug($data['item_name']) . '-' . $counter;
             $counter++;
-            
+
         }
 
         $data['slug'] = $slug;
@@ -133,9 +133,6 @@ class ItemController extends Controller
                 'price' => 'required',
                 'description' => 'nullable',
                 'image' => 'nullable|max:2048|mimes:jpeg,jpg,png,bmp,gif,svg',
-
-                
-
             ]
         );
 
@@ -149,7 +146,7 @@ class ItemController extends Controller
 
             $cover_path = Storage::put('post_covers', $data['image']);
             $data['image'] = $cover_path;
-        
+
         }
         $slug = Str::slug($data['item_name']);
 
@@ -161,7 +158,7 @@ class ItemController extends Controller
                 $counter++;
             }
             $data['slug'] = $slug;
-            
+
         }
 
         $item->update($data);
@@ -189,7 +186,7 @@ class ItemController extends Controller
         if ($item->image) {
             Storage::delete($item->image);
         }
-        
+
         $item->delete();
 
         return redirect()->route('admin.items.index');
