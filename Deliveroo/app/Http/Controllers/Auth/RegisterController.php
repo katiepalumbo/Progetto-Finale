@@ -10,6 +10,9 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
+use phpDocumentor\Reflection\Types\Nullable;
+
+
 
 class RegisterController extends Controller
 {
@@ -64,7 +67,7 @@ class RegisterController extends Controller
             'restaurant_name' => ['required', 'string', 'max:30'],
             'description' => ['required', 'string', 'min:30','max:200'],
             'types' => 'required|exists:types,id',
-            //'user_cover' => 'nullable|mimes',
+            //'user_cover' => ['image']
         ]);
     }
 

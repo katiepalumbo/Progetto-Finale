@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Item;
 use App\Tag;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class ItemController extends Controller
@@ -50,23 +51,22 @@ class ItemController extends Controller
                 'tags' => 'nullable|exists:tags,id',
                 'price' => 'required',
                 'description' => 'nullable',
-                'image' => 'nullable|max:2048|mimes:jpeg,jpg,png,bmp,gif,svg',
+                'image' => 'nullable|max:2048|'
 
-                //
+                
 
             ]
         );
 
         $data = $request->all();
 
-        /* VALIDAZIONE IMAGINE
+        
         
         if (isset($data['image'])) {
-            $cover_path = Storage::put('post_covers', $data['image']);
-            $data['cover'] = $cover_path;
+            $cover_path = Storage::put('image', $data['image']);
+            $data['image'] = $cover_path;
         }
-        
-        */
+    
 
         $slug = Str::slug($data['item_name']);
 
@@ -134,23 +134,23 @@ class ItemController extends Controller
                 'description' => 'nullable',
                 'image' => 'nullable|max:2048|mimes:jpeg,jpg,png,bmp,gif,svg',
 
-                //
+                
 
             ]
         );
 
         $data = $request->all();
 
-        /*if (isset($data['image'])) {
+        if (isset($data['image'])) {
 
-            if ($post->cover) {
-                Storage::delete($post->cover);
+            if ($item->image) {
+                Storage::delete($item->image);
             }
 
             $cover_path = Storage::put('post_covers', $data['image']);
-            $data['cover'] = $cover_path;
-        }*/
-
+            $data['image'] = $cover_path;
+        
+        }
         $slug = Str::slug($data['item_name']);
 
         if ($item->slug != $slug) {
@@ -186,9 +186,9 @@ class ItemController extends Controller
      */
     public function destroy(Item $item)
     {
-        /*if ($item->cover) {
-            Storage::delete($post->cover);
-        }*/
+        if ($item->image) {
+            Storage::delete($item->image);
+        }
         
         $item->delete();
 
