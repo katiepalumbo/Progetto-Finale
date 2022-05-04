@@ -42,7 +42,7 @@ class User extends Authenticatable
     }
 
     public function type() {
-        return $this->belongsTo('App\Type');
+        return $this->belongsToMany('App\Type');
     }
 
 }
