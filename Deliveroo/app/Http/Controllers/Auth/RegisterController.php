@@ -8,6 +8,7 @@ use App\Type;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
@@ -63,6 +64,7 @@ class RegisterController extends Controller
             'restaurant_name' => ['required', 'string', 'max:30'],
             'description' => ['required', 'string', 'min:30','max:200'],
             'types' => 'required|exists:types,id',
+            //'user_cover' => 'nullable|mimes',
         ]);
     }
 
@@ -86,7 +88,8 @@ class RegisterController extends Controller
             'user_zip_code' => $data['user_zip_code'],
             'restaurant_name' => $data['restaurant_name'],
             'description' => $data['description'],
-            'types' => Type::created($data['types']),
+            'types' => $data['types'],
+            //'user_cover'=>Storage::put('uploads',$data['user_cover']),
         ]);
     }
 
