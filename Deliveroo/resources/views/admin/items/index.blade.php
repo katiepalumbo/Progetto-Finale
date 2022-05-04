@@ -13,8 +13,9 @@
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Nome Piatto</th>
-                        <th scope="col">Slug</th>
                         <th scope="col">Descrizione</th>
+                        <th scope="col">Slug</th>
+                        <th scope="col">Categoria</th>
                         <th scope="col">Prezzo</th>
                         <th scope="col">Opzioni</th>
                     </tr>
@@ -27,6 +28,7 @@
                                 <td>{{substr($item->description, 0, 30)}}</td>
                                 <td>{{$item->slug}}</td>
                                 <td>{{isset($item->category)?$item->category->name:'N.D.'}}</td>
+                                <td>€{{$item->price}}&nbsp</td>
                                 <td class="d-flex">    
                                     <a href="{{route('admin.items.show', $item->id)}}" class="btn btn-primary m-2">Visualizza</a>
                                     <a href="{{route('admin.items.edit', $item->id)}}" class="btn btn-secondary m-2">Modifica</a>
