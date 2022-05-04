@@ -86,14 +86,20 @@ class RegisterController extends Controller
         ]);
     }
 
-    public function index()
-    {
+     public function index()
+     {
         $types = Type::all();
-        return view('views.auth.register', compact('types'));
-    }
+        return view('auth.register', compact('types'));
+     }
 
     public function show(Type $types)
     {
-        return view('views.auth.register', compact('types'));
+        return view('auth.register', compact('type'));
     }
+
+    public function showRegistrationForm()
+     {
+        $types = Type::all();
+        return view('auth.register', compact('types'));
+     }
 }
