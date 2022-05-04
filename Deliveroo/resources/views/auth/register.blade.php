@@ -11,6 +11,7 @@
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
+                        {{-- name --}}
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
@@ -40,6 +41,7 @@
                             </div>
                         </div>
 
+                        {{-- email --}}
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
@@ -54,6 +56,7 @@
                             </div>
                         </div>
 
+                        {{-- password --}}
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
@@ -68,6 +71,7 @@
                             </div>
                         </div>
 
+                        {{-- password confirm --}}
                         <div class="form-group row">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
@@ -165,14 +169,6 @@
                                 @enderror
                             </div>
                         </div>
-
-
-
-
-
-
-
-
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
