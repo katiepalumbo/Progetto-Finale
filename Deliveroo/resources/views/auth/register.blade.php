@@ -202,6 +202,21 @@
                             </ul>
                         </div>
 
+                        {{-- <div class="form-group row">
+                            <label for="user_cover" class="col-md-4 col-form-label text-md-right">{{ __('Immagine profilo') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="user_cover" type="file" class="form-control @error('user_cover') is-invalid @enderror" name="user_cover" required value="{{ old('user_cover') }}">
+
+                                @error('user_cover')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div> --}}
+
+
 
 
 
