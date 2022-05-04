@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Item;
 use App\Tag;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
@@ -51,15 +52,13 @@ class ItemController extends Controller
                 'tags' => 'nullable|exists:tags,id',
                 'price' => 'required',
                 'description' => 'nullable',
-                'image' => 'nullable|max:2048|'
-
-
-
+                'image' => 'nullable|max:2048|',
+                "visible" => "required",
             ]
         );
 
         $data = $request->all();
-
+        $new_item = new Item();
 
 
         if (isset($data['image'])) {
@@ -78,15 +77,19 @@ class ItemController extends Controller
 
         }
 
+        if($data["visible"]=='no') {
+            $new_item->visible = false;
+        } else if($data["visible"]=='yes')  {
+            $new_item->visible = true;
+        }
+
         $data['slug'] = $slug;
 
-        $post = new Item();
+        $new_item->fill($data);
 
-        $post->fill($data);
+        $new_item->save();
 
-        $post->save();
-
-        $post->tags()->sync($data['tags']);
+        $new_item->tags()->sync($data['tags']);
 
         return redirect()->route('admin.items.index');
     }
@@ -133,6 +136,7 @@ class ItemController extends Controller
                 'price' => 'required',
                 'description' => 'nullable',
                 'image' => 'nullable|max:2048|mimes:jpeg,jpg,png,bmp,gif,svg',
+                "visible" => "required",
             ]
         );
 
@@ -159,6 +163,12 @@ class ItemController extends Controller
             }
             $data['slug'] = $slug;
 
+        }
+
+        if($data["visible"]=='no') {
+            $item->visible = false;
+        } else if($data["visible"]=='yes')  {
+            $item->visible = true;
         }
 
         $item->update($data);
