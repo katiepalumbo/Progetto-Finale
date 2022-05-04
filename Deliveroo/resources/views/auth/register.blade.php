@@ -188,15 +188,18 @@
                         {{-- type --}}
                         <div class="form-group">
                             <label for="type_id" class="col-md-4 col-form-label text-md-right">{{ __('Tipologia di ristorante') }}</label>
-                            <select class="form-control" id="type_id" name="type_id">
-
-                                <option value="">Nessuna tipologia...</option>
-
+                            <ul class="form-control" id="type_id" name="type_id">
                                 @foreach ($types as $type)
-                                    <option value="{{$type->id}}">{{$type->name}}</option>
+                                    <div class="custom-control custom-checkbox">
+                                        <input name="types[]" type="checkbox" class="custom-control-input" id="type_{{$type->id}}" value={{$type->id}}>
+                                        <label class="custom-control-label" for="type{{$type->id}}">{{$type->name}}</label>
+                                    </div>
                                 @endforeach
 
-                            </select>
+
+                              
+
+                            </ul>
                         </div>
 
 

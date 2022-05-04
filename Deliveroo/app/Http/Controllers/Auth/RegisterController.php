@@ -60,7 +60,9 @@ class RegisterController extends Controller
             'user_street' => ['required', 'string', 'max:50'],
             'user_city' => ['required', 'string', 'max:30'],
             'user_zip_code' => ['required', 'numeric'],
-            'restaurant_name' => ['required', 'string', 'max:30']
+            'restaurant_name' => ['required', 'string', 'max:30'],
+            'description' => ['required', 'string', 'min:30','max:200'],
+            'types' => 'required|exists:types,id',
         ]);
     }
 
@@ -83,6 +85,8 @@ class RegisterController extends Controller
             'user_city' => $data['user_city'],
             'user_zip_code' => $data['user_zip_code'],
             'restaurant_name' => $data['restaurant_name'],
+            'description' => $data['description'],
+            'types' => Type::created($data['types']),
         ]);
     }
 
