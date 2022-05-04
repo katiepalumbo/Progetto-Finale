@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
+use App\Type;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
@@ -83,5 +84,16 @@ class RegisterController extends Controller
             'user_zip_code' => $data['user_zip_code'],
             'restaurant_name' => $data['restaurant_name'],
         ]);
+    }
+
+    public function index()
+    {
+        $types = Type::all();
+        return view('views.auth.register', compact('types'));
+    }
+
+    public function show(Type $types)
+    {
+        return view('views.auth.register', compact('types'));
     }
 }
