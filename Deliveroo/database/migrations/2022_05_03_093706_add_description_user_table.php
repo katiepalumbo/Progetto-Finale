@@ -15,7 +15,7 @@ class AddDescriptionUserTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
 
-            $table->text('description')->nullable();
+            $table->string('description')->required();
 
         });
     }
