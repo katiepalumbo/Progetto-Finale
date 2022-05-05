@@ -21,6 +21,13 @@
                 <div><strong>Slug </strong>{{$item->slug}}</div>
                 <div><strong>Categoria </strong>{{$item->category['name']}}</div>
                 <div><strong>Prezzo </strong>€{{$item->price}}</div>
+                <div><strong>Visibile?</strong>
+                    @if ($item->visible==1)
+                        <span>sì</span>
+                    @else
+                        <span>no</span>
+                    @endif
+                </div>
 
                 <div>
                     @foreach ($item->tags as $tag)
