@@ -175,7 +175,7 @@
                             <label for="description" class="col-md-4 col-form-label text-md-right">{{ __('Descrizione Ristorante') }}</label>
 
                             <div class="col-md-6">
-                                <textarea id="description" class="form-control @error('description') is-invalid @enderror" rows="10" name="description" value="{{old('description')}}" required autocomplete="description" autofocus></textarea>
+                                <textarea id="description" class="form-control @error('description') is-invalid @enderror" rows="4" name="description" value="{{old('description')}}" required autocomplete="description" autofocus></textarea>
 
                                 @error('description')
                                     <span class="invalid-feedback" role="alert">

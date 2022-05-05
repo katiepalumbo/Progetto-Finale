@@ -48,7 +48,7 @@ class ItemController extends Controller
         $request->validate(
             [
                 'item_name' => 'required|min:2',
-                'category_id' => 'nullable|exists:categories,id',
+                'category_id' => 'required|exists:categories,id',
                 'tags' => 'nullable|exists:tags,id',
                 'price' => 'required',
                 'description' => 'nullable',
@@ -131,7 +131,7 @@ class ItemController extends Controller
         $request->validate(
             [
                 'item_name' => 'required|min:2',
-                'category_id' => 'nullable|exists:categories,id',
+                'category_id' => 'required|exists:categories,id',
                 'tags' => 'nullable|exists:tags,id',
                 'price' => 'required',
                 'description' => 'nullable',
