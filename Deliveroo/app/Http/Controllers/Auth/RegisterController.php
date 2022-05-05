@@ -3,13 +3,12 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+
 use App\Providers\RouteServiceProvider;
 use App\Type;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
-//use Illuminate\Support\Facades\Request;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 use phpDocumentor\Reflection\Types\Nullable;
@@ -68,7 +67,7 @@ class RegisterController extends Controller
             'user_zip_code' => ['required', 'numeric'],
             'restaurant_name' => ['required', 'string', 'max:30'],
             'description' => ['required', 'string', 'min:30'],
-            'types' => 'required|exists:types,id',
+            'types' => ['required'],
             //'user_cover' => ['image']
         ]);
     }
@@ -81,9 +80,8 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        //$types = Type::findOrFail($data['types']);
 
-        return User::create([
+        User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
@@ -95,18 +93,21 @@ class RegisterController extends Controller
             'user_zip_code' => $data['user_zip_code'],
             'restaurant_name' => $data['restaurant_name'],
             'description' => $data['description'],
-            'types' =>  $data['types'],
+            //'types' => $data['types'],
             //'user_cover'=>Storage::put('uploads',$data['user_cover']),
         ]);
-        
 
-        //$user->types()->attach($types);
+
+        $newUser = User::orderBy('id', 'desc')->first();
+        $newUser->type()->attach($data['types']);
+
+        return $newUser;
     }
 
     public function index()
     {
         $types = Type::all();
-        return view('auth.register', compact('type'));
+        return view('auth.register', compact('types'));
     }
 
     public function show(Type $types)
@@ -115,8 +116,8 @@ class RegisterController extends Controller
     }
 
     public function showRegistrationForm()
-     {
+    {
         $types = Type::all();
         return view('auth.register', compact('types'));
-     }
+    }
 }

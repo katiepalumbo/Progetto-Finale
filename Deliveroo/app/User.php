@@ -16,11 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 
-        'user_cover', 'user_last_name', 
-        'user_cell_number', 'user_tax_code', 
-        'user_street', 'user_city', 'user_zip_code', 
-        'restaurant_name', 'description', 
+        'name', 'email', 'password', 'user_cover', 'user_last_name', 'user_cell_number', 'user_tax_code', 'user_street', 'user_city', 'user_zip_code', 'restaurant_name', 'description', 'types'
     ];
 
     /**
@@ -41,14 +37,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function items() {
+    public function item() {
         return $this->hasMany('App\item');
     }
 
-    public function types() {
+    public function type() {
         return $this->belongsToMany('App\Type');
     }
-
-    
 
 }
