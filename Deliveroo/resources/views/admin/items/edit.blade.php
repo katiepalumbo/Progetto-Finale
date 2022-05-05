@@ -12,9 +12,9 @@
                     @csrf
                     @method('PUT')
 
-                    @if ($item->cover)
+                    @if ($item->image)
                         <h4>Immagine</h4>
-                        <img class="img-thumbnail" src="{{asset('storage/' . $item->cover)}}" alt="{{$item->item_name}}">
+                        <img class="img-thumbnail" src="{{asset('storage/' . $item->image)}}" alt="{{$item->item_name}}">
                     @endif
 
                     <div class="form-group">
@@ -63,8 +63,18 @@
 
                     <div class="mb-3 form-group">
                         <label for="price" class="ms_title_price">Prezzo</label>
-                        <input type="number" step="0.01" name="price" class="p-1 form-control col-3 col-md-3 col-lg-2 ms_form_price @error('price') is-invalid @enderror ">
+                        @if ($item->price<=0)
+                            @error('price')
+                                <div class="alert alert-danger">
+                                    <span>Il prezzo deve essere maggiore di 0.</span>
+                                </div>
+                            @enderror
+                        
+                        @else
+                            <input type="number" step="0.01" name="price" class="p-1 form-control col-3 col-md-3 col-lg-2 ms_form_price @error('price') is-invalid @enderror ">
+                        @endif
                     </div>
+                    
                     @error('price')
                     <div class="mt-0 alert alert-danger">
                         {{$message}}
