@@ -16,9 +16,9 @@
                         <th scope="col">Descrizione</th>
                         <th scope="col">Slug</th>
                         <th scope="col">Categoria</th>
-                        <th scope="col">Opzioni</th>
-                        <th scope="col">Visibile</th>
                         <th scope="col">Prezzo</th>
+                        <th scope="col">Visibile</th>
+                        <th scope="col">Opzioni</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -28,11 +28,11 @@
                                 <td><a href="{{route('admin.items.show', $item->id)}}">{{$item->item_name}}</a></td>
                                 <td>{{substr($item->description, 0, 30)}}</td>
                                 <td>{{$item->slug}}</td>
-                                <td>{{isset($item->category)?$item->category->name:'N.D.'}}</td>
-                                <td>€{{$item->price}}&nbsp</td>
+                                <td>{{$item->category->name}}</td>
+                                <td>€&nbsp{{$item->price}}</td>
 
                                 @if ($item->visible==1)
-                                    <td>yes</td>
+                                    <td>sì</td>
                                 @else
                                     <td>no</td>
                                 @endif

@@ -9,7 +9,7 @@ class Type extends Model
     protected $table = 'types';
 
 
-    public function user() {
+    public function users() {
         return $this->belongsToMany('App\User');
     }
 }
