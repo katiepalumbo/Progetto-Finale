@@ -8,7 +8,7 @@ class Order extends Model
 {
 
 
-    public function items() {
+    public function item() {
         return $this->belongsToMany('App\Item');
     }
 }
