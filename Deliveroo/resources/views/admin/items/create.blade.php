@@ -11,14 +11,11 @@
 
                     @csrf
 
-                    <div class="form-group">
+                    <div class="form-group d-none">
                         <label for="user_id">Stai creando un nuovo piatto per:*</label>
                         <select class="form-control" id="user_id" name="user_id">
 
-                            <option value="">Nessun user selezionato...</option>
-                            {{-- @foreach ($users as $user) --}}
-                            <option {{(old('user_id') == Auth::user()->id) ? 'selected': ''}} value="{{ Auth::user()->id }}" selected>{{Auth::user()->name}} al ristorante: {{Auth::user()->restaurant_name}}</option>
-                            {{-- @endforeach --}}
+                        <option {{(old('user_id') == Auth::user()->id) ? 'selected': ''}} value="{{ Auth::user()->id }}" selected>{{Auth::user()->name}} al ristorante: {{Auth::user()->restaurant_name}}</option>
 
                         </select>
                     </div>

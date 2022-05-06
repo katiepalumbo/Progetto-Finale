@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\URL;
 
 class ItemController extends Controller
 {
@@ -105,7 +106,8 @@ class ItemController extends Controller
      */
     public function show(Item $item)
     {
-        return view('admin.items.show', compact('item'));
+        //return view('admin.items.show', compact('item'));
+        return URL::signedRoute('admin.items.show', ['user_id' => $item->user_id]);
     }
 
     /**
