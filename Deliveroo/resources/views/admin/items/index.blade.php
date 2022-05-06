@@ -43,12 +43,10 @@
 
                                     <form method="POST" action="{{route('admin.items.destroy', $item->id)}}">
 
-                                            @csrf
-                                            @method('DELETE')
+                                        @csrf
+                                        @method('DELETE')
 
-                                            <button type="submit" class="btn btn-danger m-2">
-                                                Elimina
-                                            </button>
+                                        <button class="btn btn-danger m-2" href="deletelink" onclick="return confirm('Sei sicuro di voler eliminare il piatto')">Elimina</button>
 
                                     </form>
                                 </td>

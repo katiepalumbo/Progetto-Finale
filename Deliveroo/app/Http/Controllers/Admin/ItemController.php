@@ -6,7 +6,6 @@ use App\Category;
 use App\Http\Controllers\Controller;
 use App\Item;
 use App\Tag;
-use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -21,9 +20,7 @@ class ItemController extends Controller
      */
     public function index()
     {
-        //$items = Item::all();
-
-        $items = Item::where('user_id', auth()->user()->id)->get();
+        $items = Item::all();
 
         return view('admin.items.index', compact('items'));
     }
@@ -34,11 +31,10 @@ class ItemController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {   
-        $users = User::all();
+    {
         $categories = Category::all();
         $tags = Tag::all();
-        return view('admin.items.create', compact('categories', 'tags', 'users'));
+        return view('admin.items.create', compact('categories', 'tags'));
     }
 
     /**
@@ -96,7 +92,6 @@ class ItemController extends Controller
         $new_item->tags()->sync($data['tags']);
 
         return redirect()->route('admin.items.index');
-
     }
 
     /**
@@ -153,7 +148,7 @@ class ItemController extends Controller
                 Storage::delete($item->image);
             }
 
-            $cover_path = Storage::put('image', $data['image']);
+            $cover_path = Storage::put('post_covers', $data['image']);
             $data['image'] = $cover_path;
 
         }
