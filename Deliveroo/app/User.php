@@ -1,6 +1,7 @@
 <?php
 
 namespace App;
+use Illuminate\Database\Eloquent\Model;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -16,7 +17,10 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'user_cover', 'user_last_name', 'user_cell_number', 'user_tax_code', 'user_street', 'user_city', 'user_zip_code', 'restaurant_name', 'description', 'types'
+        'name', 'email', 'password', 'user_cover', 
+        'user_last_name', 'user_cell_number', 'user_tax_code', 
+        'user_street', 'user_city', 'user_zip_code', 'restaurant_name', 
+        'description', 'types', 'items', 'item_id'
     ];
 
     /**
@@ -37,8 +41,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function item() {
-        return $this->hasMany('App\item');
+    public function items() {
+        return $this->hasMany('App\Item', 'user_id');
     }
 
     public function type() {
