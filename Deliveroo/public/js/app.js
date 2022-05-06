@@ -41388,11 +41388,11 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c("main", [
     _c("div", { staticClass: "container" }, [
-      _c("h1", [_vm._v("test")]),
+      _c("h1", [_vm._v("Benvenuti in Deliveboo!!")]),
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "row" },
+        { staticClass: "row m-5" },
         _vm._l(_vm.items, function (item) {
           return _c("div", { key: item.id, staticClass: "col-4 " }, [
             _c("div", { staticClass: "card" }, [
