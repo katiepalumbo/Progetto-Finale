@@ -1,8 +1,8 @@
 <template>
     <main>
        <div class="container">
-           <h1>test</h1>
-           <div class="row">
+           <h1>Benvenuti in Deliveboo!!</h1>
+           <div class="row m-5">
                <div class="col-4 " v-for="item in items" :key="item.id" >
                    <div class="card">
                        <div class="card-body">
