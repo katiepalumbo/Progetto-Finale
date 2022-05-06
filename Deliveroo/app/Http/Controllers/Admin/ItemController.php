@@ -107,8 +107,17 @@ class ItemController extends Controller
     public function show(Item $item)
     {
         //return view('admin.items.show', compact('item'));
-        return URL::signedRoute('admin.items.show', ['user_id' => $item->user_id]);
+        //return URL::signedRoute('admin.items.show', ['user_id' => $item->user_id]);
+        if($item->user_id != auth()->id()) {
+            // maybe a redirect with some info here???
+            //return response(redirect(url('/')), 404);
+            return abort(404);
+        } else {
+            return view('admin.items.show', compact('item'));
+        }
     }
+
+    
 
     /**
      * Show the form for editing the specified resource.
@@ -121,7 +130,15 @@ class ItemController extends Controller
         $categories = Category::all();
         $tags = Tag::all();
 
-        return view('admin.items.edit', compact('item', 'categories', 'tags'));
+        if($item->user_id != auth()->id()) {
+            // maybe a redirect with some info here???
+            return abort(404);
+        } else {
+            // allow portfolio edit
+            return view('admin.items.edit', compact('item', 'categories', 'tags'));
+        }
+
+        //return view('admin.items.edit', compact('item', 'categories', 'tags'));
     }
 
     /**
