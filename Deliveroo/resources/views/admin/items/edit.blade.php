@@ -10,6 +10,21 @@
                 <form method="POST" action={{route('admin.items.update', $item->id)}} enctype="multipart/form-data">
 
                     @csrf
+
+                    <div class="form-group">
+                        <label for="user_id">Stai modificando un piatto per:**</label>
+                        <select class="form-control" id="user_id" name="user_id">
+
+                            <option value="">Nessun user selezionato...</option>
+                            {{-- @foreach ($users as $user) --}}
+                            <option {{(old('user_id', $item->user_id) == Auth::user()->id) ? 'selected': ''}} value="{{ Auth::user()->id }}">{{Auth::user()->name}} al ristorante: {{Auth::user()->restaurant_name}}</option>
+                            {{-- @endforeach --}}
+
+                        </select>
+                    </div>
+
+
+
                     @method('PUT')
 
                     @if ($item->image)
