@@ -12178,3 +12178,25 @@ fieldset:disabled .btn {
   }
 }
 
+.adminNavRight {
+  flex-grow: 0 !important;
+}
+
+.adminBody {
+  height: 100vh;
+  background-color: #EAF0F2;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: contain;
+}
+
+.adminNavbar {
+  background-color: #85ADBE;
+  margin: 0 !important;
+  padding: 10px !important;
+}
+
+.card-header {
+  background-color: #85ADBE !important;
+}
+
