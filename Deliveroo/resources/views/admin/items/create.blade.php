@@ -12,6 +12,19 @@
                     @csrf
 
                     <div class="form-group">
+                        <label for="user_id">Stai creando un nuovo piatto per:*</label>
+                        <select class="form-control" id="user_id" name="user_id">
+
+                            <option value="">Nessun user selezionato...</option>
+                            {{-- @foreach ($users as $user) --}}
+                            <option {{(old('user_id') == Auth::user()->id) ? 'selected': ''}} value="{{ Auth::user()->id }}" selected>{{Auth::user()->name}} al ristorante: {{Auth::user()->restaurant_name}}</option>
+                            {{-- @endforeach --}}
+
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
                         <label for="image">Cover</label>
                         <input class="form-control" type="file" name="image" id="image">
                     </div>
