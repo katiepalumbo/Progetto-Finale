@@ -1,4 +1,4 @@
- @extends('admin.layouts.base')
+@extends('admin.layouts.base')
 
 @section('content')
     <div class="container">
@@ -6,6 +6,7 @@
             <div class="col-md-12">
 
                 <h1>Modifica piatto</h1>
+                <h4 class="mx-3 mt-3">Gli elementi contrassegnati dal simbolo * sono campi obbligatori</h4>
 
                 <form method="POST" action={{route('admin.items.update', $item->id)}} enctype="multipart/form-data">
 
@@ -15,7 +16,7 @@
                         <label for="user_id">Stai creando un nuovo piatto per:*</label>
                         <select class="form-control" id="user_id" name="user_id">
 
-                        <option {{(old('user_id') == Auth::user()->id) ? 'selected': ''}} value="{{ Auth::user()->id }}" selected>{{Auth::user()->name}} al ristorante: {{Auth::user()->restaurant_name}}</option>
+                            <option {{(old('user_id') == Auth::user()->id) ? 'selected': ''}} value="{{ Auth::user()->id }}" selected>{{Auth::user()->name}} al ristorante: {{Auth::user()->restaurant_name}}</option>
 
                         </select>
                     </div>
@@ -25,18 +26,18 @@
                     @method('PUT')
 
                     @if ($item->image)
-                        <h4>Immagine</h4>
+                        <h4>Immagine del piatto</h4>
                         <img class="img-thumbnail" src="{{asset('storage/' . $item->image)}}" alt="{{$item->item_name}}">
                     @endif
 
                     <div class="form-group">
-                        <label for="image">Carica nuova immagine del piatto</label>
-                        <input class="form-control" type="file" name="image" id="image">
+                        <label for="image">Carica nuova immagine del piatto *</label>
+                        <input class="form-control  @error('image') is-invalid @enderror" type="file" name="image" id="image" name="image">
                     </div>
 
                     <div class="form-group">
-                        <label for="category_id">Categoria</label>
-                        <select class="form-control" id="category_id" name="category_id">
+                        <label for="category_id">Categoria del piatto *</label>
+                        <select class="form-control @error('category_id') is-invalid @enderror" id="category_id" name="category_id" required>
 
                             <option value="">Nessuna categoria...</option>
 
@@ -48,15 +49,16 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="item_name">Titolo</label>
-                      <input type="text" class="form-control" id="item_name" name="item_name" value="{{old('item_name', $item->item_name)}}">
+                      <label for="item_name">Nome del piatto *</label>
+                      <input type="text" class="form-control @error('item_name') is-invalid @enderror" id="item_name" name="item_name" value="{{old('item_name', $item->item_name)}}" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="content">Descrizione</label>
+                        <label for="content">Descrizione del piatto</label>
                         <textarea class="form-control" id="description" rows="10" name="description">{{old('description', $item->description)}}</textarea>
                     </div>
 
+                    <label for="item_name">Seleziona tipologie e/o allergeni (opzionale)</label>
                     @foreach ($tags as $tag)
 
                         @if ($errors->any())
@@ -66,7 +68,7 @@
                             </div>
                         @else
                             <div class="custom-control custom-checkbox">
-                                <input name="tags[]" type="checkbox" class="custom-control-input" id="tag_{{$tag->id}}" value={{$tag->id}} {{$item->tags->contains($tag->id)?'checked':''}}  >
+                                <input name="tags[]" type="checkbox" class="custom-control-input" id="tag_{{$tag->id}}" value={{$tag->id}} {{$item->tags->contains($tag->id)?'checked':''}}>
                                 <label class="custom-control-label" for="tag_{{$tag->id}}">{{$tag->name}}</label>
                             </div>
                         @endif
@@ -74,8 +76,8 @@
                     @endforeach
 
                     <div class="mb-3 form-group">
-                        <label for="price" class="ms_title_price">Prezzo</label>
-                            <input type="number" step="0.01" name="price" class="p-1 form-control col-3 col-md-3 col-lg-2 ms_form_price @error('price') is-invalid @enderror" min="0" max="999" value="{{old('price', $item->price)}}">
+                        <label for="price" class="ms_title_price">Prezzo del piatto *</label>
+                            <input type="number" step="0.01" name="price" class="p-1 form-control col-3 col-md-3 col-lg-2 ms_form_price @error('price') is-invalid @enderror" min="0" max="999" value="{{old('price', $item->price)}}" required>
                     </div>
                     @error('price')
                     <div class="mt-0 alert alert-danger">
@@ -108,8 +110,8 @@
                         @enderror
                     </div>
 
-
-                    <button type="submit" class="btn btn-primary">Salva</button>
+                    <a href="{{ url()->previous() }}" class="btn btn-primary m-2">Annulla Modifica</a>
+                    <button type="submit" class="btn btn-secondary">Salva Modifica</button>
 
                 </form>
 

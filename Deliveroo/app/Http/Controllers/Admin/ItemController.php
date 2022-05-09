@@ -110,14 +110,14 @@ class ItemController extends Controller
         //return URL::signedRoute('admin.items.show', ['user_id' => $item->user_id]);
         if($item->user_id != auth()->id()) {
             // maybe a redirect with some info here???
-            //return response(redirect(url('/')), 404);
-            return abort(404);
+            return view('admin.error.403error');
+            //return abort(404);
         } else {
             return view('admin.items.show', compact('item'));
         }
     }
 
-    
+
 
     /**
      * Show the form for editing the specified resource.
@@ -132,7 +132,8 @@ class ItemController extends Controller
 
         if($item->user_id != auth()->id()) {
             // maybe a redirect with some info here???
-            return abort(404);
+            // return abort(404);
+            return view('admin.error.403error');
         } else {
             // allow portfolio edit
             return view('admin.items.edit', compact('item', 'categories', 'tags'));
