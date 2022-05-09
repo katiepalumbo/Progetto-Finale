@@ -58,7 +58,7 @@
                         <textarea class="form-control" id="description" rows="10" name="description">{{old('description', $item->description)}}</textarea>
                     </div>
 
-                    <label for="item_name">Seleziona tipologie e/o allergeni (opzionale)</label>
+                    <label>Seleziona tipologie e/o allergeni (opzionale)</label>
                     @foreach ($tags as $tag)
 
                         @if ($errors->any())
@@ -110,8 +110,8 @@
                         @enderror
                     </div>
 
-                    <a href="{{ url()->previous() }}" class="btn btn-primary m-2">Annulla Modifica</a>
-                    <button type="submit" class="btn btn-secondary">Salva Modifica</button>
+                    <a href="{{ url()->previous() }}" class="btn btn-primary m-2">Annulla modifica</a>
+                    <button type="submit" class="btn btn-secondary">Salva modifica</button>
 
                 </form>
 
