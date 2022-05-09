@@ -50,7 +50,7 @@
                         <textarea class="form-control @error('description') is-invalid @enderror" id="description" rows="10" name="description">{{old('description')}}</textarea>
                     </div>
 
-                    <label for="item_name">Seleziona tipologie e/o allergeni (opzionale)</label>
+                    <label>Seleziona tipologie e/o allergeni (opzionale)</label>
                     @foreach ($tags as $tag)
                         <div class="custom-control custom-checkbox">
                             <input name="tags[]" type="checkbox" class="custom-control-input" id="tag_{{$tag->id}}" value={{$tag->id}} {{in_array($tag->id, old('tags', []))?'checked':''}}>
@@ -93,7 +93,8 @@
                     @enderror
                 </div>
 
-                    <button type="submit" class="btn btn-primary">Salva</button>
+                    <a href="{{ url()->previous() }}" class="btn btn-primary m-2">Annulla creazione del piatto</a>
+                    <button type="submit" class="btn btn-primary">Salva creazione del piatto</button>
 
 
                 </form>
