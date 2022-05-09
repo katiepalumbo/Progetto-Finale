@@ -6,6 +6,7 @@
             <div class="col-md-12">
 
                 <h1>Crea un nuovo piatto</h1>
+                <h4 class="mx-3 mt-3">Gli elementi contrassegnati dal simbolo * sono campi obbligatori</h4>
 
                 <form method="POST" action={{route('admin.items.store')}} enctype="multipart/form-data">
 
@@ -13,22 +14,22 @@
 
                     <div class="form-group d-none">
                         <label for="user_id">Stai creando un nuovo piatto per:*</label>
-                        <select class="form-control" id="user_id" name="user_id">
+                        <select class="form-control" id="user_id" name="user_id" required>
 
-                        <option {{(old('user_id') == Auth::user()->id) ? 'selected': ''}} value="{{ Auth::user()->id }}" selected>{{Auth::user()->name}} al ristorante: {{Auth::user()->restaurant_name}}</option>
+                            <option {{(old('user_id') == Auth::user()->id) ? 'selected': ''}} value="{{ Auth::user()->id }}" selected>{{Auth::user()->name}} al ristorante: {{Auth::user()->restaurant_name}}</option>
 
                         </select>
                     </div>
 
 
                     <div class="form-group">
-                        <label for="image">Cover</label>
-                        <input class="form-control" type="file" name="image" id="image">
+                        <label for="image">Immagine del piatto</label>
+                        <input class="form-control @error('image') is-invalid @enderror" type="file" name="image" id="image">
                     </div>
 
-                    <div class="form-group">
-                        <label for="category_id">Categoria</label>
-                        <select class="form-control" id="category_id" name="category_id">
+                    <div class="form-group" >
+                        <label for="category_id">Categoria del piatto *</label>
+                        <select class="form-control @error('category_id') is-invalid @enderror" id="category_id" name="category_id" required>
 
                             <option value="">Nessuna categoria...</option>
 
@@ -40,15 +41,16 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="item_name">Nome piatto</label>
-                      <input type="text" class="form-control" id="item_name" name="item_name" value="{{old('item_name')}}">
+                      <label for="item_name">Nome del piatto *</label>
+                      <input type="text" class="form-control @error('item_name') is-invalid @enderror" id="item_name" name="item_name" value="{{old('item_name')}}" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="description">Descrizione</label>
-                        <textarea class="form-control" id="description" rows="10" name="description">{{old('description')}}</textarea>
+                        <label for="description">Descrizione del piatto</label>
+                        <textarea class="form-control @error('description') is-invalid @enderror" id="description" rows="10" name="description">{{old('description')}}</textarea>
                     </div>
 
+                    <label for="item_name">Seleziona tipologie e/o allergeni (opzionale)</label>
                     @foreach ($tags as $tag)
                         <div class="custom-control custom-checkbox">
                             <input name="tags[]" type="checkbox" class="custom-control-input" id="tag_{{$tag->id}}" value={{$tag->id}} {{in_array($tag->id, old('tags', []))?'checked':''}}>
@@ -57,8 +59,8 @@
                     @endforeach
 
                     <div class="mb-3 form-group">
-                        <label for="price" class="ms_title_price">Prezzo</label>
-                            <input type="number" step="0.01" name="price" class="p-1 form-control col-3 col-md-3 col-lg-2 ms_form_price @error('price') is-invalid @enderror" min="0" max="999" value="{{old('price')}}">
+                        <label for="price" class="ms_title_price">Prezzo del piatto *</label>
+                            <input type="number" step="0.01" name="price" class="p-1 form-control col-3 col-md-3 col-lg-2 ms_form_price @error('price') is-invalid @enderror" min="0" max="999" value="{{old('price')}}" required>
                     </div>
                     @error('price')
                     <div class="mt-0 alert alert-danger">
