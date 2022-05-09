@@ -54,8 +54,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="content">Descrizione del piatto</label>
-                        <textarea class="form-control" id="description" rows="10" name="description">{{old('description', $item->description)}}</textarea>
+                        <label for="content">Descrizione del piatto *</label>
+                        <textarea class="form-control" id="description" rows="8" minlength="2" maxlength="255" name="description">{{old('description', $item->description)}}</textarea>
                     </div>
 
                     <label>Seleziona tipologie e/o allergeni (opzionale)</label>

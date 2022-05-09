@@ -46,8 +46,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="description">Descrizione del piatto</label>
-                        <textarea class="form-control @error('description') is-invalid @enderror" id="description" rows="10" name="description">{{old('description')}}</textarea>
+                        <label for="description">Descrizione del piatto *</label>
+                        <textarea class="form-control @error('description') is-invalid @enderror" id="description" rows="8" minlength="2" maxlength="255" name="description">{{old('description')}}</textarea>
                     </div>
 
                     <label>Seleziona tipologie e/o allergeni (opzionale)</label>
