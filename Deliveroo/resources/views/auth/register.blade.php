@@ -31,7 +31,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nome *') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control {{-- @error('name') is-invalid @enderror --}}" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                 {{-- @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -46,7 +46,7 @@
                             <label for="user_last_name" class="col-md-4 col-form-label text-md-right">{{ __('Cognome *') }}</label>
 
                             <div class="col-md-6">
-                                <input id="user_last_name" type="text" class="form-control {{-- @error('user_last_name') is-invalid @enderror --}}" name="user_last_name" value="{{ old('user_last_name') }}" required autocomplete="user_city" autofocus>
+                                <input id="user_last_name" type="text" class="form-control @error('user_last_name') is-invalid @enderror" name="user_last_name" value="{{ old('user_last_name') }}" required autocomplete="user_city" autofocus>
 
                                 {{-- @error('user_last_name')
                                     <span class="invalid-feedback" role="alert">
@@ -61,7 +61,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail *') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control {{-- @error('email') is-invalid @enderror --}}" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                 {{-- @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -76,7 +76,7 @@
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password *') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control {{-- @error('password') is-invalid @enderror --}}" name="password" required autocomplete="new-password">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                                 {{-- @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -100,7 +100,7 @@
                             <label for="user_cell_number" class="col-md-4 col-form-label text-md-right">{{ __('Numero di telefono *') }}</label>
 
                             <div class="col-md-6">
-                                <input id="user_cell_number" type="number" class="form-control {{-- @error('user_cell_number') is-invalid @enderror --}}" name="user_cell_number" value="{{ old('user_cell_number') }}" required autocomplete="user_cell_number" autofocus size="10">
+                                <input id="user_cell_number" type="number" class="form-control @error('user_cell_number') is-invalid @enderror" name="user_cell_number" value="{{ old('user_cell_number') }}" required autocomplete="user_cell_number" autofocus size="10">
 
                                 {{-- @error('user_cell_number')
                                     <span class="invalid-feedback" role="alert">
@@ -115,7 +115,7 @@
                             <label for="user_tax_code" class="col-md-4 col-form-label text-md-right">{{ __('Partita IVA *') }}</label>
 
                             <div class="col-md-6">
-                                <input id="user_tax_code" type="number" class="form-control {{-- @error('user_tax_code') is-invalid @enderror --}}" name="user_tax_code" value="{{ old('user_tax_code') }}" required autocomplete="user_tax_code" autofocus size="11">
+                                <input id="user_tax_code" type="number" class="form-control @error('user_tax_code') is-invalid @enderror" name="user_tax_code" value="{{ old('user_tax_code') }}" required autocomplete="user_tax_code" autofocus size="11">
 
                                 {{-- @error('user_tax_code')
                                     <span class="invalid-feedback" role="alert">
@@ -130,7 +130,7 @@
                             <label for="user_street" class="col-md-4 col-form-label text-md-right">{{ __('Indirizzo *') }}</label>
 
                             <div class="col-md-6">
-                                <input id="user_street" type="text" class="form-control {{-- @error('user_street') is-invalid @enderror --}}" name="user_street" value="{{ old('user_street') }}" required autocomplete="user_street" autofocus>
+                                <input id="user_street" type="text" class="form-control @error('user_street') is-invalid @enderror" name="user_street" value="{{ old('user_street') }}" required autocomplete="user_street" autofocus>
 
                                 {{-- @error('user_street')
                                     <span class="invalid-feedback" role="alert">
@@ -145,7 +145,7 @@
                             <label for="user_city" class="col-md-4 col-form-label text-md-right">{{ __('Città *') }}</label>
 
                             <div class="col-md-6">
-                                <input id="user_city" type="text" class="form-control {{-- @error('user_city') is-invalid @enderror --}}" name="user_city" value="{{ old('user_city') }}" required autocomplete="user_city" autofocus>
+                                <input id="user_city" type="text" class="form-control @error('user_city') is-invalid @enderror" name="user_city" value="{{ old('user_city') }}" required autocomplete="user_city" autofocus>
 
                                 {{-- @error('user_city')
                                     <span class="invalid-feedback" role="alert">
@@ -175,7 +175,7 @@
                             <label for="restaurant_name" class="col-md-4 col-form-label text-md-right">{{ __('Nome Ristorante *') }}</label>
 
                             <div class="col-md-6">
-                                <input id="restaurant_name" type="text" class="form-control {{-- @error('restaurant_name') is-invalid @enderror --}}" name="restaurant_name" value="{{ old('restaurant_name') }}" required autocomplete="restaurant_name" autofocus>
+                                <input id="restaurant_name" type="text" class="form-control @error('restaurant_name') is-invalid @enderror" name="restaurant_name" value="{{ old('restaurant_name') }}" required autocomplete="restaurant_name" autofocus>
 
                                 {{-- @error('restaurant_name')
                                     <span class="invalid-feedback" role="alert">
@@ -190,7 +190,7 @@
                             <label for="description" class="col-md-4 col-form-label text-md-right">{{ __('Descrizione Ristorante') }}</label>
 
                             <div class="col-md-6">
-                                <textarea id="description" class="form-control {{-- @error('description') is-invalid @enderror --}}" rows="4" name="description"  required autocomplete="description" autofocus>{{ old('description')}}</textarea>
+                                <textarea id="description" class="form-control @error('description') is-invalid @enderror" rows="4" name="description"  required autocomplete="description" autofocus>{{ old('description')}}</textarea>
 
                                 {{-- @error('description')
                                     <span class="invalid-feedback" role="alert">

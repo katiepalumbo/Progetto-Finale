@@ -11,7 +11,7 @@
                     <img class="img-fluid" src="{{asset('storage/' . $item->image)}}" alt="{{$item->item_name}}">
                 @else
                      <img class="img-fluid" src="{{asset('img/fallback_img.jpg.png')}}" alt="{{$item->item_name}}">
-                 
+
                 @endif --}}
 
                 <img class="img-fluid" src="{{asset('storage/' . $item->image)}}" alt="{{$item->item_name}}">
@@ -36,11 +36,11 @@
                 </div>
                 <div class="d-flex">
 
-                    <a href="{{ url()->previous() }}" class="btn btn-primary">Torna alla lista</a>
+                    <a href="{{ url()->previous() }}" class="btn btn-primary m-2">Torna alla lista</a>
                     <a href="{{route('admin.items.edit', $item->id)}}" class="btn btn-secondary m-2">Modifica</a>
                 </div>
 
-                
+
 
             </div>
         </div>
