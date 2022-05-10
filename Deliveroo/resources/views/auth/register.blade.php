@@ -100,7 +100,7 @@
                             <label for="user_cell_number" class="col-md-4 col-form-label text-md-right">{{ __('Numero di telefono *') }}</label>
 
                             <div class="col-md-6">
-                                <input id="user_cell_number" type="number" class="form-control @error('user_cell_number') is-invalid @enderror" name="user_cell_number" value="{{ old('user_cell_number') }}" required autocomplete="user_cell_number" autofocus size="10">
+                                <input placeholder="deve contenere almeno 10 cifre..." id="user_cell_number" type="number" class="form-control @error('user_cell_number') is-invalid @enderror" name="user_cell_number" value="{{ old('user_cell_number') }}" required autocomplete="user_cell_number" autofocus size="10">
 
                                 {{-- @error('user_cell_number')
                                     <span class="invalid-feedback" role="alert">
@@ -115,7 +115,7 @@
                             <label for="user_tax_code" class="col-md-4 col-form-label text-md-right">{{ __('Partita IVA *') }}</label>
 
                             <div class="col-md-6">
-                                <input id="user_tax_code" type="number" class="form-control @error('user_tax_code') is-invalid @enderror" name="user_tax_code" value="{{ old('user_tax_code') }}" required autocomplete="user_tax_code" autofocus size="11">
+                                <input placeholder="deve contenere almeno 11 cifre..." id="user_tax_code" type="number" class="form-control @error('user_tax_code') is-invalid @enderror" name="user_tax_code" value="{{ old('user_tax_code') }}" required autocomplete="user_tax_code" autofocus size="11">
 
                                 {{-- @error('user_tax_code')
                                     <span class="invalid-feedback" role="alert">
@@ -160,7 +160,7 @@
                             <label for="user_zip_code" class="col-md-4 col-form-label text-md-right">{{ __('Codice Postale *') }}</label>
 
                             <div class="col-md-6">
-                                <input id="user_zip_code" type="number" class="form-control @error('user_zip_code') is-invalid @enderror" name="user_zip_code" value="{{ old('user_zip_code') }}" required autocomplete="user_zip_code" autofocus pattern="[0-9]{5}">
+                                <input placeholder="deve contenere almeno 5 cifre..." id="user_zip_code" type="number" class="form-control @error('user_zip_code') is-invalid @enderror" name="user_zip_code" value="{{ old('user_zip_code') }}" required autocomplete="user_zip_code" autofocus pattern="[0-9]{5}">
 
                                 {{-- @error('user_zip_code')
                                     <span class="invalid-feedback" role="alert">
@@ -190,7 +190,7 @@
                             <label for="description" class="col-md-4 col-form-label text-md-right">{{ __('Descrizione Ristorante') }}</label>
 
                             <div class="col-md-6">
-                                <textarea id="description" class="form-control @error('description') is-invalid @enderror" rows="4" name="description"  required autocomplete="description" autofocus>{{ old('description')}}</textarea>
+                                <textarea placeholder="deve contenere almeno 30 caratteri..." id="description" class="form-control @error('description') is-invalid @enderror" rows="4" name="description"  required autocomplete="description" autofocus>{{ old('description')}}</textarea>
 
                                 {{-- @error('description')
                                     <span class="invalid-feedback" role="alert">
