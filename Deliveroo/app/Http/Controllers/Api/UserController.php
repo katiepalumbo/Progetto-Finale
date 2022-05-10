@@ -3,38 +3,35 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Type;
+use App\User;
 use Illuminate\Http\Request;
 
-class TypeController extends Controller
+class UserController extends Controller
 {
     public function index() {
         
-        $types = Type::all();
+        $users = User::all();
 
         return response()->json(
             [
-                'results' => $types,
+                'results' => $users,
                 'success'=> true
             ]
         );
 
     }
 
-    public function show($slug)
+    public function show()
     {
-        $types = Type::where('slug', '=', $slug);
 
-        $types = Type::all();
+        $users = User::all();
 
         return response()->json(
             [
-                'results' => $types,
+                'results' => $users,
                 'success' => true
             ]
         );
         
     }
 }
-
-

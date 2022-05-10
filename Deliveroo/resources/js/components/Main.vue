@@ -13,7 +13,7 @@
 
                 </div>
             </div>
-           <div class="row m-5">
+           <!-- <div class="row m-5">
                <div class="col-4 " v-for="item in items" :key="item.id" >
                    <div class="card">
                        <div class="card-body">
@@ -21,7 +21,21 @@
                        </div>
                    </div>
                 </div>
+            </div> -->
+
+            <div  class="row m-5">
+               <div class="col-4 " v-for="user in users" :key="user.id" >
+                   <div class="card">
+                       <div class="card-body">
+                           <h5 class="card-title">{{user.restaurant_name}}</h5>
+                           <ul>
+
+                           </ul>
+                       </div>
+                   </div>
+                </div>
             </div>
+            
        </div>
     </main>
 
@@ -31,25 +45,32 @@
 <script>
 export default {
     name: 'Main',
-
-    data() {
+    data: function(){
         return {
             items:[],
             types:[],
+            users:[],
         }
     },
 
-    created() {
+    created: function(){
+
+        axios.get('http://127.0.0.1:8000/api/types/').then((response) => {
+
+            this.types = response.data.results;
+
+        });
+
+        axios.get('http://127.0.0.1:8000/api/users/').then((response) => {
+
+            this.users = response.data.results;
+
+        });
+
         axios.get('/api/items').then((response)=>{
             this.items = response.data.results.data;
-        }),
-
-        axios.get('/api/types').then((response)=>{
-            this.types = response.data.results;
-            
-        })
-
-    }      
+        });
+    }
 }
 </script>
 
