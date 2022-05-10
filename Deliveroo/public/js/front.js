@@ -2000,21 +2000,40 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Main',
   data: function data() {
     return {
       items: [],
-      types: []
+      types: [],
+      users: []
     };
   },
   created: function created() {
     var _this = this;
 
+    axios.get('http://127.0.0.1:8000/api/types/').then(function (response) {
+      _this.types = response.data.results;
+    });
+    axios.get('http://127.0.0.1:8000/api/users/').then(function (response) {
+      _this.users = response.data.results;
+    });
     axios.get('/api/items').then(function (response) {
       _this.items = response.data.results.data;
-    }), axios.get('/api/types').then(function (response) {
-      _this.types = response.data.results.data;
     });
   }
 });
@@ -2611,13 +2630,15 @@ var render = function () {
       _c(
         "div",
         { staticClass: "row m-5" },
-        _vm._l(_vm.items, function (item) {
-          return _c("div", { key: item.id, staticClass: "col-4 " }, [
+        _vm._l(_vm.users, function (user) {
+          return _c("div", { key: user.id, staticClass: "col-4 " }, [
             _c("div", { staticClass: "card" }, [
               _c("div", { staticClass: "card-body" }, [
                 _c("h5", { staticClass: "card-title" }, [
-                  _vm._v(_vm._s(item.item_name)),
+                  _vm._v(_vm._s(user.restaurant_name)),
                 ]),
+                _vm._v(" "),
+                _c("ul"),
               ]),
             ]),
           ])
@@ -15079,7 +15100,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\maion\Desktop\Progetto-Finale\Deliveroo\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\progLaravel\Progetto-Finale\Deliveroo\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })
