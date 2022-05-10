@@ -4,10 +4,12 @@
            <h1>Benvenuti in Deliveboo!!</h1>
            <div class="row">
                 <div class="col">
-                    <input class="form-check-input" type="checkbox">
-                    <label class="form-check-label" for="">
-
-                    </label>
+                    <ul>
+                        <li v-for="type in types" :key="type.id">
+                            <input class="form-check-input" type="checkbox">
+                            <label class="form-check-label" for="">{{type.name}}</label>
+                        </li>
+                    </ul>
 
                 </div>
             </div>
@@ -33,13 +35,20 @@ export default {
     data() {
         return {
             items:[],
+            types:[],
         }
     },
 
     created() {
-            axios.get('/api/items').then((response)=>{
-                this.items = response.data.results.data;
-            })
+        axios.get('/api/items').then((response)=>{
+            this.items = response.data.results.data;
+        }),
+
+        axios.get('/api/types').then((response)=>{
+            // this.types = response.data.results.data;
+            return console.log(response+'aaaaaaaaa');
+        })
+
     }      
 }
 </script>

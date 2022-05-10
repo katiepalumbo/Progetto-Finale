@@ -1998,11 +1998,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Main',
   data: function data() {
     return {
-      items: []
+      items: [],
+      types: []
     };
   },
   created: function created() {
@@ -2010,6 +2013,8 @@ __webpack_require__.r(__webpack_exports__);
 
     axios.get('/api/items').then(function (response) {
       _this.items = response.data.results.data;
+    }), axios.get('/api/types').then(function (response) {
+      _this.types = response.data.results.data;
     });
   }
 });
@@ -2580,7 +2585,28 @@ var render = function () {
     _c("div", { staticClass: "container" }, [
       _c("h1", [_vm._v("Benvenuti in Deliveboo!!")]),
       _vm._v(" "),
-      _vm._m(0),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col" }, [
+          _c(
+            "ul",
+            _vm._l(_vm.types, function (type) {
+              return _c("li", { key: type.id }, [
+                _c("input", {
+                  staticClass: "form-check-input",
+                  attrs: { type: "checkbox" },
+                }),
+                _vm._v(" "),
+                _c(
+                  "label",
+                  { staticClass: "form-check-label", attrs: { for: "" } },
+                  [_vm._v(_vm._s(type.name))]
+                ),
+              ])
+            }),
+            0
+          ),
+        ]),
+      ]),
       _vm._v(" "),
       _c(
         "div",
@@ -2601,23 +2627,7 @@ var render = function () {
     ]),
   ])
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col" }, [
-        _c("input", {
-          staticClass: "form-check-input",
-          attrs: { type: "checkbox" },
-        }),
-        _vm._v(" "),
-        _c("label", { staticClass: "form-check-label", attrs: { for: "" } }),
-      ]),
-    ])
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
