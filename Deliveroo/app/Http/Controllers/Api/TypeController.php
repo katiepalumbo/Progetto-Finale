@@ -12,27 +12,37 @@ class TypeController extends Controller
         
         $types = Type::all();
 
-        return response()->json(
-            [
-                'results' => $types,
-                'success'=> true
-            ]
-        );
+        if($types){
+            return response()->json([
+                'success' => true,
+                'results' => $types
+            ]);
+        }else{
+            return response()->json([
+                'success' => false,
+                'results' => []
+            ]);
+        }
 
     }
 
     public function show($slug)
     {
-        $types = Type::where('slug', '=', $slug);
+        $types = Type::where('slug', '=', $slug)->with(['users'])->first();
 
-        $types = Type::all();
+        /* $types = Type::all(); */
 
-        return response()->json(
-            [
-                'results' => $types,
-                'success' => true
-            ]
-        );
+        if($types){
+            return response()->json([
+                'success' => true,
+                'results' => $types
+            ]);
+        }else{
+            return response()->json([
+                'success' => false,
+                'results' => []
+            ]);
+        }
         
     }
 }
