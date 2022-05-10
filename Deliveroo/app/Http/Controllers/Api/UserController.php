@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     public function index() {
-        
+
         $users = User::all();
         $types = Type::all();
 
@@ -33,20 +33,22 @@ class UserController extends Controller
 
         $users = User::all();
 
-        $element = explode(',', $element);
+        $element = explode(",", $element);
 
         $usersArray = [];
 
-        for($i = 0; $i < count($element); $i++) {
-            foreach($users as $user) {
+        for($i=0; $i<count($element); $i++){
 
-                for($n = 0; $n < count($user->types); $n++) {
+            foreach($users as $test){
 
-                    if($user->types[$n]->id == $element[$i]) {
+                for($n=0; $n<count($test->types); $n++){
 
-                        if(!in_array($user, $usersArray)) {
-                            $usersArray[] = $user;
+                    if($test->types[$n]->id == $element[$i]){
+
+                        if(!in_array($test, $usersArray)){
+                            $usersArray[] = $test;
                         }
+
                     }
                 }
             }
@@ -55,7 +57,7 @@ class UserController extends Controller
         return response()->json(
             [
                 'results' => $usersArray,
-                'success' => true
+                'success'=> true,
             ]
         );
 
