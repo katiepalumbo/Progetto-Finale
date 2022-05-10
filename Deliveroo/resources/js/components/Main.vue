@@ -4,21 +4,19 @@
            <h1>Benvenuti in Deliveboo!!</h1>
            <div class="row">
                <form action="" class="row" @submit.prevent="filteredType()">
-                    <div class="col">
-                        <div v-for="type in types" :key="type.id">
-                            <div>
-                                <input class="form-check-input" type="checkbox" v-model="selection" :value="type.id" :id="'type_' + type.id">
-                                <label class="form-check-label" :for="'type_' + type.id">{{type.name}}</label>
-                            </div>
-                        </div>
+                    <div v-for="typex in types" :key="typex.id">
                         <div>
-                            <button type="submit" class="btn btn-primary">Cerca</button>
+                            <input class="form-check-input" type="checkbox" v-model="selection" :value="typex.id" :id="'typex_' + typex.id">
+                            <label class="form-check-label" :for="'typex_' + typex.id">{{typex.name}}</label>
                         </div>
                     </div>
+                    <div>
+                        <button type="submit" class="btn btn-primary">Cerca</button>
+                    </div>
                </form>
-                
+
             </div>
-            
+
            <!-- <div class="row m-5">
                <div class="col-4 " v-for="item in items" :key="item.id" >
                    <div class="card">
@@ -30,7 +28,7 @@
             </div> -->
 
             <div class="row m-5">
-               <div class="col-4 " v-for="user in users" :key="'user' + user.id">
+               <div class="col-4 " v-for="user in users" :key="'user_' + user.id">
                    <div class="card">
                        <div class="card-body">
                            <h5 class="card-title">{{user.restaurant_name}}</h5>
@@ -54,7 +52,7 @@
                    </div>
                 </div>
             </div> -->
-            
+
        </div>
     </main>
 
@@ -62,56 +60,60 @@
 </template>
 
 <script>
-export default {
-    name: 'Main',
-    data: function(){
-        return {
-            selection:[],
-            types:[],
-            users:[],
-        }
-    },
 
-    methods: {
+    export default {
+        name: "Main",
 
-        getTypes() {
-            axios.get('http://127.0.0.1:8000/api/types/').then((response) => {
-
-            this.types = response.data.results;
-
-            });
+        data() {
+            return {
+                types: null,
+                selected: [],
+                users: [],
+            };
         },
 
-        getUsers() {
-            axios.get('http://127.0.0.1:8000/api/users/').then((response) => {
-
-            this.users = response.data.results;
-
-            });
+        mounted(){
+            this.getTypes();
+            this.getUsers();
         },
 
-        filteredType() {
-            this.users = [];
+        methods:{
 
-            if (this.selection.length > 0) {
-                axios.get('/api/users/' + this.selection).then((response) => {
+            getTypes(){
+                // prelevo tutte le tipologie
+                axios.get('api/types')
+                    .then(response =>{
+                        this.types = response.data.results;
+                    })
+            },
 
-                    this.users = response.data.results;
+            getUsers(){
+                axios.get('/api/users')
+                    .then(response => {
+                        // handle success
+                        this.users = response.data.results;
+                    })
+                    .catch(error => {
+                        // handle error
+                        console.log(error);
+                    })
 
-                });
+            },
 
-            } else {
-                this.getUsers();
+            filteredType(){
+                this.users = [];
+
+                if(this.selected.length > 0){
+                    axios.get('api/users/' + 1) .then(response =>{
+                        this.users = response.data.results;
+                    })
+                }else{
+                    this.getUsers();
+                }
+
             }
         }
-
-    },
-
-    created: function(){
-        this.getTypes();
-        this.getUsers();
     }
-}
 </script>
 
 <style>
