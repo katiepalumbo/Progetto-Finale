@@ -2,6 +2,15 @@
     <main>
        <div class="container">
            <h1>Benvenuti in Deliveboo!!</h1>
+           <div class="row">
+                <div class="col">
+                    <input class="form-check-input" type="checkbox">
+                    <label class="form-check-label" for="">
+
+                    </label>
+
+                </div>
+            </div>
            <div class="row m-5">
                <div class="col-4 " v-for="item in items" :key="item.id" >
                    <div class="card">
@@ -9,11 +18,8 @@
                            <h5 class="card-title">{{item.item_name}}</h5>
                        </div>
                    </div>
-
-
-               </div>
-
-           </div>
+                </div>
+            </div>
        </div>
     </main>
 
