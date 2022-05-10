@@ -45,7 +45,7 @@ export default {
         }),
 
         axios.get('/api/types').then((response)=>{
-            this.types = response.data.results.data;
+            this.types = response.data.results;
             
         })
 
