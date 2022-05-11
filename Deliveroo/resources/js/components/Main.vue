@@ -6,7 +6,7 @@
                <form action="" class="row" @submit.prevent="filteredType()">
                     <div v-for="typex in types" :key="typex.id">
                         <div>
-                            <input class="form-check-input" type="checkbox" v-model="selection" :value="typex.id" :id="'typex_' + typex.id">
+                            <input class="form-check-input" type="checkbox" v-model="selected" :value="typex.id" :id="'typex_' + typex.id">
                             <label class="form-check-label" :for="'typex_' + typex.id">{{typex.name}}</label>
                         </div>
                     </div>
