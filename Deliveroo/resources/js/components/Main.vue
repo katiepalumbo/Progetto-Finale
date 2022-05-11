@@ -14,44 +14,22 @@
                         <button type="submit" class="btn btn-primary">Cerca</button>
                     </div>
                </form>
-
             </div>
-
-           <!-- <div class="row m-5">
-               <div class="col-4 " v-for="item in items" :key="item.id" >
-                   <div class="card">
-                       <div class="card-body">
-                           <h5 class="card-title">{{item.item_name}}</h5>
-                       </div>
-                   </div>
-                </div>
-            </div> -->
 
             <div class="row m-5">
                <div class="col-4 " v-for="user in users" :key="'user_' + user.id">
                    <div class="card">
                        <div class="card-body">
                            <h5 class="card-title">{{user.restaurant_name}}</h5>
-                           <ul>
-
-                           </ul>
+                           <h5 class="card-title" v-for="test in user.type" :key="test.id">
+                            <span>
+                                {{test.name}}
+                            </span>
+                           </h5>
                        </div>
                    </div>
                 </div>
             </div>
-
-            <!-- <div class="row m-5">
-               <div class="col-4 " v-for="selected in selection" :key="selected.id">
-                   <div class="card">
-                       <div class="card-body">
-                           <h5 class="card-title">{{selected.id}}</h5>
-                           <ul>
-
-                           </ul>
-                       </div>
-                   </div>
-                </div>
-            </div> -->
 
        </div>
     </main>
@@ -72,47 +50,50 @@
             };
         },
 
-        mounted(){
-            this.getTypes();
-            this.getUsers();
-        },
-
         methods:{
 
             getTypes(){
                 // prelevo tutte le tipologie
-                axios.get('api/types')
-                    .then(response =>{
-                        this.types = response.data.results;
-                    })
+                axios.get('api/types').then(response =>{
+                    this.types = response.data.results;
+                })
             },
 
             getUsers(){
-                axios.get('/api/users')
-                    .then(response => {
-                        // handle success
-                        this.users = response.data.results;
-                    })
-                    .catch(error => {
-                        // handle error
-                        console.log(error);
-                    })
+                axios.get('/api/users').then(response => {
+                    this.users = response.data.results;
+                    //console.log(response.data.results)
+                    //console.log('aaaaaaaaaaaaa')
+                })
+
+                .catch(error => {
+                    console.log(error);
+                })
 
             },
 
             filteredType(){
                 this.users = [];
 
+                console.log('api/users/'+ this.selected)
+
                 if(this.selected.length > 0){
-                    axios.get('api/users/' + 1) .then(response =>{
+                    axios.get('api/users/'+ this.selected) .then(response =>{
                         this.users = response.data.results;
+                        //console.log(response.data.results)
+                        //console.log('bbbbbbbbbbbb')
                     })
                 }else{
                     this.getUsers();
                 }
 
             }
-        }
+        },
+
+        created(){
+            this.getTypes();
+            this.getUsers();
+        },
     }
 </script>
 
