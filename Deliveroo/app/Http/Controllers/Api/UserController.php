@@ -3,15 +3,16 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Type;
+
 use App\User;
-use Illuminate\Http\Request;
+
 
 class UserController extends Controller
 {
     public function index() {
 
-        $users = User::with(['types']);
+        $users = User::with(['type'])->get();
+        // $users = User::all();
         // $types = Type::all();
 
         return response()->json(
@@ -40,16 +41,32 @@ class UserController extends Controller
 
     public function filter($filter) {
 
-        // $users = User::with(['types']);
-
         $filter = explode(",", $filter);
-        $usersArray = [];
+        $usersArrey = [];
 
-        foreach($filter as $test) {
 
-            $users = User::with(['types'])->where('types', $test)->first();
-            $usersArray[] = $users;
+        $users = User::with(['type'])->get();
+
+        for($i = 0; $i<count($filter); $i++) {
+            foreach($users as $user) {
+                foreach($user->type as $type) {
+                    if ($type->id == $filter[$i]) {
+
+                        if(!in_array($user, $usersArrey)){
+                            $usersArrey[] = $user;
+                        }
+                    }
+                }
+            }
         }
+
+
+
+        // foreach($filter as $test) {
+
+        //     $users = User::with(['type' == $test])->get();
+        //     $usersArray[] = $users;
+        // }
 
 
         // $tester = $request;
@@ -74,7 +91,7 @@ class UserController extends Controller
 
         return response()->json(
             [
-                'results' => $usersArray,
+                'results' => $usersArrey,
                 'success'=> true,
             ]
         );
