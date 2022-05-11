@@ -19,14 +19,19 @@
             <div class="row m-5">
                <div class="col-4 " v-for="user in users" :key="'user_' + user.id">
                    <div class="card">
-                       <div class="card-body">
-                           <h5 class="card-title">{{user.restaurant_name}}</h5>
-                           <h5 class="card-title" v-for="test in user.type" :key="test.id">
-                            <span>
-                                {{test.name}}
-                            </span>
-                           </h5>
-                       </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{user.restaurant_name}}</h5>
+                            <h5 class="card-title">{{user.slug}}</h5>
+                            
+                            <h5 class="card-title" v-for="test in user.type" :key="test.id">
+                                <span>
+                                    {{test.name}}
+                                </span>
+                            </h5>
+                            <li v-for="(link, index) in navLinks" :key="index" class="nav-item">
+                                <router-link  :to="{name: link.to, params:{slug: user.slug}}">{{ link.name }}</router-link>
+                            </li>
+                        </div>
                    </div>
                 </div>
             </div>
@@ -47,6 +52,13 @@
                 types: null,
                 selected: [],
                 users: [],
+
+                navLinks: [
+                {
+                    to : 'restaurant-menu',
+                    name : 'menu',
+                },
+            ]
             };
         },
 
@@ -62,7 +74,7 @@
             getUsers(){
                 axios.get('/api/users').then(response => {
                     this.users = response.data.results;
-                    //console.log(response.data.results)
+                    console.log(response.data.results)
                     //console.log('aaaaaaaaaaaaa')
                 })
 
