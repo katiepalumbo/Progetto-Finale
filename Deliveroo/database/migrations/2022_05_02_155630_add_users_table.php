@@ -23,6 +23,7 @@ class AddUsersTable extends Migration
             $table->string('user_city')->required();
             $table->decimal('user_zip_code', 5, 0)->required();
             $table->string('restaurant_name')->required();
+            $table->string("slug")->unique()->nullable();
 
         });
     }
