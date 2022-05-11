@@ -2031,6 +2031,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Main",
   data: function data() {
@@ -2039,10 +2042,6 @@ __webpack_require__.r(__webpack_exports__);
       selected: [],
       users: []
     };
-  },
-  mounted: function mounted() {
-    this.getTypes();
-    this.getUsers();
   },
   methods: {
     getTypes: function getTypes() {
@@ -2057,10 +2056,10 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       axios.get('/api/users').then(function (response) {
-        // handle success
         _this2.users = response.data.results;
+        console.log(response.data.results);
+        console.log('aaaaaaaaaaaaa');
       })["catch"](function (error) {
-        // handle error
         console.log(error);
       });
     },
@@ -2068,15 +2067,22 @@ __webpack_require__.r(__webpack_exports__);
       var _this3 = this;
 
       this.users = [];
+      console.log('api/users/' + this.selected);
 
       if (this.selected.length > 0) {
-        axios.get('api/users/' + 1).then(function (response) {
+        axios.get('api/users/' + this.selected).then(function (response) {
           _this3.users = response.data.results;
+          console.log(response.data.results);
+          console.log('bbbbbbbbbbbb');
         });
       } else {
         this.getUsers();
       }
     }
+  },
+  created: function created() {
+    this.getTypes();
+    this.getUsers();
   }
 });
 
@@ -2727,13 +2733,32 @@ var render = function () {
         _vm._l(_vm.users, function (user) {
           return _c("div", { key: "user_" + user.id, staticClass: "col-4 " }, [
             _c("div", { staticClass: "card" }, [
-              _c("div", { staticClass: "card-body" }, [
-                _c("h5", { staticClass: "card-title" }, [
-                  _vm._v(_vm._s(user.restaurant_name)),
-                ]),
-                _vm._v(" "),
-                _c("ul"),
-              ]),
+              _c(
+                "div",
+                { staticClass: "card-body" },
+                [
+                  _c("h5", { staticClass: "card-title" }, [
+                    _vm._v(_vm._s(user.restaurant_name)),
+                  ]),
+                  _vm._v(" "),
+                  _vm._l(user.type, function (test) {
+                    return _c(
+                      "h5",
+                      { key: test.id, staticClass: "card-title" },
+                      [
+                        _c("span", [
+                          _vm._v(
+                            "\n                            " +
+                              _vm._s(test.name) +
+                              "\n                        "
+                          ),
+                        ]),
+                      ]
+                    )
+                  }),
+                ],
+                2
+              ),
             ]),
           ])
         }),
@@ -18403,7 +18428,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\maion\Desktop\Progetto-Finale\Deliveroo\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\pizze\Desktop\BOOLEAN\PROGETTO_FINALE\Progetto-Finale\Deliveroo\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })

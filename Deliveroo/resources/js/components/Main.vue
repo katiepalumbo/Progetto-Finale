@@ -32,10 +32,12 @@
                    <div class="card">
                        <div class="card-body">
                            <h5 class="card-title">{{user.restaurant_name}}</h5>
-                           <h5 class="card-title">{{user.typee}}</h5>
-                           <ul>
+                           <h5 class="card-title" v-for="test in user.type" :key="test.id">
+                            <span>
+                                {{test.name}}
+                            </span>
+                           </h5>
 
-                           </ul>
                        </div>
                    </div>
                 </div>
@@ -85,6 +87,8 @@
             getUsers(){
                 axios.get('/api/users').then(response => {
                     this.users = response.data.results;
+                    console.log(response.data.results)
+                    console.log('aaaaaaaaaaaaa')
                 })
 
                 .catch(error => {
@@ -101,6 +105,8 @@
                 if(this.selected.length > 0){
                     axios.get('api/users/'+ this.selected) .then(response =>{
                         this.users = response.data.results;
+                        console.log(response.data.results)
+                        console.log('bbbbbbbbbbbb')
                     })
                 }else{
                     this.getUsers();
