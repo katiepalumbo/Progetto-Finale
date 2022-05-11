@@ -30,15 +30,6 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    // public function getClientesPorRuta(Request $request) {
-    //     $rutas = $request->input('rutas');
-    //     $tipos = $request->input('tipos');
-
-    //     // Code like this doesn't work
-    //     $index = 0;
-    //     $register = Ruta::where('CODIRUTA','=',$rutas[$index])->first();
-    //   }
-
     public function filter($filter) {
 
         $filter = explode(",", $filter);
@@ -59,35 +50,6 @@ class UserController extends Controller
                 }
             }
         }
-
-
-
-        // foreach($filter as $test) {
-
-        //     $users = User::with(['type' == $test])->get();
-        //     $usersArray[] = $users;
-        // }
-
-
-        // $tester = $request;
-
-
-
-        // for($i=0; $i<count($filter); $i++){
-
-        //     foreach($users as $user){
-
-        //         for($n=0; $n<count($user->types); $n++){
-
-        //             if($user->types[$n]->id == $filter[$i]){
-
-        //                 if(!in_array($user, $usersArray)){
-        //                     $usersArray[] = $user;
-        //                 }
-        //             }
-        //         }
-        //     }
-        // }
 
         return response()->json(
             [

@@ -2009,31 +2009,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Main",
   data: function data() {
@@ -2056,9 +2031,8 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       axios.get('/api/users').then(function (response) {
-        _this2.users = response.data.results;
-        console.log(response.data.results);
-        console.log('aaaaaaaaaaaaa');
+        _this2.users = response.data.results; //console.log(response.data.results)
+        //console.log('aaaaaaaaaaaaa')
       })["catch"](function (error) {
         console.log(error);
       });
@@ -2071,9 +2045,8 @@ __webpack_require__.r(__webpack_exports__);
 
       if (this.selected.length > 0) {
         axios.get('api/users/' + this.selected).then(function (response) {
-          _this3.users = response.data.results;
-          console.log(response.data.results);
-          console.log('bbbbbbbbbbbb');
+          _this3.users = response.data.results; //console.log(response.data.results)
+          //console.log('bbbbbbbbbbbb')
         });
       } else {
         this.getUsers();
