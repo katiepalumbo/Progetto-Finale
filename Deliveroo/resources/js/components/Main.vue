@@ -14,18 +14,7 @@
                         <button type="submit" class="btn btn-primary">Cerca</button>
                     </div>
                </form>
-
             </div>
-
-           <!-- <div class="row m-5">
-               <div class="col-4 " v-for="item in items" :key="item.id" >
-                   <div class="card">
-                       <div class="card-body">
-                           <h5 class="card-title">{{item.item_name}}</h5>
-                       </div>
-                   </div>
-                </div>
-            </div> -->
 
             <div class="row m-5">
                <div class="col-4 " v-for="user in users" :key="'user_' + user.id">
@@ -37,24 +26,10 @@
                                 {{test.name}}
                             </span>
                            </h5>
-
                        </div>
                    </div>
                 </div>
             </div>
-
-            <!-- <div class="row m-5">
-               <div class="col-4 " v-for="selected in selection" :key="selected.id">
-                   <div class="card">
-                       <div class="card-body">
-                           <h5 class="card-title">{{selected.id}}</h5>
-                           <ul>
-
-                           </ul>
-                       </div>
-                   </div>
-                </div>
-            </div> -->
 
        </div>
     </main>
@@ -87,8 +62,8 @@
             getUsers(){
                 axios.get('/api/users').then(response => {
                     this.users = response.data.results;
-                    console.log(response.data.results)
-                    console.log('aaaaaaaaaaaaa')
+                    //console.log(response.data.results)
+                    //console.log('aaaaaaaaaaaaa')
                 })
 
                 .catch(error => {
@@ -105,8 +80,8 @@
                 if(this.selected.length > 0){
                     axios.get('api/users/'+ this.selected) .then(response =>{
                         this.users = response.data.results;
-                        console.log(response.data.results)
-                        console.log('bbbbbbbbbbbb')
+                        //console.log(response.data.results)
+                        //console.log('bbbbbbbbbbbb')
                     })
                 }else{
                     this.getUsers();
