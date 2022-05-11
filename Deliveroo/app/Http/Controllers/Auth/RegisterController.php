@@ -3,7 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-
+use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use App\Providers\RouteServiceProvider;
 use App\Type;
 use App\User;
@@ -12,8 +13,6 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 use phpDocumentor\Reflection\Types\Nullable;
-
-
 
 class RegisterController extends Controller
 {
@@ -93,25 +92,51 @@ class RegisterController extends Controller
             'user_zip_code' => $data['user_zip_code'],
             'restaurant_name' => $data['restaurant_name'],
             'description' => $data['description'],
+            'slug'  => Str::slug($data['restaurant_name'], '-'),
             //'types' => $data['types'],
             //'user_cover'=>Storage::put('uploads',$data['user_cover']),
         ]);
 
+ 
+
 
         $newUser = User::orderBy('id', 'desc')->first();
+        
+        $newUser->fill($data);
         $newUser->type()->attach($data['types']);
-
         return $newUser;
     }
 
-    public function index()
+    public function index(Request $request, User $user)
     {
         $types = Type::all();
+
+        // $data = $request->all();
+
+        // $slug = Str::slug($data['restaurant_name']);
+
+        // if ($user->slug != $slug) {
+        //     $counter = 1;
+
+        //     while(User::where('slug', $slug)->first()){
+        //         $slug = Str::slug($data['restaurant_name']) . '-' . $counter;
+        //         $counter++;
+        //     }
+        //     $data['slug'] = $slug;
+
+        // }
+
+        // $data['slug'] = $slug;
+
+
         return view('auth.register', compact('types'));
     }
 
+    
+
     public function show(Type $types)
     {
+
         return view('auth.register', compact('type'));
     }
 
