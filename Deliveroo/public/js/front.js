@@ -2175,8 +2175,8 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       axios.get('/api/users').then(function (response) {
-        _this2.users = response.data.results;
-        console.log(response.data.results); //console.log('aaaaaaaaaaaaa')
+        _this2.users = response.data.results; // console.log(response.data.results)
+        // console.log('aaaaaaaaaaaaa')
       })["catch"](function (error) {
         console.log(error);
       });
@@ -2236,17 +2236,34 @@ __webpack_require__.r(__webpack_exports__);
       element: null
     };
   },
-  mounted: function mounted() {
-    var _this = this;
+  methods: {
+    getUsers: function getUsers() {
+      var _this = this;
 
-    var slug = this.$route.params.slug;
-    console.log('api/users/' + slug);
-    console.log(slug);
-    axios.get('api/users/' + slug).then(function (response) {
-      _this.element = response.data.results;
-      console.log(response.data);
-      console.log('cccccccccccc');
-    });
+      var slug = this.$route.params.slug;
+      console.log(slug);
+      console.log('/api/users/' + slug);
+      axios.get('/api/users/' + slug).then(function (response) {
+        _this.element = response.data.results;
+        console.log(response.data);
+        console.log('ddddddd');
+      })["catch"](function (error) {
+        console.log(error);
+      });
+    } // getSlug(){
+    //     const slug = this.$route.params.slug;
+    //     console.log('api/users/' + slug);
+    //     console.log(slug);
+    //     axios.get('api/users/'+slug).then(response => {
+    //         this.element = response.data.results;
+    //         console.log(response);
+    //         console.log('cccccccccccc');
+    //     });
+    // },
+
+  },
+  mounted: function mounted() {
+    this.getUsers(); // this.getSlug();
   }
 });
 
