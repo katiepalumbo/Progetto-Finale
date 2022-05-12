@@ -1,13 +1,20 @@
 <template>
   <div>
       <div class="row m-5">
-        <div v-for="item in users" :key="item.id">
-            <div class="card col-4" v-if="item.slug == test">
+        <div v-for="user in users" :key="user.name">
+            <div class="card col-4" v-if="user.slug == test">
                 <div class="card-body">
-                    <h5 class="card-title">{{item.name}}</h5>
+                    <h5 class="card-title">{{user.restaurant_name}}</h5>
+                </div>
+                <div v-for="item in user.items" :key="item.id">
+                    <h5>{{item.item_name}}</h5>
                 </div>
             </div>
         </div>
+
+         <!-- <div v-for="item in user.item" :key="item.id">
+            <h5>{{item.item_name}}</h5>
+        </div> -->
       </div>
   </div>
 </template>
@@ -20,6 +27,7 @@ export default {
             element: null,
             users: [],
             test: this.$route.params.slug,
+            items:[],
         }
     },
 
@@ -54,11 +62,25 @@ export default {
 
         },
 
+        // getItems(){
+        //     axios.get('/api/items').then(response => {
+        //         this.items = response.data.results.data;
+        //         // console.log(response.data.results.data)
+        //         // console.log('items')
+        //     })
+
+        //     .catch(error => {
+        //         console.log(error);
+        //     })
+
+        // },
+
     },
 
     mounted() {
         // this.getSlug();
         this.getUsers();
+        // this.getItems();
     }
 }
 </script>
