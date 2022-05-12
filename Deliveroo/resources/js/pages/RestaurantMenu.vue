@@ -18,25 +18,47 @@ export default {
     name: 'RestaurantMenu',
     data: function(){
         return {
-            element: null,
-
+            element: null
         }
     },
 
+    methods: {
+        getUsers(){
+            const slug = this.$route.params.slug;
+            console.log(slug)
+            console.log('/api/users/' + slug)
+
+            axios.get('/api/users/' + slug).then(response => {
+                this.element = response.data.results;
+                console.log(response.data)
+                console.log('ddddddd')
+            })
+
+            .catch(error => {
+                console.log(error);
+            })
+
+        },
+
+        // getSlug(){
+        //     const slug = this.$route.params.slug;
+        //     console.log('api/users/' + slug);
+        //     console.log(slug);
+
+        //     axios.get('api/users/'+slug).then(response => {
+
+        //         this.element = response.data.results;
+        //         console.log(response);
+        //         console.log('cccccccccccc');
+
+        //     });
+
+        // },
+    },
+
     mounted() {
-
-        const slug = this.$route.params.slug;
-        console.log('api/users/' + slug);
-        console.log(slug);
-
-        axios.get('api/users/'+slug).then(response => {
-
-            this.element = response.data.results;
-            console.log(response.data);
-            console.log('cccccccccccc');
-
-        });
-
+        this.getUsers();
+        // this.getSlug();
     }
 }
 </script>
