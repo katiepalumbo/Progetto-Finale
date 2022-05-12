@@ -26,3 +26,5 @@ Route::get('/users','Api\UserController@index');
 
 Route::get('/users/{filter}','Api\UserController@filter');
 
+Route::get('/users/{slug}', 'Api\UserController@show');
+

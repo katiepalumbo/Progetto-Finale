@@ -84,23 +84,14 @@ class UserController extends Controller
     {
 
         $users = User::where('slug', $slug)->first();
+        // $users = User::with(['type'])->get();
 
-        if($users) {
-            return response()->json(
-                [
-                    'results' => $users,
-                    'success' => true,
-                ]
-            );
-        } else {
-            return response()->json(
-                [
-                    'results' => 'errore',
-                    'success' => false,
-                ]
-            );
-        }
 
-        return response();
+        return response()->json(
+            [
+                'results' => $users,
+                'success' => true,
+            ]
+        );
     }
 }

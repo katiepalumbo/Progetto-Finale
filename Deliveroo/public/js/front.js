@@ -2020,7 +2020,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Main",
   data: function data() {
@@ -2173,20 +2172,20 @@ __webpack_require__.r(__webpack_exports__);
   name: 'RestaurantMenu',
   data: function data() {
     return {
-      items: []
+      element: null
     };
   },
-  methods: {
-    getItems: function getItems() {
-      var _this = this;
+  mounted: function mounted() {
+    var _this = this;
 
-      axios.get('http://127.0.0.1:8000/api/items/').then(function (response) {
-        _this.items = response.data.results;
-      });
-    }
-  },
-  created: function created() {
-    this.getItems();
+    var slug = this.$route.params.slug;
+    console.log('api/users/' + slug);
+    console.log(slug);
+    axios.get('api/users/' + slug).then(function (response) {
+      _this.element = response.data.results;
+      console.log(response);
+      console.log('cccccccccccc');
+    });
   }
 });
 
@@ -2895,10 +2894,12 @@ var render = function () {
                 [
                   _c("h5", { staticClass: "card-title" }, [
                     _vm._v(_vm._s(user.restaurant_name)),
+                    _c("b", [_vm._v(": nome")]),
                   ]),
                   _vm._v(" "),
                   _c("h5", { staticClass: "card-title" }, [
                     _vm._v(_vm._s(user.slug)),
+                    _c("b", [_vm._v(": slug")]),
                   ]),
                   _vm._v(" "),
                   _vm._l(user.type, function (test) {
@@ -2909,35 +2910,27 @@ var render = function () {
                         _c("span", [
                           _vm._v(
                             "\n                                " +
-                              _vm._s(test.name) +
-                              "\n                            "
+                              _vm._s(test.name)
                           ),
+                          _c("b", [_vm._v(": tag")]),
                         ]),
                       ]
                     )
                   }),
                   _vm._v(" "),
-                  _vm._l(_vm.navLinks, function (link, index) {
-                    return _c(
-                      "li",
-                      { key: index, staticClass: "nav-item" },
-                      [
-                        _c(
-                          "router-link",
-                          {
-                            attrs: {
-                              to: {
-                                name: link.to,
-                                params: { slug: user.slug },
-                              },
-                            },
-                          },
-                          [_vm._v(_vm._s(link.name))]
-                        ),
-                      ],
-                      1
-                    )
-                  }),
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "btn btn-primary",
+                      attrs: {
+                        to: {
+                          name: "restaurant-menu",
+                          params: { slug: user.slug },
+                        },
+                      },
+                    },
+                    [_vm._v("link")]
+                  ),
                 ],
                 2
               ),
