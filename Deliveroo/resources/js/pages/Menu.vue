@@ -69,8 +69,8 @@
             getUsers(){
                 axios.get('/api/users').then(response => {
                     this.users = response.data.results;
-                    console.log(response.data.results)
-                    //console.log('aaaaaaaaaaaaa')
+                    // console.log(response.data.results)
+                    // console.log('aaaaaaaaaaaaa')
                 })
 
                 .catch(error => {
