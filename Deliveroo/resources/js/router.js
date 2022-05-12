@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Item from './pages/Item';
 import CheckOut from './pages/CheckOut';
 import RestaurantMenu from './pages/RestaurantMenu';
+import Menu from './pages/Menu.vue';
 
 const router = new VueRouter({
     mode: "history",
@@ -28,12 +29,17 @@ const router = new VueRouter({
             component: CheckOut
         },
         {
-            path: '/restaurant-menu/:slug',
-            name: 'restaurant-menu',
+            path: '/menu',
+            name: 'menu',
+            component: Menu
+        },
+        {
+            path: '/menu/:slug',
+            name: 'restaurant',
             component: RestaurantMenu
         },
-        
-    
+
+
     ]
 });
 

@@ -1,14 +1,14 @@
 <template>
   <div>
       <div class="row m-5">
-        <div class="col-4 " v-for="item in items" :key="item.id" >
+        <!-- <div class="col-4 " v-for="item in items" :key="item.id" >
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">{{item.item_name}}</h5>
                     {{$route.params.slug}}
                 </div>
             </div>
-        </div>
+        </div> -->
       </div>
   </div>
 </template>
@@ -19,7 +19,7 @@ export default {
     data: function(){
         return {
             element: null,
-            
+
         }
     },
 
@@ -32,7 +32,7 @@ export default {
         axios.get('api/users/'+slug).then(response => {
 
             this.element = response.data.results;
-            console.log(response);
+            console.log(response.data);
             console.log('cccccccccccc');
 
         });
