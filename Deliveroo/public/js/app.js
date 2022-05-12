@@ -5145,7 +5145,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Main",
   data: function data() {
@@ -41537,10 +41536,12 @@ var render = function () {
                 [
                   _c("h5", { staticClass: "card-title" }, [
                     _vm._v(_vm._s(user.restaurant_name)),
+                    _c("b", [_vm._v(": nome")]),
                   ]),
                   _vm._v(" "),
                   _c("h5", { staticClass: "card-title" }, [
                     _vm._v(_vm._s(user.slug)),
+                    _c("b", [_vm._v(": slug")]),
                   ]),
                   _vm._v(" "),
                   _vm._l(user.type, function (test) {
@@ -41551,35 +41552,27 @@ var render = function () {
                         _c("span", [
                           _vm._v(
                             "\n                                " +
-                              _vm._s(test.name) +
-                              "\n                            "
+                              _vm._s(test.name)
                           ),
+                          _c("b", [_vm._v(": tag")]),
                         ]),
                       ]
                     )
                   }),
                   _vm._v(" "),
-                  _vm._l(_vm.navLinks, function (link, index) {
-                    return _c(
-                      "li",
-                      { key: index, staticClass: "nav-item" },
-                      [
-                        _c(
-                          "router-link",
-                          {
-                            attrs: {
-                              to: {
-                                name: link.to,
-                                params: { slug: user.slug },
-                              },
-                            },
-                          },
-                          [_vm._v(_vm._s(link.name))]
-                        ),
-                      ],
-                      1
-                    )
-                  }),
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "btn btn-primary",
+                      attrs: {
+                        to: {
+                          name: "restaurant-menu",
+                          params: { slug: user.slug },
+                        },
+                      },
+                    },
+                    [_vm._v("link")]
+                  ),
                 ],
                 2
               ),

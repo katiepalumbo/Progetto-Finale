@@ -18,23 +18,24 @@ export default {
     name: 'RestaurantMenu',
     data: function(){
         return {
-            items:[],
+            element: null
         }
     },
 
-    methods: {
+    mounted() {
 
-        getItems() {
-            axios.get('http://127.0.0.1:8000/api/items/').then((response) => {
+        const slug = this.$route.params.slug;
+        console.log('api/users/' + slug);
+        console.log(slug);
 
-              this.items = response.data.results;
+        axios.get('api/users/'+slug).then(response => {
 
-            });
-        },
-    },
+            this.element = response.data.results;
+            console.log(response);
+            console.log('cccccccccccc');
 
-    created: function(){
-        this.getItems();
+        });
+
     }
 }
 </script>
