@@ -2228,13 +2228,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'RestaurantMenu',
   data: function data() {
     return {
       element: null,
       users: [],
-      test: this.$route.params.slug
+      test: this.$route.params.slug,
+      items: []
     };
   },
   methods: {
@@ -2261,11 +2269,21 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (error) {
         console.log(error);
       });
-    }
+    } // getItems(){
+    //     axios.get('/api/items').then(response => {
+    //         this.items = response.data.results.data;
+    //         // console.log(response.data.results.data)
+    //         // console.log('items')
+    //     })
+    //     .catch(error => {
+    //         console.log(error);
+    //     })
+    // },
+
   },
   mounted: function mounted() {
     // this.getSlug();
-    this.getUsers();
+    this.getUsers(); // this.getItems();
   }
 });
 
@@ -3191,16 +3209,27 @@ var render = function () {
     _c(
       "div",
       { staticClass: "row m-5" },
-      _vm._l(_vm.users, function (item) {
-        return _c("div", { key: item.id }, [
-          item.slug == _vm.test
-            ? _c("div", { staticClass: "card col-4" }, [
-                _c("div", { staticClass: "card-body" }, [
-                  _c("h5", { staticClass: "card-title" }, [
-                    _vm._v(_vm._s(item.name)),
+      _vm._l(_vm.users, function (user) {
+        return _c("div", { key: user.name }, [
+          user.slug == _vm.test
+            ? _c(
+                "div",
+                { staticClass: "card col-4" },
+                [
+                  _c("div", { staticClass: "card-body" }, [
+                    _c("h5", { staticClass: "card-title" }, [
+                      _vm._v(_vm._s(user.restaurant_name)),
+                    ]),
                   ]),
-                ]),
-              ])
+                  _vm._v(" "),
+                  _vm._l(user.items, function (item) {
+                    return _c("div", { key: item.id }, [
+                      _c("h5", [_vm._v(_vm._s(item.item_name))]),
+                    ])
+                  }),
+                ],
+                2
+              )
             : _vm._e(),
         ])
       }),
@@ -19367,7 +19396,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\progLaravel\Progetto-Finale\Deliveroo\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\maion\Desktop\Progetto-Finale\Deliveroo\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })

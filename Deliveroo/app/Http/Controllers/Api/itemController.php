@@ -63,7 +63,7 @@ class itemController extends Controller
      */
     public function show($slug)
     {
-        $item = Item::where('slug', '=', $slug)->with(['category','tags'])->first();
+        $item = Item::where('slug', '=', $slug)->with(['category','tags','user'])->first();
 
         if ($item->image) {
             $item->image = url('storage/'.$item->image);
