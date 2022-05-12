@@ -2020,6 +2020,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Main",
   data: function data() {
@@ -2918,19 +2920,27 @@ var render = function () {
                     )
                   }),
                   _vm._v(" "),
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "btn btn-primary",
-                      attrs: {
-                        to: {
-                          name: "restaurant-menu",
-                          params: { slug: user.slug },
-                        },
-                      },
-                    },
-                    [_vm._v("link")]
-                  ),
+                  _vm._l(_vm.navLinks, function (link, index) {
+                    return _c(
+                      "li",
+                      { key: index, staticClass: "nav-item" },
+                      [
+                        _c(
+                          "router-link",
+                          {
+                            attrs: {
+                              to: {
+                                name: link.to,
+                                params: { slug: user.slug },
+                              },
+                            },
+                          },
+                          [_vm._v(_vm._s(link.name))]
+                        ),
+                      ],
+                      1
+                    )
+                  }),
                 ],
                 2
               ),
@@ -19088,7 +19098,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\progLaravel\Progetto-Finale\Deliveroo\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\maion\Desktop\Progetto-Finale\Deliveroo\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })
