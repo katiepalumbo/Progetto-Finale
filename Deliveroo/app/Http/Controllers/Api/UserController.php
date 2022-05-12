@@ -5,13 +5,33 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 
 use App\User;
-
+use Illuminate\Support\Str;
 
 class UserController extends Controller
 {
     public function index() {
 
         $users = User::with(['type'])->get();
+
+        /* $new_item = new User();
+
+        $users = User::with(['type'])->get();
+
+        $slug = Str::slug($users['restaurant_name']);
+
+        $counter = 1;
+
+        while(User::where('slug', $slug)->first()){
+            $slug = Str::slug($users['restaurant_name']) . '-' . $counter;
+            $counter++;
+
+        }
+
+        $users['slug'] = $slug;
+
+        /* $new_item->fill($users); */
+
+        /* $new_item->save(); */ 
         // $users = User::all();
         // $types = Type::all();
 
