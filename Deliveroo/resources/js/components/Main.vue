@@ -29,7 +29,9 @@
                                 </span>
                             </h5>
 
-                            <router-link class="btn btn-primary" :to="{name: link.to, params:{slug: user.slug}}">link</router-link>
+                            <li v-for="(link, index) in navLinks" :key="index" class="nav-item">
+                                <router-link  :to="{name: link.to, params:{slug: user.slug}}">{{ link.name }}</router-link>
+                            </li>
                         </div>
                    </div>
                 </div>
