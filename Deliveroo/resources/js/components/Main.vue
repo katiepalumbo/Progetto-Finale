@@ -20,17 +20,16 @@
                <div class="col-4 " v-for="user in users" :key="'user_' + user.id">
                    <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">{{user.restaurant_name}}</h5>
-                            <h5 class="card-title">{{user.slug}}</h5>
-                            
+                            <h5 class="card-title">{{user.restaurant_name}}<b>: nome</b></h5>
+                            <h5 class="card-title">{{user.slug}}<b>: slug</b></h5>
+
                             <h5 class="card-title" v-for="test in user.type" :key="test.id">
                                 <span>
-                                    {{test.name}}
+                                    {{test.name}}<b>: tag</b>
                                 </span>
                             </h5>
-                            <li v-for="(link, index) in navLinks" :key="index" class="nav-item">
-                                <router-link  :to="{name: link.to, params:{slug: user.slug}}">{{ link.name }}</router-link>
-                            </li>
+
+                            <router-link class="btn btn-primary" :to="{name: 'restaurant-menu', params:{slug: user.slug}}">link</router-link>
                         </div>
                    </div>
                 </div>
