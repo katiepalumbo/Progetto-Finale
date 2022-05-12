@@ -2228,42 +2228,44 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'RestaurantMenu',
   data: function data() {
     return {
-      element: null
+      element: null,
+      users: [],
+      test: this.$route.params.slug
     };
   },
   methods: {
+    // getSlug(){
+    //     const slug = this.$route.params.slug;
+    //     // console.log(slug)
+    //     // console.log('/api/users/' + slug)
+    //     axios.get('/api/users/' + slug).then(response => {
+    //         this.element = response.data;
+    //         console.log(response.data)
+    //         console.log('ddddddd')
+    //     })
+    //     .catch(error => {
+    //         console.log(error);
+    //     })
+    // },
     getUsers: function getUsers() {
       var _this = this;
 
-      var slug = this.$route.params.slug;
-      console.log(slug);
-      console.log('/api/users/' + slug);
-      axios.get('/api/users/' + slug).then(function (response) {
-        _this.element = response.data.results;
-        console.log(response.data);
-        console.log('ddddddd');
+      axios.get('/api/users').then(function (response) {
+        _this.users = response.data.results;
+        console.log(response.data.results);
+        console.log('aaaaaaaaaaaaa');
       })["catch"](function (error) {
         console.log(error);
       });
-    } // getSlug(){
-    //     const slug = this.$route.params.slug;
-    //     console.log('api/users/' + slug);
-    //     console.log(slug);
-    //     axios.get('api/users/'+slug).then(response => {
-    //         this.element = response.data.results;
-    //         console.log(response);
-    //         console.log('cccccccccccc');
-    //     });
-    // },
-
+    }
   },
   mounted: function mounted() {
-    this.getUsers(); // this.getSlug();
+    // this.getSlug();
+    this.getUsers();
   }
 });
 
@@ -3185,16 +3187,28 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _c(
+      "div",
+      { staticClass: "row m-5" },
+      _vm._l(_vm.users, function (item) {
+        return _c("div", { key: item.id }, [
+          item.slug == _vm.test
+            ? _c("div", { staticClass: "card col-4" }, [
+                _c("div", { staticClass: "card-body" }, [
+                  _c("h5", { staticClass: "card-title" }, [
+                    _vm._v(_vm._s(item.name)),
+                  ]),
+                ]),
+              ])
+            : _vm._e(),
+        ])
+      }),
+      0
+    ),
+  ])
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [_c("div", { staticClass: "row m-5" })])
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -19353,7 +19367,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\pizze\Desktop\BOOLEAN\PROGETTO_FINALE\Progetto-Finale\Deliveroo\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\progLaravel\Progetto-Finale\Deliveroo\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })

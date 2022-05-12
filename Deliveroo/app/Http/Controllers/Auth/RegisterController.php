@@ -68,6 +68,7 @@ class RegisterController extends Controller
             'restaurant_name' => ['required', 'string', 'max:30'],
             'description' => ['required', 'string', 'min:30'],
             'types' => ['required'],
+            'slug' => ['required'],
             //'user_cover' => ['image']
         ]);
     }
@@ -93,7 +94,7 @@ class RegisterController extends Controller
             'user_zip_code' => $data['user_zip_code'],
             'restaurant_name' => $data['restaurant_name'],
             'description' => $data['description'],
-            'slug'  => Str::slug($data['restaurant_name'], '-'),
+            'slug' => Str::slug($data['restaurant_name']),
             //'types' => $data['types'],
             //'user_cover'=>Storage::put('uploads',$data['user_cover']),
         ]);
