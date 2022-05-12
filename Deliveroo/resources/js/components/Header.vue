@@ -31,9 +31,13 @@ export default {
                     to : 'checkout',
                     name : 'Carrello',
                 },
+                // {
+                //     to : 'contacts',
+                //     name : 'Contattaci',
+                // },
                 {
-                    to : 'contacts',
-                    name : 'Contattaci',
+                    to : 'menu',
+                    name : 'Menù',
                 },
             ]
         }
