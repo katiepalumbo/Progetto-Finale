@@ -116,61 +116,6 @@ class UsersTableSeeder extends Seeder
             adipisicing elit.',
 
         ]);
-        // $fakeUsers = [
-
-        //     [
-        //         'name' => 'Universal User 1',                
-        //         'email' => 'user1@universal.com',
-        //         'password' => bcrypt('P@ssw0rd'),
-        //         'user_last_name' => 'lastname',
-        //         'user_cell_number' => '1231231231',
-        //         'user_tax_code' => '12312312312',
-        //         'user_street' => '123 No Way',
-        //         'user_city' => 'Boolcity',
-        //         'user_zip_code' => '12345',
-        //         'restaurant_name' => 'User 1 Restaurant',
-        //         'description' => 'Lorem ipsum dolor, sit amet consectetur 
-        //         adipisicing elit.',
-        //     ],
-
-        //     [
-        //         'name' => 'Universal User 2',                
-        //         'email' => 'user2@universal.com',
-        //         'password' => bcrypt('P@ssw0rd'),
-        //         'user_last_name' => 'lastname',
-        //         'user_cell_number' => '1231231231',
-        //         'user_tax_code' => '12312312312',
-        //         'user_street' => '123 No Way',
-        //         'user_city' => 'Boolcity',
-        //         'user_zip_code' => '12345',
-        //         'restaurant_name' => 'User 2 Restaurant',
-        //         'description' => 'Lorem ipsum dolor, sit amet consectetur 
-        //         adipisicing elit.',
-
-
-
-        //foreach($user as $fakeUser){
-            
-        //     $newUser = new User();
-        //     $newUser->name = $user["name"];
-        //     $newUser->email = $user["email"];
-        //     $newUser->user_last_name = $user["user_last_name"];
-        //     $newUser->user_cell_number = $user["user_cell_number"];
-        //     $newUser->user_tax_code = $user["user_tax_code"];
-        //     $newUser->user_street = $user["user_street"];
-        //     $newUser->user_city = $user["user_city"];
-        //     $newUser->user_zip_code = $user["user_zip_code"];
-        //     $newUser->description = $user['description'];
-        //     $newUser->slug = Str::slug($user["restaurant_name"]);
-
-        //     $newUser->save();
-
-        // }
-
-        // DB::table('users')->insert([
-        //     'Password' => bcrypt('P@ssw0rd'),
-        //     'isEnabled' => true,
-        //     'isAdmin' => true
-        //     ]);
+ 
     }
 }
