@@ -5112,93 +5112,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "Main",
-  data: function data() {
-    return {
-      types: null,
-      selected: [],
-      users: [],
-      navLinks: [{
-        to: 'restaurant-menu',
-        name: 'menu'
-      }]
-    };
-  },
-  methods: {
-    getTypes: function getTypes() {
-      var _this = this;
-
-      // prelevo tutte le tipologie
-      axios.get('api/types').then(function (response) {
-        _this.types = response.data.results;
-      });
-    },
-    getUsers: function getUsers() {
-      var _this2 = this;
-
-      axios.get('/api/users').then(function (response) {
-        _this2.users = response.data.results;
-        console.log(response.data.results); //console.log('aaaaaaaaaaaaa')
-      })["catch"](function (error) {
-        console.log(error);
-      });
-    },
-    filteredType: function filteredType() {
-      var _this3 = this;
-
-      this.users = [];
-      console.log('api/users/' + this.selected);
-
-      if (this.selected.length > 0) {
-        axios.get('api/users/' + this.selected).then(function (response) {
-          _this3.users = response.data.results; //console.log(response.data.results)
-          //console.log('bbbbbbbbbbbb')
-        });
-      } else {
-        this.getUsers();
-      }
-    }
-  },
-  created: function created() {
-    this.getTypes();
-    this.getUsers();
-  }
+  name: "Main"
 });
 
 /***/ }),
@@ -41447,164 +41362,17 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("main", [
-    _c("div", { staticClass: "container" }, [
-      _c("h1", [_vm._v("Benvenuti in Deliveboo!!")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "form",
-          {
-            staticClass: "row",
-            attrs: { action: "" },
-            on: {
-              submit: function ($event) {
-                $event.preventDefault()
-                return _vm.filteredType()
-              },
-            },
-          },
-          [
-            _vm._l(_vm.types, function (typex) {
-              return _c("div", { key: typex.id }, [
-                _c("div", [
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.selected,
-                        expression: "selected",
-                      },
-                    ],
-                    staticClass: "form-check-input",
-                    attrs: { type: "checkbox", id: "typex_" + typex.id },
-                    domProps: {
-                      value: typex.id,
-                      checked: Array.isArray(_vm.selected)
-                        ? _vm._i(_vm.selected, typex.id) > -1
-                        : _vm.selected,
-                    },
-                    on: {
-                      change: function ($event) {
-                        var $$a = _vm.selected,
-                          $$el = $event.target,
-                          $$c = $$el.checked ? true : false
-                        if (Array.isArray($$a)) {
-                          var $$v = typex.id,
-                            $$i = _vm._i($$a, $$v)
-                          if ($$el.checked) {
-                            $$i < 0 && (_vm.selected = $$a.concat([$$v]))
-                          } else {
-                            $$i > -1 &&
-                              (_vm.selected = $$a
-                                .slice(0, $$i)
-                                .concat($$a.slice($$i + 1)))
-                          }
-                        } else {
-                          _vm.selected = $$c
-                        }
-                      },
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "label",
-                    {
-                      staticClass: "form-check-label",
-                      attrs: { for: "typex_" + typex.id },
-                    },
-                    [_vm._v(_vm._s(typex.name))]
-                  ),
-                ]),
-              ])
-            }),
-            _vm._v(" "),
-            _vm._m(0),
-          ],
-          2
-        ),
-      ]),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "row m-5" },
-        _vm._l(_vm.users, function (user) {
-          return _c("div", { key: "user_" + user.id, staticClass: "col-4 " }, [
-            _c("div", { staticClass: "card" }, [
-              _c(
-                "div",
-                { staticClass: "card-body" },
-                [
-                  _c("h5", { staticClass: "card-title" }, [
-                    _vm._v(_vm._s(user.restaurant_name)),
-                    _c("b", [_vm._v(": nome")]),
-                  ]),
-                  _vm._v(" "),
-                  _c("h5", { staticClass: "card-title" }, [
-                    _vm._v(_vm._s(user.slug)),
-                    _c("b", [_vm._v(": slug")]),
-                  ]),
-                  _vm._v(" "),
-                  _vm._l(user.type, function (test) {
-                    return _c(
-                      "h5",
-                      { key: test.id, staticClass: "card-title" },
-                      [
-                        _c("span", [
-                          _vm._v(
-                            "\n                                " +
-                              _vm._s(test.name)
-                          ),
-                          _c("b", [_vm._v(": tag")]),
-                        ]),
-                      ]
-                    )
-                  }),
-                  _vm._v(" "),
-                  _vm._l(_vm.navLinks, function (link, index) {
-                    return _c(
-                      "li",
-                      { key: index, staticClass: "nav-item" },
-                      [
-                        _c(
-                          "router-link",
-                          {
-                            attrs: {
-                              to: {
-                                name: link.to,
-                                params: { slug: user.slug },
-                              },
-                            },
-                          },
-                          [_vm._v(_vm._s(link.name))]
-                        ),
-                      ],
-                      1
-                    )
-                  }),
-                ],
-                2
-              ),
-            ]),
-          ])
-        }),
-        0
-      ),
-    ]),
-  ])
+  return _vm._m(0)
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c(
-        "button",
-        { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-        [_vm._v("Cerca")]
-      ),
+    return _c("main", [
+      _c("div", { staticClass: "container" }, [
+        _c("h1", [_vm._v("Benvenuti in Deliveboo!!")]),
+      ]),
     ])
   },
 ]
@@ -53995,8 +53763,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\maion\Desktop\Progetto-Finale\Deliveroo\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\maion\Desktop\Progetto-Finale\Deliveroo\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\pizze\Desktop\BOOLEAN\PROGETTO_FINALE\Progetto-Finale\Deliveroo\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\pizze\Desktop\BOOLEAN\PROGETTO_FINALE\Progetto-Finale\Deliveroo\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
