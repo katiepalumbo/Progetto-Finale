@@ -29,7 +29,7 @@
                                 </span>
                             </h5>
 
-                            <router-link class="btn btn-primary" :to="{name: 'restaurant-menu', params:{slug: user.slug}}">link</router-link>
+                            <router-link class="btn btn-primary" :to="{name: link.to, params:{slug: user.slug}}">link</router-link>
                         </div>
                    </div>
                 </div>

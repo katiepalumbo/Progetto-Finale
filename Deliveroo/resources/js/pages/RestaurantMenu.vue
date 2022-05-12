@@ -18,7 +18,8 @@ export default {
     name: 'RestaurantMenu',
     data: function(){
         return {
-            element: null
+            element: null,
+            
         }
     },
 
