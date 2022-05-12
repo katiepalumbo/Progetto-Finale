@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-
 use App\Providers\RouteServiceProvider;
 use App\Type;
 use App\User;
+use Illuminate\Support\Str;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
@@ -93,12 +93,14 @@ class RegisterController extends Controller
             'user_zip_code' => $data['user_zip_code'],
             'restaurant_name' => $data['restaurant_name'],
             'description' => $data['description'],
+            'slug'  => Str::slug($data['restaurant_name'], '-'),
             //'types' => $data['types'],
             //'user_cover'=>Storage::put('uploads',$data['user_cover']),
         ]);
 
 
         $newUser = User::orderBy('id', 'desc')->first();
+        $newUser->fill($data);
         $newUser->type()->attach($data['types']);
 
         return $newUser;
