@@ -13,28 +13,6 @@ class UserController extends Controller
 
         $users = User::with(['type'])->get();
 
-        /* $new_item = new User();
-
-        $users = User::with(['type'])->get();
-
-        $slug = Str::slug($users['restaurant_name']);
-
-        $counter = 1;
-
-        while(User::where('slug', $slug)->first()){
-            $slug = Str::slug($users['restaurant_name']) . '-' . $counter;
-            $counter++;
-
-        }
-
-        $users['slug'] = $slug;
-
-        /* $new_item->fill($users); */
-
-        /* $new_item->save(); */ 
-        // $users = User::all();
-        // $types = Type::all();
-
         return response()->json(
             [
                 'results' => $users,
@@ -82,16 +60,34 @@ class UserController extends Controller
 
     public function show($slug)
     {
+        //$user = User::where('slug', $slug)->first();
+        $user = User::all();
+        $usersSlugArrey = [];
 
-        $users = User::where('slug', $slug)->first();
-        // $users = User::with(['type'])->get();
+        foreach($user as $userx) {
 
+            if ($userx->slug == $slug) {
 
-        return response()->json(
-            [
-                'results' => $users,
-                'success' => true,
-            ]
-        );
+                if(!in_array($userx, $usersSlugArrey)){
+                    $usersSlugArrey[] = $userx;
+                }
+            }
+        }
+
+        if ($user) {
+            return response()->json(
+                [
+                    'results' => $usersSlugArrey,
+                    'success' => true
+                ]
+            );
+        } else {
+            return response()->json(
+                [
+                    'results' => 'Nessun risultato trovato',
+                    'success' => false
+                ]
+            );
+        }
     }
 }
