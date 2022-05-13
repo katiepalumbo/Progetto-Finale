@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-
+use App\Item;
 use App\User;
 
 class UserController extends Controller
@@ -22,10 +22,10 @@ class UserController extends Controller
     }
 
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    * Display a listing of the resource.
+    *
+    * @return \Illuminate\Http\Response
+    */
 
     public function filter($filter) {
 
@@ -34,6 +34,7 @@ class UserController extends Controller
 
 
         $users = User::with(['type'])->get();
+
 
         for($i = 0; $i<count($filter); $i++) {
             foreach($users as $user) {
@@ -57,26 +58,50 @@ class UserController extends Controller
 
     }
 
-    public function show($slug)
-    {
-        //$user = User::where('slug', $slug)->first();
-        $user = User::all();
-        $usersSlugArrey = [];
+    public function cart($slug, $cart) {
 
-        foreach($user as $userx) {
+        $cart = explode(",", $cart);
+        $itemsArrey = [];
+        $price = [];
 
-            if ($userx->slug == $slug) {
 
-                if(!in_array($userx, $usersSlugArrey)){
-                    $usersSlugArrey[] = $userx;
+        $items = Item::all();
+
+
+        for($i = 0; $i<count($cart); $i++) {
+            foreach($items as $item) {
+                if ($item->id == $cart[$i]) {
+
+                    $price[] = $item->price;
+
+                    if(!in_array($item, $itemsArrey)){
+                        $itemsArrey[] = $item;
+                    }
                 }
             }
         }
 
+        return response()->json(
+            [
+                'results' => $itemsArrey,
+                'price' => $price,
+                'success'=> true,
+            ]
+        );
+
+    }
+
+    public function show($slug)
+    {
+        $user = User::where('slug', $slug)->first();
+        $items = Item::where('user_id', $user->id)->with(['tags','category'])->get();
+
+
         if ($user) {
             return response()->json(
                 [
-                    'results' => $usersSlugArrey,
+                    'users' => $user,
+                    'items' => $items,
                     'success' => true
                 ]
             );

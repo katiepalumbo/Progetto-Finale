@@ -1,31 +1,51 @@
 <template>
-  <div>
-      <div class="row m-5">
-        <div v-for="user in users" :key="user.name">
-            <div class="card col-12" v-if="user.slug == test">
-                <div class="card-body">
-                    <h5 class="card-title">{{user.restaurant_name}}</h5>
+    <div>
+        <div class="row m-5">
+            <h2>Nome ristorante</h2>
+            <div class="card col-12">
+                <div class="card-body" v-if="users != null">
+                    <h5 class="card-title">{{users.restaurant_name}}</h5>
                 </div>
-                <form @submit.prevent="addToCart()">
-                    <div v-for="item in user.items" :key="item.id">
-                    <!-- <h5>{{item.item_name}}</h5> -->
-                    <input class="form-check-input" type="checkbox" v-model="cart" :value="item.id" :id="'item_' + item.id">
-                    <label class="form-check-label" :for="'item_' + item.id">{{item.item_name}}</label>
-                </div>
-                <button type="submit" class="btn btn-primary">aggiungi al carrello</button>
-                </form>
             </div>
-        </div>
-        <h1>carrello</h1>
-        <div class="card col-12">
-            
-        </div>
 
-         <!-- <div v-for="item in user.item" :key="item.id">
-            <h5>{{item.item_name}}</h5>
-        </div> -->
-      </div>
-  </div>
+            <h2 class="mt-4">Menù</h2>
+            <h4>seleziona i piatti che desideri</h4>
+            <!-- <div class="card col-12">
+                <div v-for="item in items" :key='item.id'>
+                    <h5 class="card-title">{{item.item_name}}</h5>
+                </div>
+            </div> -->
+            <div class="flex">
+
+                <form action="" class="row first-box" @submit.prevent="addToCart()">
+                    <div class="p-2 col-4" v-for="item in items" :key="item.id">
+                        <div class="card p-4">
+                            <h1>{{item.item_name}}</h1>
+                            <span class="py-2">{{item.description}}</span>
+                            <h4 class="py-2">{{item.price}}</h4>
+                            <span>AGGIUNGI PIATTO</span>
+                            <input class="form-check-input box" type="checkbox" v-model="cart" :value="item.id" :id="'item_' + item.id">
+                        </div>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-warning mt-4">AGGIUNGI PIATTI AL CARRELLO</button>
+                    </div>
+                </form>
+
+                <div class="carrello">
+                    <h1 class="m-2">carrello</h1>
+                    <div class="card" v-for="dato in dati" :key="dato.name">
+                        <div v-if="dato.visible = 1">
+                            <h3>{{dato.item_name}}</h3>
+                            <h5>{{dato.price}}</h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
 </template>
 
 <script>
@@ -33,36 +53,27 @@ export default {
     name: 'RestaurantMenu',
     data: function(){
         return {
-            element: null,
             users: [],
+            items: [],
+            dati: [],
             test: this.$route.params.slug,
             cart:[],
+            aaa: []
         }
     },
 
     methods: {
-        // getSlug(){
-        //     const slug = this.$route.params.slug;
-        //     // console.log(slug)
-        //     // console.log('/api/users/' + slug)
+        getSlug(){
+            const slug = this.$route.params.slug;
+            // console.log(slug)
+            // console.log('/api/users/' + slug)
 
-        //     axios.get('/api/users/' + slug).then(response => {
-        //         this.element = response.data;
-        //         console.log(response.data)
-        //         console.log('ddddddd')
-        //     })
-
-        //     .catch(error => {
-        //         console.log(error);
-        //     })
-
-        // },
-
-        getUsers(){
-            axios.get('/api/users').then(response => {
-                this.users = response.data.results;
-                console.log(response.data.results)
-                console.log('aaaaaaaaaaaaa')
+            axios.get('/api/user/' + slug).then(response => {
+                this.users = response.data.users;
+                this.items = response.data.items;
+                // console.log(response.data.users);
+                console.log(response.data.items);
+                // console.log('ddddddd');
             })
 
             .catch(error => {
@@ -72,32 +83,65 @@ export default {
         },
 
         addToCart(){
-            this.users = [];
+            this.itemsCart = []
+            const slug = this.$route.params.slug;
+            console.log('/api/user/' + slug + '/' + this.cart)
 
-                console.log('api/users/'+ this.cart)
+            if(this.cart.length > 0){
+                axios.get('/api/user/' + slug + '/' + this.cart) .then(response =>{
+                    this.dati = response.data.results;
+                    console.log(response.data.price);
 
-                if(this.selected.length > 0){
-                    axios.get('api/users/'+ this.cart) .then(response =>{
-                        this.users = response.data.results;
-                        //console.log(response.data.results)
-                        //console.log('bbbbbbbbbbbb')
-                    })
-                }else{
-                    this.getUsers();
-                }
+                    const array1 = [1, 2, 3, 4];
+
+                    const initialValue = 0;
+                    const sumWithInitial = array1.reduce(
+                    (previousValue, currentValue) => previousValue + currentValue,
+                        initialValue
+                    );
+
+                    console.log(sumWithInitial);
+
+                })
+            }else{
+                this.items;
+            }
 
         }
-
     },
 
-    mounted() {
-        // this.getSlug();
-        this.getUsers();
-        // this.getItems();
+    created() {
+        this.getSlug();
     }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+.flex{
+    display: flex;
+
+    .first-box{
+        width: 60%;
+        padding: 0px 30px;
+        overflow-y: auto;
+    }
+    .carrello{
+        width: 40%;
+        height: 510px;
+        background-color: aqua;
+        overflow-y: auto;
+        margin: 10px 0px;
+
+        .card{
+            margin: 10px;
+        }
+    }
+
+    .box{
+        width: 100%;
+        height: 30px;
+        text-align: center;
+    }
+}
 
 </style>
