@@ -54,11 +54,12 @@ class ItemController extends Controller
                 'item_name' => 'required|min:2',
                 'category_id' => 'required|exists:categories,id',
                 'tags' => 'nullable|exists:tags,id',
-                'price' => 'required',
+                'price' => 'required|numeric',
                 'description' => 'nullable',
                 'image' => 'nullable|max:2048|',
                 "visible" => "required",
             ]
+
         );
 
         $data = $request->all();
@@ -86,12 +87,11 @@ class ItemController extends Controller
         } else if($data["visible"]=='yes')  {
             $new_item->visible = true;
         }
+            $data['slug'] = $slug;
 
-        $data['slug'] = $slug;
+            $new_item->fill($data);
 
-        $new_item->fill($data);
-
-        $new_item->save();
+            $new_item->save();
 
         $new_item->tags()->sync($data['tags']);
 
