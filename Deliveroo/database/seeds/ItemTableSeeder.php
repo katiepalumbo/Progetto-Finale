@@ -1,13 +1,11 @@
 <?php
 
+use Illuminate\Database\Seeder;
 use App\Item;
 use Faker\Generator as Faker;
-use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
-use Symfony\Component\HttpFoundation\File\File;
 
-class ItemsTableSeeder extends Seeder
+class ItemTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,7 +15,7 @@ class ItemsTableSeeder extends Seeder
     public function run(Faker $faker)
     {
         for($i=0; $i<160; $i++){
-            
+
             $newItem = new Item();
 
             $newItem->item_name = ucfirst($faker->word());
@@ -38,14 +36,11 @@ class ItemsTableSeeder extends Seeder
             $newItem->visible = rand(true, false);
 
             $newItem->image = url('https://www.pexels.com/photo/flat-lay-photography-of-vegetable-salad-on-plate-1640777/');
-            
+
 
 
 
             $newItem->save();
         }
-
-        
-
-}
+    }
 }

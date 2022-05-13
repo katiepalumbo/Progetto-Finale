@@ -46,7 +46,7 @@
 
                     <h1 class="mt-4">Totale</h1>
                     <h3 v-if="totale != null">{{totale}}.00</h3>
-                    <router-link class="btn btn-primary"  :to="{name: 'checkout', params:{cart: newCart}}">vai al pagamento</router-link>
+                    <router-link class="btn btn-primary"  :to="{name: 'checkout', params:{cart: newCart, price: totale}}">vai al pagamento</router-link>
                 </div>
 
             </div>
@@ -76,7 +76,7 @@ export default {
         }
     },
 
-    
+
 
     methods: {
         getSlug(){
@@ -120,25 +120,27 @@ export default {
                     this.totale = sumWithInitial;
                 })
             }else{
-                
+
                 this.dati = [];
             }
 
         },
 
-        
+
     },
     mounted() {
         if (localStorage.cart) {
         this.newCart = localStorage.cart;
+        this.price = this.totale;
         }
     },
+
     watch: {
         cart(newCart) {
         localStorage.cart = newCart;
         console.log(localStorage);
         }
-        
+
     },
 
     created() {
