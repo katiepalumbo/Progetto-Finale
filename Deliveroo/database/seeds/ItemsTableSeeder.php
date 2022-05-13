@@ -5,6 +5,7 @@ use Faker\Generator as Faker;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
+use Symfony\Component\HttpFoundation\File\File;
 
 class ItemsTableSeeder extends Seeder
 {
@@ -35,9 +36,16 @@ class ItemsTableSeeder extends Seeder
             $newItem->description = $faker->paragraph();
 
             $newItem->visible = rand(true, false);
-            $newItem->image = 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?cs=srgb&dl=pexels-ella-olsson-1640777.jpg&fm=jpg';
+
+            $newItem->image = url('https://www.pexels.com/photo/flat-lay-photography-of-vegetable-salad-on-plate-1640777/');
+            
+
+
+
             $newItem->save();
         }
+
+        
 
 }
 }
