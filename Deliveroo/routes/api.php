@@ -26,5 +26,7 @@ Route::get('/users','Api\UserController@index');
 
 Route::get('/users/{filter}','Api\UserController@filter');
 
-Route::get('/users/{slug}', 'Api\UserController@show');
+Route::get('/user/{slug}', 'Api\UserController@show');
+
+Route::get('/user/{slug}/{cart}','Api\UserController@cart');
 
