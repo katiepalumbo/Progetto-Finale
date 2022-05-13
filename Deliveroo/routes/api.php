@@ -20,6 +20,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/items','Api\ItemController@index');
 
+Route::get('/user/{slug}/{cart}/{filtcart}','Api\ItemController@filtcart');
+
 Route::get('/types','Api\TypeController@index');
 
 Route::get('/users','Api\UserController@index');

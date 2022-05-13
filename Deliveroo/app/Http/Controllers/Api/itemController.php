@@ -55,6 +55,35 @@ class itemController extends Controller
         //
     }
 
+    public function filtcart($slug, $cart, $filtcart){
+
+        $filtcart = explode(",", $filtcart);
+        $aaaaaaArrey = [];
+
+
+        $items = Item::all();
+
+
+        for($i = 0; $i<count($filtcart); $i++) {
+            foreach($items as $item) {
+                if ($item->id == $filtcart[$i]) {
+
+                    if(!in_array($item, $aaaaaaArrey)){
+                        $aaaaaaArrey[] = $item;
+                    }
+                }
+            }
+        }
+
+        return response()->json(
+            [
+                'results' => $aaaaaaArrey,
+                'success'=> true,
+            ]
+        );
+
+    }
+
     /**
      * Display the specified resource.
      *
@@ -70,7 +99,7 @@ class itemController extends Controller
         } else {
             $item->image = url('img/fallback_img.jpg');
         }
-        
+
         if($item) {
             return response()->json(
                 [
@@ -88,7 +117,7 @@ class itemController extends Controller
 
             );
         }
-        
+
     }
 
     /**
