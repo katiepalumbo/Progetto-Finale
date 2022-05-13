@@ -2235,6 +2235,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'RestaurantMenu',
   data: function data() {
@@ -2242,7 +2251,7 @@ __webpack_require__.r(__webpack_exports__);
       element: null,
       users: [],
       test: this.$route.params.slug,
-      items: []
+      cart: []
     };
   },
   methods: {
@@ -2269,17 +2278,22 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (error) {
         console.log(error);
       });
-    } // getItems(){
-    //     axios.get('/api/items').then(response => {
-    //         this.items = response.data.results.data;
-    //         // console.log(response.data.results.data)
-    //         // console.log('items')
-    //     })
-    //     .catch(error => {
-    //         console.log(error);
-    //     })
-    // },
+    },
+    addToCart: function addToCart() {
+      var _this2 = this;
 
+      this.users = [];
+      console.log('api/users/' + this.cart);
+
+      if (this.selected.length > 0) {
+        axios.get('api/users/' + this.cart).then(function (response) {
+          _this2.users = response.data.results; //console.log(response.data.results)
+          //console.log('bbbbbbbbbbbb')
+        });
+      } else {
+        this.getUsers();
+      }
+    }
   },
   mounted: function mounted() {
     // this.getSlug();
@@ -3209,31 +3223,102 @@ var render = function () {
     _c(
       "div",
       { staticClass: "row m-5" },
-      _vm._l(_vm.users, function (user) {
-        return _c("div", { key: user.name }, [
-          user.slug == _vm.test
-            ? _c(
-                "div",
-                { staticClass: "card col-4" },
-                [
+      [
+        _vm._l(_vm.users, function (user) {
+          return _c("div", { key: user.name }, [
+            user.slug == _vm.test
+              ? _c("div", { staticClass: "card col-12" }, [
                   _c("div", { staticClass: "card-body" }, [
                     _c("h5", { staticClass: "card-title" }, [
                       _vm._v(_vm._s(user.restaurant_name)),
                     ]),
                   ]),
                   _vm._v(" "),
-                  _vm._l(user.items, function (item) {
-                    return _c("div", { key: item.id }, [
-                      _c("h5", [_vm._v(_vm._s(item.item_name))]),
-                    ])
-                  }),
-                ],
-                2
-              )
-            : _vm._e(),
-        ])
-      }),
-      0
+                  _c(
+                    "form",
+                    {
+                      on: {
+                        submit: function ($event) {
+                          $event.preventDefault()
+                          return _vm.addToCart()
+                        },
+                      },
+                    },
+                    [
+                      _vm._l(user.items, function (item) {
+                        return _c("div", { key: item.id }, [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.cart,
+                                expression: "cart",
+                              },
+                            ],
+                            staticClass: "form-check-input",
+                            attrs: { type: "checkbox", id: "item_" + item.id },
+                            domProps: {
+                              value: item.id,
+                              checked: Array.isArray(_vm.cart)
+                                ? _vm._i(_vm.cart, item.id) > -1
+                                : _vm.cart,
+                            },
+                            on: {
+                              change: function ($event) {
+                                var $$a = _vm.cart,
+                                  $$el = $event.target,
+                                  $$c = $$el.checked ? true : false
+                                if (Array.isArray($$a)) {
+                                  var $$v = item.id,
+                                    $$i = _vm._i($$a, $$v)
+                                  if ($$el.checked) {
+                                    $$i < 0 && (_vm.cart = $$a.concat([$$v]))
+                                  } else {
+                                    $$i > -1 &&
+                                      (_vm.cart = $$a
+                                        .slice(0, $$i)
+                                        .concat($$a.slice($$i + 1)))
+                                  }
+                                } else {
+                                  _vm.cart = $$c
+                                }
+                              },
+                            },
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "label",
+                            {
+                              staticClass: "form-check-label",
+                              attrs: { for: "item_" + item.id },
+                            },
+                            [_vm._v(_vm._s(item.item_name))]
+                          ),
+                        ])
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary",
+                          attrs: { type: "submit" },
+                        },
+                        [_vm._v("aggiungi al carrello")]
+                      ),
+                    ],
+                    2
+                  ),
+                ])
+              : _vm._e(),
+          ])
+        }),
+        _vm._v(" "),
+        _c("h1", [_vm._v("carrello")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "card col-12" }),
+      ],
+      2
     ),
   ])
 }
