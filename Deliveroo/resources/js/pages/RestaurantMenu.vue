@@ -15,9 +15,10 @@
                     <h5 class="card-title">{{item.item_name}}</h5>
                 </div>
             </div> -->
+            <div class="flex">
 
-            <form action="" class="row" @submit.prevent="addToCart()">
-                    <div class="p-2 col-3" v-for="item in items" :key="item.id">
+                <form action="" class="row first-box" @submit.prevent="addToCart()">
+                    <div class="p-2 col-4" v-for="item in items" :key="item.id">
                         <div class="card p-4">
                             <h1>{{item.item_name}}</h1>
                             <span class="py-2">{{item.description}}</span>
@@ -29,17 +30,20 @@
                     <div>
                         <button type="submit" class="btn btn-warning mt-4">AGGIUNGI PIATTI AL CARRELLO</button>
                     </div>
-            </form>
+                </form>
 
-            <div class="carrello">
-                <h1>carrello</h1>
-                <div class="card"  v-for="dato in dati" :key="dato.name">
-                    <div v-if="dato.visible = 1">
-                        <h3>{{dato.item_name}}</h3>
-                        <h5>{{dato.price}}</h5>
+                <div class="carrello">
+                    <h1 class="m-2">carrello</h1>
+                    <div class="card" v-for="dato in dati" :key="dato.name">
+                        <div v-if="dato.visible = 1">
+                            <h3>{{dato.item_name}}</h3>
+                            <h5>{{dato.price}}</h5>
+                        </div>
                     </div>
                 </div>
+
             </div>
+
         </div>
     </div>
 </template>
@@ -113,20 +117,31 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.flex{
+    display: flex;
 
-.carrello{
-    width: 600px;
-    height: 300px;
-    position: absolute;
-    bottom: 0;
-    right: 100px;
-    background-color: aqua;
-    overflow-y: auto;
+    .first-box{
+        width: 60%;
+        padding: 0px 30px;
+        overflow-y: auto;
+    }
+    .carrello{
+        width: 40%;
+        height: 510px;
+        background-color: aqua;
+        overflow-y: auto;
+        margin: 10px 0px;
+
+        .card{
+            margin: 10px;
+        }
+    }
+
+    .box{
+        width: 100%;
+        height: 30px;
+        text-align: center;
+    }
 }
 
-.box{
-    width: 100%;
-    height: 30px;
-    text-align: center;
-}
 </style>

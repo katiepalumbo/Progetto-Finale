@@ -2260,6 +2260,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'RestaurantMenu',
   data: function data() {
@@ -2364,7 +2368,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".carrello[data-v-14400205] {\n  width: 600px;\n  height: 300px;\n  position: absolute;\n  bottom: 0;\n  right: 100px;\n  background-color: aqua;\n  overflow-y: auto;\n}\n.box[data-v-14400205] {\n  width: 100%;\n  height: 30px;\n  text-align: center;\n}", ""]);
+exports.push([module.i, ".flex[data-v-14400205] {\n  display: flex;\n}\n.flex .first-box[data-v-14400205] {\n  width: 60%;\n  padding: 0px 30px;\n  overflow-y: auto;\n}\n.flex .carrello[data-v-14400205] {\n  width: 40%;\n  height: 510px;\n  background-color: aqua;\n  overflow-y: auto;\n  margin: 10px 0px;\n}\n.flex .carrello .card[data-v-14400205] {\n  margin: 10px;\n}\n.flex .box[data-v-14400205] {\n  width: 100%;\n  height: 30px;\n  text-align: center;\n}", ""]);
 
 // exports
 
@@ -3897,100 +3901,104 @@ var render = function () {
       _vm._v(" "),
       _c("h4", [_vm._v("seleziona i piatti che desideri")]),
       _vm._v(" "),
-      _c(
-        "form",
-        {
-          staticClass: "row",
-          attrs: { action: "" },
-          on: {
-            submit: function ($event) {
-              $event.preventDefault()
-              return _vm.addToCart()
+      _c("div", { staticClass: "flex" }, [
+        _c(
+          "form",
+          {
+            staticClass: "row first-box",
+            attrs: { action: "" },
+            on: {
+              submit: function ($event) {
+                $event.preventDefault()
+                return _vm.addToCart()
+              },
             },
           },
-        },
-        [
-          _vm._l(_vm.items, function (item) {
-            return _c("div", { key: item.id, staticClass: "p-2 col-3" }, [
-              _c("div", { staticClass: "card p-4" }, [
-                _c("h1", [_vm._v(_vm._s(item.item_name))]),
-                _vm._v(" "),
-                _c("span", { staticClass: "py-2" }, [
-                  _vm._v(_vm._s(item.description)),
-                ]),
-                _vm._v(" "),
-                _c("h4", { staticClass: "py-2" }, [_vm._v(_vm._s(item.price))]),
-                _vm._v(" "),
-                _c("span", [_vm._v("AGGIUNGI PIATTO")]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.cart,
-                      expression: "cart",
+          [
+            _vm._l(_vm.items, function (item) {
+              return _c("div", { key: item.id, staticClass: "p-2 col-4" }, [
+                _c("div", { staticClass: "card p-4" }, [
+                  _c("h1", [_vm._v(_vm._s(item.item_name))]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "py-2" }, [
+                    _vm._v(_vm._s(item.description)),
+                  ]),
+                  _vm._v(" "),
+                  _c("h4", { staticClass: "py-2" }, [
+                    _vm._v(_vm._s(item.price)),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", [_vm._v("AGGIUNGI PIATTO")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.cart,
+                        expression: "cart",
+                      },
+                    ],
+                    staticClass: "form-check-input box",
+                    attrs: { type: "checkbox", id: "item_" + item.id },
+                    domProps: {
+                      value: item.id,
+                      checked: Array.isArray(_vm.cart)
+                        ? _vm._i(_vm.cart, item.id) > -1
+                        : _vm.cart,
                     },
-                  ],
-                  staticClass: "form-check-input box",
-                  attrs: { type: "checkbox", id: "item_" + item.id },
-                  domProps: {
-                    value: item.id,
-                    checked: Array.isArray(_vm.cart)
-                      ? _vm._i(_vm.cart, item.id) > -1
-                      : _vm.cart,
-                  },
-                  on: {
-                    change: function ($event) {
-                      var $$a = _vm.cart,
-                        $$el = $event.target,
-                        $$c = $$el.checked ? true : false
-                      if (Array.isArray($$a)) {
-                        var $$v = item.id,
-                          $$i = _vm._i($$a, $$v)
-                        if ($$el.checked) {
-                          $$i < 0 && (_vm.cart = $$a.concat([$$v]))
+                    on: {
+                      change: function ($event) {
+                        var $$a = _vm.cart,
+                          $$el = $event.target,
+                          $$c = $$el.checked ? true : false
+                        if (Array.isArray($$a)) {
+                          var $$v = item.id,
+                            $$i = _vm._i($$a, $$v)
+                          if ($$el.checked) {
+                            $$i < 0 && (_vm.cart = $$a.concat([$$v]))
+                          } else {
+                            $$i > -1 &&
+                              (_vm.cart = $$a
+                                .slice(0, $$i)
+                                .concat($$a.slice($$i + 1)))
+                          }
                         } else {
-                          $$i > -1 &&
-                            (_vm.cart = $$a
-                              .slice(0, $$i)
-                              .concat($$a.slice($$i + 1)))
+                          _vm.cart = $$c
                         }
-                      } else {
-                        _vm.cart = $$c
-                      }
+                      },
                     },
-                  },
-                }),
-              ]),
-            ])
-          }),
-          _vm._v(" "),
-          _vm._m(0),
-        ],
-        2
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "carrello" },
-        [
-          _c("h1", [_vm._v("carrello")]),
-          _vm._v(" "),
-          _vm._l(_vm.dati, function (dato) {
-            return _c("div", { key: dato.name, staticClass: "card" }, [
-              (dato.visible = 1)
-                ? _c("div", [
-                    _c("h3", [_vm._v(_vm._s(dato.item_name))]),
-                    _vm._v(" "),
-                    _c("h5", [_vm._v(_vm._s(dato.price))]),
-                  ])
-                : _vm._e(),
-            ])
-          }),
-        ],
-        2
-      ),
+                  }),
+                ]),
+              ])
+            }),
+            _vm._v(" "),
+            _vm._m(0),
+          ],
+          2
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "carrello" },
+          [
+            _c("h1", { staticClass: "m-2" }, [_vm._v("carrello")]),
+            _vm._v(" "),
+            _vm._l(_vm.dati, function (dato) {
+              return _c("div", { key: dato.name, staticClass: "card" }, [
+                (dato.visible = 1)
+                  ? _c("div", [
+                      _c("h3", [_vm._v(_vm._s(dato.item_name))]),
+                      _vm._v(" "),
+                      _c("h5", [_vm._v(_vm._s(dato.price))]),
+                    ])
+                  : _vm._e(),
+              ])
+            }),
+          ],
+          2
+        ),
+      ]),
     ]),
   ])
 }
