@@ -2047,9 +2047,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'CheckOut'
-});
+}); // console.log(this.$route.params.slug.cart)
 
 /***/ }),
 
@@ -2272,6 +2276,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'RestaurantMenu',
   data: function data() {
@@ -2282,7 +2287,7 @@ __webpack_require__.r(__webpack_exports__);
       test: this.$route.params.slug,
       cart: [],
       totale: null,
-      name: ""
+      newCart: []
     };
   },
   methods: {
@@ -2327,7 +2332,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     if (localStorage.cart) {
-      this.name = localStorage.cart;
+      this.newCart = localStorage.cart;
     }
   },
   watch: {
@@ -3694,7 +3699,11 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("\n    Carrello\n")])
+  return _c("div", [
+    _c("div", [
+      _vm._v("\n      " + _vm._s(this.$route.params.cart) + "\n    "),
+    ]),
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -3918,23 +3927,6 @@ var render = function () {
           : _vm._e(),
       ]),
       _vm._v(" "),
-      _c("h2", { staticClass: "mt-4" }, [_vm._v("Menù")]),
-      _vm._v(" "),
-      _c("h4", [_vm._v("seleziona i piatti che desideri")]),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "card col-12" },
-        _vm._l(_vm.items, function (item) {
-          return _c("div", { key: item.id }, [
-            _c("h5", { staticClass: "card-title" }, [
-              _vm._v(_vm._s(item.item_name)),
-            ]),
-          ])
-        }),
-        0
-      ),
-      _vm._v(" -->\n         "),
       _c("div", { staticClass: "flex" }, [
         _c(
           "form",
@@ -4012,32 +4004,48 @@ var render = function () {
           2
         ),
         _vm._v(" "),
-        _c("div", { staticClass: "carrello" }, [
-          _c("h1", { staticClass: "m-2" }, [_vm._v("carrello")]),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "card-box" },
-            _vm._l(_vm.dati, function (dato) {
-              return _c("div", { key: dato.name, staticClass: "card" }, [
-                (dato.visible = 1)
-                  ? _c("div", [
-                      _c("h3", [_vm._v(_vm._s(dato.item_name))]),
-                      _vm._v(" "),
-                      _c("h5", [_vm._v(_vm._s(dato.price))]),
-                    ])
-                  : _vm._e(),
-              ])
-            }),
-            0
-          ),
-          _vm._v(" "),
-          _c("h1", { staticClass: "mt-4" }, [_vm._v("Totale")]),
-          _vm._v(" "),
-          _vm.totale != null
-            ? _c("h3", [_vm._v(_vm._s(_vm.totale) + ".00")])
-            : _vm._e(),
-        ]),
+        _c(
+          "div",
+          { staticClass: "carrello" },
+          [
+            _c("h1", { staticClass: "m-2" }, [_vm._v("carrello")]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "card-box" },
+              _vm._l(_vm.dati, function (dato) {
+                return _c("div", { key: dato.name, staticClass: "card" }, [
+                  (dato.visible = 1)
+                    ? _c("div", [
+                        _c("h3", [_vm._v(_vm._s(dato.item_name))]),
+                        _vm._v(" "),
+                        _c("h5", [_vm._v(_vm._s(dato.price))]),
+                      ])
+                    : _vm._e(),
+                ])
+              }),
+              0
+            ),
+            _vm._v(" "),
+            _c("h1", { staticClass: "mt-4" }, [_vm._v("Totale")]),
+            _vm._v(" "),
+            _vm.totale != null
+              ? _c("h3", [_vm._v(_vm._s(_vm.totale) + ".00")])
+              : _vm._e(),
+            _vm._v(" "),
+            _c(
+              "router-link",
+              {
+                staticClass: "btn btn-primary",
+                attrs: {
+                  to: { name: "checkout", params: { cart: _vm.newCart } },
+                },
+              },
+              [_vm._v("vai al pagamento")]
+            ),
+          ],
+          1
+        ),
       ]),
     ]),
   ])
@@ -20020,15 +20028,14 @@ __webpack_require__.r(__webpack_exports__);
 /*!***********************************************!*\
   !*** ./resources/js/pages/RestaurantMenu.vue ***!
   \***********************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _RestaurantMenu_vue_vue_type_template_id_14400205_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RestaurantMenu.vue?vue&type=template&id=14400205&scoped=true& */ "./resources/js/pages/RestaurantMenu.vue?vue&type=template&id=14400205&scoped=true&");
 /* harmony import */ var _RestaurantMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RestaurantMenu.vue?vue&type=script&lang=js& */ "./resources/js/pages/RestaurantMenu.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _RestaurantMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _RestaurantMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _RestaurantMenu_vue_vue_type_style_index_0_id_14400205_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./RestaurantMenu.vue?vue&type=style&index=0&id=14400205&lang=scss&scoped=true& */ "./resources/js/pages/RestaurantMenu.vue?vue&type=style&index=0&id=14400205&lang=scss&scoped=true&");
+/* empty/unused harmony star reexport *//* harmony import */ var _RestaurantMenu_vue_vue_type_style_index_0_id_14400205_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./RestaurantMenu.vue?vue&type=style&index=0&id=14400205&lang=scss&scoped=true& */ "./resources/js/pages/RestaurantMenu.vue?vue&type=style&index=0&id=14400205&lang=scss&scoped=true&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -20060,7 +20067,7 @@ component.options.__file = "resources/js/pages/RestaurantMenu.vue"
 /*!************************************************************************!*\
   !*** ./resources/js/pages/RestaurantMenu.vue?vue&type=script&lang=js& ***!
   \************************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -20140,7 +20147,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
     name: 'item',
     component: _pages_Item__WEBPACK_IMPORTED_MODULE_3__["default"]
   }, {
-    path: '/checkout',
+    path: '/menu/:slug/:cart',
     name: 'checkout',
     component: _pages_CheckOut__WEBPACK_IMPORTED_MODULE_4__["default"]
   }, {

@@ -8,7 +8,7 @@
                 </div>
             </div>
 
-            <h2 class="mt-4">Menù</h2>
+            <!-- <h2 class="mt-4">Menù</h2>
             <h4>seleziona i piatti che desideri</h4>
              <div class="card col-12">
                 <div v-for="item in items" :key='item.id'>
@@ -46,6 +46,7 @@
 
                     <h1 class="mt-4">Totale</h1>
                     <h3 v-if="totale != null">{{totale}}.00</h3>
+                    <router-link class="btn btn-primary"  :to="{name: 'checkout', params:{cart: newCart}}">vai al pagamento</router-link>
                 </div>
 
             </div>
@@ -70,7 +71,7 @@ export default {
             test: this.$route.params.slug,
             cart:[],
             totale: null,
-            name:""
+            newCart:[]
 
         }
     },
@@ -129,7 +130,7 @@ export default {
     },
     mounted() {
         if (localStorage.cart) {
-        this.name = localStorage.cart;
+        this.newCart = localStorage.cart;
         }
     },
     watch: {
