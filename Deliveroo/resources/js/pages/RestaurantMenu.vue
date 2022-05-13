@@ -10,12 +10,12 @@
 
             <h2 class="mt-4">Menù</h2>
             <h4>seleziona i piatti che desideri</h4>
-            <!-- <div class="card col-12">
+             <div class="card col-12">
                 <div v-for="item in items" :key='item.id'>
                     <h5 class="card-title">{{item.item_name}}</h5>
                 </div>
             </div> -->
-            <div class="flex">
+             <div class="flex">
 
                 <form action="" class="row first-box" @submit.prevent="addToCart()">
                     <div class="p-2 col-4" v-for="item in items" :key="item.id">
@@ -50,11 +50,16 @@
 
             </div>
 
+
+
         </div>
     </div>
 </template>
 
 <script>
+
+
+
 export default {
     name: 'RestaurantMenu',
     data: function(){
@@ -64,10 +69,13 @@ export default {
             dati: [],
             test: this.$route.params.slug,
             cart:[],
-            totale: null
+            totale: null,
+            name:""
 
         }
     },
+
+    
 
     methods: {
         getSlug(){
@@ -115,7 +123,21 @@ export default {
                 this.dati = [];
             }
 
+        },
+
+        
+    },
+    mounted() {
+        if (localStorage.cart) {
+        this.name = localStorage.cart;
         }
+    },
+    watch: {
+        cart(newCart) {
+        localStorage.cart = newCart;
+        console.log(localStorage);
+        }
+        
     },
 
     created() {

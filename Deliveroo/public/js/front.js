@@ -2270,6 +2270,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'RestaurantMenu',
   data: function data() {
@@ -2279,7 +2281,8 @@ __webpack_require__.r(__webpack_exports__);
       dati: [],
       test: this.$route.params.slug,
       cart: [],
-      totale: null
+      totale: null,
+      name: ""
     };
   },
   methods: {
@@ -2320,6 +2323,17 @@ __webpack_require__.r(__webpack_exports__);
       } else {
         this.dati = [];
       }
+    }
+  },
+  mounted: function mounted() {
+    if (localStorage.cart) {
+      this.name = localStorage.cart;
+    }
+  },
+  watch: {
+    cart: function cart(newCart) {
+      localStorage.cart = newCart;
+      console.log(localStorage);
     }
   },
   created: function created() {
@@ -3908,6 +3922,19 @@ var render = function () {
       _vm._v(" "),
       _c("h4", [_vm._v("seleziona i piatti che desideri")]),
       _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "card col-12" },
+        _vm._l(_vm.items, function (item) {
+          return _c("div", { key: item.id }, [
+            _c("h5", { staticClass: "card-title" }, [
+              _vm._v(_vm._s(item.item_name)),
+            ]),
+          ])
+        }),
+        0
+      ),
+      _vm._v(" -->\n         "),
       _c("div", { staticClass: "flex" }, [
         _c(
           "form",
@@ -19993,14 +20020,15 @@ __webpack_require__.r(__webpack_exports__);
 /*!***********************************************!*\
   !*** ./resources/js/pages/RestaurantMenu.vue ***!
   \***********************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _RestaurantMenu_vue_vue_type_template_id_14400205_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RestaurantMenu.vue?vue&type=template&id=14400205&scoped=true& */ "./resources/js/pages/RestaurantMenu.vue?vue&type=template&id=14400205&scoped=true&");
 /* harmony import */ var _RestaurantMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RestaurantMenu.vue?vue&type=script&lang=js& */ "./resources/js/pages/RestaurantMenu.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _RestaurantMenu_vue_vue_type_style_index_0_id_14400205_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./RestaurantMenu.vue?vue&type=style&index=0&id=14400205&lang=scss&scoped=true& */ "./resources/js/pages/RestaurantMenu.vue?vue&type=style&index=0&id=14400205&lang=scss&scoped=true&");
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _RestaurantMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _RestaurantMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _RestaurantMenu_vue_vue_type_style_index_0_id_14400205_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./RestaurantMenu.vue?vue&type=style&index=0&id=14400205&lang=scss&scoped=true& */ "./resources/js/pages/RestaurantMenu.vue?vue&type=style&index=0&id=14400205&lang=scss&scoped=true&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -20032,7 +20060,7 @@ component.options.__file = "resources/js/pages/RestaurantMenu.vue"
 /*!************************************************************************!*\
   !*** ./resources/js/pages/RestaurantMenu.vue?vue&type=script&lang=js& ***!
   \************************************************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -20205,7 +20233,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\pizze\Desktop\BOOLEAN\PROGETTO_FINALE\Progetto-Finale\Deliveroo\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\maion\Desktop\Progetto-Finale\Deliveroo\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })
