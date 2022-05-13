@@ -1,71 +1,95 @@
 <template>
-  <section class="container-fluid contanier-jumbo">
-        <div class="jumbo-title">
-            <span>Benvenuti in Deliveboo!</span>
+    <!-- inizio jumbotron -->
+    <div class="jumbotron-container">
+        <div class="col-8 m-auto">
+            <div class="row jumbotron-contents col-7">
+                <h1 class="jumbotron_title">Cosa ti prendi?</h1>
+                <p class="jumbotron_subtitle">Con Deliveboo puoi mangiare quello che vuoi, quando vuoi, dove vuoi</p>
+                <div class="col">
+                    <router-link class="text-white button"  :to="{name: 'menu'}">INIZIA SUBITO!</router-link>
+                </div>
+            </div>
+
         </div>
-  </section>
+
+    </div>
+
 </template>
 
 <script>
 export default {
+        data() {
+            return {
+                navLinks: [
+                            {
+                                to : 'menu',
+                                name : 'Menù',
+                            },
+                        ]
+            }
+        }
 
 }
 </script>
 
-<style lang="scss">
-    .contanier-jumbo {
-        display: flex;
-        justify-content: center;
-        height: 400px;
+<style scoped lang="scss">
 
-        .box-carousel {
-            width: 400px;
+@import '../../sass/_variables.scss';
+
+//all jumbotron rules
+
+.jumbotron-container {
+    min-height: 450px;
+    background-image: url('../assets/images/food.jpg');
+    background-size: cover;
+
+    .jumbotron-contents {
+        //color: $third;
+        vertical-align: middle;
+        transform: translateY(50%);
+        transform: translateX(100%);
+        font-size: xx-large;
+        padding: 10px;
+        
+
+
+        .jumbotron_title {
+            font-size: 95px;
+            font-weight: 700;
+            color: $purple;
+            margin-top: 15px;
         }
-    
-        .jumbo-title {
-            position: relative;
-            width: 510px;
-            height: fit-content;
-            margin-top: 40px;
-            text-align: center;
+
+        .jumbotron_subtitle {
+            font-size: 16px;
+            font-weight: 400;
+            color: #9538f2;
+        }
+
+        .button {
+            //@include all_caps_button;
+            display: inline-block;
+            background-color: #9538f2;
+            padding: 6px 16px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #fff;
+            border-radius: 5px;
+            //box-shadow: 0 4px 0 #7633b9;
+            transition: all 0.3s;
+            margin-left: 10px;
+            font-size: 12px;
+            font-weight: 700;
+            &:hover {
+                color: $orange;
+            }
 
             span {
-                font-size: 45px;
-                color: #FF4718;
-            }
-        }
-
-        .jumbo-title::before {
-            content: '';
-            position: absolute;
-            width: 0;
-            left: 0;
-            top: 10px;
-            height: 50px;
-            background-color: #8559b2;
-            opacity: 0.6;
-            border-radius: 5px;
-            animation: reveal 1s ease-out 0.5s forwards;
-            z-index: 1;
-        }
-
-        @keyframes reveal {
-            0% {
-                left: 0;
-                right: 100%;
-                width: 0;
-            }
-            50% {
-                left: 0;
-                right: 0;
-                width: 100%;
-            }
-            100% {
-                left: 100%;
-                right: 0;
-                width: 0;
+                padding-left: 10px;
             }
         }
     }
 
-</style>>
+}
+
+</style>
