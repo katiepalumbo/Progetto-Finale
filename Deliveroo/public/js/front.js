@@ -2264,6 +2264,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'RestaurantMenu',
   data: function data() {
@@ -2273,7 +2279,7 @@ __webpack_require__.r(__webpack_exports__);
       dati: [],
       test: this.$route.params.slug,
       cart: [],
-      aaa: []
+      totale: null
     };
   },
   methods: {
@@ -2302,16 +2308,17 @@ __webpack_require__.r(__webpack_exports__);
       if (this.cart.length > 0) {
         axios.get('/api/user/' + slug + '/' + this.cart).then(function (response) {
           _this2.dati = response.data.results;
-          console.log(response.data.price);
-          var array1 = [1, 2, 3, 4];
+          console.log(response.data);
+          var array1 = response.data.price;
           var initialValue = 0;
           var sumWithInitial = array1.reduce(function (previousValue, currentValue) {
             return previousValue + currentValue;
           }, initialValue);
           console.log(sumWithInitial);
+          _this2.totale = sumWithInitial;
         });
       } else {
-        this.items;
+        this.dati = [];
       }
     }
   },
@@ -2368,7 +2375,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".flex[data-v-14400205] {\n  display: flex;\n}\n.flex .first-box[data-v-14400205] {\n  width: 60%;\n  padding: 0px 30px;\n  overflow-y: auto;\n}\n.flex .carrello[data-v-14400205] {\n  width: 40%;\n  height: 510px;\n  background-color: aqua;\n  overflow-y: auto;\n  margin: 10px 0px;\n}\n.flex .carrello .card[data-v-14400205] {\n  margin: 10px;\n}\n.flex .box[data-v-14400205] {\n  width: 100%;\n  height: 30px;\n  text-align: center;\n}", ""]);
+exports.push([module.i, ".flex[data-v-14400205] {\n  display: flex;\n}\n.flex .first-box[data-v-14400205] {\n  width: 60%;\n  padding: 0px 30px;\n  overflow-y: auto;\n}\n.flex .carrello[data-v-14400205] {\n  width: 40%;\n  height: 510px;\n  background-color: aqua;\n  margin: 10px 0px;\n}\n.flex .carrello .card-box[data-v-14400205] {\n  height: 320px;\n  overflow-y: auto;\n  margin: 10px;\n}\n.flex .carrello .card[data-v-14400205] {\n  margin: 10px;\n}\n.flex .box[data-v-14400205] {\n  width: 100%;\n  height: 30px;\n  text-align: center;\n}", ""]);
 
 // exports
 
@@ -3978,12 +3985,12 @@ var render = function () {
           2
         ),
         _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "carrello" },
-          [
-            _c("h1", { staticClass: "m-2" }, [_vm._v("carrello")]),
-            _vm._v(" "),
+        _c("div", { staticClass: "carrello" }, [
+          _c("h1", { staticClass: "m-2" }, [_vm._v("carrello")]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "card-box" },
             _vm._l(_vm.dati, function (dato) {
               return _c("div", { key: dato.name, staticClass: "card" }, [
                 (dato.visible = 1)
@@ -3995,9 +4002,15 @@ var render = function () {
                   : _vm._e(),
               ])
             }),
-          ],
-          2
-        ),
+            0
+          ),
+          _vm._v(" "),
+          _c("h1", { staticClass: "mt-4" }, [_vm._v("Totale")]),
+          _vm._v(" "),
+          _vm.totale != null
+            ? _c("h3", [_vm._v(_vm._s(_vm.totale) + ".00")])
+            : _vm._e(),
+        ]),
       ]),
     ]),
   ])
