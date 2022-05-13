@@ -34,12 +34,18 @@
 
                 <div class="carrello">
                     <h1 class="m-2">carrello</h1>
-                    <div class="card" v-for="dato in dati" :key="dato.name">
-                        <div v-if="dato.visible = 1">
-                            <h3>{{dato.item_name}}</h3>
-                            <h5>{{dato.price}}</h5>
+                    <div class="card-box">
+                        <div class="card" v-for="dato in dati" :key="dato.name">
+                            <div v-if="dato.visible = 1">
+                                <h3>{{dato.item_name}}</h3>
+                                <h5>{{dato.price}}</h5>
+                            </div>
                         </div>
+
                     </div>
+
+                    <h1 class="mt-4">Totale</h1>
+                    <h3 v-if="totale != null">{{totale}}.00</h3>
                 </div>
 
             </div>
@@ -58,7 +64,8 @@ export default {
             dati: [],
             test: this.$route.params.slug,
             cart:[],
-            aaa: []
+            totale: null
+
         }
     },
 
@@ -90,9 +97,9 @@ export default {
             if(this.cart.length > 0){
                 axios.get('/api/user/' + slug + '/' + this.cart) .then(response =>{
                     this.dati = response.data.results;
-                    console.log(response.data.price);
+                    console.log(response.data);
 
-                    const array1 = [1, 2, 3, 4];
+                    const array1 = response.data.price;
 
                     const initialValue = 0;
                     const sumWithInitial = array1.reduce(
@@ -101,10 +108,11 @@ export default {
                     );
 
                     console.log(sumWithInitial);
-
+                    this.totale = sumWithInitial;
                 })
             }else{
-                this.items;
+                
+                this.dati = [];
             }
 
         }
@@ -129,11 +137,18 @@ export default {
         width: 40%;
         height: 510px;
         background-color: aqua;
-        overflow-y: auto;
+
         margin: 10px 0px;
+
+        .card-box{
+            height: 320px;
+            overflow-y: auto;
+            margin: 10px;
+        }
 
         .card{
             margin: 10px;
+
         }
     }
 

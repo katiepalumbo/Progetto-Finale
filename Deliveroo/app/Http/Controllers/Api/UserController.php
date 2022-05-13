@@ -63,6 +63,7 @@ class UserController extends Controller
         $cart = explode(",", $cart);
         $itemsArrey = [];
         $price = [];
+        $price2 = [];
 
 
         $items = Item::all();
@@ -81,10 +82,22 @@ class UserController extends Controller
             }
         }
 
+        for($i = 0; $i<count($price); $i++) {
+
+            $num = $price[$i];
+
+            $int = (int)$num;
+
+            $price2[] = $int;
+
+
+            $float = (float)$num;
+        }
+
         return response()->json(
             [
                 'results' => $itemsArrey,
-                'price' => $price,
+                'price' => $price2,
                 'success'=> true,
             ]
         );
