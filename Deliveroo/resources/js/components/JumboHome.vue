@@ -42,6 +42,7 @@ export default {
     min-height: 450px;
     background-image: url('../assets/images/food.jpg');
     background-size: cover;
+    margin-top: 66px;
 
     .jumbotron-contents {
         //color: $third;
