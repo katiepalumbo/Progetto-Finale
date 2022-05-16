@@ -1,5 +1,5 @@
 <template>
-  <div class="filtraggio-container col-11 m-auto">
+  <div class="filtraggio-container col-11 mx-auto my-5">
       <div class="filtraggio-title">
           <h3>Ti serve ancora qualche idea?</h3>
       </div>

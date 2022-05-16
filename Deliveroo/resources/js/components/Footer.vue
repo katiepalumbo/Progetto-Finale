@@ -2,7 +2,7 @@
 
     <!-- all'interno del footer ho 2 sezioni (top e bottom) -- il top contiene i menu 
     che vengono popolati in modo dinamico con dati passati tramite props da app.vue -->
-    <div class="footer_container">
+    <div class="footer_container py-5">
 
         <!-- inizio footer top con info e menu -->
         <div class="col-8 m-auto footer_top">
@@ -56,7 +56,7 @@
                         <li><a href="#" target="_blank" rel="noopener">Recent Topic 4</a></li>
                     </ul>
                 </div>
-                <div class="col menu_list">
+                <div class="col menu_list mb-5">
                     <h6 class="all_caps_footer">Latest Replies</h6>
                     <ul class="menu-col" >
                         <li><a href="#" target="_blank" rel="noopener">Latest Reply 1</a></li>
@@ -72,12 +72,12 @@
 
         <!-- inizio footer bottom -->
         <div class="footer_bottom_container">
-            <div class="col-8 m-auto">
+            <div class="col m-auto">
                 <div class="row footer_bottom">
 
                     <!-- copyright information -->
                     <div class="col-9 m-auto">
-                        <p class="copyright"><span><i class="fa-regular fa-copyright copyright_icon"></i></span> Copyright 2022 | Powered by Team 7</p>
+                        <p class="copyright mt-1"><span><i class="fa-regular fa-copyright copyright_icon"></i></span> Copyright 2022 | Powered by Team 7</p>
                     </div>
 
                     <!-- social media icons -->
@@ -125,6 +125,7 @@ export default {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: $first;
 }
 
 .all_caps_footer {
@@ -140,7 +141,7 @@ export default {
     }
     p {
         font-size: x-small;
-        color: $purple;
+        color: $body-bg;
     }   
 
 }
@@ -166,7 +167,7 @@ export default {
             padding-bottom: 5px;
             border-bottom: 1px solid $orange;
             &:hover {
-                border-bottom: 1px solid $purple;
+                border-bottom: 1px solid $body-bg;
             }
 
 
@@ -183,7 +184,7 @@ export default {
             a {
                 
                 text-decoration: none;
-                color: $indigo;
+                color: $body-bg;
                 padding: 0;
                 &:hover {                        
                     color: $orange;
@@ -198,10 +199,10 @@ export default {
 
 .footer_bottom_container {
     height: 50px;
-    border-top: 1px solid $blue;
+    border-top: 1px solid $third;
 
     .copyright {
-        color: $indigo;
+        color: $third;
         font-size: xx-small;
 
         .copyright_icon {
@@ -214,7 +215,7 @@ export default {
             color: $orange;
             text-decoration: none;
             &:hover {
-                color: $purple;
+                color: $body-bg;
             }
         }
     }
