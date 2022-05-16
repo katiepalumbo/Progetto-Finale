@@ -80,7 +80,7 @@ export default {
                     text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
                 },
                 {
-                    url: '../../images/chinese.jpg',
+                    url: '../../images/mexican.jpg',
                     date: 'October 11 | 2 comments',
                     name: 'Food',
                     text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
