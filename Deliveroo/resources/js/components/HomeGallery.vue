@@ -83,9 +83,8 @@ export default {
     margin: auto;
 
     .img-container {
-        height: 150px;
-        border: red 2px solid;
-        background-image: url('../assets/images/food.jpg');
+        height: 150px;        
+        background-image: url('../assets/images/italian.jpg');
         background-size: cover;
 
     }

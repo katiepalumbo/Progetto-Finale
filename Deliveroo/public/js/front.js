@@ -1932,8 +1932,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'FiltraggioHome',
   data: function data() {
@@ -2908,7 +2906,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
 
 // module
-exports.push([module.i, "*[data-v-721742ac] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #f6f1fb;\n}\n.filtraggio-title[data-v-721742ac] {\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  width: 90%;\n  margin: auto;\n}", ""]);
+exports.push([module.i, "*[data-v-721742ac] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #f6f1fb;\n}\n.filtraggio-container .filtraggio-title[data-v-721742ac] {\n  width: 90%;\n  margin: auto 15px;\n}\n.filtraggio-container .filtraggio-title h3[data-v-721742ac] {\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  margin-bottom: 25px;\n}\n.filtraggio-container .type-button[data-v-721742ac] {\n  background-color: #9561e2;\n  text-transform: uppercase;\n  font-size: 0.8em;\n  font-weight: 700;\n  border: none;\n  color: #EAF0F2;\n  padding: 10px 30px;\n}", ""]);
 
 // exports
 
@@ -2966,7 +2964,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
 
 // module
-exports.push([module.i, "*[data-v-55d28a50] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #f6f1fb;\n}\n.home-gallery-container[data-v-55d28a50] {\n  max-width: 80%;\n  margin: auto;\n}\n.home-gallery-container .img-container[data-v-55d28a50] {\n  height: 150px;\n  border: red 2px solid;\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/food.jpg */ "./resources/js/assets/images/food.jpg")) + ");\n  background-size: cover;\n}\n.home-gallery-container .white-space[data-v-55d28a50] {\n  min-height: 100px;\n}", ""]);
+exports.push([module.i, "*[data-v-55d28a50] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #f6f1fb;\n}\n.home-gallery-container[data-v-55d28a50] {\n  max-width: 80%;\n  margin: auto;\n}\n.home-gallery-container .img-container[data-v-55d28a50] {\n  height: 150px;\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/italian.jpg */ "./resources/js/assets/images/italian.jpg")) + ");\n  background-size: cover;\n}\n.home-gallery-container .white-space[data-v-55d28a50] {\n  min-height: 100px;\n}", ""]);
 
 // exports
 
@@ -3043,7 +3041,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
 
 // module
-exports.push([module.i, "*[data-v-b3c5cf30] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.gallery-container[data-v-b3c5cf30] {\n  background-color: #FF4718;\n  margin-top: -20px;\n  margin-bottom: 20px;\n}\n.orange-space[data-v-b3c5cf30] {\n  background-color: #f6993f;\n  min-height: 100px;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}", ""]);
+exports.push([module.i, "*[data-v-b3c5cf30] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.gallery-container[data-v-b3c5cf30] {\n  background-color: #FF4718;\n  margin-top: -20px;\n  margin-bottom: 20px;\n  padding-bottom: 40px;\n}\n.orange-space[data-v-b3c5cf30] {\n  background-color: #f6993f;\n  min-height: 100px;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}", ""]);
 
 // exports
 
@@ -4445,11 +4443,11 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "filtraggio-container" }, [
+  return _c("div", { staticClass: "filtraggio-container col-11 m-auto" }, [
     _vm._m(0),
     _vm._v(" "),
     _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-8 m-auto" }, [
+      _c("div", { staticClass: "col-10 m-auto" }, [
         _c(
           "form",
           {
@@ -4462,71 +4460,21 @@ var render = function () {
               },
             },
           },
-          [
-            _c(
-              "div",
-              { staticClass: "col" },
-              [
-                _vm._l(_vm.types, function (typex) {
-                  return _c("div", { key: typex.id, staticClass: "row" }, [
-                    _c("div", [
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.selected,
-                            expression: "selected",
-                          },
-                        ],
-                        staticClass: "form-check-input",
-                        attrs: { type: "checkbox", id: "typex_" + typex.id },
-                        domProps: {
-                          value: typex.id,
-                          checked: Array.isArray(_vm.selected)
-                            ? _vm._i(_vm.selected, typex.id) > -1
-                            : _vm.selected,
-                        },
-                        on: {
-                          change: function ($event) {
-                            var $$a = _vm.selected,
-                              $$el = $event.target,
-                              $$c = $$el.checked ? true : false
-                            if (Array.isArray($$a)) {
-                              var $$v = typex.id,
-                                $$i = _vm._i($$a, $$v)
-                              if ($$el.checked) {
-                                $$i < 0 && (_vm.selected = $$a.concat([$$v]))
-                              } else {
-                                $$i > -1 &&
-                                  (_vm.selected = $$a
-                                    .slice(0, $$i)
-                                    .concat($$a.slice($$i + 1)))
-                              }
-                            } else {
-                              _vm.selected = $$c
-                            }
-                          },
-                        },
-                      }),
-                      _vm._v(" "),
-                      _c(
-                        "label",
-                        {
-                          staticClass: "form-check-label",
-                          attrs: { for: "typex_" + typex.id },
-                        },
-                        [_vm._v(_vm._s(typex.name))]
-                      ),
-                    ]),
-                  ])
-                }),
-                _vm._v(" "),
-                _vm._m(1),
-              ],
-              2
-            ),
-          ]
+          _vm._l(_vm.types, function (typex) {
+            return _c("div", { key: typex.id, staticClass: "col" }, [
+              _c("div", { staticClass: "row d-inline-flex" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "form-check-label btn type-button mx-5 my-2",
+                    attrs: { for: "typex_" + typex.id },
+                  },
+                  [_vm._v(_vm._s(typex.name))]
+                ),
+              ]),
+            ])
+          }),
+          0
         ),
       ]),
     ]),
@@ -4538,19 +4486,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "filtraggio-title" }, [
-      _c("h1", [_vm._v("Ti serve ancora qualche idea?")]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c(
-        "button",
-        { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-        [_vm._v("Cerca")]
-      ),
+      _c("h3", [_vm._v("Ti serve ancora qualche idea?")]),
     ])
   },
 ]
@@ -20990,6 +20926,17 @@ module.exports = "/images/food.jpg?8b6484624e0337a510cea428a0a76f69";
 
 /***/ }),
 
+/***/ "./resources/js/assets/images/italian.jpg":
+/*!************************************************!*\
+  !*** ./resources/js/assets/images/italian.jpg ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/italian.jpg?7d568d4dc3014f6468c4fdbb062812c8";
+
+/***/ }),
+
 /***/ "./resources/js/components/FiltraggioHome.vue":
 /*!****************************************************!*\
   !*** ./resources/js/components/FiltraggioHome.vue ***!
@@ -21842,14 +21789,15 @@ __webpack_require__.r(__webpack_exports__);
 /*!*************************************!*\
   !*** ./resources/js/pages/Home.vue ***!
   \*************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Home_vue_vue_type_template_id_b3c5cf30_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Home.vue?vue&type=template&id=b3c5cf30&scoped=true& */ "./resources/js/pages/Home.vue?vue&type=template&id=b3c5cf30&scoped=true&");
 /* harmony import */ var _Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Home.vue?vue&type=script&lang=js& */ "./resources/js/pages/Home.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _Home_vue_vue_type_style_index_0_id_b3c5cf30_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Home.vue?vue&type=style&index=0&id=b3c5cf30&scoped=true&lang=scss& */ "./resources/js/pages/Home.vue?vue&type=style&index=0&id=b3c5cf30&scoped=true&lang=scss&");
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _Home_vue_vue_type_style_index_0_id_b3c5cf30_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Home.vue?vue&type=style&index=0&id=b3c5cf30&scoped=true&lang=scss& */ "./resources/js/pages/Home.vue?vue&type=style&index=0&id=b3c5cf30&scoped=true&lang=scss&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -21881,7 +21829,7 @@ component.options.__file = "resources/js/pages/Home.vue"
 /*!**************************************************************!*\
   !*** ./resources/js/pages/Home.vue?vue&type=script&lang=js& ***!
   \**************************************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

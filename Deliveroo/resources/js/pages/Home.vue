@@ -169,6 +169,7 @@ export default {
       background-color: $darkOrange;
       margin-top: -20px;
       margin-bottom: 20px;
+      padding-bottom: 40px;
 
     
 }
