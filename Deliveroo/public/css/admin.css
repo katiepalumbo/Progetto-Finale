@@ -12195,6 +12195,24 @@ fieldset:disabled .btn {
   background-color: #85ADBE !important;
 }
 
+.ms_background-img {
+  background-repeat: no-repeat;
+  background-image: url(https://centoform.it/wp-content/uploads/2021/10/brooke-lark-08bOYnH_r_E-unsplash.jpg);
+  background-position: 1% -30%;
+}
+
+.ms_background-color {
+  background: linear-gradient(45deg, #ff8e0d, #ffaf1e);
+}
+
+.ms_text-orange {
+  color: #f6993f;
+}
+
+.ms_text-purple {
+  color: #9561e2;
+}
+
 .contanier-form {
   display: flex;
 }

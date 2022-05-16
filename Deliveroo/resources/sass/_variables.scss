@@ -1,11 +1,12 @@
 // Body
 $body-bg: #f8fafc;
-
 // Typography
-$font-family-sans-serif: 'Nunito', sans-serif;
+//https://fonts.google.com/specimen/Raleway FONT TITOLI
+//https://fonts.google.com/specimen/Tenor+Sans FONT SOTTOTITOLI
+$font-family-sans-serif: 'Nunito',
+sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
-
 // Colors
 $blue: #3490dc;
 $indigo: #6574cd;
@@ -17,13 +18,9 @@ $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
-
 $first: #2F5F74;
 $second: #85ADBE;
-$third: #EAF0F2 ;
-
-
-
+$third: #EAF0F2;
 @mixin li-menu-horizontal {
     display: inline-block;
     font-size: 1.5em;
@@ -44,38 +41,36 @@ $third: #EAF0F2 ;
 }
 
 @mixin all-caps-footer {
-  text-transform: uppercase;
-  font-size: 0.8em;
-  font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: 700;
 }
 
 @mixin all-caps-button {
-  text-transform: uppercase;
-  font-size: 0.8em;
-  font-weight: 700;
-  border: none;
-  color: $third;
-  padding: 10px 30px;
-
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: 700;
+    border: none;
+    color: $third;
+    padding: 10px 30px;
 }
 
 @mixin brand-icons {
-  color: #fff;
-  border-radius: 50%;
+    color: #fff;
+    border-radius: 50%;
 }
 
 @mixin flex-column {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 @mixin li-menu-horizontal {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 600;
-  vertical-align: center;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    vertical-align: center;
 }
-
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;800&family=Outfit:wght@600&family=Source+Sans+Pro:wght@200;400;600;700&display=swap');
 //@import '~bootstrap/scss/bootstrap';
