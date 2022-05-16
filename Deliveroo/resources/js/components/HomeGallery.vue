@@ -87,8 +87,6 @@ export default {
         border: red 2px solid;
         background-image: url('../assets/images/food.jpg');
         background-size: cover;
-        
- 
 
     }
 

@@ -1,6 +1,6 @@
 <template>
     <!-- qua uso le props da main per poter popolare le due gallerie diverse -->
-     <div class="col article_card">
+     <div class="col article_card mx-auto">
         <img :src="`${item.url}`" :alt="`${item.name}`">
         <p class="article_title">{{item.name}}</p>
         <!-- <p class="article_date">{{item.date}}</p>
@@ -13,7 +13,7 @@
 
 //sotto troviamo le props passate da home
 export default {
-    name: 'Gallery',
+    name: 'StandardGallery',
     props: {
         'galleryOneItems': Array,
         //'galleryTwoItems': Array,
@@ -32,6 +32,7 @@ export default {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: $darkOrange;
     
 }
 
@@ -39,13 +40,13 @@ export default {
 
 .article_card {
     max-height: 300px;
-    max-width: 300px;
+    width: 25vw;
     overflow: hidden;
-    margin: 10px 0;
+    margin: 5px 0;
 
 
     img {
-        width: 80%;
+        width: 100%;
         object-fit: cover;
         padding-bottom: 2px;
         border-bottom: 2px solid transparent;
@@ -67,12 +68,14 @@ export default {
         font-size: .6em;
         padding-right: 10px;
         margin-top: -15px;
+        
     }
 
     .article_preview {
         font-size: .7em;
         padding-right: 10px;
         margin-top: -10px;
+       
     }
 
 }
