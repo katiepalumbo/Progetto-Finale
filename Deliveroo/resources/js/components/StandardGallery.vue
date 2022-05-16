@@ -1,7 +1,9 @@
 <template>
     <!-- qua uso le props da main per poter popolare le due gallerie diverse -->
      <div class="col article_card mx-auto">
-        <img :src="`${item.url}`" :alt="`${item.name}`">
+         <div class="img-container">
+            <img :src="`${item.url}`" :alt="`${item.name}`">
+         </div>
         <p class="article_title">{{item.name}}</p>
         <!-- <p class="article_date">{{item.date}}</p>
         <p class="article_preview">{{item.text}}</p> -->
@@ -44,8 +46,10 @@ export default {
     overflow: hidden;
     margin: 5px 0;
 
+    .img-container {
 
     img {
+        max-height: 200px;
         width: 100%;
         object-fit: cover;
         padding-bottom: 2px;
@@ -56,6 +60,12 @@ export default {
             
         }
     }
+
+    }
+
+
+
+
 
     .article_title {
         font-size: 1.2em;

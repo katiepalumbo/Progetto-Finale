@@ -2383,6 +2383,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 //sotto troviamo le props passate da home
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'StandardGallery',
@@ -2539,64 +2541,45 @@ __webpack_require__.r(__webpack_exports__);
       }],
       galleryOneItems: [{
         url: '../../images/hamburger.jpg',
-        name: 'McBooleans' //text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
-
+        name: 'McBooleans'
       }, {
         url: '../../images/italian.jpg',
-        name: 'Pasta FaBool' //text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
-
+        name: 'Pasta FaBool'
       }, {
         url: '../../images/chinese.jpg',
-        name: 'Mexican',
-        text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
+        name: 'BamBool Lounge'
+      }, {
+        url: '../../images/mexican.jpg',
+        name: 'Los Tres Booleaners'
+      }, {
+        url: '../../images/hamburger.jpg',
+        name: 'McBooleans'
+      }, {
+        url: '../../images/italian.jpg',
+        name: 'Pasta FaBool'
+      }, {
+        url: '../../images/chinese.jpg',
+        name: 'Bambool Lounge'
       }, {
         url: '../../images/mexican.jpg',
         date: 'October 11 | 2 comments',
-        name: 'Food',
-        text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
+        name: 'Los Tres Booleaners'
+      }, {
+        url: '../../images/hamburger.jpg',
+        name: 'McBooleans'
+      }, {
+        url: '../../images/italian.jpg',
+        name: 'Pasta FaBool'
       }, {
         url: '../../images/chinese.jpg',
+        name: 'BamBool Lounge'
+      }, {
+        url: '../../images/mexican.jpg',
         date: 'October 11 | 2 comments',
-        name: 'Chinese',
-        text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
-      }, {
-        url: '../../images/chinese.jpg',
-        date: 'October 11 | comments off',
-        name: 'Italian',
-        text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
-      }, {
-        url: '../../images/chinese.jpg',
-        date: 'October 11 | 2 comments',
-        name: 'Mexican',
-        text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
-      }, {
-        url: '../../images/chinese.jpg',
-        date: 'October 11 | 2 comments',
-        name: 'Food',
-        text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
-      }, {
-        url: '../../images/chinese.jpg',
-        date: 'October 11 | 2 comments',
-        name: 'Chinese',
-        text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
-      }, {
-        url: '../../images/chinese.jpg',
-        date: 'October 11 | comments off',
-        name: 'Italian',
-        text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
-      }, {
-        url: '../../images/chinese.jpg',
-        date: 'October 11 | 2 comments',
-        name: 'Mexican',
-        text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
-      }, {
-        url: '../../images/chinese.jpg',
-        date: 'October 11 | 2 comments',
-        name: 'Food',
-        text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
+        name: 'Los Tres Booleaners'
       }],
       galleryTwoItems: [{
-        url: '../assets/images/food.jpg',
+        url: '../../images/food.jpg',
         date: 'October 11 | 2 comments',
         name: 'This is Another Title',
         text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
@@ -3082,7 +3065,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
 
 // module
-exports.push([module.i, "*[data-v-55d28a50] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #f6f1fb;\n}\n.home-gallery-container[data-v-55d28a50] {\n  max-width: 80%;\n  margin: auto;\n}\n.home-gallery-container .img-container[data-v-55d28a50] {\n  height: 150px;\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/italian.jpg */ "./resources/js/assets/images/italian.jpg")) + ");\n  background-size: cover;\n}\n.home-gallery-container .overlay-text[data-v-55d28a50] {\n  color: white;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  padding: auto;\n  background-color: transparent;\n  height: 100%;\n  width: 100%;\n}\n.home-gallery-container .white-space[data-v-55d28a50] {\n  min-height: 100px;\n}", ""]);
+exports.push([module.i, "*[data-v-55d28a50] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #f6f1fb;\n}\n.home-gallery-container[data-v-55d28a50] {\n  max-width: 80%;\n  margin: auto;\n  position: relative;\n  align-items: center;\n  justify-content: center;\n}\n.home-gallery-container .img-container[data-v-55d28a50] {\n  height: 150px;\n  background-size: cover;\n}\n.home-gallery-container .casalinga[data-v-55d28a50] {\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/tomato-basil.jpg */ "./resources/js/assets/images/tomato-basil.jpg")) + ");\n}\n.home-gallery-container .dolci[data-v-55d28a50] {\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/pink-cake.jpg */ "./resources/js/assets/images/pink-cake.jpg")) + ");\n}\n.home-gallery-container .bevande[data-v-55d28a50] {\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/coke.jpg */ "./resources/js/assets/images/coke.jpg")) + ");\n  background-position: center;\n}\n.home-gallery-container .pane[data-v-55d28a50] {\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/pane.jpg */ "./resources/js/assets/images/pane.jpg")) + ");\n  background-position: center;\n}\n.home-gallery-container .overlay-text[data-v-55d28a50] {\n  color: white;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  padding: auto;\n  background-color: transparent;\n  height: 100%;\n  width: 100%;\n  line-height: 150px;\n  text-align: center;\n  text-shadow: #9561e2;\n}\n.home-gallery-container .white-space[data-v-55d28a50] {\n  min-height: 100px;\n}", ""]);
 
 // exports
 
@@ -3159,7 +3142,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
 
 // module
-exports.push([module.i, "*[data-v-6bed6bba] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #FF4718;\n}\n.article_card[data-v-6bed6bba] {\n  max-height: 300px;\n  width: 25vw;\n  overflow: hidden;\n  margin: 5px 0;\n}\n.article_card img[data-v-6bed6bba] {\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  padding-bottom: 2px;\n  border-bottom: 2px solid transparent;\n}\n.article_card img[data-v-6bed6bba]:hover {\n  border-bottom: 2px solid #9561e2;\n  cursor: pointer;\n}\n.article_card .article_title[data-v-6bed6bba] {\n  font-size: 1.2em;\n  margin-top: 10px;\n  font-weight: 600;\n  padding-top: 2px;\n  color: #f6f1fb;\n}", ""]);
+exports.push([module.i, "*[data-v-6bed6bba] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #FF4718;\n}\n.article_card[data-v-6bed6bba] {\n  max-height: 300px;\n  width: 25vw;\n  overflow: hidden;\n  margin: 5px 0;\n}\n.article_card .img-container img[data-v-6bed6bba] {\n  max-height: 200px;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  padding-bottom: 2px;\n  border-bottom: 2px solid transparent;\n}\n.article_card .img-container img[data-v-6bed6bba]:hover {\n  border-bottom: 2px solid #9561e2;\n  cursor: pointer;\n}\n.article_card .article_title[data-v-6bed6bba] {\n  font-size: 1.2em;\n  margin-top: 10px;\n  font-weight: 600;\n  padding-top: 2px;\n  color: #f6f1fb;\n}", ""]);
 
 // exports
 
@@ -5013,7 +4996,7 @@ var staticRenderFns = [
       _c("div", { staticClass: "row mt-5 row-cols-10 m-auto" }, [
         _c("div", { staticClass: "col-5" }, [
           _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-11 img-container" }, [
+            _c("div", { staticClass: "col-11 img-container casalinga" }, [
               _c("h1", { staticClass: "overlay-text" }, [
                 _vm._v("Cucina Casalinga"),
               ]),
@@ -5033,7 +5016,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("div", { staticClass: "col-7" }, [
           _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-11 img-container" }, [
+            _c("div", { staticClass: "col-11 img-container dolci" }, [
               _c("h1", { staticClass: "overlay-text" }, [
                 _vm._v("Dessert, gelati, dolci"),
               ]),
@@ -5057,7 +5040,7 @@ var staticRenderFns = [
       _c("div", { staticClass: "row mt-5 row-cols-10 m-auto" }, [
         _c("div", { staticClass: "col-7" }, [
           _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-11 img-container" }, [
+            _c("div", { staticClass: "col-11 img-container bevande" }, [
               _c("h1", { staticClass: "overlay-text" }, [_vm._v("Bevande")]),
             ]),
           ]),
@@ -5075,7 +5058,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("div", { staticClass: "col-5" }, [
           _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-11 img-container" }, [
+            _c("div", { staticClass: "col-11 img-container pane" }, [
               _c("h1", { staticClass: "overlay-text" }, [_vm._v("Lievitati")]),
             ]),
           ]),
@@ -5310,7 +5293,9 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "col article_card mx-auto" }, [
-    _c("img", { attrs: { src: "" + _vm.item.url, alt: "" + _vm.item.name } }),
+    _c("div", { staticClass: "img-container" }, [
+      _c("img", { attrs: { src: "" + _vm.item.url, alt: "" + _vm.item.name } }),
+    ]),
     _vm._v(" "),
     _c("p", { staticClass: "article_title" }, [_vm._v(_vm._s(_vm.item.name))]),
   ])
@@ -21140,6 +21125,17 @@ module.exports = g;
 
 /***/ }),
 
+/***/ "./resources/js/assets/images/coke.jpg":
+/*!*********************************************!*\
+  !*** ./resources/js/assets/images/coke.jpg ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/coke.jpg?416db6664a0c19d8db2dd0278247b245";
+
+/***/ }),
+
 /***/ "./resources/js/assets/images/food.jpg":
 /*!*********************************************!*\
   !*** ./resources/js/assets/images/food.jpg ***!
@@ -21151,14 +21147,36 @@ module.exports = "/images/food.jpg?8b6484624e0337a510cea428a0a76f69";
 
 /***/ }),
 
-/***/ "./resources/js/assets/images/italian.jpg":
-/*!************************************************!*\
-  !*** ./resources/js/assets/images/italian.jpg ***!
-  \************************************************/
+/***/ "./resources/js/assets/images/pane.jpg":
+/*!*********************************************!*\
+  !*** ./resources/js/assets/images/pane.jpg ***!
+  \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/italian.jpg?7d568d4dc3014f6468c4fdbb062812c8";
+module.exports = "/images/pane.jpg?719e01bb11abc32054888aeedfbba95e";
+
+/***/ }),
+
+/***/ "./resources/js/assets/images/pink-cake.jpg":
+/*!**************************************************!*\
+  !*** ./resources/js/assets/images/pink-cake.jpg ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/pink-cake.jpg?cc8b0b6cb14312b8eadebb1fe2aab0a9";
+
+/***/ }),
+
+/***/ "./resources/js/assets/images/tomato-basil.jpg":
+/*!*****************************************************!*\
+  !*** ./resources/js/assets/images/tomato-basil.jpg ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/tomato-basil.jpg?3dfed2d61109013177a2995379f466c3";
 
 /***/ }),
 

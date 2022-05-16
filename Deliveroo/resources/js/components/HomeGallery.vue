@@ -3,7 +3,7 @@
         <div class="row mt-5 row-cols-10 m-auto">
             <div class="col-5">
                 <div class='row'>
-                    <div class="col-11 img-container">
+                    <div class="col-11 img-container casalinga">
                         <h1 class="overlay-text">Cucina Casalinga</h1>
                     </div>    
                 </div>
@@ -17,7 +17,7 @@
             
             <div class="col-7">
                 <div class='row'>
-                    <div class="col-11 img-container">
+                    <div class="col-11 img-container dolci">
                         <h1 class="overlay-text">Dessert, gelati, dolci</h1>
                     </div>    
                 </div>
@@ -32,7 +32,7 @@
         <div class="row mt-5 row-cols-10 m-auto">
             <div class="col-7">
                 <div class='row'>
-                    <div class="col-11 img-container">
+                    <div class="col-11 img-container bevande">
                         <h1 class="overlay-text">Bevande</h1>
                     </div>    
                 </div>
@@ -46,7 +46,7 @@
             
             <div class="col-5">
                 <div class='row'>
-                    <div class="col-11 img-container">
+                    <div class="col-11 img-container pane">
                         <h1 class="overlay-text">Lievitati</h1>
                     </div>     
                 </div>
@@ -89,12 +89,36 @@ export default {
 .home-gallery-container {
     max-width: 80%;
     margin: auto;
+    position: relative;
+    align-items: center;
+    justify-content: center;
 
     .img-container {
         height: 150px;        
-        background-image: url('../assets/images/italian.jpg');
         background-size: cover;
 
+    }
+
+    .casalinga {
+        background-image: url('../assets/images/tomato-basil.jpg');
+        
+    }
+
+    .dolci {
+        background-image: url('../assets/images/pink-cake.jpg');
+        
+    }
+
+    .bevande {
+        background-image: url('../assets/images/coke.jpg');
+        background-position: center;
+        
+    }
+
+    .pane {
+        background-image: url('../assets/images/pane.jpg');
+        background-position: center;
+        
     }
 
     .overlay-text {
@@ -106,6 +130,9 @@ export default {
         background-color: transparent;
         height: 100%;
         width: 100%;
+        line-height: 150px;
+        text-align: center;
+        text-shadow: $purple;
     }
 
     .white-space {
