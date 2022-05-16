@@ -41,6 +41,16 @@ export default {
 
     data () {
       return {
+          types: null,
+                selected: [],
+                //users: [],
+
+                navLinks: [
+                {
+                    to : 'restaurant-menu',
+                    name : 'menu',
+                },
+            ],
         introText1:[
           {
             small: 'piatti per ogni gusto',
@@ -55,20 +65,17 @@ export default {
         ],
         galleryOneItems: [
                 {
-                    url: '../../images/chinese.jpg',
-                    date: 'October 11 | 2 comments',
-                    name: 'Chinese',
-                    text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
+                    url: '../../images/hamburger.jpg',
+                    name: 'McBooleans',
+                    //text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
+                },
+                {
+                    url: '../../images/italian.jpg',
+                    name: 'Pasta FaBool',
+                    //text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
                 },
                 {
                     url: '../../images/chinese.jpg',
-                    date: 'October 11 | comments off',
-                    name: 'Italian',
-                    text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
-                },
-                {
-                    url: '../../images/chinese.jpg',
-                    date: 'October 11 | 2 comments',
                     name: 'Mexican',
                     text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
                 },
@@ -149,7 +156,22 @@ export default {
 
             ],
         }
-}}
+    },
+    methods:{
+                getUsers(){
+                axios.get('/api/users').then(response => {
+                    this.users = response.data.results;
+                    // console.log(response.data.results)
+                    // console.log('aaaaaaaaaaaaa')
+                })
+
+                .catch(error => {
+                    console.log(error);
+                })
+
+            },
+    },
+}
 </script>
 
 <style scoped lang="scss">

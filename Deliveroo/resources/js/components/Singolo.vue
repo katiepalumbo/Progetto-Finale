@@ -96,6 +96,7 @@ export default {
                 margin: 6px 4px;
                 font-weight: bold;
                 color: #fff;
+                
             }
         }
 
