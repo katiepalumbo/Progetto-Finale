@@ -2,14 +2,15 @@
   <div>
       <JumboHome/>
       <IntroText/>
-      <div class="gallery-container mt-3">
+      <HomeGallery/>
+      <!-- <div class="gallery-container mt-3">
             <div class="col-10 m-auto gallery">
                 <div class="row row-cols-4">
                     <Gallery :galleryOneItems="galleryOneItems" :item="item" 
                     v-for="(item, index) in galleryOneItems" :key="index"/>
                 </div>
             </div>
-        </div>
+        </div> -->
 
   </div>
 </template>
@@ -18,7 +19,8 @@
 import JumboHome from '../components/JumboHome.vue'
 import Main from '../components/Main.vue'
 import IntroText from '../components/IntroText.vue'
-import Gallery from '../components/Gallery.vue'
+//import Gallery from '../components/Gallery.vue'
+import HomeGallery from '../components/HomeGallery.vue'
 
 export default {
     name: 'Home',
@@ -26,7 +28,7 @@ export default {
       Main,
       JumboHome,
       IntroText,
-      Gallery,
+      HomeGallery,
 
     },
 
@@ -93,6 +95,8 @@ export default {
     padding: 0;
     box-sizing: border-box;
     background-color: $body-bg;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
 }
     
 

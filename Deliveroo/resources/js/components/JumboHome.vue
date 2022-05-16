@@ -58,11 +58,13 @@ export default {
             font-weight: 700;
             color: $purple;
             margin-top: 15px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
         }
 
         .jumbotron_subtitle {
             font-size: 16px;
-            font-weight: 400;
+            font-family: 'Tenor Sans', sans-serif;
             color: #9538f2;
         }
 

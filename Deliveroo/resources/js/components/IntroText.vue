@@ -2,12 +2,12 @@
     <!-- inizio forums intro text -- può essere riusato se si utilizzano 
     le props da main per popolare il testo in caso ci fosse bisogno -->
     <div class="forum-intro-text-container">
-            <div class="col-6 m-auto">
+            <div class="col-4">
                 <div class="row forum-intro-text">
                     <h6 class="all_caps_title">piatti per ogni gusto</h6>
                     <h3>Deliveboo ti suggerisce</h3>
                 </div>
-            <div class="col-1 m-auto orange_divider"></div>
+            <div class="col-12 orange_divider"></div>
         </div>
     </div>
   
@@ -29,11 +29,14 @@ export default {
 .forum-intro-text-container {
     min-height: 150px;
     background-color: $darkOrange;
+    
 
     .forum-intro-text {
         color: $body-bg;
-        text-align: center;
+        text-align: left;
         padding: 40px 0 10px 0;
+        width: 80%;
+        margin: auto;
         
 
         .all_caps_title {
@@ -49,9 +52,10 @@ export default {
     //accent divider rules
 
     .orange_divider {
-        width: 50px;
+        width: 80%;
         height: 2px;
         background-color: $orange;
+        align-self: flex-start;
     }
 }
 
