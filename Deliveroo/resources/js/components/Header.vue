@@ -13,7 +13,7 @@
                             <router-link class="text-white btn-header" aria-current="page" :to="{name: link.to}">{{ link.name }}</router-link>
                         </li>
                         <li>
-                            <a class=" btn-header" href="/admin">Accedi o Registrati</a>
+                            <a class="btn-header" href="/admin">Accedi o Registrati</a>
                         </li>
                     </ul>
                 </nav>
