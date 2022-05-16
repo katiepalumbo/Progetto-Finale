@@ -86,7 +86,7 @@
     </div>
 
     <div class="position-absolute bottom-25 end-0 translate-middle-y me-5 pe-5">
-        <a class="me-5 pe-5 ms_text-orange fw-bold fs-1 text-decoration-none" href="{{ route('admin.home') }}">{{ __('torna alla sezione ordini') }}</a>
+        <a class="me-5 pe-5 ms_text-orange fw-bold fs-1 text-decoration-none" href="{{ route('admin.home') }}">{{ __('torna alla home') }}</a>
     </div>
 
     <div class="bg-black text-white position-absolute bottom-0 end-0 d-flex w-100 flex-row-reverse">
