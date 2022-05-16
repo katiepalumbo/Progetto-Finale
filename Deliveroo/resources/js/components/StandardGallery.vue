@@ -1,9 +1,9 @@
 <template>
     <!-- qua uso le props da main per poter popolare le due gallerie diverse -->
      <div class="col article_card mx-auto">
-         <div class="img-container">
+        <router-link class="img-container" :to="{name: 'menu'}">
             <img :src="`${item.url}`" :alt="`${item.name}`">
-         </div>
+        </router-link>
         <p class="article_title">{{item.name}}</p>
         <!-- <p class="article_date">{{item.date}}</p>
         <p class="article_preview">{{item.text}}</p> -->
