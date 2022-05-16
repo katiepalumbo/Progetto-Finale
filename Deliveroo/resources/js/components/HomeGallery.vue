@@ -1,10 +1,10 @@
 <template>
-  <div class="container">
-      <div class="row">
-          <div class="col-4">
+  <div class="container home-gallery-container">
+      <div class="row row-cols-10 m-auto">
+          <div class="col-3">
               ONE IMAGE HERE
           </div>
-          <div class="col-8">
+          <div class="col-7">
               ONE IMAGE HERE
           </div>
 
@@ -21,6 +21,15 @@ export default {
 }
 </script>
 
-<style>
+<style scoped lang="scss">
+
+@import '../../sass/_variables.scss';
+
+.home-gallery-container {
+    max-width: 80%;
+    margin: auto;
+}
+
+
 
 </style>
