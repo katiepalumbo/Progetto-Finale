@@ -2208,6 +2208,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -2964,7 +2972,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
 
 // module
-exports.push([module.i, "*[data-v-55d28a50] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #f6f1fb;\n}\n.home-gallery-container[data-v-55d28a50] {\n  max-width: 80%;\n  margin: auto;\n}\n.home-gallery-container .img-container[data-v-55d28a50] {\n  height: 150px;\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/italian.jpg */ "./resources/js/assets/images/italian.jpg")) + ");\n  background-size: cover;\n}\n.home-gallery-container .white-space[data-v-55d28a50] {\n  min-height: 100px;\n}", ""]);
+exports.push([module.i, "*[data-v-55d28a50] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #f6f1fb;\n}\n.home-gallery-container[data-v-55d28a50] {\n  max-width: 80%;\n  margin: auto;\n}\n.home-gallery-container .img-container[data-v-55d28a50] {\n  height: 150px;\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/italian.jpg */ "./resources/js/assets/images/italian.jpg")) + ");\n  background-size: cover;\n}\n.home-gallery-container .overlay-text[data-v-55d28a50] {\n  color: white;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  padding: auto;\n  background-color: transparent;\n  height: 100%;\n  width: 100%;\n}\n.home-gallery-container .white-space[data-v-55d28a50] {\n  min-height: 100px;\n}", ""]);
 
 // exports
 
@@ -4797,7 +4805,11 @@ var staticRenderFns = [
       _c("div", { staticClass: "row mt-5 row-cols-10 m-auto" }, [
         _c("div", { staticClass: "col-5" }, [
           _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-11 img-container" }),
+            _c("div", { staticClass: "col-11 img-container" }, [
+              _c("h1", { staticClass: "overlay-text" }, [
+                _vm._v("Cucina Casalinga"),
+              ]),
+            ]),
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "row mt-1" }, [
@@ -4813,7 +4825,11 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("div", { staticClass: "col-7" }, [
           _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-11 img-container" }),
+            _c("div", { staticClass: "col-11 img-container" }, [
+              _c("h1", { staticClass: "overlay-text" }, [
+                _vm._v("Dessert, gelati, dolci"),
+              ]),
+            ]),
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "row mt-1" }, [
@@ -4833,7 +4849,9 @@ var staticRenderFns = [
       _c("div", { staticClass: "row mt-5 row-cols-10 m-auto" }, [
         _c("div", { staticClass: "col-7" }, [
           _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-11 img-container" }),
+            _c("div", { staticClass: "col-11 img-container" }, [
+              _c("h1", { staticClass: "overlay-text" }, [_vm._v("Bevande")]),
+            ]),
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "row mt-1" }, [
@@ -4849,7 +4867,9 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("div", { staticClass: "col-5" }, [
           _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-11 img-container" }),
+            _c("div", { staticClass: "col-11 img-container" }, [
+              _c("h1", { staticClass: "overlay-text" }, [_vm._v("Lievitati")]),
+            ]),
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "row mt-1" }, [

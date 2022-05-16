@@ -3,7 +3,9 @@
         <div class="row mt-5 row-cols-10 m-auto">
             <div class="col-5">
                 <div class='row'>
-                    <div class="col-11 img-container"></div>    
+                    <div class="col-11 img-container">
+                        <h1 class="overlay-text">Cucina Casalinga</h1>
+                    </div>    
                 </div>
                 <div class="row mt-1">
                     <h5>HERE'S SOME INFO ABOUT THIS</h5>
@@ -15,7 +17,9 @@
             
             <div class="col-7">
                 <div class='row'>
-                    <div class="col-11 img-container"></div>    
+                    <div class="col-11 img-container">
+                        <h1 class="overlay-text">Dessert, gelati, dolci</h1>
+                    </div>    
                 </div>
                 <div class="row mt-1">
                     <h5 class="text-right">HERE'S SOME INFO ABOUT THIS</h5>
@@ -28,7 +32,9 @@
         <div class="row mt-5 row-cols-10 m-auto">
             <div class="col-7">
                 <div class='row'>
-                    <div class="col-11 img-container"></div>    
+                    <div class="col-11 img-container">
+                        <h1 class="overlay-text">Bevande</h1>
+                    </div>    
                 </div>
                 <div class="row mt-1">
                     <h5>HERE'S SOME INFO ABOUT THIS</h5>
@@ -40,7 +46,9 @@
             
             <div class="col-5">
                 <div class='row'>
-                    <div class="col-11 img-container"></div>    
+                    <div class="col-11 img-container">
+                        <h1 class="overlay-text">Lievitati</h1>
+                    </div>     
                 </div>
                 <div class="row mt-1">
                     <h5 class="text-right">HERE'S SOME INFO ABOUT THIS</h5>
@@ -87,6 +95,17 @@ export default {
         background-image: url('../assets/images/italian.jpg');
         background-size: cover;
 
+    }
+
+    .overlay-text {
+        color: white;
+        @include title-font;
+        padding: auto;
+        //transform: translate (-90%, -90%);
+        //position: absolute;
+        background-color: transparent;
+        height: 100%;
+        width: 100%;
     }
 
     .white-space {
