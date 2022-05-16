@@ -1,5 +1,8 @@
 // Body
+<<<<<<< HEAD
 
+=======
+>>>>>>> style-home-main
 $body-bg: #f6f1fb;
 
 // Typography
@@ -24,6 +27,17 @@ $cyan: #6cb2eb;
 $first: #2F5F74;
 $second: #85ADBE;
 $third: #EAF0F2;
+
+@mixin title-font {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+}
+
+@mixin subtitle-font {
+  font-family: 'Tenor Sans', sans-serif;
+}
+
+
 @mixin li-menu-horizontal {
     display: inline-block;
     font-size: 1.5em;

@@ -2,10 +2,10 @@
     <!-- inizio forums intro text -- può essere riusato se si utilizzano 
     le props da main per popolare il testo in caso ci fosse bisogno -->
     <div class="forum-intro-text-container">
-            <div class="col-4">
+            <div class="col-5">
                 <div class="row forum-intro-text">
-                    <h6 class="all_caps_title">piatti per ogni gusto</h6>
-                    <h3>Deliveboo ti suggerisce</h3>
+                    <h6 class="all_caps_title">{{text.small}}</h6>
+                    <h3>{{text.big}}</h3>
                 </div>
             <div class="col-12 orange_divider"></div>
         </div>
@@ -16,6 +16,11 @@
 <script>
 export default {
     name: 'IntroText',
+    props: {
+        'introText1': Array,
+        'introText2': Array,
+        'text': Object
+    }
 
 }
 </script>
