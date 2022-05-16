@@ -1,10 +1,10 @@
 <template>
     <div class="my_card">
 
-        <router-link  :to="{name: 'restaurant', params:{slug: slug}}">
+        <router-link :to="{name: 'restaurant', params:{slug: slug}}">
 
-            <div class="my_card-header">
-            <img src="https://c4.wallpaperflare.com/wallpaper/728/259/631/spices-pepper-food-spoons-wallpaper-preview.jpg" alt="rover" />
+             <div class="my_card-header">
+                <img src="https://c4.wallpaperflare.com/wallpaper/226/838/327/chocolate-brown-food-sweet-wallpaper-preview.jpg" alt="rover" />
             </div>
 
             <div class="my_card-body">
@@ -29,10 +29,18 @@
 export default {
     name: "Singolo",
     props: ['title', 'type', 'slug',],
+
+    data () {
+        return {   
+        }           
+        
+    }
 }
 </script>
 
 <style lang="scss" >
+
+    @import '../../sass/_variables.scss';
 
     .my_card {
         margin: 10px;
@@ -41,6 +49,7 @@ export default {
         box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
         overflow: hidden;
         position: relative;
+        display: flex;
         width: 210px;
         height: 260px;
 
@@ -67,12 +76,19 @@ export default {
         .my_card-body {
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: flex-end;
             align-items: flex-start;
             position: absolute;
             bottom: 0px;
+            width: 100%;
+            height: 110px;
             z-index: 3;
-            padding: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 15px;
+            padding-top: 15px;
+            background-color: rgba(0, 0, 0, 0.5);
+            
 
             .box-tag {
                 display: flex;
@@ -94,8 +110,8 @@ export default {
             .card-title {
                 text-transform: uppercase;
                 margin: 6px 4px;
-                font-weight: bold;
                 color: #fff;
+                @include title-font;
             }
         }
 
