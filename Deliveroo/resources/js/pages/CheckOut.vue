@@ -15,7 +15,7 @@
         </div>
 
         <h1 class="mt-4">Totale</h1>
-        <h3>{{this.$route.params.price}}.00</h3>
+        <h3>{{price}}.00</h3>
 
         <button type="button" class="btn btn-danger m-2" @click="testPagato()">PAGA</button>
 
@@ -32,6 +32,7 @@ export default {
         return {
             finale: [],
             pagato: false,
+            price: this.$route.params.price
         }
     },
 
@@ -65,7 +66,7 @@ export default {
 
     created() {
         this.getItemCart();
-    }
+    },
 
 }
 // console.log(this.$route.params.slug.cart)
