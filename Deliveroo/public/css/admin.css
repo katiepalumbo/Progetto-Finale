@@ -1,11 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;
 
-/*!
- * Bootstrap v5.1.3 (https://getbootstrap.com/)
- * Copyright 2011-2021 The Bootstrap Authors
- * Copyright 2011-2021 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+400;500;600;800&family=Outfit:wght@600&family=Source+Sans+Pro:wght@200;400;600;700&display=swap);@charset "UTF-8";
 
 :root {
   --bs-blue: #3490dc;
@@ -12200,8 +12195,21 @@ fieldset:disabled .btn {
   background-color: #85ADBE !important;
 }
 
-.ciao {
-  margin-left: 500px;
-  font-size: 45px;
+.ms_background-img {
+  background-repeat: no-repeat;
+  background-image: url(https://centoform.it/wp-content/uploads/2021/10/brooke-lark-08bOYnH_r_E-unsplash.jpg);
+  background-position: 1% -30%;
+}
+
+.ms_background-color {
+  background: linear-gradient(45deg, #ff8e0d, #ffaf1e);
+}
+
+.ms_text-orange {
+  color: #f6993f;
+}
+
+.ms_text-purple {
+  color: #9561e2;
 }
 
