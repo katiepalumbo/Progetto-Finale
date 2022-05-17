@@ -1,54 +1,33 @@
 @extends('admin.layouts.base')
 
 @section('content')
-{{-- <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
 
-                
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+<div class="container-fluid dashboard">
 
-                    {{ __('FATTO') }}
-                </div>
-            </div>
-        </div>
-    </div>
-</div> --}}
+    <div class="row ms_banner pt-3 ps-3">
 
-
-<div class="container-fluid">
-
-    <div class="row ms_banner">
-
-        <div class="p-3 my-1 ml-3 text-white ms_banner">
+        <div class="text-white">
             @if (session('status'))
                 <div class="alert alert-success" role="alert">
                     {{ session('status') }}
                 </div>
             @endif
 
-            <h1>
-                Benvenuto "{{ Auth::user()->restaurant_name }}""
+            <h1 class="">
+                Benvenuto "{{ Auth::user()->restaurant_name }}"
             </h1>
-            <h4>
+            <h5>
                 {{ Auth::user()->email }}
-            </h4>
+            </h5>
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container mt-2">
 
     <div class="row justify-content-center">
-        <div class="col-md-6 col-lg-5">
+        <div class="col-md-6 col-lg-6">
             <div class="card">
-                <div class="card-header fs-4 ms_banner">{{ __('Dettagli Utente') }}</div>
+                <div class="card-header fs-4">{{ __('Dettagli Utente') }}</div>
 
                 {{-- card utente --}}
                 <div class="card-body">
@@ -56,7 +35,6 @@
                       <li class="list-group-item my-2 card"><span class="fw-bold">Nome: </span> {{$user->name}} {{$user->user_last_name}}</li>
                       <li class="list-group-item my-2 card"><span class="fw-bold">Email: </span> {{$user->email}}</li>
                       <li class="list-group-item my-2 card"><span class="fw-bold">Cellulare: </span> {{$user->user_cell_number}}</li>
-                      <li class="list-group-item my-2 card"><span class="fw-bold">Codice CAP: </span> {{$user->user_zip_code}}</li>
                       <li class="list-group-item my-2 card"><span class="fw-bold">P.Iva: </span> {{$user->user_tax_code}}</li>
                       <li class="list-group-item my-2 card"><span class="fw-bold">Sei registrato dal: </span> {{$user->created_at}}</li>
                   </ul>
@@ -66,63 +44,38 @@
 
 
             {{-- card ristorante --}}
-            <div class="col-sm-6 col-lg-5">
+            <div class="col-sm-6 col-lg-6">
               <div class="card">
-                <div class="card-header fs-4 ms_banner">{{ __('Dettagli Ristorante') }}</div>
+                <div class="card-header fs-4">{{ __('Dettagli Ristorante') }}</div>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item my-2 card"><span class="fw-bold">Nome: </span> {{$user->restaurant_name}}</li>
                         <li class="list-group-item my-2 card"><span class="fw-bold">Indirizzo: </span> {{$user->user_street}}</li>
                         <li class="list-group-item my-2 card"><span class="fw-bold">Città: </span> {{$user->user_city}}</li>
-                        <li class="list-group-item my-2 card">
-                            <span class="fw-bold">Categories: </span>
-
-                        </li>
+                        <li class="list-group-item my-2 card"><span class="fw-bold">Codice CAP: </span> {{$user->user_zip_code}}</li>
                     </ul>
                   <h5 class="card-title mt-2">Dettagli Piatti</h5>
                   <ul class="list-group list-group-flush">
 
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                       Piatti visibili nel menù:
-                      <span class="badge bg-primary rounded-pill">8</span>
+                      <span class="badge bg-primary rounded-pill">15</span>
                     </li>
 
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Piatti non visibili nel menù:
                         <span class="badge bg-primary rounded-pill">4</span>
-                      </li>
+                    </li>
                   </ul>
                   
                 </div>
+                
+            
               </div>
 
-        </div>
-    </div>
-
-</div>
-
-
-<div class="row mb-4">
-
-    <div class="col-sm-6">
-        {{-- <a href="{{ route('food.index') }}"> --}}
-
-        <div class="mb-4 card lista piatti">
-            <h2>I tuoi piatti</h2>
-            <p>Thumbnail Piatti</p>
-        </div>
-    </div>
-
-    <div class="col-sm-6">
-        {{-- <a href="{{ route('orders.index') }}"> --}}
-
-            <div class="mb-4 card lista ordini">
-                <h2>Ordini ricevuti</h2>
             </div>
-    </div>
-</div>
 
-<div class="row">
+<div class="row mt-3">
     {{-- colonna di sinistra img user --}}
     <div class="col-sm-12 col-md-6 mb-5">
 
@@ -130,16 +83,16 @@
         <div class="card p-4">
             <div class="card-img">
 
-                @if (Auth::user()->image)
+                @if (Auth::user()->user_cover)
                     <img class="img-fluid" src="{{ asset('storage/icon/' . Auth::user()->user_cover) }}" alt=""
-                        height="400px" width="400px">
+                        height="500px" width="600px">
                 @else
-                    <img class="img-fluid" src="{{ asset('/img/noimg.png') }}" alt=""
-                        height="400px" width="400px">
+                    <img class="img-fluid" src="{{ asset('/images/noimg.png') }}" alt=""
+                        height="500px" width="600px">
                 @endif
             </div>
 
-            <form action="" method="POST" enctype="multipart/form-data">
+            {{-- <form action="" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('POST')
 
@@ -156,43 +109,22 @@
                     <a href="" class="button">Elimina</a>
                     <small id="helpId" class="text-muted"></small>
                 </div>
-            </form>
+            </form> --}}
 
         </div>
     </div>
 
-    {{-- colonna di destra con info user --}}
+    {{-- colonna di destra con miei piatti --}}
     <div class="col-sm-12 col-md-6 mb-5">
-        {{-- <div class=""> --}}
 
-            <h2 class="px-3 card-title">Le tue Informazioni</h2>
+        <a href="{{ route('admin.items.index') }}" class="text-decoration-none">
+            <div class="card lista piatti">
+                <div class="card-body text-center lista">
+                    <h2 class="mt-3 ms_bg-Opaco text-white">I TUOI PIATTI</h2>
+                </div>
+            </div>
+        </a>
 
-
-            <ul class="list-group list-group-flush">
-                <li class="my-2 card list-group-item">
-                    <strong>Nome: </strong> {{ Auth::user()->restaurant_name }}
-                </li>
-                <li class="my-2 card list-group-item">
-                    <strong>Indirizzo: </strong> {{ Auth::user()->user_street }}
-                </li>
-                <li class="my-2 card list-group-item">
-                    <strong>Telefono: </strong> {{ Auth::user()->user_cell_number }}
-                </li>
-                <li class="my-2 card list-group-item">
-                    <strong>Partita IVA: </strong> {{ Auth::user()->user_tax_code }}
-                </li>
-                {{-- <ul class="my-2 card list-group list-group-flush"> --}}
-                <li class="my-2 card list-group-item">
-                    <strong>Tipologie: </strong>
-                    {{-- @foreach (Auth::user()->typologies as $typ)
-                        {{ $typ->name }}
-
-                    @endforeach --}}
-                </li>
-
-            </ul>
-
-        {{-- </div> --}}
     </div>
 </div>
 @endsection

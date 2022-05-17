@@ -137,11 +137,11 @@
 
                         <div class="form-btn row mb-0">
                             <div class="col-register box-btn">
-                                <button href="#" type="submit" class="btn-register">
+                                <button href="#" type="submit" class="btn-register me-5">
                                     {{ __('Registrati') }} <i class="ri-arrow-right-line"></i>
                                 </button>
-                                <a type="submit" class="btn-register" href="{{ route('login')}}">
-                                    {{ __('Accedi') }} <i class="ri-arrow-right-line"></i>
+                                <a type="submit" class="btn-register ms-5" href="{{ route('login')}}">
+                                    {{ __('Torna alla pagina di login') }} <i class="ri-arrow-right-line"></i>
                                 </a>
                             </div>
                         </div>
