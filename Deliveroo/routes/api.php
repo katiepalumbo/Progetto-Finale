@@ -32,3 +32,5 @@ Route::get('/user/{slug}', 'Api\UserController@show');
 
 Route::get('/user/{slug}/{cart}','Api\UserController@cart');
 
+Route::post('/user/{slug}/{cart}/{order}', 'Api\OrderController@orderController');
+
