@@ -12213,6 +12213,10 @@ fieldset:disabled .btn {
   color: #9561e2;
 }
 
+.ms_banner {
+  background-color: #FF4718;
+}
+
 .contanier-form {
   display: flex;
 }
