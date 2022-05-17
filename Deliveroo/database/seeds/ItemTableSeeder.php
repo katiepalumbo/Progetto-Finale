@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 use App\Item;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
+use phpDocumentor\Reflection\DocBlock\Tags\Reference\Url;
 
 class ItemTableSeeder extends Seeder
 {
@@ -36,7 +37,8 @@ class ItemTableSeeder extends Seeder
 
             $newItem->visible = rand(true, false);
 
-            $newItem->image = url('https://www.pexels.com/photo/flat-lay-photography-of-vegetable-salad-on-plate-1640777/');
+            $newItem->image = Url('https://c4.wallpaperflare.com/wallpaper/848/809/121/red-and-yellow-boat-wallpaper-preview.jpg
+            ');
 
             $newItem->save();
         }
