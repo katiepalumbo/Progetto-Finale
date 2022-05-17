@@ -5,6 +5,7 @@
             <div class="card col-12">
                 <div class="card-body" v-if="users != null">
                     <h5 class="card-title">{{users.restaurant_name}}</h5>
+                    <img class="card-img-top" :src="`${users.user_cover}`">
                 </div>
             </div>
 
@@ -15,9 +16,11 @@
                 <div action="" class="row first-box" >
                     <div class="p-2 col-4" v-for="item in items" :key="item.id">
                         <div class="card p-4">
+                            <!--<img class="card-img-top" :src=>-->
                             <h1>{{item.item_name}}</h1>
                             <span class="py-2">{{item.description}}</span>
                             <h4 class="py-2">{{item.price}}</h4>
+                            <img :src="`${item.image}`" alt="">
                             <span>AGGIUNGI PIATTO</span>
                             <button type="submit" @click="addToCart(item.id)" class="btn btn-warning">test</button>
 
@@ -356,6 +359,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.card-img-top {
+    max-width: 50px;
+}
 .flex{
     display: flex;
 
