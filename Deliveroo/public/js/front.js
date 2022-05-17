@@ -3112,17 +3112,9 @@ __webpack_require__.r(__webpack_exports__);
   !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/sass-loader/dist/cjs.js??ref--8-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FiltraggioHome.vue?vue&type=style&index=0&id=721742ac&scoped=true&lang=scss& ***!
   \************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
-
-// module
-exports.push([module.i, "*[data-v-721742ac] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #f6f1fb;\n}\n.filtraggio-container .filtraggio-title[data-v-721742ac] {\n  width: 90%;\n  margin: auto 15px;\n}\n.filtraggio-container .filtraggio-title h3[data-v-721742ac] {\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  margin-bottom: 25px;\n}\n.filtraggio-container .type-button[data-v-721742ac] {\n  background-color: #9561e2;\n  text-transform: uppercase;\n  font-size: 0.8em;\n  font-weight: 700;\n  border: none;\n  color: #EAF0F2;\n  padding: 10px 30px;\n}", ""]);
-
-// exports
-
+throw new Error("Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: expected \"{\".\n   ╷\n87 │ <<<<<<< HEAD=======@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;800&family=Outfit:wght@600&family=Source+Sans+Pro:wght@200;400;600;700&display=swap');\r\n   │                                                                                                                                                                                              ^\n   ╵\n  resources\\sass\\_variables.scss 87:190  @import\n  C:\\Users\\Tonno\\Desktop\\Boolean\\Deliveboo\\Progetto-Finale\\Deliveroo\\resources\\js\\components\\FiltraggioHome.vue 61:9                             root stylesheet");
 
 /***/ }),
 
@@ -3131,17 +3123,9 @@ exports.push([module.i, "*[data-v-721742ac] {\n  margin: 0;\n  padding: 0;\n  bo
   !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/sass-loader/dist/cjs.js??ref--8-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Footer.vue?vue&type=style&index=0&id=61a7c374&scoped=true&lang=scss& ***!
   \****************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
-
-// module
-exports.push([module.i, "*[data-v-61a7c374] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #2F5F74;\n}\n.all_caps_footer[data-v-61a7c374] {\n  text-transform: uppercase;\n  font-size: 0.8em;\n  font-weight: 700;\n}\n.info_text h6[data-v-61a7c374] {\n  padding: 10px 0;\n  margin-top: 10px;\n}\n.info_text p[data-v-61a7c374] {\n  font-size: x-small;\n  color: #f6f1fb;\n}\n.menu_list[data-v-61a7c374] {\n  display: flex;\n  flex-direction: column;\n}\n.menu_list h6[data-v-61a7c374] {\n  padding: 10px;\n  margin-top: 10px;\n}\n.menu_list ul[data-v-61a7c374] {\n  list-style-type: none;\n  padding: 0;\n}\n.menu_list ul li[data-v-61a7c374] {\n  display: block;\n  margin: 0 10px;\n  font-size: 11px;\n  min-height: 20px;\n  padding-bottom: 5px;\n  border-bottom: 1px solid #f6993f;\n}\n.menu_list ul li[data-v-61a7c374]:hover {\n  border-bottom: 1px solid #f6f1fb;\n}\n.menu_list ul li .list_decoration[data-v-61a7c374] {\n  width: 10px;\n  min-height: 20px;\n  margin-right: 2px;\n  float: left;\n  font-size: 0.8em;\n  font-weight: 400;\n}\n.menu_list ul li a[data-v-61a7c374] {\n  text-decoration: none;\n  color: #f6f1fb;\n  padding: 0;\n}\n.menu_list ul li a[data-v-61a7c374]:hover {\n  color: #f6993f;\n}\n.footer_bottom_container[data-v-61a7c374] {\n  height: 50px;\n  border-top: 1px solid #EAF0F2;\n}\n.footer_bottom_container .copyright[data-v-61a7c374] {\n  color: #EAF0F2;\n  font-size: xx-small;\n}\n.footer_bottom_container .copyright .copyright_icon[data-v-61a7c374] {\n  padding-bottom: 2px;\n}\n.footer_bottom_container .copyright a[data-v-61a7c374] {\n  color: #f6993f;\n  text-decoration: none;\n}\n.footer_bottom_container .copyright a[data-v-61a7c374]:hover {\n  color: #f6f1fb;\n}\n.footer_bottom_container .footer-right li[data-v-61a7c374] {\n  display: inline-block;\n  font-size: 11px;\n  font-weight: 600;\n  vertical-align: center;\n  margin: 15px 5px;\n}\n.footer_bottom_container .footer-right li .fa-facebook-f[data-v-61a7c374] {\n  color: #fff;\n  border-radius: 50%;\n  padding: 10px;\n  background-color: #3c5997;\n}\n.footer_bottom_container .footer-right li .fa-twitter[data-v-61a7c374] {\n  color: #fff;\n  border-radius: 50%;\n  background-color: #56acee;\n  padding: 10px;\n}\n.footer_bottom_container .footer-right li .fa-instagram[data-v-61a7c374] {\n  color: #fff;\n  border-radius: 50%;\n  background-color: #3f729b;\n  padding: 10px;\n}\n.footer_bottom_container .footer-right li .fa-youtube[data-v-61a7c374] {\n  color: #fff;\n  border-radius: 50%;\n  background-color: #ce201f;\n  padding: 10px;\n}", ""]);
-
-// exports
-
+throw new Error("Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: expected \"{\".\n   ╷\n87 │ <<<<<<< HEAD=======@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;800&family=Outfit:wght@600&family=Source+Sans+Pro:wght@200;400;600;700&display=swap');\r\n   │                                                                                                                                                                                              ^\n   ╵\n  resources\\sass\\_variables.scss 87:190  @import\n  C:\\Users\\Tonno\\Desktop\\Boolean\\Deliveboo\\Progetto-Finale\\Deliveroo\\resources\\js\\components\\Footer.vue 119:9                            root stylesheet");
 
 /***/ }),
 
@@ -3169,18 +3153,9 @@ exports.push([module.i, ".container-header {\n  background-color: #FF4718;\n  po
   !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/sass-loader/dist/cjs.js??ref--8-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/HomeGallery.vue?vue&type=style&index=0&id=55d28a50&scoped=true&lang=scss& ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-var escape = __webpack_require__(/*! ../../../node_modules/css-loader/lib/url/escape.js */ "./node_modules/css-loader/lib/url/escape.js");
-exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
-
-// module
-exports.push([module.i, "*[data-v-55d28a50] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #f6f1fb;\n}\n.home-gallery-container[data-v-55d28a50] {\n  max-width: 80%;\n  margin: auto;\n}\n.home-gallery-container .img-container[data-v-55d28a50] {\n  height: 150px;\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/italian.jpg */ "./resources/js/assets/images/italian.jpg")) + ");\n  background-size: cover;\n}\n.home-gallery-container .overlay-text[data-v-55d28a50] {\n  color: white;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  padding: auto;\n  background-color: transparent;\n  height: 100%;\n  width: 100%;\n}\n.home-gallery-container .white-space[data-v-55d28a50] {\n  min-height: 100px;\n}", ""]);
-
-// exports
-
+throw new Error("Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: expected \"{\".\n   ╷\n87 │ <<<<<<< HEAD=======@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;800&family=Outfit:wght@600&family=Source+Sans+Pro:wght@200;400;600;700&display=swap');\r\n   │                                                                                                                                                                                              ^\n   ╵\n  resources\\sass\\_variables.scss 87:190  @import\n  C:\\Users\\Tonno\\Desktop\\Boolean\\Deliveboo\\Progetto-Finale\\Deliveroo\\resources\\js\\components\\HomeGallery.vue 79:9                             root stylesheet");
 
 /***/ }),
 
@@ -3189,17 +3164,9 @@ exports.push([module.i, "*[data-v-55d28a50] {\n  margin: 0;\n  padding: 0;\n  bo
   !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/sass-loader/dist/cjs.js??ref--8-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/IntroText.vue?vue&type=style&index=0&id=bc51a144&scoped=true&lang=scss& ***!
   \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
-
-// module
-exports.push([module.i, ".forum-intro-text-container[data-v-bc51a144] {\n  min-height: 150px;\n  background-color: #FF4718;\n}\n.forum-intro-text-container .forum-intro-text[data-v-bc51a144] {\n  color: #f6f1fb;\n  text-align: left;\n  padding: 40px 0 10px 0;\n  width: 80%;\n  margin: auto;\n}\n.forum-intro-text-container .forum-intro-text .all_caps_title[data-v-bc51a144] {\n  text-transform: uppercase;\n  font-size: 0.6em;\n  font-weight: 600;\n  letter-spacing: 3px;\n}\n.forum-intro-text-container .forum-intro-text h3[data-v-bc51a144] {\n  font-weight: 700;\n}\n.forum-intro-text-container .orange_divider[data-v-bc51a144] {\n  width: 80%;\n  height: 2px;\n  background-color: #f6993f;\n  align-self: flex-start;\n}", ""]);
-
-// exports
-
+throw new Error("Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: expected \"{\".\n   ╷\n87 │ <<<<<<< HEAD=======@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;800&family=Outfit:wght@600&family=Source+Sans+Pro:wght@200;400;600;700&display=swap');\r\n   │                                                                                                                                                                                              ^\n   ╵\n  resources\\sass\\_variables.scss 87:190  @import\n  C:\\Users\\Tonno\\Desktop\\Boolean\\Deliveboo\\Progetto-Finale\\Deliveroo\\resources\\js\\components\\IntroText.vue 30:9                             root stylesheet");
 
 /***/ }),
 
@@ -3208,18 +3175,9 @@ exports.push([module.i, ".forum-intro-text-container[data-v-bc51a144] {\n  min-h
   !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/sass-loader/dist/cjs.js??ref--8-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/JumboHome.vue?vue&type=style&index=0&id=e395661a&scoped=true&lang=scss& ***!
   \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-var escape = __webpack_require__(/*! ../../../node_modules/css-loader/lib/url/escape.js */ "./node_modules/css-loader/lib/url/escape.js");
-exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
-
-// module
-exports.push([module.i, ".jumbotron-container[data-v-e395661a] {\n  min-height: 450px;\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/food.jpg */ "./resources/js/assets/images/food.jpg")) + ");\n  background-size: cover;\n  margin-top: 66px;\n}\n.jumbotron-container .jumbotron-contents[data-v-e395661a] {\n  vertical-align: middle;\n  transform: translateY(50%);\n  transform: translateX(100%);\n  font-size: xx-large;\n  padding: 10px;\n}\n.jumbotron-container .jumbotron-contents .jumbotron_title[data-v-e395661a] {\n  font-size: 95px;\n  font-weight: 700;\n  color: #9561e2;\n  margin-top: 15px;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.jumbotron-container .jumbotron-contents .jumbotron_subtitle[data-v-e395661a] {\n  font-size: 16px;\n  font-family: \"Tenor Sans\", sans-serif;\n  color: #9538f2;\n}\n.jumbotron-container .jumbotron-contents .button[data-v-e395661a] {\n  display: inline-block;\n  background-color: #9538f2;\n  padding: 6px 16px;\n  text-decoration: none;\n  font-weight: bold;\n  color: #fff;\n  border-radius: 5px;\n  transition: all 0.3s;\n  margin-left: 10px;\n  font-size: 12px;\n  font-weight: 700;\n}\n.jumbotron-container .jumbotron-contents .button[data-v-e395661a]:hover {\n  color: #f6993f;\n}\n.jumbotron-container .jumbotron-contents .button span[data-v-e395661a] {\n  padding-left: 10px;\n}", ""]);
-
-// exports
-
+throw new Error("Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: expected \"{\".\n   ╷\n87 │ <<<<<<< HEAD=======@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;800&family=Outfit:wght@600&family=Source+Sans+Pro:wght@200;400;600;700&display=swap');\r\n   │                                                                                                                                                                                              ^\n   ╵\n  resources\\sass\\_variables.scss 87:190  @import\n  C:\\Users\\Tonno\\Desktop\\Boolean\\Deliveboo\\Progetto-Finale\\Deliveroo\\resources\\js\\components\\JumboHome.vue 37:9                             root stylesheet");
 
 /***/ }),
 
@@ -3228,17 +3186,9 @@ exports.push([module.i, ".jumbotron-container[data-v-e395661a] {\n  min-height: 
   !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/sass-loader/dist/cjs.js??ref--8-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Singolo.vue?vue&type=style&index=0&lang=scss& ***!
   \*****************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
-
-// module
-exports.push([module.i, ".my_card {\n  margin: 10px;\n  background-color: #fff;\n  border-radius: 10px;\n  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);\n  overflow: hidden;\n  position: relative;\n  display: flex;\n  width: 210px;\n  height: 260px;\n}\n.my_card .my_card-header {\n  height: 100%;\n}\n.my_card .my_card-header img {\n  height: 100%;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  transition: 0.9s;\n  outline: 1px solid rgba(255, 255, 255, 0.5);\n  opacity: 0.8;\n  outline-offset: -8px;\n}\n.my_card img:hover {\n  transform: scale(1.3);\n  opacity: 1;\n}\n.my_card .my_card-body {\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end;\n  align-items: flex-start;\n  position: absolute;\n  bottom: 0px;\n  width: 100%;\n  height: 110px;\n  z-index: 3;\n  padding-left: 20px;\n  padding-right: 20px;\n  padding-bottom: 15px;\n  padding-top: 15px;\n  background-color: rgba(0, 0, 0, 0.5);\n}\n.my_card .my_card-body .box-tag {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n}\n.my_card .my_card-body .box-tag .my_tag {\n  background: #cccccc;\n  border-radius: 50px;\n  background-color: #FF4718;\n  font-size: 10px;\n  margin: 3px 2px;\n  color: #fff;\n  padding: 2px 10px;\n  text-transform: uppercase;\n}\n.my_card .my_card-body .card-title {\n  text-transform: uppercase;\n  margin: 6px 4px;\n  color: #fff;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.my_card .btn-card {\n  background-color: #9538f2;\n  box-shadow: #4e1f7c 2px 2px 0px;\n  margin-top: 7px;\n  text-transform: uppercase;\n  text-decoration: none;\n  color: #fff;\n  margin-left: 4px;\n  padding: 6px 8px;\n  font-size: 13.5px;\n  border-radius: 8px;\n  transition: transform 200ms, box-shadow 200ms;\n}\n.my_card .btn-card:hover {\n  transform: translateY(2px) translateX(2px);\n  box-shadow: #4e1f7c 0px 0px 0px;\n}", ""]);
-
-// exports
-
+throw new Error("Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: expected \"{\".\n   ╷\n87 │ <<<<<<< HEAD=======@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;800&family=Outfit:wght@600&family=Source+Sans+Pro:wght@200;400;600;700&display=swap');\r\n   │                                                                                                                                                                                              ^\n   ╵\n  resources\\sass\\_variables.scss 87:190  @import\n  C:\\Users\\Tonno\\Desktop\\Boolean\\Deliveboo\\Progetto-Finale\\Deliveroo\\resources\\js\\components\\Singolo.vue 43:9                             root stylesheet");
 
 /***/ }),
 
@@ -3247,17 +3197,9 @@ exports.push([module.i, ".my_card {\n  margin: 10px;\n  background-color: #fff;\
   !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/sass-loader/dist/cjs.js??ref--8-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/StandardGallery.vue?vue&type=style&index=0&id=6bed6bba&scoped=true&lang=scss& ***!
   \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
-
-// module
-exports.push([module.i, "*[data-v-6bed6bba] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #FF4718;\n}\n.article_card[data-v-6bed6bba] {\n  max-height: 300px;\n  width: 25vw;\n  overflow: hidden;\n  margin: 5px 0;\n}\n.article_card img[data-v-6bed6bba] {\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  padding-bottom: 2px;\n  border-bottom: 2px solid transparent;\n}\n.article_card img[data-v-6bed6bba]:hover {\n  border-bottom: 2px solid #9561e2;\n  cursor: pointer;\n}\n.article_card .article_title[data-v-6bed6bba] {\n  font-size: 0.9em;\n  margin-top: 10px;\n  font-weight: 600;\n  padding-top: 2px;\n}\n.article_card .article_date[data-v-6bed6bba] {\n  font-size: 0.6em;\n  padding-right: 10px;\n  margin-top: -15px;\n}\n.article_card .article_preview[data-v-6bed6bba] {\n  font-size: 0.7em;\n  padding-right: 10px;\n  margin-top: -10px;\n}", ""]);
-
-// exports
-
+throw new Error("Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: expected \"{\".\n   ╷\n87 │ <<<<<<< HEAD=======@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;800&family=Outfit:wght@600&family=Source+Sans+Pro:wght@200;400;600;700&display=swap');\r\n   │                                                                                                                                                                                              ^\n   ╵\n  resources\\sass\\_variables.scss 87:190  @import\n  C:\\Users\\Tonno\\Desktop\\Boolean\\Deliveboo\\Progetto-Finale\\Deliveroo\\resources\\js\\components\\StandardGallery.vue 27:9                             root stylesheet");
 
 /***/ }),
 
@@ -3266,17 +3208,9 @@ exports.push([module.i, "*[data-v-6bed6bba] {\n  margin: 0;\n  padding: 0;\n  bo
   !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/sass-loader/dist/cjs.js??ref--8-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Home.vue?vue&type=style&index=0&id=b3c5cf30&scoped=true&lang=scss& ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
-
-// module
-exports.push([module.i, "*[data-v-b3c5cf30] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.gallery-container[data-v-b3c5cf30] {\n  background-color: #FF4718;\n  margin-top: -20px;\n  margin-bottom: 20px;\n  padding-bottom: 40px;\n}\n.orange-space[data-v-b3c5cf30] {\n  background-color: #f6993f;\n  min-height: 100px;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}", ""]);
-
-// exports
-
+throw new Error("Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: expected \"{\".\n   ╷\n87 │ <<<<<<< HEAD=======@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;800&family=Outfit:wght@600&family=Source+Sans+Pro:wght@200;400;600;700&display=swap');\r\n   │                                                                                                                                                                                              ^\n   ╵\n  resources\\sass\\_variables.scss 87:190  @import\n  C:\\Users\\Tonno\\Desktop\\Boolean\\Deliveboo\\Progetto-Finale\\Deliveroo\\resources\\js\\pages\\Home.vue 156:9                            root stylesheet");
 
 /***/ }),
 
@@ -3285,17 +3219,9 @@ exports.push([module.i, "*[data-v-b3c5cf30] {\n  margin: 0;\n  padding: 0;\n  bo
   !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/sass-loader/dist/cjs.js??ref--8-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Menu.vue?vue&type=style&index=0&lang=scss& ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
-
-// module
-exports.push([module.i, ".my_container-menu {\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n}\n.my_container-menu .my_row-menu-1 {\n  width: 15%;\n  height: calc(100vh - 65.6px);\n  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);\n  background-clip: #f6f1fb;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 65.6px;\n}\n.my_container-menu .my_row-menu-1 .my_box {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n}\n.my_container-menu .my_row-menu-1 .my_box .my_box-input {\n  width: 100%;\n}\n.my_container-menu .my_row-menu-1 .my_box .my_box-input .my_label-input {\n  font-size: 13px;\n  color: #FF4718;\n  margin-top: 2px;\n  margin-left: 20px;\n  cursor: pointer;\n}\n.my_container-menu .my_row-menu-1 .my_box .my_box-input .my_input-item {\n  display: flex;\n  flex-direction: row-reverse;\n  justify-content: space-between;\n  align-items: center;\n  margin: 2.5px 0px;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.my_container-menu .my_row-menu-1 .my_box .my_box-input .my_input-item .my_input {\n  margin-right: 15px;\n  margin-top: 2px;\n}\n.my_container-menu .my_row-menu-1 .my_box .box-btn {\n  height: 40px;\n}\n.my_container-menu .my_row-menu-1 .my_box .btn-header {\n  display: inline-block;\n  background-color: #9538f2;\n  padding: 6px 16px;\n  text-decoration: none;\n  font-weight: bold;\n  color: #fff;\n  border: 0px;\n  border-radius: 5px;\n  box-shadow: 0 4px 0 #7633b9;\n  transition: all 0.3s;\n  margin-left: 19px;\n  margin-top: 10px;\n}\n.my_container-menu .my_row-menu-1 .my_box .btn-header:hover {\n  transform: translateY(2px);\n  box-shadow: 0 2px 0 #9538f2;\n}\n.my_container-menu .my_row-menu-2 {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  margin-top: 100px;\n  margin-bottom: 40px;\n  width: 85%;\n  align-self: flex-end;\n}\n.my_container-menu .my_row-menu-2 .my_box-items {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  margin-top: 26px;\n  flex-wrap: wrap;\n  width: 100%;\n  align-self: flex-end;\n}\n.my_container-menu .my_row-menu-2 .my_col-menu {\n  padding: 10px 10px;\n}\n.my_container-menu .my_row-menu-2 .my_box-title {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.my_container-menu .my_row-menu-2 .my_box-title .menu-title {\n  color: #9538f2;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.my_container-menu .my_row-menu-2 .my_box-title .menu-text {\n  color: #FF4718;\n  font-family: \"Tenor Sans\", sans-serif;\n}", ""]);
-
-// exports
-
+throw new Error("Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: expected \"{\".\n   ╷\n87 │ <<<<<<< HEAD=======@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;800&family=Outfit:wght@600&family=Source+Sans+Pro:wght@200;400;600;700&display=swap');\r\n   │                                                                                                                                                                                              ^\n   ╵\n  resources\\sass\\_variables.scss 87:190  @import\n  C:\\Users\\Tonno\\Desktop\\Boolean\\Deliveboo\\Progetto-Finale\\Deliveroo\\resources\\js\\pages\\Menu.vue 121:9                            root stylesheet");
 
 /***/ }),
 
@@ -3400,33 +3326,6 @@ function toComment(sourceMap) {
 	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
 
 	return '/*# ' + data + ' */';
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/lib/url/escape.js":
-/*!***************************************************!*\
-  !*** ./node_modules/css-loader/lib/url/escape.js ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = function escape(url) {
-    if (typeof url !== 'string') {
-        return url
-    }
-    // If url is already wrapped in quotes, remove them
-    if (/^['"].*['"]$/.test(url)) {
-        url = url.slice(1, -1);
-    }
-    // Should url be wrapped?
-    // See https://drafts.csswg.org/css-values-3/#urls
-    if (/["'() \t\n]/.test(url)) {
-        return '"' + url.replace(/"/g, '\\"').replace(/\n/g, '\\n') + '"'
-    }
-
-    return url
 }
 
 
@@ -21275,28 +21174,6 @@ module.exports = g;
 
 /***/ }),
 
-/***/ "./resources/js/assets/images/food.jpg":
-/*!*********************************************!*\
-  !*** ./resources/js/assets/images/food.jpg ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/food.jpg?8b6484624e0337a510cea428a0a76f69";
-
-/***/ }),
-
-/***/ "./resources/js/assets/images/italian.jpg":
-/*!************************************************!*\
-  !*** ./resources/js/assets/images/italian.jpg ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/italian.jpg?7d568d4dc3014f6468c4fdbb062812c8";
-
-/***/ }),
-
 /***/ "./resources/js/components/FiltraggioHome.vue":
 /*!****************************************************!*\
   !*** ./resources/js/components/FiltraggioHome.vue ***!
@@ -22621,7 +22498,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\pizze\Desktop\BOOLEAN\PROGETTO_FINALE\Progetto-Finale\Deliveroo\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\Tonno\Desktop\Boolean\Deliveboo\Progetto-Finale\Deliveroo\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })

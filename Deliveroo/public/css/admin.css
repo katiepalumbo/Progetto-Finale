@@ -1,6 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;
+@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;
 
-700;900&family=Tenor+Sans&display=swap);@charset "UTF-8";
+400;500;600;800&family=Outfit:wght@600&family=Source+Sans+Pro:wght@200;400;600;700&display=swap);@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);@charset "UTF-8";
 
 :root {
   --bs-blue: #3490dc;
@@ -12211,6 +12211,10 @@ fieldset:disabled .btn {
 
 .ms_text-purple {
   color: #9561e2;
+}
+
+.ms_banner {
+  background-color: #FF4718;
 }
 
 .contanier-form {

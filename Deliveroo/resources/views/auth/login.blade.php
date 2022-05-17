@@ -3,7 +3,7 @@
 @section('content')
 
 
-<section class="background-radial-gradient overflow-hidden vh-100 ms_background-img">
+<section class="vh-100 ms_background-img">
     <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
       <div class="row gx-lg-5 align-items-center mb-5">
 

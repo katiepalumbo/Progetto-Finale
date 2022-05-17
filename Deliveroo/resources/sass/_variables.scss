@@ -1,7 +1,7 @@
 // Body
-
 $body-bg: #f6f1fb;
-
+$body-bg: #f8fafc;
+$body-bg: #f6f1fb;
 // Typography
 //https://fonts.google.com/specimen/Raleway FONT TITOLI
 //https://fonts.google.com/specimen/Tenor+Sans FONT SOTTOTITOLI
@@ -24,16 +24,14 @@ $cyan: #6cb2eb;
 $first: #2F5F74;
 $second: #85ADBE;
 $third: #EAF0F2;
-
 @mixin title-font {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
 }
 
 @mixin subtitle-font {
-  font-family: 'Tenor Sans', sans-serif;
+    font-family: 'Tenor Sans', sans-serif;
 }
-
 
 @mixin li-menu-horizontal {
     display: inline-block;
@@ -86,5 +84,6 @@ $third: #EAF0F2;
     vertical-align: center;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap');
+<<<<<<< HEAD=======@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;800&family=Outfit:wght@600&family=Source+Sans+Pro:wght@200;400;600;700&display=swap');
+>>>>>>>Styling-dashboard @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap');
 //@import '~bootstrap/scss/bootstrap';
