@@ -5,7 +5,7 @@
     <div class="footer_container py-5">
 
         <!-- inizio footer top con info e menu -->
-        <div class="col m-auto footer_top">
+        <div class="col-10 m-auto footer_top">
             <div class="row footer_lists">
                 <div class="col-3 m-1 footer-block">
                     <h3 class="mb-3">Discover Deliveboo</h3>
@@ -25,12 +25,7 @@
                         <li v-for="(item, index) in helpItems" :key="index">{{item.name}}</li>
                     </ul>
                 </div>
-                <div class="col-3 m-1 footer-block">
-                    <h3 class="mb-3">Discover Deliveboo</h3>
-                    <ul class="footer-menu">
-                        <li v-for="(item, index) in discoverItems" :key="index">{{item.name}}</li>
-                    </ul>
-                </div>
+
 
 
                 <!-- footer text

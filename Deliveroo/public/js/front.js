@@ -2093,11 +2093,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 //qua ci sono i dati che vengono importati da app.vue 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'MyFooter',
@@ -2930,6 +2925,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'RestaurantMenu',
   data: function data() {
@@ -3408,7 +3406,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".flex[data-v-14400205] {\n  display: flex;\n}\n.flex .first-box[data-v-14400205] {\n  width: 60%;\n  padding: 0px 30px;\n  overflow-y: auto;\n}\n.flex .carrello[data-v-14400205] {\n  width: 40%;\n  height: 510px;\n  background-color: aqua;\n  margin: 10px 0px;\n}\n.flex .carrello .card-box[data-v-14400205] {\n  height: 320px;\n  overflow-y: auto;\n  margin: 10px;\n}\n.flex .carrello .card[data-v-14400205] {\n  margin: 10px;\n}\n.flex .box[data-v-14400205] {\n  width: 100%;\n  height: 30px;\n  text-align: center;\n}", ""]);
+exports.push([module.i, ".card-img-top[data-v-14400205] {\n  max-width: 50px;\n}\n.flex[data-v-14400205] {\n  display: flex;\n}\n.flex .first-box[data-v-14400205] {\n  width: 60%;\n  padding: 0px 30px;\n  overflow-y: auto;\n}\n.flex .carrello[data-v-14400205] {\n  width: 40%;\n  height: 510px;\n  background-color: aqua;\n  margin: 10px 0px;\n}\n.flex .carrello .card-box[data-v-14400205] {\n  height: 320px;\n  overflow-y: auto;\n  margin: 10px;\n}\n.flex .carrello .card[data-v-14400205] {\n  margin: 10px;\n}\n.flex .box[data-v-14400205] {\n  width: 100%;\n  height: 30px;\n  text-align: center;\n}", ""]);
 
 // exports
 
@@ -4933,7 +4931,7 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "footer_container py-5" }, [
-    _c("div", { staticClass: "col m-auto footer_top" }, [
+    _c("div", { staticClass: "col-10 m-auto footer_top" }, [
       _c("div", { staticClass: "row footer_lists" }, [
         _c("div", { staticClass: "col-3 m-1 footer-block" }, [
           _c("h3", { staticClass: "mb-3" }, [_vm._v("Discover Deliveboo")]),
@@ -4966,19 +4964,6 @@ var render = function () {
           _c(
             "ul",
             _vm._l(_vm.helpItems, function (item, index) {
-              return _c("li", { key: index }, [_vm._v(_vm._s(item.name))])
-            }),
-            0
-          ),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-3 m-1 footer-block" }, [
-          _c("h3", { staticClass: "mb-3" }, [_vm._v("Discover Deliveboo")]),
-          _vm._v(" "),
-          _c(
-            "ul",
-            { staticClass: "footer-menu" },
-            _vm._l(_vm.discoverItems, function (item, index) {
               return _c("li", { key: index }, [_vm._v(_vm._s(item.name))])
             }),
             0
@@ -5842,6 +5827,11 @@ var render = function () {
               _c("h5", { staticClass: "card-title" }, [
                 _vm._v(_vm._s(_vm.users.restaurant_name)),
               ]),
+              _vm._v(" "),
+              _c("img", {
+                staticClass: "card-img-top",
+                attrs: { src: "" + _vm.users.user_cover },
+              }),
             ])
           : _vm._e(),
       ]),
@@ -5879,6 +5869,8 @@ var render = function () {
                 ]),
                 _vm._v(" "),
                 _c("h4", { staticClass: "py-2" }, [_vm._v(_vm._s(item.price))]),
+                _vm._v(" "),
+                _c("img", { attrs: { src: "" + item.image, alt: "" } }),
                 _vm._v(" "),
                 _c("span", [_vm._v("AGGIUNGI PIATTO")]),
                 _vm._v(" "),
