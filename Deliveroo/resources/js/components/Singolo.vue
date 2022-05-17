@@ -111,11 +111,7 @@ export default {
                 text-transform: uppercase;
                 margin: 6px 4px;
                 color: #fff;
-<<<<<<< HEAD
                 @include title-font;
-=======
-                
->>>>>>> home-style-rifiniture
             }
         }
 
