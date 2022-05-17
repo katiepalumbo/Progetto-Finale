@@ -12434,3 +12434,11 @@ fieldset:disabled .btn {
   height: calc(100% + 16px);
 }
 
+.ms_banner {
+  background-color: #FF4718;
+}
+
+.ms_green {
+  color: green;
+}
+
