@@ -2,10 +2,12 @@
 
 use App\User;
 use Illuminate\Database\Seeder;
+namespace Database\Seeders;
 use Faker\Generator as Faker;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
  
-class RestaurantsTableSeeder extends Seeder
+class NewUsersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -84,20 +86,34 @@ class RestaurantsTableSeeder extends Seeder
             
         ];
 
-        foreach($restaurants as $key => $restaurant){
+        foreach($users as $key => $user) {
 
-            $newRestaurant = new Restaurant();
+            $newUser = new User();
 
-            $newRestaurant->name = $restaurant["name"];
-            $newRestaurant->slug = Str::slug($newRestaurant->name);
-           
-            $newRestaurant->address = $faker->address();
-            $newRestaurant->phone = $faker->phoneNumber();
-            $newRestaurant->email = $faker->email();
-            $newRestaurant->vat = $faker->numberBetween(10000000000,99999999999);
-            $newRestaurant->description = $faker->paragraph(2);
-            $newRestaurant->user_id = $key+1;
+            $newUser->restaurant_name = $user["restaurant_name"];
+            $newUser->user_cover = $user['user_cover'];
+            $newUser->name = $faker->word();
+            $newUser->email = $faker->email();
+            $newUser->password = Hash::make('testtest');
+            $newUser->user_last_name = $faker->word();
+            $newUser->user_cell_number = $faker->numerify('##########');
+            $newUser->user_tax_code = $faker->numerify('###########');
+            $newUser->user_street = $faker->streetName();
+            $newUser->user_city = $faker->city();
+            $newUser->user_zip_code = $faker->numerify('#####');
+            $newUser->restaurant_name = $faker->word();
+            $newUser->slug = Str::slug($newUser->restaurant_name);
+            $counter = 1;
+            while (User::where('slug', $newUser->slug)->first()) {
+                $newUser->slug = Str::slug($newUser->restaurant_name) . '-' . $counter;
+                $counter++;
+            }
 
-            $newRestaurant->save();
+            $newUser->user_id = $key+1;
+            $newUser->description = $faker->paragraph(2);
+
+            $newUser->save();
 
         }
+    }
+}
