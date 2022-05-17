@@ -41,6 +41,16 @@ export default {
 
     data () {
       return {
+          types: null,
+                selected: [],
+                //users: [],
+
+                navLinks: [
+                {
+                    to : 'restaurant-menu',
+                    name : 'menu',
+                },
+            ],
         introText1:[
           {
             small: 'piatti per ogni gusto',
@@ -55,81 +65,59 @@ export default {
         ],
         galleryOneItems: [
                 {
+                    url: '../../images/hamburger.jpg',
+                    name: 'McBooleans',
+                },
+                {
+                    url: '../../images/italian.jpg',
+                    name: 'Pasta FaBool',
+                },
+                {
                     url: '../../images/chinese.jpg',
+                    name: 'BamBool Lounge',
+                },
+                {
+                    url: '../../images/mexican.jpg',
+                    name: 'Los Tres Booleaners',
+                },
+                {
+                    url: '../../images/hamburger.jpg',
+                    name: 'McBooleans',
+                },
+                {
+                    url: '../../images/italian.jpg',
+                    name: 'Pasta FaBool',
+                },
+                {
+                    url: '../../images/chinese.jpg',
+                    name: 'Bambool Lounge',
+                },
+                {
+                    url: '../../images/mexican.jpg',
                     date: 'October 11 | 2 comments',
-                    name: 'Chinese',
-                    text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
+                    name: 'Los Tres Booleaners',
+                },
+                                {
+                    url: '../../images/hamburger.jpg',
+                    name: 'McBooleans',
+                },
+                {
+                    url: '../../images/italian.jpg',
+                    name: 'Pasta FaBool',
                 },
                 {
                     url: '../../images/chinese.jpg',
-                    date: 'October 11 | comments off',
-                    name: 'Italian',
-                    text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
+                    name: 'BamBool Lounge',
                 },
                 {
-                    url: '../../images/chinese.jpg',
+                    url: '../../images/mexican.jpg',
                     date: 'October 11 | 2 comments',
-                    name: 'Mexican',
-                    text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
-                },
-                {
-                    url: '../../images/chinese.jpg',
-                    date: 'October 11 | 2 comments',
-                    name: 'Food',
-                    text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
-                },
-                {
-                    url: '../../images/chinese.jpg',
-                    date: 'October 11 | 2 comments',
-                    name: 'Chinese',
-                    text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
-                },
-                {
-                    url: '../../images/chinese.jpg',
-                    date: 'October 11 | comments off',
-                    name: 'Italian',
-                    text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
-                },
-                {
-                    url: '../../images/chinese.jpg',
-                    date: 'October 11 | 2 comments',
-                    name: 'Mexican',
-                    text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
-                },
-                {
-                    url: '../../images/chinese.jpg',
-                    date: 'October 11 | 2 comments',
-                    name: 'Food',
-                    text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
-                },
-                                                {
-                    url: '../../images/chinese.jpg',
-                    date: 'October 11 | 2 comments',
-                    name: 'Chinese',
-                    text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
-                },
-                {
-                    url: '../../images/chinese.jpg',
-                    date: 'October 11 | comments off',
-                    name: 'Italian',
-                    text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
-                },
-                {
-                    url: '../../images/chinese.jpg',
-                    date: 'October 11 | 2 comments',
-                    name: 'Mexican',
-                    text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
-                },
-                {
-                    url: '../../images/chinese.jpg',
-                    date: 'October 11 | 2 comments',
-                    name: 'Food',
-                    text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
+                    name: 'Los Tres Booleaners',
                 },
             ],
             galleryTwoItems : [
                 {
-                    url: '../assets/images/food.jpg',
+                    url: '../../images/food.jpg',
                     date: 'October 11 | 2 comments',
                     name:'This is Another Title',
                     text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
@@ -149,7 +137,22 @@ export default {
 
             ],
         }
-}}
+    },
+    methods:{
+                getUsers(){
+                axios.get('/api/users').then(response => {
+                    this.users = response.data.results;
+                    // console.log(response.data.results)
+                    // console.log('aaaaaaaaaaaaa')
+                })
+
+                .catch(error => {
+                    console.log(error);
+                })
+
+            },
+    },
+}
 </script>
 
 <style scoped lang="scss">
@@ -180,6 +183,8 @@ export default {
   @include title-font;
 
 }
+
+
     
 
 

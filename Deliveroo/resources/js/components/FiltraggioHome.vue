@@ -9,7 +9,7 @@
                     <div class="col"  v-for="typex in types" :key="typex.id">
                         <div class="row d-inline-flex">
                             <!-- <input  class="form-check-input row" type="checkbox" v-model="selected" :value="typex.id" :id="'typex_' + typex.id"> -->
-                            <button class="form-check-label btn type-button mx-5 my-2" :for="'typex_' + typex.id">{{typex.name}}</button>
+                            <router-link class="form-check-label btn type-button mx-5 my-2" :to="{name: 'menu'}" :for="'typex_' + typex.id">{{typex.name}}</router-link>
                         </div>
                     </div>
                     <!-- <div>
@@ -31,17 +31,17 @@ export default {
                 //selected: [],
                 //users: [],
 
-            //     navLinks: [
-            //     {
-            //         to : 'restaurant-menu',
-            //         name : 'menu',
-            //     },
-            // ]
+                 navLinks: [
+                 {
+                    to : 'restaurant-menu',
+                   name : 'menu',
+                },
+             ]
             };
         },
     methods: {
 
-            getTypes(){
+        getTypes(){
                 // prelevo tutte le tipologie
                 axios.get('api/types').then(response =>{
                     this.types = response.data.results;

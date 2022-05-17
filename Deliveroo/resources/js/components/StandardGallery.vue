@@ -1,7 +1,9 @@
 <template>
     <!-- qua uso le props da main per poter popolare le due gallerie diverse -->
      <div class="col article_card mx-auto">
-        <img :src="`${item.url}`" :alt="`${item.name}`">
+        <router-link class="img-container" :to="{name: 'menu'}">
+            <img :src="`${item.url}`" :alt="`${item.name}`">
+        </router-link>
         <p class="article_title">{{item.name}}</p>
         <!-- <p class="article_date">{{item.date}}</p>
         <p class="article_preview">{{item.text}}</p> -->
@@ -44,8 +46,10 @@ export default {
     overflow: hidden;
     margin: 5px 0;
 
+    .img-container {
 
     img {
+        max-height: 200px;
         width: 100%;
         object-fit: cover;
         padding-bottom: 2px;
@@ -53,30 +57,26 @@ export default {
         &:hover {
             border-bottom: 2px solid $purple;
             cursor: pointer;
+            
         }
     }
 
+    }
+
+
+
+
+
     .article_title {
-        font-size: .9em;
+        font-size: 1.2em;
         margin-top: 10px;
         font-weight: 600;
         padding-top: 2px;
+        color: $body-bg;
 
     }
 
-    .article_date {
-        font-size: .6em;
-        padding-right: 10px;
-        margin-top: -15px;
-        
-    }
 
-    .article_preview {
-        font-size: .7em;
-        padding-right: 10px;
-        margin-top: -10px;
-       
-    }
 
 }
 

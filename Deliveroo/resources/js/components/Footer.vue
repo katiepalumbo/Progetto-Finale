@@ -199,7 +199,7 @@ export default {
 
 .footer_bottom_container {
     height: 50px;
-    border-top: 1px solid $third;
+    border-top: 1px solid slategray;
 
     .copyright {
         color: $third;
@@ -220,36 +220,36 @@ export default {
         }
     }
 
-    .footer-right {
-        li {
-            @include li-menu-horizontal;
-            margin: 15px 5px;
+    // .footer-right {
+    //     li {
+    //         @include li-menu-horizontal;
+    //         margin: 15px 5px;
 
-            .fa-facebook-f {
-                @include brand-icons;
-                padding: 10px;
-                background-color: #3c5997;
-            }
+    //         .fa-facebook-f {
+    //             @include brand-icons;
+    //             padding: 10px;
+    //             background-color: #3c5997;
+    //         }
 
-            .fa-twitter {
-                @include brand-icons;
-                background-color: #56acee;
-                padding: 10px;
-            }
+    //         .fa-twitter {
+    //             @include brand-icons;
+    //             background-color: #56acee;
+    //             padding: 10px;
+    //         }
 
-            .fa-instagram {
-                @include brand-icons;
-                background-color: #3f729b;
-                padding: 10px;
-            }
+    //         .fa-instagram {
+    //             @include brand-icons;
+    //             background-color: #3f729b;
+    //             padding: 10px;
+    //         }
 
-            .fa-youtube {
-                @include brand-icons;
-                background-color: #ce201f;
-                padding: 10px;
-            }
-        }
-    }
+    //         .fa-youtube {
+    //             @include brand-icons;
+    //             background-color: #ce201f;
+    //             padding: 10px;
+    //         }
+    //     }
+    // }
 }
 
 </style>

@@ -42,7 +42,9 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
+
+@import '../../sass/_variables.scss';
 
     .container-header {
         background-color: #FF4718;
@@ -58,6 +60,7 @@ export default {
 
             .logo-header {
                 font-size: 21px;
+                @include title-font;
             }
         }
 
@@ -72,6 +75,7 @@ export default {
             box-shadow: 0 4px 0 #7633b9;
             transition: all 0.3s;
             margin-left: 10px;
+            @include title-font;
         }
 
         .btn-header:hover {
