@@ -86,6 +86,7 @@ export default {
     .type-button {
         background-color: $purple;
         @include all-caps-button;
+        max-width: 70%;
     }
 }
 
