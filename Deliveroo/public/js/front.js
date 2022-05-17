@@ -2073,6 +2073,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //qua ci sono i dati che vengono importati da app.vue 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'MyFooter',
@@ -2080,6 +2100,61 @@ __webpack_require__.r(__webpack_exports__);
     'popularTopics': Array,
     'recentTopics': Array,
     'latestReplies': Array
+  },
+  data: function data() {
+    return {
+      discoverItems: [{
+        name: 'Investors',
+        url: '/home'
+      }, {
+        name: 'About Us',
+        url: '/home'
+      }, {
+        name: 'Takeaway',
+        url: '/home'
+      }, {
+        name: 'More',
+        url: '/home'
+      }, {
+        name: 'Newsroom',
+        url: '/home'
+      }, {
+        name: 'Foodscene blog',
+        url: '/home'
+      }, {
+        name: 'Engineering blog',
+        url: '/home'
+      }, {
+        name: 'Design blog',
+        url: '/home'
+      }, {
+        name: 'Careers',
+        url: '/home'
+      }, {
+        name: 'Restaurant sign',
+        url: '/home'
+      }],
+      legalItems: [{
+        name: 'Terms and Conditions',
+        url: '/home'
+      }, {
+        name: 'Privacy',
+        url: '/home'
+      }, {
+        name: 'Cookies',
+        url: '/home'
+      }],
+      helpItems: [{
+        name: 'Contact',
+        url: '/home'
+      }, {
+        name: 'FAQs',
+        url: '/home'
+      }, {
+        name: 'Cuisines',
+        url: '/home'
+      }]
+    };
   }
 });
 
@@ -2860,6 +2935,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'RestaurantMenu',
   data: function data() {
@@ -3129,7 +3207,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Op
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
 
 // module
-exports.push([module.i, "*[data-v-721742ac] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #f6f1fb;\n}\n.filtraggio-container .filtraggio-title[data-v-721742ac] {\n  width: 90%;\n  margin: auto 15px;\n}\n.filtraggio-container .filtraggio-title h3[data-v-721742ac] {\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  margin-bottom: 25px;\n}\n.filtraggio-container .type-button[data-v-721742ac] {\n  background-color: #9561e2;\n  text-transform: uppercase;\n  font-size: 0.8em;\n  font-weight: 700;\n  border: none;\n  color: #EAF0F2;\n  padding: 10px 30px;\n}", ""]);
+exports.push([module.i, "*[data-v-721742ac] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #f6f1fb;\n}\n.filtraggio-container .filtraggio-title[data-v-721742ac] {\n  width: 90%;\n  margin: auto 15px;\n}\n.filtraggio-container .filtraggio-title h3[data-v-721742ac] {\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  margin-bottom: 25px;\n}\n.filtraggio-container .type-button[data-v-721742ac] {\n  background-color: #9561e2;\n  text-transform: uppercase;\n  font-size: 0.8em;\n  font-weight: 700;\n  border: none;\n  color: #EAF0F2;\n  padding: 10px 30px;\n  max-width: 70%;\n}", ""]);
 
 // exports
 
@@ -3149,7 +3227,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Op
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
 
 // module
-exports.push([module.i, "*[data-v-61a7c374] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #2F5F74;\n}\n.all_caps_footer[data-v-61a7c374] {\n  text-transform: uppercase;\n  font-size: 0.8em;\n  font-weight: 700;\n}\n.info_text h6[data-v-61a7c374] {\n  padding: 10px 0;\n  margin-top: 10px;\n}\n.info_text p[data-v-61a7c374] {\n  font-size: x-small;\n  color: #f6f1fb;\n}\n.menu_list[data-v-61a7c374] {\n  display: flex;\n  flex-direction: column;\n}\n.menu_list h6[data-v-61a7c374] {\n  padding: 10px;\n  margin-top: 10px;\n}\n.menu_list ul[data-v-61a7c374] {\n  list-style-type: none;\n  padding: 0;\n}\n.menu_list ul li[data-v-61a7c374] {\n  display: block;\n  margin: 0 10px;\n  font-size: 11px;\n  min-height: 20px;\n  padding-bottom: 5px;\n  border-bottom: 1px solid #f6993f;\n}\n.menu_list ul li[data-v-61a7c374]:hover {\n  border-bottom: 1px solid #f6f1fb;\n}\n.menu_list ul li .list_decoration[data-v-61a7c374] {\n  width: 10px;\n  min-height: 20px;\n  margin-right: 2px;\n  float: left;\n  font-size: 0.8em;\n  font-weight: 400;\n}\n.menu_list ul li a[data-v-61a7c374] {\n  text-decoration: none;\n  color: #f6f1fb;\n  padding: 0;\n}\n.menu_list ul li a[data-v-61a7c374]:hover {\n  color: #f6993f;\n}\n.footer_bottom_container[data-v-61a7c374] {\n  height: 50px;\n  border-top: 1px solid slategray;\n}\n.footer_bottom_container .copyright[data-v-61a7c374] {\n  color: #EAF0F2;\n  font-size: xx-small;\n}\n.footer_bottom_container .copyright .copyright_icon[data-v-61a7c374] {\n  padding-bottom: 2px;\n}\n.footer_bottom_container .copyright a[data-v-61a7c374] {\n  color: #f6993f;\n  text-decoration: none;\n}\n.footer_bottom_container .copyright a[data-v-61a7c374]:hover {\n  color: #f6f1fb;\n}", ""]);
+exports.push([module.i, "*[data-v-61a7c374] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n.footer-top[data-v-61a7c374] {\n  background-color: #2e3333;\n}\n.footer-block[data-v-61a7c374] {\n  background-color: orange;\n  padding: 10px;\n  max-width: 50%;\n}\n.footer-block h3[data-v-61a7c374] {\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.footer-block li[data-v-61a7c374] {\n  text-decoration: none;\n  list-style: none;\n  font-family: \"Tenor Sans\", sans-serif;\n}", ""]);
 
 // exports
 
@@ -4854,167 +4932,50 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "footer_container py-5" }, [
+    _c("div", { staticClass: "col-10 m-auto footer_top" }, [
+      _c("div", { staticClass: "row footer_lists" }, [
+        _c("div", { staticClass: "col-3 m-1 footer-block" }, [
+          _c("h3", { staticClass: "mb-3" }, [_vm._v("Discover Deliveboo")]),
+          _vm._v(" "),
+          _c(
+            "ul",
+            { staticClass: "footer-menu" },
+            _vm._l(_vm.discoverItems, function (item, index) {
+              return _c("li", { key: index }, [_vm._v(_vm._s(item.name))])
+            }),
+            0
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-3 m-1 footer-block" }, [
+          _c("h3", { staticClass: "mb-3" }, [_vm._v("Legal")]),
+          _vm._v(" "),
+          _c(
+            "ul",
+            _vm._l(_vm.legalItems, function (item, index) {
+              return _c("li", { key: index }, [_vm._v(_vm._s(item.name))])
+            }),
+            0
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-3 m-1 footer-block" }, [
+          _c("h3", { staticClass: "mb-3" }, [_vm._v("Help")]),
+          _vm._v(" "),
+          _c(
+            "ul",
+            _vm._l(_vm.helpItems, function (item, index) {
+              return _c("li", { key: index }, [_vm._v(_vm._s(item.name))])
+            }),
+            0
+          ),
+        ]),
+      ]),
+    ]),
+  ])
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "footer_container py-5" }, [
-      _c("div", { staticClass: "col-8 m-auto footer_top" }, [
-        _c("div", { staticClass: "row footer_lists" }, [
-          _c("div", { staticClass: "col info_text" }, [
-            _c("h6", { staticClass: "all_caps_footer" }, [_vm._v("deliveboo")]),
-            _vm._v(" "),
-            _c("p", { staticClass: "footer_text_block" }, [
-              _vm._v(
-                "Lorem, ipsum dolor sit amet consectetur adipisicing elit. \n                    Cumque, illo iste optio atque molestias distinctio, \n                    enim modi tempora asperiores rem voluptate, blanditiis iure! \n                    Ullam fuga earum libero voluptas, dicta excepturi."
-              ),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col menu_list" }, [
-            _c("h6", { staticClass: "all_caps_footer" }, [
-              _vm._v("Popular Topics"),
-            ]),
-            _vm._v(" "),
-            _c("ul", { staticClass: "menu-col" }, [
-              _c("li", [
-                _c(
-                  "a",
-                  { attrs: { href: "#", target: "_blank", rel: "noopener" } },
-                  [_vm._v("Popular Topic 1")]
-                ),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c(
-                  "a",
-                  { attrs: { href: "#", target: "_blank", rel: "noopener" } },
-                  [_vm._v("Popular Topic 2")]
-                ),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c(
-                  "a",
-                  { attrs: { href: "#", target: "_blank", rel: "noopener" } },
-                  [_vm._v("Popular Topic 3")]
-                ),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c(
-                  "a",
-                  { attrs: { href: "#", target: "_blank", rel: "noopener" } },
-                  [_vm._v("Popular Topic 4")]
-                ),
-              ]),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col menu_list" }, [
-            _c("h6", { staticClass: "all_caps_footer" }, [
-              _vm._v("Recent Topics"),
-            ]),
-            _vm._v(" "),
-            _c("ul", { staticClass: "menu-col" }, [
-              _c("li", [
-                _c(
-                  "a",
-                  { attrs: { href: "#", target: "_blank", rel: "noopener" } },
-                  [_vm._v("Recent Topic 1")]
-                ),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c(
-                  "a",
-                  { attrs: { href: "#", target: "_blank", rel: "noopener" } },
-                  [_vm._v("Recent Topic 2")]
-                ),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c(
-                  "a",
-                  { attrs: { href: "#", target: "_blank", rel: "noopener" } },
-                  [_vm._v("Recent Topic 3")]
-                ),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c(
-                  "a",
-                  { attrs: { href: "#", target: "_blank", rel: "noopener" } },
-                  [_vm._v("Recent Topic 4")]
-                ),
-              ]),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col menu_list mb-5" }, [
-            _c("h6", { staticClass: "all_caps_footer" }, [
-              _vm._v("Latest Replies"),
-            ]),
-            _vm._v(" "),
-            _c("ul", { staticClass: "menu-col" }, [
-              _c("li", [
-                _c(
-                  "a",
-                  { attrs: { href: "#", target: "_blank", rel: "noopener" } },
-                  [_vm._v("Latest Reply 1")]
-                ),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c(
-                  "a",
-                  { attrs: { href: "#", target: "_blank", rel: "noopener" } },
-                  [_vm._v("Latest Reply 2")]
-                ),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c(
-                  "a",
-                  { attrs: { href: "#", target: "_blank", rel: "noopener" } },
-                  [_vm._v("Latest Reply 3")]
-                ),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c(
-                  "a",
-                  { attrs: { href: "#", target: "_blank", rel: "noopener" } },
-                  [_vm._v("Latest Reply 4")]
-                ),
-              ]),
-            ]),
-          ]),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "footer_bottom_container" }, [
-        _c("div", { staticClass: "col m-auto" }, [
-          _c("div", { staticClass: "row footer_bottom" }, [
-            _c("div", { staticClass: "col-9 m-auto" }, [
-              _c("p", { staticClass: "copyright mt-1" }, [
-                _c("span", [
-                  _c("i", {
-                    staticClass: "fa-regular fa-copyright copyright_icon",
-                  }),
-                ]),
-                _vm._v(" Copyright 2022 | Powered by Team 7"),
-              ]),
-            ]),
-          ]),
-        ]),
-      ]),
-    ])
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -5868,6 +5829,11 @@ var render = function () {
               _c("h5", { staticClass: "card-title" }, [
                 _vm._v(_vm._s(_vm.users.restaurant_name)),
               ]),
+              _vm._v(" "),
+              _c("img", {
+                staticClass: "card-img-top",
+                attrs: { src: "" + _vm.users.user_cover },
+              }),
             ])
           : _vm._e(),
       ]),
@@ -5905,6 +5871,8 @@ var render = function () {
                 ]),
                 _vm._v(" "),
                 _c("h4", { staticClass: "py-2" }, [_vm._v(_vm._s(item.price))]),
+                _vm._v(" "),
+                _c("img", { attrs: { src: "" + item.image, alt: "" } }),
                 _vm._v(" "),
                 _c("span", [_vm._v("AGGIUNGI PIATTO")]),
                 _vm._v(" "),
