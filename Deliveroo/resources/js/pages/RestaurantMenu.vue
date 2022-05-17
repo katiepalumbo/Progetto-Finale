@@ -1,5 +1,5 @@
 <template>
-    <div class="box-items">
+    <div>
         <div class="row m-5">
             <h2>Nome ristorante</h2>
             <div class="card col-12">
@@ -9,6 +9,7 @@
             </div>
 
             <h1>{{newCart}}</h1>
+            <button type="button" class="btn btn-danger col col-2" id="add" @click="clear()" @onclick="window.location.reload()">PULISCI CARRELLO</button>
             <div class="flex">
 
                 <div action="" class="row first-box" >
@@ -47,8 +48,16 @@
                         <div ></div>
                             <div v-if="dato.visible = 1">
                                 <h3>{{dato.item_name}}</h3>
-                                <h5>{{dato.price}}</h5>
+
+                                <h5 v-if="dato.quantity != 1">{{dato.price}}.00€</h5>
+                                <h5 v-else>{{dato.price}}</h5>
+
+                                <h5>{{dato.quantity}}</h5>
                                 <button type="submit" @click="delate(dato.id)" class="btn btn-danger">delate</button>
+
+                                <button type="button" class="btn btn-danger" id="subtract" @click="decrease(dato.id)">-</button>
+                                <button type="button" class="btn btn-danger" id="add" @click="increase(dato.id)">+</button>
+
                             </div>
                         </div>
 
@@ -56,7 +65,7 @@
 
                     <h1 class="mt-4">Totale</h1>
 
-                    <h3 v-if="totale != null">{{totale}}.00</h3>
+                    <h3 v-if="totale != 0">{{totale}}.00</h3>
                     <h3 v-else>{{newTotale}}.00</h3>
 
                     <router-link class="btn btn-primary"  :to="{name: 'checkout', params:{cart: newCart, price: totale}}">vai al pagamento</router-link>
@@ -92,12 +101,17 @@ export default {
             totale2: null,
             newTotale: null,
 
-            newCart: null
+            newCart: null,
+
+            aaa: null,
+            bbb: null,
+
+            event: {},
+
+
 
         }
     },
-
-
 
     methods: {
         getSlug(){
@@ -119,44 +133,35 @@ export default {
 
         },
 
-        // addToCart(){
-        //     this.dati = [];
-        //     const slug = this.$route.params.slug;
-        //     console.log('/api/user/' + slug + '/' + this.cart)
-
-        //     if(this.cart.length > 0){
-        //         axios.get('/api/user/' + slug + '/' + this.cart) .then(response =>{
-        //             this.dati = response.data.results;
-        //             console.log(response.data);
-
-        //             const array1 = response.data.price;
-
-        //             const initialValue = 0;
-        //             const sumWithInitial = array1.reduce(
-        //             (previousValue, currentValue) => previousValue + currentValue,
-        //                 initialValue
-        //             );
-
-        //             console.log(sumWithInitial);
-        //             this.totale = sumWithInitial;
-        //         })
-        //     }else{
-
-        //         this.dati = [];
-        //     }
-
-        // },
-
         addToCart(id){
             const slug = this.$route.params.slug;
-            this.cart.push(id)
-            console.log('/api/user/' + slug + '/' + id)
+            this.cart.push(id);
+
+            var arrTwo = this.cart;
+            const filteredArray = arrTwo.filter(function(ele , pos){
+                return arrTwo.indexOf(ele) == pos;
+            })
+            console.log(filteredArray);
+
+            this.cart = filteredArray
 
 
-                axios.get('/api/user/' + slug + '/' + id) .then(response =>{
+            // for (let index = 0; index < filteredArray.length; index++) {
+            //     if(filteredArray[index] != id) {
+            //         this.dati.push(response.data.results)
+            //         console.log(filteredArray[index]);
+            //     }
+            // }
+
+            for (let index = 0; index < this.cart.length; index++) {
+                console.log(this.cart[index]);
+                this.dati2 = []
+                this.dati = []
+                this.totale = null
+
+                axios.get('/api/user/' + slug + '/' + this.cart[index]) .then(response =>{
+
                     this.dati.push(response.data.results)
-                    console.log(response);
-                    console.log('ssssssssssssssssssss');
 
                     this.dati2=this.dati.flat()
 
@@ -170,15 +175,18 @@ export default {
 
                     console.log(sumWithInitial);
                     this.totale += sumWithInitial;
+
+                    if (localStorage.totale) {
+                        this.newTotale = localStorage.totale;
+                    }
+
+                    if (localStorage.cart) {
+                        this.newCart = localStorage.cart;
+                    }
                 })
 
-            if (localStorage.cart) {
-                this.newCart = localStorage.cart;
             }
 
-            if (localStorage.totale) {
-                this.newTotale = localStorage.totale;
-            }
 
         },
 
@@ -197,21 +205,138 @@ export default {
                 console.log('wwwwwwwwww');
             })
 
-            .catch(error => {
-                console.log(error);
-            })
+            // .catch(error => {
+            //     console.log(error);
+            // })
 
             this.cart = []
 
+            if(this.newCart == null) {
+                this.totale = 0;
+            } else {
+                this.totale = Number(this.newTotale)
+                // this.$newCart = explode(",", this.$newCart);
+                // this.cart = this.newCart.split(',')
 
+                const vvv = this.newCart.split('')
+
+                for (let index = 0; index < vvv.length; index++) {
+
+                    if(this.newCart[index] != ',') {
+                        this.ggg = Number(this.newCart[index])
+                        this.cart.push(this.ggg)
+                    }
+
+                    // console.log(this.aaa[index])
+                    console.log('ppppppppppppppppp')
+
+                }
+            }
         },
 
+        increase(id) {
+
+            for (let index = 0; index < this.dati2.length; index++) {
+                if(this.dati2[index].id == id) {
+                    this.element = Number(this.dati2[index].quantity);
+                    this.price = Number(this.dati2[index].price);
+
+                    if(this.element == 20){
+                        this.test = 20
+                        this.test2 = this.price
+                    } else if (this.element == 1) {
+                        this.test = this.element + 1
+                        this.test2 = (this.price * this.test)
+                    } else {
+                        this.test = this.element + 1
+                        this.test2 = (this.price + (this.price/(this.test-1)))
+                    }
+
+                    this.dati2[index].quantity = this.test;
+                    this.dati2[index].price = this.test2;
+
+                    // console.log(this.element)
+                    // console.log(this.price)
+
+                    this.totale += (this.test2/(this.test));
+                    console.log(this.totale);
+
+                    if (localStorage.totale) {
+                        this.newTotale = localStorage.totale;
+                    }
+                }
+            }
+        },
+
+        decrease(id) {
+
+            for (let index = 0; index < this.dati2.length; index++) {
+                if(this.dati2[index].id == id) {
+                    this.element = Number(this.dati2[index].quantity);
+                    this.price = Number(this.dati2[index].price);
+
+                    if(this.element == 1){
+                        this.test = 1
+                        this.test2 = this.price
+                    } else if (this.element == 20){
+                        this.test = this.element - 1
+                        this.test2 = (this.price * this.test)
+                    } else {
+                        this.test = this.element - 1
+                        this.test2 = (this.price - (this.price/(this.test+1)))
+                    }
+
+
+                    this.dati2[index].quantity = this.test;
+                    this.dati2[index].price = this.test2;
+
+                    // console.log(this.element)
+                    // console.log(this.price)
+
+                    this.totale -= this.price;
+                    console.log(this.totale);
+
+                    if (localStorage.totale) {
+                        this.newTotale = localStorage.totale;
+                    }
+
+                    if(this.totale < 0) {
+                        this.totale = 0
+                    }
+                }
+            }
+        },
+
+        delate(id) {
+
+            for (let index = 0; index < this.dati2.length; index++) {
+                if(this.dati2[index].id == id) {
+
+                    this.dati2[index] = {}
+                    console.log(this.dati2[index])
+                    console.log(this.dati2)
+                }
+            }
+        },
+
+        clear() {
+            this.newCart = [],
+            this.cart = []
+            window.location.reload()
+        }
 
     },
 
     mounted() {
 
         this.getItemCart();
+
+        if (localStorage.totale) {
+            this.newTotale = localStorage.totale;
+        }
+
+        this.aaa = this.newTotale;
+        this.bbb = this.newCart;
 
     },
 
@@ -244,10 +369,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.box-items {
-    margin-top: 66px;
-}
-
 .flex{
     display: flex;
 

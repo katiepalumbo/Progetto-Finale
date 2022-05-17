@@ -32,13 +32,11 @@ class ItemTableSeeder extends Seeder
             $newItem->user_id = $faker->numberBetween(1,20);
             $newItem->price = $faker->numberBetween(2, 15);
             $newItem->description = $faker->paragraph();
+            $newItem->quantity = $faker->numberBetween(1, 1);
 
             $newItem->visible = rand(true, false);
 
             $newItem->image = url('https://www.pexels.com/photo/flat-lay-photography-of-vegetable-salad-on-plate-1640777/');
-
-
-
 
             $newItem->save();
         }
