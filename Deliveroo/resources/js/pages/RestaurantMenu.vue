@@ -162,7 +162,7 @@ export default {
                     this.cart[index] = 0
                 }
 
-                console.log(result)
+               
 
                 axios.get('/api/user/' + slug + '/' + this.cart[index]) .then(response =>{
 
