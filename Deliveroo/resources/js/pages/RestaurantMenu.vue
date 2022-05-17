@@ -155,9 +155,14 @@ export default {
 
             for (let index = 0; index < this.cart.length; index++) {
                 console.log(this.cart[index]);
-                this.dati2 = []
                 this.dati = []
                 this.totale = null
+
+                if(this.cart[index] == undefined)  {
+                    this.cart[index] = 0
+                }
+
+                console.log(result)
 
                 axios.get('/api/user/' + slug + '/' + this.cart[index]) .then(response =>{
 
@@ -184,10 +189,7 @@ export default {
                         this.newCart = localStorage.cart;
                     }
                 })
-
             }
-
-
         },
 
         getItemCart(){
@@ -309,14 +311,16 @@ export default {
 
         delate(id) {
 
-            for (let index = 0; index < this.dati2.length; index++) {
-                if(this.dati2[index].id == id) {
+            for (let index = 0; index < this.cart.length; index++) {
+                if(this.cart[index] == id) {
 
-                    this.dati2[index] = {}
-                    console.log(this.dati2[index])
-                    console.log(this.dati2)
+                    this.cart[index] = 0
+                    console.log(this.cart[index])
+                    console.log(this.cart)
                 }
             }
+
+            this.addToCart()
         },
 
         clear() {

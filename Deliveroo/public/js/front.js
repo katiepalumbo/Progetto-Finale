@@ -2905,9 +2905,14 @@ __webpack_require__.r(__webpack_exports__);
 
       for (var index = 0; index < this.cart.length; index++) {
         console.log(this.cart[index]);
-        this.dati2 = [];
         this.dati = [];
         this.totale = null;
+
+        if (this.cart[index] == undefined) {
+          this.cart[index] = 0;
+        }
+
+        console.log(result);
         axios.get('/api/user/' + slug + '/' + this.cart[index]).then(function (response) {
           _this2.dati.push(response.data.results);
 
@@ -3033,13 +3038,15 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     delate: function delate(id) {
-      for (var index = 0; index < this.dati2.length; index++) {
-        if (this.dati2[index].id == id) {
-          this.dati2[index] = {};
-          console.log(this.dati2[index]);
-          console.log(this.dati2);
+      for (var index = 0; index < this.cart.length; index++) {
+        if (this.cart[index] == id) {
+          this.cart[index] = 0;
+          console.log(this.cart[index]);
+          console.log(this.cart);
         }
       }
+
+      this.addToCart();
     },
     clear: function clear() {
       this.newCart = [], this.cart = [];
@@ -22779,7 +22786,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Tonno\Desktop\Boolean\Deliveboo\Progetto-Finale\Deliveroo\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\pizze\Desktop\BOOLEAN\PROGETTO_FINALE\Progetto-Finale\Deliveroo\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })
