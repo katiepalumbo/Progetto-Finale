@@ -2093,6 +2093,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 //qua ci sono i dati che vengono importati da app.vue 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'MyFooter',
@@ -3227,7 +3230,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Op
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
 
 // module
-exports.push([module.i, "*[data-v-61a7c374] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n.footer-top[data-v-61a7c374] {\n  background-color: #2e3333;\n}\n.footer-block[data-v-61a7c374] {\n  background-color: orange;\n  padding: 10px;\n  max-width: 50%;\n}\n.footer-block h3[data-v-61a7c374] {\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.footer-block li[data-v-61a7c374] {\n  text-decoration: none;\n  list-style: none;\n  font-family: \"Tenor Sans\", sans-serif;\n}", ""]);
+exports.push([module.i, "*[data-v-61a7c374] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n.footer_container[data-v-61a7c374] {\n  background-color: #2e3333;\n}\n.footer-block[data-v-61a7c374] {\n  background-color: #434848;\n  padding: 20px;\n  max-width: 50%;\n}\n.footer-block h4[data-v-61a7c374] {\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  color: #f6f1fb;\n}\n.footer-block li[data-v-61a7c374] {\n  color: #f6f1fb;\n  list-style: none;\n  font-family: \"Tenor Sans\", sans-serif;\n}\n.footer-block li a[data-v-61a7c374] {\n  text-decoration: none;\n  color: #f6f1fb;\n}\n.copyright[data-v-61a7c374] {\n  color: #f6f1fb;\n}", ""]);
 
 // exports
 
@@ -3408,7 +3411,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".flex[data-v-14400205] {\n  display: flex;\n}\n.flex .first-box[data-v-14400205] {\n  width: 60%;\n  padding: 0px 30px;\n  overflow-y: auto;\n}\n.flex .carrello[data-v-14400205] {\n  width: 40%;\n  height: 510px;\n  background-color: aqua;\n  margin: 10px 0px;\n}\n.flex .carrello .card-box[data-v-14400205] {\n  height: 320px;\n  overflow-y: auto;\n  margin: 10px;\n}\n.flex .carrello .card[data-v-14400205] {\n  margin: 10px;\n}\n.flex .box[data-v-14400205] {\n  width: 100%;\n  height: 30px;\n  text-align: center;\n}", ""]);
+exports.push([module.i, ".card-img-top[data-v-14400205] {\n  max-width: 50px;\n}\n.flex[data-v-14400205] {\n  display: flex;\n}\n.flex .first-box[data-v-14400205] {\n  width: 60%;\n  padding: 0px 30px;\n  overflow-y: auto;\n}\n.flex .carrello[data-v-14400205] {\n  width: 40%;\n  height: 510px;\n  background-color: aqua;\n  margin: 10px 0px;\n}\n.flex .carrello .card-box[data-v-14400205] {\n  height: 320px;\n  overflow-y: auto;\n  margin: 10px;\n}\n.flex .carrello .card[data-v-14400205] {\n  margin: 10px;\n}\n.flex .box[data-v-14400205] {\n  width: 100%;\n  height: 30px;\n  text-align: center;\n}", ""]);
 
 // exports
 
@@ -4932,50 +4935,72 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "footer_container py-5" }, [
+  return _c("div", { staticClass: "footer_container py-2" }, [
     _c("div", { staticClass: "col-10 m-auto footer_top" }, [
-      _c("div", { staticClass: "row footer_lists" }, [
-        _c("div", { staticClass: "col-3 m-1 footer-block" }, [
-          _c("h3", { staticClass: "mb-3" }, [_vm._v("Discover Deliveboo")]),
+      _c("div", { staticClass: "row footer_lists justify-content-center" }, [
+        _c("div", { staticClass: "col-3 m-3 footer-block" }, [
+          _c("h4", { staticClass: "mb-3" }, [_vm._v("Discover Deliveboo")]),
           _vm._v(" "),
           _c(
             "ul",
             { staticClass: "footer-menu" },
             _vm._l(_vm.discoverItems, function (item, index) {
-              return _c("li", { key: index }, [_vm._v(_vm._s(item.name))])
+              return _c("li", { key: index }, [
+                _c("a", { attrs: { href: "#" } }, [_vm._v(_vm._s(item.name))]),
+              ])
             }),
             0
           ),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-3 m-1 footer-block" }, [
-          _c("h3", { staticClass: "mb-3" }, [_vm._v("Legal")]),
+        _c("div", { staticClass: "col-3 m-3 footer-block" }, [
+          _c("h4", { staticClass: "mb-3" }, [_vm._v("Legal")]),
           _vm._v(" "),
           _c(
             "ul",
             _vm._l(_vm.legalItems, function (item, index) {
-              return _c("li", { key: index }, [_vm._v(_vm._s(item.name))])
+              return _c("li", { key: index }, [
+                _c("a", { attrs: { href: "#" } }, [_vm._v(_vm._s(item.name))]),
+              ])
             }),
             0
           ),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-3 m-1 footer-block" }, [
-          _c("h3", { staticClass: "mb-3" }, [_vm._v("Help")]),
+        _c("div", { staticClass: "col-3 m-3 footer-block" }, [
+          _c("h4", { staticClass: "mb-3" }, [_vm._v("Help")]),
           _vm._v(" "),
           _c(
             "ul",
             _vm._l(_vm.helpItems, function (item, index) {
-              return _c("li", { key: index }, [_vm._v(_vm._s(item.name))])
+              return _c("li", { key: index }, [
+                _c("a", { attrs: { href: "#" } }, [_vm._v(_vm._s(item.name))]),
+              ])
             }),
             0
           ),
         ]),
+        _vm._v(" "),
+        _vm._m(0),
       ]),
     ]),
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-10 m-auto" }, [
+      _c("p", { staticClass: "copyright mt-1" }, [
+        _c("span", [
+          _c("i", { staticClass: "fa-regular fa-copyright copyright_icon" }),
+        ]),
+        _vm._v(" Copyright 2022 | Powered by Team 7"),
+      ]),
+    ])
+  },
+]
 render._withStripped = true
 
 
@@ -22749,7 +22774,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\maion\Desktop\Progetto-Finale\Deliveroo\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! /Users/katiepalumbo/Documents/Boolean/Assignments/Progetto-Finale/Progetto-Finale/Deliveroo/resources/js/front.js */"./resources/js/front.js");
 
 
 /***/ })
