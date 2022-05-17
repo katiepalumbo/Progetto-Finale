@@ -55,7 +55,7 @@ class itemController extends Controller
         //
     }
 
-    public function filtcart($slug, $cart, $filtcart){
+    public function filtcart($slug, $filtcart){
 
         $filtcart = explode(",", $filtcart);
         $aaaaaaArrey = [];

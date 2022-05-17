@@ -17,7 +17,7 @@
         <h1 class="mt-4">Totale</h1>
         <h3>{{price}}.00</h3>
 
-        <button type="button" class="btn btn-danger m-2" @click="testPagato()">PAGA</button>
+        <button type="button" class="btn btn-danger m-2" @click="testPagato($item.order)">PAGA</button>
 
         <h3 v-if="pagato != false">HAI PAGATO</h3>
 
@@ -41,12 +41,11 @@ export default {
     methods: {
         getItemCart(){
             const filtcart = this.$route.params.cart;
-            const cart = this.$route.params.cart;
             const slugCart = this.$route.params.slug;
             // console.log(slug)
-            console.log('/api/user/' + slugCart + '/' + cart + '/' + filtcart)
+            console.log('/api/user/' + slugCart + '/' + filtcart)
 
-            axios.get('/api/user/' + slugCart + '/' + filtcart + '/' + filtcart).then(response => {
+            axios.get('/api/user/' + slugCart + '/' + filtcart).then(response => {
                 this.finale = response.data.results;
 
                 console.log(response.data.results);
@@ -61,6 +60,24 @@ export default {
 
         testPagato() {
             this.pagato = true;
+
+            const order = this.$route.params.cart;
+            const filtcart = this.$route.params.cart;
+            const slugCart = this.$route.params.slug;
+            // console.log(slug)
+            console.log('/api/user/' + slugCart + '/' + filtcart + '/'  + order)
+
+            axios.post('/api/user/' + slugCart + '/' + filtcart + '/'  + order).then(response => {
+
+                console.log(response.data.results);
+                console.log('wwwwwwwwww');
+            })
+
+            .catch(error => {
+                console.log(error);
+            })
+
+
         }
     },
 
