@@ -2092,6 +2092,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 //qua ci sono i dati che vengono importati da app.vue 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'MyFooter',
@@ -3221,7 +3227,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Op
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
 
 // module
-exports.push([module.i, "*[data-v-61a7c374] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n.footer-block[data-v-61a7c374] {\n  background-color: orange;\n  padding: 10px;\n}", ""]);
+exports.push([module.i, "*[data-v-61a7c374] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n.footer-top[data-v-61a7c374] {\n  background-color: #2e3333;\n}\n.footer-block[data-v-61a7c374] {\n  background-color: orange;\n  padding: 10px;\n  max-width: 50%;\n}\n.footer-block h3[data-v-61a7c374] {\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.footer-block li[data-v-61a7c374] {\n  text-decoration: none;\n  list-style: none;\n  font-family: \"Tenor Sans\", sans-serif;\n}", ""]);
 
 // exports
 
@@ -4927,10 +4933,10 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "footer_container py-5" }, [
-    _c("div", { staticClass: "col-8 m-auto footer_top" }, [
+    _c("div", { staticClass: "col m-auto footer_top" }, [
       _c("div", { staticClass: "row footer_lists" }, [
-        _c("div", { staticClass: "col-3 m-3 footer-block" }, [
-          _c("h3", [_vm._v("Discover Deliveboo")]),
+        _c("div", { staticClass: "col-3 m-1 footer-block" }, [
+          _c("h3", { staticClass: "mb-3" }, [_vm._v("Discover Deliveboo")]),
           _vm._v(" "),
           _c(
             "ul",
@@ -4942,8 +4948,8 @@ var render = function () {
           ),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-3 m-3" }, [
-          _c("h3", [_vm._v("Legal")]),
+        _c("div", { staticClass: "col-3 m-1 footer-block" }, [
+          _c("h3", { staticClass: "mb-3" }, [_vm._v("Legal")]),
           _vm._v(" "),
           _c(
             "ul",
@@ -4954,12 +4960,25 @@ var render = function () {
           ),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-3 m-3" }, [
-          _c("h3", [_vm._v("Help")]),
+        _c("div", { staticClass: "col-3 m-1 footer-block" }, [
+          _c("h3", { staticClass: "mb-3" }, [_vm._v("Help")]),
           _vm._v(" "),
           _c(
             "ul",
             _vm._l(_vm.helpItems, function (item, index) {
+              return _c("li", { key: index }, [_vm._v(_vm._s(item.name))])
+            }),
+            0
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-3 m-1 footer-block" }, [
+          _c("h3", { staticClass: "mb-3" }, [_vm._v("Discover Deliveboo")]),
+          _vm._v(" "),
+          _c(
+            "ul",
+            { staticClass: "footer-menu" },
+            _vm._l(_vm.discoverItems, function (item, index) {
               return _c("li", { key: index }, [_vm._v(_vm._s(item.name))])
             }),
             0
