@@ -14,7 +14,8 @@ class AddImageUserTable extends Migration
     public function up()
     {
         Schema::table('items', function (Blueprint $table) {
-            $table->string('image')->nullable(); 
+            $table->string('image')->nullable();
+            $table->decimal('quantity', 1, 0)->nullable();
         });
     }
 
@@ -25,8 +26,8 @@ class AddImageUserTable extends Migration
      */
     public function down()
     {
-        
+
         Schema::dropIfExists('items');
-        
+
     }
 }
