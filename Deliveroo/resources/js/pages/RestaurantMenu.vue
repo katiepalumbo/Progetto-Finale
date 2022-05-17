@@ -162,7 +162,7 @@ export default {
                     this.cart[index] = 0
                 }
 
-               
+
 
                 axios.get('/api/user/' + slug + '/' + this.cart[index]) .then(response =>{
 
@@ -186,7 +186,7 @@ export default {
                     }
 
                     if (localStorage.cart) {
-                        this.newCart = localStorage.cart;
+                        this.newCart = this.cart;
                     }
                 })
             }
@@ -207,32 +207,15 @@ export default {
                 console.log('wwwwwwwwww');
             })
 
-            // .catch(error => {
-            //     console.log(error);
-            // })
-
             this.cart = []
 
             if(this.newCart == null) {
                 this.totale = 0;
             } else {
                 this.totale = Number(this.newTotale)
-                // this.$newCart = explode(",", this.$newCart);
-                // this.cart = this.newCart.split(',')
+                const vvv =  this.newCart.split(',')
 
-                const vvv = this.newCart.split('')
-
-                for (let index = 0; index < vvv.length; index++) {
-
-                    if(this.newCart[index] != ',') {
-                        this.ggg = Number(this.newCart[index])
-                        this.cart.push(this.ggg)
-                    }
-
-                    // console.log(this.aaa[index])
-                    console.log('ppppppppppppppppp')
-
-                }
+                console.log(vvv)
             }
         },
 
