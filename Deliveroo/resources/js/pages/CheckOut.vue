@@ -48,8 +48,8 @@
 
                     <tr>
                         <td>
-                            <button type="button" class="btn m-2" @click="testPagato($item.order)">PAGA ORA</button>
-                            <h3 v-if="pagato != false">HAI PAGATO</h3>
+                            <button type="button" class="btn m-2" @click="testPagato()">PAGA ORA</button>
+                            <p v-if="pagato != false">Ordine Completato Grazie per aver comprato da Deliveboo</p>
                         </td>
                         <td></td>
                     </tr>
@@ -118,6 +118,7 @@ export default {
             client_cell_number: null,
             client_zip_code: null,
             error: false
+
         }
     },
     methods: {

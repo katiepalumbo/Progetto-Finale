@@ -3399,7 +3399,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Op
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
 
 // module
-exports.push([module.i, ".checkout {\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/pexels-lukas-349610.jpg */ "./resources/js/assets/images/pexels-lukas-349610.jpg")) + ");\n  background-size: cover;\n  width: 100vw;\n  margin-top: -10px;\n}\n.container {\n  margin-top: 80px;\n}\n.container h1 {\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  color: #9561e2;\n}\n.container .my_item {\n  overflow: hidden;\n  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);\n  border-radius: 10px;\n  background-color: #f6f1fb;\n}\n.container .my_item img {\n  height: 125px;\n  -o-object-fit: cover;\n     object-fit: cover;\n  margin-left: -15px;\n}\n.container .my_item h4 {\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  line-height: 80%;\n  color: #FF4718;\n  padding-top: 10px;\n}\n.container .my_item p {\n  font-family: \"Tenor Sans\", sans-serif;\n  line-height: 80%;\n  color: #9561e2;\n}\n.container thead {\n  font-family: \"Tenor Sans\", sans-serif;\n  color: #9561e2;\n}\n.container tbody {\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  color: #FF4718;\n}\n.container .btn {\n  background-color: #9561e2;\n  color: #f6f1fb;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  padding: 10px 100px;\n}", ""]);
+exports.push([module.i, ".checkout {\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/pexels-lukas-349610.jpg */ "./resources/js/assets/images/pexels-lukas-349610.jpg")) + ");\n  background-size: cover;\n  width: 100vw;\n  margin-top: -10px;\n}\n.container {\n  margin-top: 80px;\n}\n.container h1 {\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  color: #9561e2;\n}\n.container .my_item {\n  overflow: hidden;\n  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);\n  border-radius: 10px;\n  background-color: #f6f1fb;\n}\n.container .my_item img {\n  height: 150px;\n  -o-object-fit: cover;\n     object-fit: cover;\n  margin-left: -15px;\n}\n.container .my_item h4 {\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  line-height: 80%;\n  color: #FF4718;\n  padding-top: 10px;\n}\n.container .my_item p {\n  font-family: \"Tenor Sans\", sans-serif;\n  line-height: 80%;\n  color: #9561e2;\n}\n.container thead {\n  font-family: \"Tenor Sans\", sans-serif;\n  color: #9561e2;\n}\n.container tbody {\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  color: #FF4718;\n}\n.container .btn {\n  background-color: #9561e2;\n  color: #f6f1fb;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  padding: 10px 100px;\n}", ""]);
 
 // exports
 
@@ -5636,7 +5636,7 @@ var render = function () {
                     attrs: { type: "button" },
                     on: {
                       click: function ($event) {
-                        return _vm.testPagato(_vm.$item.order)
+                        return _vm.testPagato()
                       },
                     },
                   },
