@@ -19,12 +19,12 @@
 
             </div>
 
-            <div class="my_row-menu-2">
+            <div class="my_box-title">
+                <h1 class="menu-title">Benvenuto nella sezione ristoranti!</h1>
+                <span class="menu-text">Seleziona un ristorante per scoprire il menù!</span>
+            </div>
 
-                <div class="my_box-title">
-                    <h1 class="menu-title">Benvenuto nella sezione ristoranti!</h1>
-                    <span class="menu-text">Seleziona un ristorante per scoprire il menù!</span>
-                </div>
+            <div class="my_row-menu-2">
 
                 <div class="my_box-items">
                     <div class="my_col-menu " v-for="user in users" :key="user.id">
@@ -33,6 +33,7 @@
                             :title='user.restaurant_name'
                             :type='user.type'
                             :slug='user.slug'
+                            :user_cover='user.user_cover'
                         />
 
                     </div>
@@ -124,6 +125,8 @@
         width: 100%;
         display: flex;
         flex-direction: row;
+        justify-content: center;
+        position: relative;
 
         .my_row-menu-1 {
             width: 15%;
@@ -173,23 +176,21 @@
                 }
 
                 .btn-header {
-                    display: inline-block;
-                    background-color: #9538f2;
-                    padding: 6px 16px;
-                    text-decoration: none;
-                    font-weight: bold;
-                    color: #fff;
+                    width: fit-content;
+                    margin-left: 20px;
+                    margin-bottom: 3px;
+                    margin-top: 5px;
+                    background-color: $purple;
+                    border-radius: 4px;
                     border: 0px;
-                    border-radius: 5px;
-                    box-shadow: 0 4px 0 #7633b9;
-                    transition: all 0.3s;
-                    margin-left: 19px;
-                    margin-top: 10px;
-                }
-
-                .btn-header:hover {
-                    transform: translateY(2px);
-                    box-shadow: 0 2px 0 #9538f2;
+                    padding: 7px 10px;
+                    color: #ffffff;
+                    font-size: 13px;
+                    font-family: "Raleway", sans-serif;
+                    font-weight: 700;
+                    &:hover {
+                        background-color: #7048ab;
+                    }
                 }
             }
         }
@@ -198,8 +199,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 100px;
+            margin-top: 150px;
             margin-bottom: 40px;
+            position: relative;
+            top: 0;
             width: 85%;
             align-self: flex-end;
 
@@ -216,21 +219,25 @@
             .my_col-menu {
                 padding: 10px 10px;
             }
+        }
 
-            .my_box-title {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+        .my_box-title {
+            display: flex;
+            width: 84%;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            top: 90px;
+            right: 0;
 
-                .menu-title {
-                    color: #9538f2;
-                    @include title-font;
-                }
+            .menu-title {
+                color: #9538f2;
+                @include title-font;
+            }
 
-                .menu-text {
-                    color: #FF4718;
-                    @include subtitle-font;
-                }
+            .menu-text {
+                color: #FF4718;
+                @include subtitle-font;
             }
         }
     }

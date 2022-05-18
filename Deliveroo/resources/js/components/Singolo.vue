@@ -4,7 +4,7 @@
         <router-link :to="{name: 'restaurant', params:{slug: slug}}">
 
              <div class="my_card-header">
-                <img src="https://c4.wallpaperflare.com/wallpaper/226/838/327/chocolate-brown-food-sweet-wallpaper-preview.jpg" alt="rover" />
+                <img :src="user_cover" alt="rover" />
             </div>
 
             <div class="my_card-body">
@@ -28,7 +28,7 @@
 <script>
 export default {
     name: "Singolo",
-    props: ['title', 'type', 'slug',],
+    props: ['title', 'type', 'slug', 'user_cover'],
 
     data () {
         return {   
