@@ -2,12 +2,10 @@
     <!-- qua uso le props da main per poter popolare le due gallerie diverse -->
      <div class="col restaurant_card mx-auto">
         <router-link class="img-container" :to="{name: 'menu'}">
-            <img :src="`${item.url}`" :alt="`${item.name}`">
-            <p class="restaurant_name">{{item.name}}</p>
+            <img :src="`${item.url}`" :alt="`${item.name}`"> 
+            <p class="restaurant_name">{{item.name}}</p>   
         </router-link>
         
-        <!-- <p class="article_date">{{item.date}}</p>
-        <p class="article_preview">{{item.text}}</p> -->
     </div>
 
 </template>
@@ -48,6 +46,8 @@ export default {
     margin: 5px 0;
 
     .img-container {
+        text-decoration: none;
+
 
 
         img {
@@ -56,20 +56,29 @@ export default {
             object-fit: cover;
             padding-bottom: 2px;
             transition: 0.80s;
-            //border-bottom: 2px solid transparent;
-            
-            
-        }
-        &:hover {
-            color: $purple;
-            //border-bottom: 2px solid $purple;
             cursor: pointer;
             transform: translateY(2px) translateX(2px);
             box-shadow: #4e1f7c 0px 0px 0px;
-            transform: scale(1.1);
+            //transform: scale(1.1);
+            &:hover {
+                transform: scale(1.1);
+                opacity: 1;
+                
+            }
+
             
             
         }
+        .restaurant_name {
+                font-size: 1.4em;
+                margin-top: 5px;
+                margin-bottom: 30px;
+                font-weight: 600;
+                padding-top: 2px;
+                color: $body-bg;
+
+
+            }
 
     }
 
@@ -77,19 +86,7 @@ export default {
 
 
 
-    .restaurant_name {
-        font-size: 1.4em;
-        margin-top: 5px;
-        margin-bottom: 30px;
-        font-weight: 600;
-        padding-top: 2px;
-        color: $body-bg;
-        &:hover {
-            color: $purple;
-            cursor: pointer;
-        }
-
-    }
+    
 
 
 

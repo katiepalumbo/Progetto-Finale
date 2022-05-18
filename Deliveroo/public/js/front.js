@@ -2389,8 +2389,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 //sotto troviamo le props passate da home
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'StandardGallery',
@@ -3167,7 +3165,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Op
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
 
 // module
-exports.push([module.i, ".container-header[data-v-1f42fb90] {\n  background-color: #FF4718;\n  position: fixed;\n  z-index: 4;\n  top: 0;\n}\n.container-header .box-nav[data-v-1f42fb90] {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n}\n.container-header .box-nav .logo-header[data-v-1f42fb90] {\n  font-size: 21px;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.container-header .btn-header[data-v-1f42fb90] {\n  display: inline-block;\n  background-color: #9538f2;\n  padding: 6px 16px;\n  text-decoration: none;\n  font-weight: bold;\n  color: #fff;\n  border-radius: 5px;\n  box-shadow: 0 4px 0 #7633b9;\n  transition: all 0.3s;\n  margin-left: 10px;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.container-header .btn-header[data-v-1f42fb90]:hover {\n  transform: translateY(2px);\n  box-shadow: 0 2px 0 #9538f2;\n}", ""]);
+exports.push([module.i, ".container-header[data-v-1f42fb90] {\n  background-color: #FF4718;\n  position: fixed;\n  z-index: 4;\n  top: 0;\n  max-height: 70px;\n  border-bottom: 1px #f6f1fb solid;\n}\n.container-header .box-nav[data-v-1f42fb90] {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n}\n.container-header .box-nav .logo[data-v-1f42fb90] {\n  max-height: 50px;\n}\n.container-header .box-nav .logo-header[data-v-1f42fb90] {\n  font-size: 21px;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.container-header .btn-header[data-v-1f42fb90] {\n  display: inline-block;\n  background-color: #9538f2;\n  padding: 6px 16px;\n  text-decoration: none;\n  font-weight: bold;\n  color: #fff;\n  border-radius: 5px;\n  box-shadow: 0 4px 0 #7633b9;\n  transition: all 0.3s;\n  margin-left: 10px;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.container-header .btn-header[data-v-1f42fb90]:hover {\n  transform: translateY(2px);\n  box-shadow: 0 2px 0 #9538f2;\n}", ""]);
 
 // exports
 
@@ -3269,7 +3267,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Op
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
 
 // module
-exports.push([module.i, "*[data-v-6bed6bba] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #FF4718;\n}\n.restaurant_card[data-v-6bed6bba] {\n  max-height: 300px;\n  width: 25vw;\n  overflow: hidden;\n  margin: 5px 0;\n}\n.restaurant_card .img-container img[data-v-6bed6bba] {\n  max-height: 200px;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  padding-bottom: 2px;\n  transition: 0.8s;\n}\n.restaurant_card .img-container[data-v-6bed6bba]:hover {\n  color: #9561e2;\n  cursor: pointer;\n  transform: translateY(2px) translateX(2px);\n  box-shadow: #4e1f7c 0px 0px 0px;\n  transform: scale(1.1);\n}\n.restaurant_card .restaurant_name[data-v-6bed6bba] {\n  font-size: 1.4em;\n  margin-top: 5px;\n  margin-bottom: 30px;\n  font-weight: 600;\n  padding-top: 2px;\n  color: #f6f1fb;\n}\n.restaurant_card .restaurant_name[data-v-6bed6bba]:hover {\n  color: #9561e2;\n  cursor: pointer;\n}", ""]);
+exports.push([module.i, "*[data-v-6bed6bba] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #FF4718;\n}\n.restaurant_card[data-v-6bed6bba] {\n  max-height: 300px;\n  width: 25vw;\n  overflow: hidden;\n  margin: 5px 0;\n}\n.restaurant_card .img-container[data-v-6bed6bba] {\n  text-decoration: none;\n}\n.restaurant_card .img-container img[data-v-6bed6bba] {\n  max-height: 200px;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  padding-bottom: 2px;\n  transition: 0.8s;\n  cursor: pointer;\n  transform: translateY(2px) translateX(2px);\n  box-shadow: #4e1f7c 0px 0px 0px;\n}\n.restaurant_card .img-container img[data-v-6bed6bba]:hover {\n  transform: scale(1.1);\n  opacity: 1;\n}\n.restaurant_card .img-container .restaurant_name[data-v-6bed6bba] {\n  font-size: 1.4em;\n  margin-top: 5px;\n  margin-bottom: 30px;\n  font-weight: 600;\n  padding-top: 2px;\n  color: #f6f1fb;\n}", ""]);
 
 // exports
 
@@ -4864,7 +4862,7 @@ var render = function () {
             "ul",
             { staticClass: "footer-menu" },
             _vm._l(_vm.discoverItems, function (item, index) {
-              return _c("li", { key: index }, [
+              return _c("li", { key: index, staticClass: "my-1" }, [
                 _c("a", { attrs: { href: "#" } }, [_vm._v(_vm._s(item.name))]),
               ])
             }),
@@ -4945,7 +4943,7 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container-fluid container-header" }, [
     _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-10" }, [
+      _c("div", { staticClass: "col-10 m-auto" }, [
         _c("nav", { staticClass: "py-2 box-nav" }, [
           _vm._m(0),
           _vm._v(" "),
@@ -4991,7 +4989,11 @@ var staticRenderFns = [
     return _c("ul", { staticClass: "nav" }, [
       _c("li", [
         _c("img", {
-          attrs: { src: "assets/images/LOGO_DELIVEBOO.png", alt: "logo" },
+          staticClass: "logo img-fluid",
+          attrs: {
+            src: __webpack_require__(/*! ../assets/images/LOGO_DELIVEBOO.png */ "./resources/js/assets/images/LOGO_DELIVEBOO.png"),
+            alt: "logo",
+          },
         }),
       ]),
       _vm._v(" "),
@@ -21234,6 +21236,17 @@ try {
 
 module.exports = g;
 
+
+/***/ }),
+
+/***/ "./resources/js/assets/images/LOGO_DELIVEBOO.png":
+/*!*******************************************************!*\
+  !*** ./resources/js/assets/images/LOGO_DELIVEBOO.png ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/LOGO_DELIVEBOO.png?a2c2b17dfd26b5c04a792d5c575117e9";
 
 /***/ }),
 

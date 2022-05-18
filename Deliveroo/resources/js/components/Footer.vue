@@ -7,7 +7,7 @@
                 <div class="col-3 m-3 footer-block">
                     <h4 class="mb-3">Discover Deliveboo</h4>
                     <ul class="footer-menu">
-                        <li v-for="(item, index) in discoverItems" :key="index"><a href="#">{{item.name}}</a></li>
+                        <li class="my-1" v-for="(item, index) in discoverItems" :key="index"><a href="#">{{item.name}}</a></li>
                     </ul>
                 </div>
                 <div class="col-3 m-3 footer-block">
@@ -159,10 +159,13 @@ export default {
         color: $body-bg;
         list-style: none;
         @include subtitle-font;
+ 
+        
 
         a {
             text-decoration: none;
             color: $body-bg;
+            
         }
 
     }
@@ -173,134 +176,5 @@ export default {
         color: $body-bg;
 }
 
-
-
-
-// .all_caps_footer {
-//     @include all-caps-footer;
-// }
-
-// //top footer text rules
-
-// .info_text {
-//     h6 {
-//         padding: 10px 0;
-//         margin-top: 10px;
-//     }
-//     p {
-//         font-size: x-small;
-//         color: $body-bg;
-//     }   
-
-// }
-
-//top footer menu rules
-
-// .footer-menu {
-//     @include flex-column;
-//     background-color: #434848;
-
-//     h6 {
-//     padding: 10px;
-//     margin-top: 10px;
-//     }
-//     ul {                
-//         list-style-type: none;
-//         padding: 0;
-
-//         li {                
-//             display: block;
-//             margin: 0 10px;
-//             font-size: 11px;
-//             min-height: 20px;
-//             padding-bottom: 5px;
-//             border-bottom: 1px solid $orange;
-//             &:hover {
-//                 border-bottom: 1px solid $body-bg;
-//             }
-
-
-//             .list_decoration {
-//                 width: 10px;
-//                 min-height: 20px;
-//                 margin-right: 2px;
-//                 float: left;
-//                 font-size: 0.8em;
-//                 font-weight: 400;
-//             }
-
-
-//             a {
-                
-//                 text-decoration: none;
-//                 color: $body-bg;
-//                 padding: 0;
-//                 &:hover {                        
-//                     color: $orange;
-//                 }
-//             }
-//         }
-//     }
-// }
-
-
-
-
-// //bottom footer rules
-
-// .footer_bottom_container {
-//     height: 50px;
-//     border-top: 1px solid slategray;
-
-//     .copyright {
-//         color: $third;
-//         font-size: xx-small;
-
-//         .copyright_icon {
-//             padding-bottom: 2px;
-//         }
-
-        
-
-//         a {
-//             color: $orange;
-//             text-decoration: none;
-//             &:hover {
-//                 color: $body-bg;
-//             }
-//         }
-//     }
-
-//     // .footer-right {
-//     //     li {
-//     //         @include li-menu-horizontal;
-//     //         margin: 15px 5px;
-
-//     //         .fa-facebook-f {
-//     //             @include brand-icons;
-//     //             padding: 10px;
-//     //             background-color: #3c5997;
-//     //         }
-
-//     //         .fa-twitter {
-//     //             @include brand-icons;
-//     //             background-color: #56acee;
-//     //             padding: 10px;
-//     //         }
-
-//     //         .fa-instagram {
-//     //             @include brand-icons;
-//     //             background-color: #3f729b;
-//     //             padding: 10px;
-//     //         }
-
-//     //         .fa-youtube {
-//     //             @include brand-icons;
-//     //             background-color: #ce201f;
-//     //             padding: 10px;
-//     //         }
-//     //     }
-//     // }
-//}
 
 </style>

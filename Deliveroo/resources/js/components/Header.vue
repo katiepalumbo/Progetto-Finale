@@ -1,11 +1,11 @@
 <template>
     <div class="container-fluid container-header">
         <div class="row">
-            <div class="col-10">
+            <div class="col-10 m-auto">
                 <nav class="py-2 box-nav">
                     <ul class="nav">
                         <li>
-                            <img src="assets/images/LOGO_DELIVEBOO.png" alt="logo">
+                            <img class="logo img-fluid" src="../assets/images/LOGO_DELIVEBOO.png" alt="logo">
                         </li>
                         <li class="nav-item">
                             <!-- LINK NON FUNZIONANTE -- DEVE RIPORTARE ALLA HOME -->
@@ -55,12 +55,18 @@ export default {
         position: fixed;
         z-index: 4;
         top: 0;
+        max-height: 70px;
+        border-bottom: 1px $body-bg solid;
 
         .box-nav {
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
+
+            .logo {
+                max-height: 50px;
+            }
 
             .logo-header {
                 font-size: 21px;
