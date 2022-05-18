@@ -12195,11 +12195,10 @@ fieldset:disabled .btn {
   background-color: #85ADBE !important;
 }
 
-.ms_background-img {
-  background-repeat: no-repeat;
-  background: url(/images/BG_LOGIN_IMG.jpg?2151c2a431fadd4d6d9373f6259bbeb3);
-  background-size: cover;
-  background-position: 1% -80%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .ms_background-color {
