@@ -2390,6 +2390,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 //sotto troviamo le props passate da home
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'StandardGallery',
@@ -3268,7 +3269,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Op
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
 
 // module
-exports.push([module.i, "*[data-v-6bed6bba] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #FF4718;\n}\n.restaurant_card[data-v-6bed6bba] {\n  max-height: 300px;\n  width: 25vw;\n  overflow: hidden;\n  margin: 5px 0;\n}\n.restaurant_card .img-container img[data-v-6bed6bba] {\n  max-height: 200px;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  padding-bottom: 2px;\n  transition: 0.8s;\n}\n.restaurant_card .img-container img[data-v-6bed6bba]:hover {\n  color: #9561e2;\n  cursor: pointer;\n  transform: translateY(2px) translateX(2px);\n  box-shadow: #4e1f7c 0px 0px 0px;\n  transform: scale(1.1);\n}\n.restaurant_card .restaurant_name[data-v-6bed6bba] {\n  font-size: 1.4em;\n  margin-top: 5px;\n  margin-bottom: 30px;\n  font-weight: 600;\n  padding-top: 2px;\n  color: #f6f1fb;\n}\n.restaurant_card .restaurant_name[data-v-6bed6bba]:hover {\n  color: #9561e2;\n  cursor: pointer;\n}", ""]);
+exports.push([module.i, "*[data-v-6bed6bba] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #FF4718;\n}\n.restaurant_card[data-v-6bed6bba] {\n  max-height: 300px;\n  width: 25vw;\n  overflow: hidden;\n  margin: 5px 0;\n}\n.restaurant_card .img-container img[data-v-6bed6bba] {\n  max-height: 200px;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  padding-bottom: 2px;\n  transition: 0.8s;\n}\n.restaurant_card .img-container[data-v-6bed6bba]:hover {\n  color: #9561e2;\n  cursor: pointer;\n  transform: translateY(2px) translateX(2px);\n  box-shadow: #4e1f7c 0px 0px 0px;\n  transform: scale(1.1);\n}\n.restaurant_card .restaurant_name[data-v-6bed6bba] {\n  font-size: 1.4em;\n  margin-top: 5px;\n  margin-bottom: 30px;\n  font-weight: 600;\n  padding-top: 2px;\n  color: #f6f1fb;\n}\n.restaurant_card .restaurant_name[data-v-6bed6bba]:hover {\n  color: #9561e2;\n  cursor: pointer;\n}", ""]);
 
 // exports
 
@@ -5354,12 +5355,12 @@ var render = function () {
           _c("img", {
             attrs: { src: "" + _vm.item.url, alt: "" + _vm.item.name },
           }),
+          _vm._v(" "),
+          _c("p", { staticClass: "restaurant_name" }, [
+            _vm._v(_vm._s(_vm.item.name)),
+          ]),
         ]
       ),
-      _vm._v(" "),
-      _c("p", { staticClass: "restaurant_name" }, [
-        _vm._v(_vm._s(_vm.item.name)),
-      ]),
     ],
     1
   )

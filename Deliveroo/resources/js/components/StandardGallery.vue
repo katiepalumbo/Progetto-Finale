@@ -3,8 +3,9 @@
      <div class="col restaurant_card mx-auto">
         <router-link class="img-container" :to="{name: 'menu'}">
             <img :src="`${item.url}`" :alt="`${item.name}`">
+            <p class="restaurant_name">{{item.name}}</p>
         </router-link>
-        <p class="restaurant_name">{{item.name}}</p>
+        
         <!-- <p class="article_date">{{item.date}}</p>
         <p class="article_preview">{{item.text}}</p> -->
     </div>
@@ -48,13 +49,17 @@ export default {
 
     .img-container {
 
-    img {
-        max-height: 200px;
-        width: 100%;
-        object-fit: cover;
-        padding-bottom: 2px;
-        transition: 0.80s;
-        //border-bottom: 2px solid transparent;
+
+        img {
+            max-height: 200px;
+            width: 100%;
+            object-fit: cover;
+            padding-bottom: 2px;
+            transition: 0.80s;
+            //border-bottom: 2px solid transparent;
+            
+            
+        }
         &:hover {
             color: $purple;
             //border-bottom: 2px solid $purple;
@@ -65,8 +70,6 @@ export default {
             
             
         }
-        
-    }
 
     }
 
