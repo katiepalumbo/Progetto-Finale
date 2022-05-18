@@ -53605,7 +53605,12 @@ module.exports = function(module) {
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // {
+//   "require" : {
+//     "braintree/braintree_php" : "6.8.0"
+//   }
+// }
+
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /**
@@ -53774,9 +53779,9 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\maion\Desktop\Progetto-Finale\Deliveroo\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\Users\maion\Desktop\Progetto-Finale\Deliveroo\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\Users\maion\Desktop\Progetto-Finale\Deliveroo\resources\sass\admin.scss */"./resources/sass/admin.scss");
+__webpack_require__(/*! /Users/katiepalumbo/Documents/Boolean/Assignments/Progetto-Finale/Progetto-Finale/Deliveroo/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /Users/katiepalumbo/Documents/Boolean/Assignments/Progetto-Finale/Progetto-Finale/Deliveroo/resources/sass/app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! /Users/katiepalumbo/Documents/Boolean/Assignments/Progetto-Finale/Progetto-Finale/Deliveroo/resources/sass/admin.scss */"./resources/sass/admin.scss");
 
 
 /***/ })

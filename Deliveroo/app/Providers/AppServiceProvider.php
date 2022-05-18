@@ -24,15 +24,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-         // braintree setup
-            $environment = env('BRAINTREE_ENV');
-            $braintree = new \Braintree\Gateway([
-            'environment' => $environment,
-            'merchantId' => 'merchant_id_example',
-            'publicKey' => 'public_key_example',
-            'privateKey' => 'private_key_example'
-    ]);
-    config(['braintree' => $braintree]); 
+    //      // braintree setup
+    //         $environment = env('BRAINTREE_ENV');
+    //         $braintree = new \Braintree\Gateway([
+    //         'environment' => $environment,
+    //         'merchantId' => 'merchant_id_example',
+    //         'publicKey' => 'public_key_example',
+    //         'privateKey' => 'private_key_example'
+    // ]);
+    // config(['braintree' => $braintree]); 
 
         //  $gateway = new \Braintree\Gateway([
         //      'environment' => 'sandbox',

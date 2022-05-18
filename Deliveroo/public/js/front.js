@@ -2471,6 +2471,52 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'CheckOut',
   data: function data() {
@@ -2528,6 +2574,9 @@ __webpack_require__.r(__webpack_exports__);
       } else {
         this.error = true;
       }
+    },
+    testPagato: function testPagato() {
+      this.pagato = true;
     }
   },
   created: function created() {
@@ -3343,13 +3392,14 @@ exports.push([module.i, "*[data-v-6bed6bba] {\n  margin: 0;\n  padding: 0;\n  bo
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+var escape = __webpack_require__(/*! ../../../node_modules/css-loader/lib/url/escape.js */ "./node_modules/css-loader/lib/url/escape.js");
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;800&family=Outfit:wght@600&family=Source+Sans+Pro:wght@200;400;600;700&display=swap);", ""]);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
 
 // module
-exports.push([module.i, "#aaa {\n  margin-top: 40px;\n}", ""]);
+exports.push([module.i, ".checkout {\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/pexels-lukas-349610.jpg */ "./resources/js/assets/images/pexels-lukas-349610.jpg")) + ");\n  background-size: cover;\n  width: 100vw;\n  margin-top: -10px;\n}\n.container {\n  margin-top: 80px;\n}\n.container h1 {\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  color: #9561e2;\n}\n.container .my_item {\n  overflow: hidden;\n  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);\n  border-radius: 10px;\n  background-color: #f6f1fb;\n}\n.container .my_item img {\n  height: 125px;\n  -o-object-fit: cover;\n     object-fit: cover;\n  margin-left: -15px;\n}\n.container .my_item h4 {\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  line-height: 80%;\n  color: #FF4718;\n  padding-top: 10px;\n}\n.container .my_item p {\n  font-family: \"Tenor Sans\", sans-serif;\n  line-height: 80%;\n  color: #9561e2;\n}\n.container thead {\n  font-family: \"Tenor Sans\", sans-serif;\n  color: #9561e2;\n}\n.container tbody {\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  color: #FF4718;\n}\n.container .btn {\n  background-color: #9561e2;\n  color: #f6f1fb;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  padding: 10px 100px;\n}", ""]);
 
 // exports
 
@@ -5521,134 +5571,112 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { attrs: { id: "aaa" } }, [
-    _c("h1", [_vm._v("I tuoi prodotti")]),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "row" },
-      _vm._l(_vm.finale, function (finito) {
-        return _c("div", { key: finito.id, staticClass: "card col-3" }, [
-          _c("h3", [_vm._v(_vm._s(finito.item_name))]),
-          _vm._v(" "),
-          _c("h6", [_vm._v(_vm._s(finito.description))]),
-        ])
-      }),
-      0
-    ),
-    _vm._v(" "),
-    _c("h1", { staticClass: "mt-4" }, [_vm._v("Totale")]),
-    _vm._v(" "),
-    _c("h3", [_vm._v(_vm._s(_vm.price) + ".00")]),
-    _vm._v(" "),
-    _c(
-      "button",
-      {
-        staticClass: "btn btn-danger m-2",
-        attrs: { type: "button" },
-        on: {
-          click: function ($event) {
-            return _vm.testPagato(_vm.$item.order)
-          },
-        },
-      },
-      [_vm._v("PAGA")]
-    ),
-    _vm._v(" "),
-    _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col" }, [
+  return _c("div", { staticClass: "checkout" }, [
+    _c("div", { staticClass: "container" }, [
+      _c("h1", [_vm._v("I tuoi prodotti")]),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "row" },
+        _vm._l(_vm.finale, function (finito) {
+          return _c(
+            "div",
+            { key: finito.id, staticClass: "my_item col-3 mx-3" },
+            [
+              _c("div", { staticClass: "row my-auto" }, [
+                _c("img", {
+                  staticClass: "col-4",
+                  attrs: { src: "" + finito.image, alt: "" },
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-7" }, [
+                  _c("h4", [_vm._v(_vm._s(finito.item_name))]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v(_vm._s(finito.description))]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v(_vm._s(finito.price))]),
+                ]),
+              ]),
+            ]
+          )
+        }),
+        0
+      ),
+      _vm._v(" "),
+      _c("table", { staticClass: "col-6 mt-4" }, [
+        _vm._m(0),
+        _vm._v(" "),
         _c(
-          "form",
-          {
-            on: {
-              submit: function ($event) {
-                $event.preventDefault()
-                return _vm.payment()
-              },
-            },
-          },
+          "tbody",
           [
-            _c("div", { staticClass: "form-group" }, [
-              _c("label", { attrs: { for: "address" } }, [_vm._v("Via ")]),
+            _vm._l(_vm.finale, function (finito) {
+              return _c("tr", { key: finito.id }, [
+                _c("td", [_vm._v(_vm._s(finito.item_name))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(finito.price))]),
+              ])
+            }),
+            _vm._v(" "),
+            _vm._m(1),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", [_vm._v("Totale:")]),
               _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.client_street,
-                    expression: "client_street",
-                  },
-                ],
-                staticClass: "form-control",
-                attrs: {
-                  id: "client_street",
-                  type: "text",
-                  name: "client_street",
-                  required: "",
-                  autocomplete: "client_street",
-                },
-                domProps: { value: _vm.client_street },
-                on: {
-                  input: function ($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.client_street = $event.target.value
-                  },
-                },
-              }),
-            ]),
-            _vm._v("\n\n                1"),
-            _c("div", { staticClass: "form-group" }, [
-              _c("label", { attrs: { for: "address" } }, [_vm._v("Città")]),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.client_city,
-                    expression: "client_city",
-                  },
-                ],
-                staticClass: "form-control",
-                attrs: {
-                  id: "client_city",
-                  type: "text",
-                  name: "client_city",
-                  required: "",
-                  autocomplete: "client_city",
-                },
-                domProps: { value: _vm.client_city },
-                on: {
-                  input: function ($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.client_city = $event.target.value
-                  },
-                },
-              }),
+              _c("td", { staticClass: "total" }, [
+                _vm._v(_vm._s(_vm.price) + ".00"),
+              ]),
             ]),
             _vm._v(" "),
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-primary my-3",
-                attrs: { type: "submit" },
-              },
-              [_vm._v("Invia")]
-            ),
-          ]
+            _c("tr", [
+              _c("td", [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn m-2",
+                    attrs: { type: "button" },
+                    on: {
+                      click: function ($event) {
+                        return _vm.testPagato(_vm.$item.order)
+                      },
+                    },
+                  },
+                  [_vm._v("PAGA ORA")]
+                ),
+                _vm._v(" "),
+                _vm.pagato != false
+                  ? _c("h3", [_vm._v("HAI PAGATO")])
+                  : _vm._e(),
+              ]),
+              _vm._v(" "),
+              _c("td"),
+            ]),
+          ],
+          2
         ),
       ]),
     ]),
-    _vm._v(" "),
-    _vm.pagato != false ? _c("h3", [_vm._v("HAI PAGATO")]) : _vm._e(),
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Piatto")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Prezzo Singolo")]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [_c("hr")])
+  },
+]
 render._withStripped = true
 
 
@@ -21546,6 +21574,17 @@ module.exports = "/images/pane.jpg?719e01bb11abc32054888aeedfbba95e";
 
 /***/ }),
 
+/***/ "./resources/js/assets/images/pexels-lukas-349610.jpg":
+/*!************************************************************!*\
+  !*** ./resources/js/assets/images/pexels-lukas-349610.jpg ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/pexels-lukas-349610.jpg?54b91b6546d649a500c376dd47b31ad3";
+
+/***/ }),
+
 /***/ "./resources/js/assets/images/pink-cake.jpg":
 /*!**************************************************!*\
   !*** ./resources/js/assets/images/pink-cake.jpg ***!
@@ -22910,7 +22949,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\maion\Desktop\Progetto-Finale\Deliveroo\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! /Users/katiepalumbo/Documents/Boolean/Assignments/Progetto-Finale/Progetto-Finale/Deliveroo/resources/js/front.js */"./resources/js/front.js");
 
 
 /***/ })

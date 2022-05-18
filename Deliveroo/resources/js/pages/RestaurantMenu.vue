@@ -364,7 +364,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    @import '../../sass/_variables.scss';
+
+@import '../../sass/_variables.scss';
 
     .my_container-check {
         margin-top: 65.5px;
