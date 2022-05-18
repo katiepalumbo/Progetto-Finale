@@ -1,8 +1,8 @@
 //myStyle
 .ms_background-img {
     background-repeat: no-repeat;
-    background-image: url(https://centoform.it/wp-content/uploads/2021/10/brooke-lark-08bOYnH_r_E-unsplash.jpg);
-    background-position: 1% -30%;
+    background-image: url("../../../public/images/brooke-lark-08bOYnH_r_E-unsplash.jpg");
+    background-position: 50% 50% !important;
 }
 
 .ms_background-color {
@@ -15,4 +15,10 @@
 
 .ms_text-purple {
     color: $purple;
+}
+
+.ms-logo-banner {
+    height: 100% !important;
+    width: 100% !important;
+    background-color: rgba(0, 0, 0, 0.7)!important;
 }
