@@ -68,7 +68,7 @@ class RegisterController extends Controller
             'restaurant_name' => ['required', 'string', 'max:30'],
             'description' => ['required', 'string', 'min:30'],
             'types' => ['required'],
-            'slug' => ['required'],
+            'slug' => ['nullable'],
             //'user_cover' => ['image']
         ]);
     }

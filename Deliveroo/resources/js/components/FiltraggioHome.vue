@@ -4,7 +4,7 @@
           <h3>Ti serve ancora qualche idea?</h3>
       </div>
         <div class="row">
-            <div class="col-10 m-auto">
+            <div class="col m-auto">
                <form action="" class="row" @submit.prevent="filteredType()">
                     <div class="col"  v-for="typex in types" :key="typex.id">
                         <div class="row d-inline-flex">
@@ -86,6 +86,7 @@ export default {
     .type-button {
         background-color: $purple;
         @include all-caps-button;
+        max-width: 70%;
     }
 }
 

@@ -1,0 +1,19 @@
+.ms_banner {
+    background-color: $darkOrange;
+    height: 120px;
+    line-height: 120px;
+}
+
+.piatti {
+    background-image: url(https://img.cdn4dd.com/cdn-cgi/image/fit=contain,width=1200,height=672,format=auto/https://doordash-static.s3.amazonaws.com/media/store/header/2631.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 10% 50%;
+    height: 350px;
+    h2 {}
+}
+
+.ms_bg-Opaco {
+    box-shadow: 1px 1px 10px 2px rgb(143, 143, 143);
+    background-color: rgba(0, 0, 0, 0.6);
+}
