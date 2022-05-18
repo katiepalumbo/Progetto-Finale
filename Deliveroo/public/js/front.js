@@ -2093,6 +2093,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 //qua ci sono i dati che vengono importati da app.vue 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'MyFooter',
@@ -3227,7 +3230,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Op
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
 
 // module
-exports.push([module.i, "*[data-v-61a7c374] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n.footer-top[data-v-61a7c374] {\n  background-color: #2e3333;\n}\n.footer-block[data-v-61a7c374] {\n  background-color: orange;\n  padding: 10px;\n  max-width: 50%;\n}\n.footer-block h3[data-v-61a7c374] {\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.footer-block li[data-v-61a7c374] {\n  text-decoration: none;\n  list-style: none;\n  font-family: \"Tenor Sans\", sans-serif;\n}", ""]);
+exports.push([module.i, "*[data-v-61a7c374] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n.footer_container[data-v-61a7c374] {\n  background-color: #2e3333;\n}\n.footer-block[data-v-61a7c374] {\n  background-color: #434848;\n  padding: 20px;\n  max-width: 50%;\n}\n.footer-block h4[data-v-61a7c374] {\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  color: #f6f1fb;\n}\n.footer-block li[data-v-61a7c374] {\n  color: #f6f1fb;\n  list-style: none;\n  font-family: \"Tenor Sans\", sans-serif;\n}\n.footer-block li a[data-v-61a7c374] {\n  text-decoration: none;\n  color: #f6f1fb;\n}\n.copyright[data-v-61a7c374] {\n  color: #f6f1fb;\n}", ""]);
 
 // exports
 
@@ -3268,7 +3271,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Op
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
 
 // module
-exports.push([module.i, "*[data-v-55d28a50] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #f6f1fb;\n}\n.home-gallery-container[data-v-55d28a50] {\n  max-width: 80%;\n  margin: auto;\n  position: relative;\n  align-items: center;\n  justify-content: center;\n}\n.home-gallery-container .img-container[data-v-55d28a50] {\n  height: 150px;\n  background-size: cover;\n}\n.home-gallery-container .casalinga[data-v-55d28a50] {\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/tomato-basil.jpg */ "./resources/js/assets/images/tomato-basil.jpg")) + ");\n}\n.home-gallery-container .dolci[data-v-55d28a50] {\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/pink-cake.jpg */ "./resources/js/assets/images/pink-cake.jpg")) + ");\n}\n.home-gallery-container .bevande[data-v-55d28a50] {\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/coke.jpg */ "./resources/js/assets/images/coke.jpg")) + ");\n  background-position: center;\n}\n.home-gallery-container .pane[data-v-55d28a50] {\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/pane.jpg */ "./resources/js/assets/images/pane.jpg")) + ");\n  background-position: center;\n}\n.home-gallery-container .overlay-text[data-v-55d28a50] {\n  color: white;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  padding: auto;\n  background-color: transparent;\n  height: 100%;\n  width: 100%;\n  line-height: 150px;\n  text-align: center;\n  text-shadow: #9561e2;\n  text-decoration: none;\n}\n.home-gallery-container .white-space[data-v-55d28a50] {\n  min-height: 100px;\n}", ""]);
+exports.push([module.i, "*[data-v-55d28a50] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #f6f1fb;\n}\n.home-gallery-container[data-v-55d28a50] {\n  max-width: 80%;\n  margin: auto;\n  position: relative;\n  align-items: center;\n  justify-content: center;\n}\n.home-gallery-container .img-container[data-v-55d28a50] {\n  height: 150px;\n  background-size: cover;\n  text-decoration: none;\n}\n.home-gallery-container .casalinga[data-v-55d28a50] {\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/tomato-basil.jpg */ "./resources/js/assets/images/tomato-basil.jpg")) + ");\n}\n.home-gallery-container .dolci[data-v-55d28a50] {\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/pink-cake.jpg */ "./resources/js/assets/images/pink-cake.jpg")) + ");\n}\n.home-gallery-container .bevande[data-v-55d28a50] {\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/coke.jpg */ "./resources/js/assets/images/coke.jpg")) + ");\n  background-position: center;\n}\n.home-gallery-container .pane[data-v-55d28a50] {\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/pane.jpg */ "./resources/js/assets/images/pane.jpg")) + ");\n  background-position: center;\n}\n.home-gallery-container .overlay-text[data-v-55d28a50] {\n  color: white;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  padding: auto;\n  background-color: transparent;\n  height: 100%;\n  width: 100%;\n  line-height: 150px;\n  text-align: center;\n  text-shadow: #9561e2;\n}\n.home-gallery-container .white-space[data-v-55d28a50] {\n  min-height: 100px;\n}", ""]);
 
 // exports
 
@@ -4858,7 +4861,7 @@ var render = function () {
       _vm._m(0),
       _vm._v(" "),
       _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-10 m-auto" }, [
+        _c("div", { staticClass: "col m-auto" }, [
           _c(
             "form",
             {
@@ -4932,50 +4935,72 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "footer_container py-5" }, [
+  return _c("div", { staticClass: "footer_container py-2" }, [
     _c("div", { staticClass: "col-10 m-auto footer_top" }, [
-      _c("div", { staticClass: "row footer_lists" }, [
-        _c("div", { staticClass: "col-3 m-1 footer-block" }, [
-          _c("h3", { staticClass: "mb-3" }, [_vm._v("Discover Deliveboo")]),
+      _c("div", { staticClass: "row footer_lists justify-content-center" }, [
+        _c("div", { staticClass: "col-3 m-3 footer-block" }, [
+          _c("h4", { staticClass: "mb-3" }, [_vm._v("Discover Deliveboo")]),
           _vm._v(" "),
           _c(
             "ul",
             { staticClass: "footer-menu" },
             _vm._l(_vm.discoverItems, function (item, index) {
-              return _c("li", { key: index }, [_vm._v(_vm._s(item.name))])
+              return _c("li", { key: index }, [
+                _c("a", { attrs: { href: "#" } }, [_vm._v(_vm._s(item.name))]),
+              ])
             }),
             0
           ),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-3 m-1 footer-block" }, [
-          _c("h3", { staticClass: "mb-3" }, [_vm._v("Legal")]),
+        _c("div", { staticClass: "col-3 m-3 footer-block" }, [
+          _c("h4", { staticClass: "mb-3" }, [_vm._v("Legal")]),
           _vm._v(" "),
           _c(
             "ul",
             _vm._l(_vm.legalItems, function (item, index) {
-              return _c("li", { key: index }, [_vm._v(_vm._s(item.name))])
+              return _c("li", { key: index }, [
+                _c("a", { attrs: { href: "#" } }, [_vm._v(_vm._s(item.name))]),
+              ])
             }),
             0
           ),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-3 m-1 footer-block" }, [
-          _c("h3", { staticClass: "mb-3" }, [_vm._v("Help")]),
+        _c("div", { staticClass: "col-3 m-3 footer-block" }, [
+          _c("h4", { staticClass: "mb-3" }, [_vm._v("Help")]),
           _vm._v(" "),
           _c(
             "ul",
             _vm._l(_vm.helpItems, function (item, index) {
-              return _c("li", { key: index }, [_vm._v(_vm._s(item.name))])
+              return _c("li", { key: index }, [
+                _c("a", { attrs: { href: "#" } }, [_vm._v(_vm._s(item.name))]),
+              ])
             }),
             0
           ),
         ]),
+        _vm._v(" "),
+        _vm._m(0),
       ]),
     ]),
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-10 m-auto" }, [
+      _c("p", { staticClass: "copyright mt-1" }, [
+        _c("span", [
+          _c("i", { staticClass: "fa-regular fa-copyright copyright_icon" }),
+        ]),
+        _vm._v(" Copyright 2022 | Powered by Team 7"),
+      ]),
+    ])
+  },
+]
 render._withStripped = true
 
 
