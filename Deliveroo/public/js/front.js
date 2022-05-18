@@ -2361,7 +2361,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Singolo",
-  props: ['title', 'type', 'slug'],
+  props: ['title', 'type', 'slug', 'user_cover'],
   data: function data() {
     return {};
   }
@@ -2704,6 +2704,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Menu",
@@ -2773,6 +2774,14 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3228,7 +3237,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Op
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
 
 // module
-exports.push([module.i, ".jumbotron-container[data-v-e395661a] {\n  min-height: 450px;\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/food.jpg */ "./resources/js/assets/images/food.jpg")) + ");\n  background-size: cover;\n  margin-top: 66px;\n}\n.jumbotron-container .jumbotron-contents[data-v-e395661a] {\n  vertical-align: middle;\n  transform: translateY(50%);\n  transform: translateX(100%);\n  font-size: xx-large;\n  padding: 10px;\n}\n.jumbotron-container .jumbotron-contents .jumbotron_title[data-v-e395661a] {\n  font-size: 95px;\n  font-weight: 700;\n  color: #9561e2;\n  margin-top: 15px;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.jumbotron-container .jumbotron-contents .jumbotron_subtitle[data-v-e395661a] {\n  font-size: 16px;\n  font-family: \"Tenor Sans\", sans-serif;\n  margin-left: 15px;\n  color: #9538f2;\n}\n.jumbotron-container .jumbotron-contents .button[data-v-e395661a] {\n  display: inline-block;\n  background-color: #9538f2;\n  padding: 6px 16px;\n  text-decoration: none;\n  font-weight: bold;\n  color: #fff;\n  border-radius: 5px;\n  transition: all 0.3s;\n  margin-left: 10px;\n  font-size: 12px;\n  font-weight: 700;\n}\n.jumbotron-container .jumbotron-contents .button[data-v-e395661a]:hover {\n  color: #f6993f;\n}\n.jumbotron-container .jumbotron-contents .button span[data-v-e395661a] {\n  padding-left: 10px;\n}", ""]);
+exports.push([module.i, ".jumbotron-container[data-v-e395661a] {\n  min-height: 450px;\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/food.jpg */ "./resources/js/assets/images/food.jpg")) + ");\n  background-size: cover;\n  margin-top: 66px;\n}\n.jumbotron-container .jumbotron-contents[data-v-e395661a] {\n  vertical-align: middle;\n  transform: translateY(50%);\n  transform: translateX(100%);\n  font-size: xx-large;\n  padding: 10px;\n}\n.jumbotron-container .jumbotron-contents .jumbotron_title[data-v-e395661a] {\n  font-size: 2em;\n  font-weight: 700;\n  color: #9561e2;\n  margin-top: 15px;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.jumbotron-container .jumbotron-contents .jumbotron_subtitle[data-v-e395661a] {\n  font-size: 16px;\n  font-family: \"Tenor Sans\", sans-serif;\n  margin-left: 15px;\n  color: #9538f2;\n}\n.jumbotron-container .jumbotron-contents .button[data-v-e395661a] {\n  display: inline-block;\n  background-color: #9538f2;\n  padding: 6px 16px;\n  text-decoration: none;\n  font-weight: bold;\n  color: #fff;\n  border-radius: 5px;\n  transition: all 0.3s;\n  margin-left: 10px;\n  font-size: 12px;\n  font-weight: 700;\n}\n.jumbotron-container .jumbotron-contents .button[data-v-e395661a]:hover {\n  color: #f6993f;\n}\n.jumbotron-container .jumbotron-contents .button span[data-v-e395661a] {\n  padding-left: 10px;\n}", ""]);
 
 // exports
 
@@ -3268,7 +3277,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Op
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
 
 // module
-exports.push([module.i, "*[data-v-6bed6bba] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #FF4718;\n}\n.restaurant_card[data-v-6bed6bba] {\n  max-height: 300px;\n  width: 25vw;\n  overflow: hidden;\n  margin: 5px 0;\n}\n.restaurant_card .img-container[data-v-6bed6bba] {\n  text-decoration: none;\n}\n.restaurant_card .img-container img[data-v-6bed6bba] {\n  max-height: 200px;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  padding-bottom: 2px;\n  transition: 0.8s;\n  cursor: pointer;\n  transform: translateY(2px) translateX(2px);\n  box-shadow: #4e1f7c 0px 0px 0px;\n}\n.restaurant_card .img-container img[data-v-6bed6bba]:hover {\n  transform: scale(1.1);\n  opacity: 1;\n}\n.restaurant_card .img-container .restaurant_name[data-v-6bed6bba] {\n  font-size: 1.4em;\n  margin-top: 5px;\n  margin-bottom: 30px;\n  font-weight: 600;\n  padding-top: 2px;\n  color: #f6f1fb;\n}", ""]);
+exports.push([module.i, "*[data-v-6bed6bba] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #FF4718;\n}\n.restaurant_card[data-v-6bed6bba] {\n  max-height: 300px;\n  width: 25vw;\n  overflow: hidden;\n  margin: 5px 0;\n}\n.restaurant_card .img-container[data-v-6bed6bba] {\n  text-decoration: none;\n}\n.restaurant_card .img-container img[data-v-6bed6bba] {\n  height: 200px;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  padding-bottom: 2px;\n  transition: 0.8s;\n  cursor: pointer;\n  transform: translateY(2px) translateX(2px);\n  box-shadow: #4e1f7c 0px 0px 0px;\n}\n.restaurant_card .img-container img[data-v-6bed6bba]:hover {\n  transform: scale(1.1);\n  opacity: 1;\n}\n.restaurant_card .img-container .restaurant_name[data-v-6bed6bba] {\n  font-size: 1.4em;\n  margin-top: 5px;\n  margin-bottom: 30px;\n  font-weight: 600;\n  padding-top: 2px;\n  color: #f6f1fb;\n}", ""]);
 
 // exports
 
@@ -3308,7 +3317,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Op
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
 
 // module
-exports.push([module.i, ".my_container-menu {\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n}\n.my_container-menu .my_row-menu-1 {\n  width: 15%;\n  height: calc(100vh - 65.6px);\n  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);\n  background-clip: #f6f1fb;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 65.6px;\n}\n.my_container-menu .my_row-menu-1 .my_box {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n}\n.my_container-menu .my_row-menu-1 .my_box .my_box-input {\n  width: 100%;\n}\n.my_container-menu .my_row-menu-1 .my_box .my_box-input .my_label-input {\n  font-size: 13px;\n  color: #FF4718;\n  margin-top: 2px;\n  margin-left: 20px;\n  cursor: pointer;\n}\n.my_container-menu .my_row-menu-1 .my_box .my_box-input .my_input-item {\n  display: flex;\n  flex-direction: row-reverse;\n  justify-content: space-between;\n  align-items: center;\n  margin: 2.5px 0px;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.my_container-menu .my_row-menu-1 .my_box .my_box-input .my_input-item .my_input {\n  margin-right: 15px;\n  margin-top: 2px;\n}\n.my_container-menu .my_row-menu-1 .my_box .box-btn {\n  height: 40px;\n}\n.my_container-menu .my_row-menu-1 .my_box .btn-header {\n  display: inline-block;\n  background-color: #9538f2;\n  padding: 6px 16px;\n  text-decoration: none;\n  font-weight: bold;\n  color: #fff;\n  border: 0px;\n  border-radius: 5px;\n  box-shadow: 0 4px 0 #7633b9;\n  transition: all 0.3s;\n  margin-left: 19px;\n  margin-top: 10px;\n}\n.my_container-menu .my_row-menu-1 .my_box .btn-header:hover {\n  transform: translateY(2px);\n  box-shadow: 0 2px 0 #9538f2;\n}\n.my_container-menu .my_row-menu-2 {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  margin-top: 100px;\n  margin-bottom: 40px;\n  width: 85%;\n  align-self: flex-end;\n}\n.my_container-menu .my_row-menu-2 .my_box-items {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  margin-top: 26px;\n  flex-wrap: wrap;\n  width: 100%;\n  align-self: flex-end;\n}\n.my_container-menu .my_row-menu-2 .my_col-menu {\n  padding: 10px 10px;\n}\n.my_container-menu .my_row-menu-2 .my_box-title {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.my_container-menu .my_row-menu-2 .my_box-title .menu-title {\n  color: #9538f2;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.my_container-menu .my_row-menu-2 .my_box-title .menu-text {\n  color: #FF4718;\n  font-family: \"Tenor Sans\", sans-serif;\n}", ""]);
+exports.push([module.i, ".my_container-menu {\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  position: relative;\n}\n.my_container-menu .my_row-menu-1 {\n  width: 15%;\n  min-width: 150px;\n  height: calc(100vh - 65.6px);\n  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);\n  background-clip: #f6f1fb;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 65.6px;\n}\n.my_container-menu .my_row-menu-1 .my_box {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n}\n.my_container-menu .my_row-menu-1 .my_box .my_box-input {\n  width: 100%;\n}\n.my_container-menu .my_row-menu-1 .my_box .my_box-input .my_label-input {\n  font-size: 13px;\n  color: #FF4718;\n  margin-top: 2px;\n  margin-left: 20px;\n  cursor: pointer;\n}\n.my_container-menu .my_row-menu-1 .my_box .my_box-input .my_input-item {\n  display: flex;\n  flex-direction: row-reverse;\n  justify-content: space-between;\n  align-items: center;\n  margin: 0px 0px;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.my_container-menu .my_row-menu-1 .my_box .my_box-input .my_input-item .my_input {\n  margin-right: 15px;\n  margin-top: 1px;\n}\n.my_container-menu .my_row-menu-1 .my_box .box-btn {\n  height: 40px;\n}\n.my_container-menu .my_row-menu-1 .my_box .btn-header {\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  margin-left: 20px;\n  margin-bottom: 3px;\n  margin-top: 5px;\n  background-color: #9561e2;\n  border-radius: 4px;\n  border: 0px;\n  padding: 7px 10px;\n  color: #ffffff;\n  font-size: 13px;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.my_container-menu .my_row-menu-1 .my_box .btn-header:hover {\n  background-color: #7048ab;\n}\n.my_container-menu .my_row-menu-2 {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  margin-top: 150px;\n  margin-bottom: 40px;\n  position: relative;\n  top: 0;\n  width: 85%;\n  align-self: flex-end;\n}\n.my_container-menu .my_row-menu-2 .my_box-items {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  margin-top: 26px;\n  flex-wrap: wrap;\n  width: 100%;\n  align-self: flex-end;\n}\n.my_container-menu .my_row-menu-2 .my_col-menu {\n  padding: 10px 10px;\n}\n.my_container-menu .my_box-title {\n  display: flex;\n  width: 74%;\n  flex-direction: column;\n  align-items: center;\n  position: absolute;\n  top: 90px;\n  right: 0;\n}\n.my_container-menu .my_box-title .menu-title {\n  color: #9538f2;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.my_container-menu .my_box-title .menu-text {\n  color: #FF4718;\n  font-family: \"Tenor Sans\", sans-serif;\n}", ""]);
 
 // exports
 
@@ -3324,10 +3333,11 @@ exports.push([module.i, ".my_container-menu {\n  width: 100%;\n  display: flex;\
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
-
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;800&family=Outfit:wght@600&family=Source+Sans+Pro:wght@200;400;600;700&display=swap);", ""]);
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
 
 // module
-exports.push([module.i, ".card-img-top[data-v-14400205] {\n  max-width: 50px;\n}\n.flex[data-v-14400205] {\n  display: flex;\n}\n.flex .first-box[data-v-14400205] {\n  width: 60%;\n  padding: 0px 30px;\n  overflow-y: auto;\n}\n.flex .carrello[data-v-14400205] {\n  width: 40%;\n  height: 510px;\n  background-color: aqua;\n  margin: 10px 0px;\n}\n.flex .carrello .card-box[data-v-14400205] {\n  height: 320px;\n  overflow-y: auto;\n  margin: 10px;\n}\n.flex .carrello .card[data-v-14400205] {\n  margin: 10px;\n}\n.flex .box[data-v-14400205] {\n  width: 100%;\n  height: 30px;\n  text-align: center;\n}", ""]);
+exports.push([module.i, ".my_container-check[data-v-14400205] {\n  margin-top: 65.5px;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n}\n.my_container-check .my_check-left[data-v-14400205] {\n  width: 70%;\n  margin-top: 20px;\n}\n.my_container-check .my_container-info[data-v-14400205] {\n  width: 92%;\n  height: 250px;\n  border-radius: 10px;\n  overflow: hidden;\n  display: flex;\n  flex-direction: row;\n  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);\n}\n.my_container-check .my_container-info .my_img-info[data-v-14400205] {\n  width: 270px;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.my_container-check .my_container-info .my_box-info[data-v-14400205] {\n  display: flex;\n  flex-direction: column;\n  margin-left: 25px;\n  margin-top: 30px;\n}\n.my_container-check .my_container-info .my_box-info .my_info-name[data-v-14400205] {\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  text-transform: uppercase;\n  color: #FF4718;\n}\n.my_container-check .my_container-info .my_box-info .my_info-city[data-v-14400205] {\n  font-family: \"Tenor Sans\", sans-serif;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n  margin-top: 10px;\n  color: #9561e2;\n}\n.my_container-check .my_container-info .my_box-info .my_info-text[data-v-14400205] {\n  font-family: \"Tenor Sans\", sans-serif;\n  margin-top: 25px;\n  width: 90%;\n  color: #9561e2;\n  display: flex;\n  flex-direction: column;\n}\n.my_container-check .my_container-info .my_box-info .my_info-text span[data-v-14400205] {\n  color: #FF4718;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  margin-bottom: 0px;\n}\n.my_container-check .my_container-items[data-v-14400205] {\n  width: 93.5%;\n  margin-left: 15px;\n  margin-top: 40px;\n  margin-bottom: 40px;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  flex-wrap: wrap;\n}\n.my_container-check .my_container-items .my_card-items[data-v-14400205] {\n  min-width: 413px;\n  min-height: 130px;\n  max-width: 413px;\n  max-height: 150px;\n  margin: 10px 13px;\n  border-radius: 10px;\n  overflow: hidden;\n  display: flex;\n  flex-direction: row;\n  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);\n}\n.my_container-check .my_container-items .my_card-items .my_item-img[data-v-14400205] {\n  width: 120px;\n  height: 100%;\n}\n.my_container-check .my_container-items .my_card-items .my_item-img img[data-v-14400205] {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.my_container-check .my_container-items .my_card-items .my_item-info[data-v-14400205] {\n  width: 60%;\n  height: 100%;\n  margin-left: 20px;\n}\n.my_container-check .my_container-items .my_card-items .my_item-info .title-info[data-v-14400205] {\n  margin-bottom: 0px;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  color: #FF4718;\n  margin-top: 10px;\n}\n.my_container-check .my_container-items .my_card-items .my_item-info .info-item[data-v-14400205] {\n  margin-bottom: 0px;\n  margin-top: 7px;\n  font-size: 14px;\n  font-family: \"Tenor Sans\", sans-serif;\n  color: #9561e2;\n}\n.my_container-check .my_container-items .my_card-items .my_item-info div[data-v-14400205] {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  margin-top: 10px;\n  margin-bottom: 5px;\n}\n.my_container-check .my_container-items .my_card-items .my_item-info div .price-item[data-v-14400205] {\n  margin-bottom: 0px;\n  font-size: 14px;\n  font-family: \"Tenor Sans\", sans-serif;\n  color: #9561e2;\n}\n.my_container-check .my_container-items .my_card-items .my_item-info div .btn-add[data-v-14400205] {\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  margin-left: 40px;\n  margin-bottom: 3px;\n  background-color: #FF4718;\n  border-radius: 4px;\n  color: #ffffff;\n  font-size: 13px;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.my_container-check .my_container-items .my_card-items .my_item-info div .btn-add[data-v-14400205]:hover {\n  background-color: #be2d05;\n}\n.my_container-check .my_container-cart[data-v-14400205] {\n  margin-top: 20px;\n  border-radius: 10px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 25%;\n  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n  min-height: 20vh;\n  max-height: 80vh;\n  margin-bottom: 50px;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 85.5px;\n  bottom: 30px;\n  margin-left: 10px;\n}\n.my_container-check .my_container-cart .box-title[data-v-14400205] {\n  display: flex;\n  justify-content: center;\n  border-bottom: 1px solid #9561e2;\n  height: 50px;\n  width: 95%;\n  margin-bottom: 15px;\n}\n.my_container-check .my_container-cart .box-title .my_title-cart[data-v-14400205] {\n  margin-top: 10px;\n  color: #FF4718;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.my_container-check .my_container-cart .my_box-cart[data-v-14400205] {\n  width: 91%;\n  max-height: 310px;\n  border-radius: 5px;\n  overflow-y: scroll;\n  display: flex;\n  flex-direction: column;\n  box-shadow: -1px 7px 11px -10px rgba(0, 0, 0, 0.2);\n}\n.my_container-check .my_container-cart .my_box-cart[data-v-14400205]::-webkit-scrollbar {\n  width: 4px;\n}\n.my_container-check .my_container-cart .my_box-cart[data-v-14400205]::-webkit-scrollbar-thumb {\n  background-color: #7b787c;\n  border-radius: 10px;\n}\n.my_container-check .my_container-cart .my_box-cart .my_card-cart[data-v-14400205] {\n  position: relative;\n  margin-top: 15px;\n  margin-bottom: 10px;\n  width: 94%;\n  height: 72px;\n  display: flex;\n  flex-direction: row;\n  box-shadow: 0px 0px 13px -2px rgba(0, 0, 0, 0.2);\n}\n.my_container-check .my_container-cart .my_box-cart .my_card-cart .box-cart-img[data-v-14400205] {\n  width: 95px;\n  height: 100%;\n}\n.my_container-check .my_container-cart .my_box-cart .my_card-cart .box-cart-img img[data-v-14400205] {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.my_container-check .my_container-cart .my_box-cart .my_card-cart .box-cart-info[data-v-14400205] {\n  width: 80%;\n  display: flex;\n  flex-direction: column;\n  margin-left: 10px;\n  margin-top: 12px;\n}\n.my_container-check .my_container-cart .my_box-cart .my_card-cart .box-cart-info h4[data-v-14400205] {\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  font-size: 14px;\n  color: #9561e2;\n  margin-bottom: 0;\n}\n.my_container-check .my_container-cart .my_box-cart .my_card-cart .box-cart-info .cart-price[data-v-14400205] {\n  color: #FF4718;\n  margin-top: 10px;\n}\n.my_container-check .my_container-cart .my_box-cart .my_card-cart .box-cart-btn[data-v-14400205] {\n  height: 100%;\n  position: relative;\n  display: flex;\n  align-items: flex-end;\n  flex-direction: column;\n}\n.my_container-check .my_container-cart .my_box-cart .my_card-cart .box-cart-btn .btn-quantity[data-v-14400205] {\n  background-color: rgba(148, 97, 226, 0.5);\n  border: 0px;\n  display: inline-block;\n  cursor: pointer;\n  color: #ffffff;\n  font-family: Arial;\n  font-size: 17px;\n  width: 40px;\n  height: 50%;\n}\n.my_container-check .my_container-cart .my_box-cart .my_card-cart .box-cart-btn .btn-quantity[data-v-14400205]:hover {\n  background-color: #7048ab;\n}\n.my_container-check .my_container-cart .my_box-cart .my_card-cart .box-cart-btn .quantity[data-v-14400205] {\n  position: absolute;\n  top: 19px;\n  right: 50px;\n  color: #FF4718;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  font-weight: 400;\n  font-size: 21px;\n}\n.my_container-check .my_container-cart .my_box-cart .my_card-cart .box-cart-btn .box-btn-delate[data-v-14400205] {\n  position: absolute;\n  top: -11px;\n  right: -11px;\n}\n.my_container-check .my_container-cart .my_box-cart .my_card-cart .box-cart-btn .box-btn-delate .btn-delate[data-v-14400205] {\n  border-radius: 28px;\n  display: inline-block;\n  cursor: pointer;\n  font-family: Arial;\n  font-size: 14px;\n  padding: 1px 8px;\n  text-decoration: none;\n  background-color: #FF4718;\n}\n.my_container-check .my_container-cart .box-checkout[data-v-14400205] {\n  height: 70px;\n  width: 94%;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  margin-top: 5px;\n}\n.my_container-check .my_container-cart .box-checkout .tot[data-v-14400205] {\n  color: #FF4718;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  font-weight: 400;\n  padding-right: 10px;\n}\n.my_container-check .my_container-cart .box-checkout .line[data-v-14400205] {\n  height: 40px;\n  margin-bottom: 4px;\n  width: 1px;\n  background-color: #FF4718;\n}\n.my_container-check .my_container-cart .box-checkout span[data-v-14400205] {\n  color: #9561e2;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  font-weight: 400;\n  margin-left: 15px;\n  margin-bottom: 5px;\n}\n.my_container-check .my_container-cart .btn-checkout[data-v-14400205] {\n  width: 99.7%;\n  background-color: #9461e2;\n  border-radius: 5px;\n  color: #ffffff;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.my_container-check .my_container-cart .btn-checkout[data-v-14400205]:hover {\n  background-color: #7048ab;\n}\n.my_container-check .my_container-cart .btn-svuota[data-v-14400205] {\n  width: 25%;\n  margin-left: 80px;\n  background-color: #FF4718;\n  border-radius: 5px;\n  color: #ffffff;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.my_container-check .my_container-cart .btn-svuota[data-v-14400205]:hover {\n  background-color: #be2d05;\n}", ""]);
 
 // exports
 
@@ -4968,7 +4978,7 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container-fluid container-header" }, [
     _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-lg-10 col-md-8 col-sm-6 m-auto" }, [
+      _c("div", { staticClass: "col-lg-10 col-md-11 col-sm-12 m-auto" }, [
         _c("nav", { staticClass: "py-2 box-nav" }, [
           _vm._m(0),
           _vm._v(" "),
@@ -5315,12 +5325,7 @@ var render = function () {
         { attrs: { to: { name: "restaurant", params: { slug: _vm.slug } } } },
         [
           _c("div", { staticClass: "my_card-header" }, [
-            _c("img", {
-              attrs: {
-                src: "https://c4.wallpaperflare.com/wallpaper/226/838/327/chocolate-brown-food-sweet-wallpaper-preview.jpg",
-                alt: "rover",
-              },
-            }),
+            _c("img", { attrs: { src: _vm.user_cover, alt: "rover" } }),
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "my_card-body" }, [
@@ -5638,9 +5643,9 @@ var render = function () {
         ),
       ]),
       _vm._v(" "),
+      _vm._m(1),
+      _vm._v(" "),
       _c("div", { staticClass: "my_row-menu-2" }, [
-        _vm._m(1),
-        _vm._v(" "),
         _c(
           "div",
           { staticClass: "my_box-items" },
@@ -5654,6 +5659,7 @@ var render = function () {
                     title: user.restaurant_name,
                     type: user.type,
                     slug: user.slug,
+                    user_cover: user.user_cover,
                   },
                 }),
               ],
@@ -5683,7 +5689,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "my_box-title" }, [
       _c("h1", { staticClass: "menu-title" }, [
-        _vm._v("Benvenuto nella sezione ristoranti!"),
+        _vm._v("Benvenuti nella sezione ristoranti!"),
       ]),
       _vm._v(" "),
       _c("span", { staticClass: "menu-text" }, [
@@ -5713,67 +5719,63 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "row m-5" }, [
-      _c("h2", [_vm._v("Nome ristorante")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "card col-12" }, [
-        _vm.users != null
-          ? _c("div", { staticClass: "card-body" }, [
-              _c("h5", { staticClass: "card-title" }, [
+  return _c("div", { staticClass: "my_container-check" }, [
+    _c("div", { staticClass: "my_check-left" }, [
+      _vm.users != null
+        ? _c("div", { staticClass: "my_container-info ms-4" }, [
+            _c("img", {
+              staticClass: "my_img-info ",
+              attrs: { src: "" + _vm.users.user_cover },
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "my_box-info" }, [
+              _c("h2", { staticClass: "my_info-name" }, [
                 _vm._v(_vm._s(_vm.users.restaurant_name)),
               ]),
               _vm._v(" "),
-              _c("img", {
-                staticClass: "card-img-top",
-                attrs: { src: "" + _vm.users.user_cover },
-              }),
-            ])
-          : _vm._e(),
-      ]),
-      _vm._v(" "),
-      _c("h1", [_vm._v(_vm._s(_vm.newCart))]),
+              _c("span", { staticClass: "my_info-city" }, [
+                _vm._v(_vm._s(_vm.users.user_city)),
+              ]),
+              _vm._v(" "),
+              _c("span", { staticClass: "my_info-text" }, [
+                _c("span", [_vm._v("Descrizione")]),
+                _vm._v(
+                  "\n                    " +
+                    _vm._s(_vm.users.description) +
+                    "\n                "
+                ),
+              ]),
+            ]),
+          ])
+        : _vm._e(),
       _vm._v(" "),
       _c(
-        "button",
-        {
-          staticClass: "btn btn-danger col col-2",
-          attrs: { type: "button", id: "add" },
-          on: {
-            click: function ($event) {
-              return _vm.clear()
-            },
-            onclick: function ($event) {
-              return _vm.window.location.reload()
-            },
-          },
-        },
-        [_vm._v("PULISCI CARRELLO")]
-      ),
-      _vm._v(" "),
-      _c("div", { staticClass: "flex" }, [
-        _c(
-          "div",
-          { staticClass: "row first-box", attrs: { action: "" } },
-          _vm._l(_vm.items, function (item) {
-            return _c("div", { key: item.id, staticClass: "p-2 col-4" }, [
-              _c("div", { staticClass: "card p-4" }, [
-                _c("h1", [_vm._v(_vm._s(item.item_name))]),
-                _vm._v(" "),
-                _c("span", { staticClass: "py-2" }, [
-                  _vm._v(_vm._s(item.description)),
+        "div",
+        { staticClass: "my_container-items" },
+        _vm._l(_vm.items, function (item) {
+          return _c("div", { key: item.id, staticClass: "my_card-items" }, [
+            _c("div", { staticClass: "my_item-img" }, [
+              _c("img", { attrs: { src: "" + item.image, alt: "" } }),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "my_item-info" }, [
+              _c("h4", { staticClass: "title-info" }, [
+                _vm._v(_vm._s(item.item_name)),
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "info-item" }, [
+                _vm._v(_vm._s(item.description)),
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("span", { staticClass: "price-item" }, [
+                  _vm._v(_vm._s(item.price) + "€"),
                 ]),
-                _vm._v(" "),
-                _c("h4", { staticClass: "py-2" }, [_vm._v(_vm._s(item.price))]),
-                _vm._v(" "),
-                _c("img", { attrs: { src: "" + item.image, alt: "" } }),
-                _vm._v(" "),
-                _c("span", [_vm._v("AGGIUNGI PIATTO")]),
                 _vm._v(" "),
                 _c(
                   "button",
                   {
-                    staticClass: "btn btn-warning",
+                    staticClass: "btn btn-add",
                     attrs: { type: "submit" },
                     on: {
                       click: function ($event) {
@@ -5781,41 +5783,83 @@ var render = function () {
                       },
                     },
                   },
-                  [_vm._v("test")]
+                  [_vm._v("Aggiungi")]
                 ),
               ]),
-            ])
-          }),
-          0
-        ),
+            ]),
+          ])
+        }),
+        0
+      ),
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "my_container-cart" },
+      [
+        _vm._m(0),
         _vm._v(" "),
         _c(
           "div",
-          { staticClass: "carrello" },
-          [
-            _c("h1", { staticClass: "m-2" }, [_vm._v("carrello")]),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "card-box" },
-              _vm._l(_vm.dati2, function (dato) {
-                return _c("div", { key: dato.name, staticClass: "card" }, [
-                  _c("div"),
-                  _vm._v(" "),
-                  (dato.visible = 1)
-                    ? _c("div", [
-                        _c("h3", [_vm._v(_vm._s(dato.item_name))]),
-                        _vm._v(" "),
-                        dato.quantity != 1
-                          ? _c("h5", [_vm._v(_vm._s(dato.price) + ".00€")])
-                          : _c("h5", [_vm._v(_vm._s(dato.price))]),
-                        _vm._v(" "),
-                        _c("h5", [_vm._v(_vm._s(dato.quantity))]),
-                        _vm._v(" "),
+          { staticClass: "my_box-cart" },
+          _vm._l(_vm.dati2, function (dato) {
+            return _c("div", { key: dato.name }, [
+              (dato.visible = 1)
+                ? _c("div", { staticClass: "my_card-cart" }, [
+                    _c("div", { staticClass: "box-cart-img" }, [
+                      _c("img", { attrs: { src: dato.image, alt: "" } }),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "box-cart-info" }, [
+                      _c("h4", [_vm._v(_vm._s(dato.item_name))]),
+                      _vm._v(" "),
+                      dato.quantity != 1
+                        ? _c("span", { staticClass: "cart-price" }, [
+                            _vm._v(_vm._s(dato.price) + ".00€"),
+                          ])
+                        : _c("span", { staticClass: "cart-price" }, [
+                            _vm._v(_vm._s(dato.price) + "€"),
+                          ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "box-cart-btn" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn-quantity",
+                          attrs: { type: "button", id: "subtract" },
+                          on: {
+                            click: function ($event) {
+                              return _vm.decrease(dato.id)
+                            },
+                          },
+                        },
+                        [_vm._v("-")]
+                      ),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "quantity" }, [
+                        _vm._v(_vm._s(dato.quantity)),
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn-quantity border-top",
+                          attrs: { type: "button", id: "add" },
+                          on: {
+                            click: function ($event) {
+                              return _vm.increase(dato.id)
+                            },
+                          },
+                        },
+                        [_vm._v("+")]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "box-btn-delate" }, [
                         _c(
                           "button",
                           {
-                            staticClass: "btn btn-danger",
+                            staticClass: "btn-delate btn",
                             attrs: { type: "submit" },
                             on: {
                               click: function ($event) {
@@ -5823,70 +5867,72 @@ var render = function () {
                               },
                             },
                           },
-                          [_vm._v("delate")]
+                          [_vm._v("x")]
                         ),
-                        _vm._v(" "),
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-danger",
-                            attrs: { type: "button", id: "subtract" },
-                            on: {
-                              click: function ($event) {
-                                return _vm.decrease(dato.id)
-                              },
-                            },
-                          },
-                          [_vm._v("-")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-danger",
-                            attrs: { type: "button", id: "add" },
-                            on: {
-                              click: function ($event) {
-                                return _vm.increase(dato.id)
-                              },
-                            },
-                          },
-                          [_vm._v("+")]
-                        ),
-                      ])
-                    : _vm._e(),
-                ])
-              }),
-              0
-            ),
-            _vm._v(" "),
-            _c("h1", { staticClass: "mt-4" }, [_vm._v("Totale")]),
-            _vm._v(" "),
-            _vm.totale != 0
-              ? _c("h3", [_vm._v(_vm._s(_vm.totale) + ".00")])
-              : _c("h3", [_vm._v(_vm._s(_vm.newTotale) + ".00")]),
-            _vm._v(" "),
-            _c(
-              "router-link",
-              {
-                staticClass: "btn btn-primary",
-                attrs: {
-                  to: {
-                    name: "checkout",
-                    params: { cart: _vm.newCart, price: _vm.totale },
-                  },
+                      ]),
+                    ]),
+                  ])
+                : _vm._e(),
+            ])
+          }),
+          0
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "box-checkout" }, [
+          _c("h3", { staticClass: "tot" }, [_vm._v("Totale")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "line" }),
+          _vm._v(" "),
+          _vm.totale != 0
+            ? _c("span", [_vm._v(_vm._s(_vm.totale) + ".00€")])
+            : _c("span", [_vm._v(_vm._s(_vm.newTotale) + ".00€")]),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-svuota",
+              attrs: { type: "button", id: "add" },
+              on: {
+                click: function ($event) {
+                  return _vm.clear()
+                },
+                onclick: function ($event) {
+                  return _vm.window.location.reload()
                 },
               },
-              [_vm._v("vai al pagamento")]
-            ),
-          ],
-          1
+            },
+            [_vm._v("Svuota")]
+          ),
+        ]),
+        _vm._v(" "),
+        _c(
+          "router-link",
+          {
+            staticClass: "btn btn-checkout",
+            attrs: {
+              to: {
+                name: "checkout",
+                params: { cart: _vm.newCart, price: _vm.totale },
+              },
+            },
+          },
+          [_vm._v("Vai al pagamento")]
         ),
-      ]),
-    ]),
+      ],
+      1
+    ),
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "box-title" }, [
+      _c("h2", { staticClass: "my_title-cart" }, [_vm._v("Carrello")]),
+    ])
+  },
+]
 render._withStripped = true
 
 

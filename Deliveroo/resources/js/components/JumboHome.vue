@@ -55,7 +55,7 @@ export default {
 
 
         .jumbotron_title {
-            font-size: 95px;
+            font-size: 2em;
             font-weight: 700;
             color: $purple;
             margin-top: 15px;

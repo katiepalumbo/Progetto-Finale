@@ -51,7 +51,7 @@ export default {
 
 
         img {
-            max-height: 200px;
+            height: 200px;
             width: 100%;
             object-fit: cover;
             padding-bottom: 2px;
