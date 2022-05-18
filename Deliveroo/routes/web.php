@@ -25,9 +25,6 @@ Route::middleware('auth')
 
     Route::resource('items', 'ItemController');
 
-    //rotta per braintree
-    Route::get('/payment/make', 'PaymentsController@make')->name('payment.make');
-
     //Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
     //Route::post('register', 'Auth\RegisterController@register');
 
