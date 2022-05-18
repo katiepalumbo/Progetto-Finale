@@ -12197,8 +12197,9 @@ fieldset:disabled .btn {
 
 .ms_background-img {
   background-repeat: no-repeat;
-  background-image: url(https://centoform.it/wp-content/uploads/2021/10/brooke-lark-08bOYnH_r_E-unsplash.jpg);
-  background-position: 1% -30%;
+  background: url(/images/BG_LOGIN_IMG.jpg?2151c2a431fadd4d6d9373f6259bbeb3);
+  background-size: cover;
+  background-position: 1% -80%;
 }
 
 .ms_background-color {

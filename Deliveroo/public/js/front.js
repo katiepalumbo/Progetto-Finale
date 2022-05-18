@@ -22774,7 +22774,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/katiepalumbo/Documents/Boolean/Assignments/Progetto-Finale/Progetto-Finale/Deliveroo/resources/js/front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\Tonno\Desktop\Boolean\Deliveboo\Progetto-Finale\Deliveroo\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })
