@@ -1,8 +1,8 @@
 <template>
     <!-- inizio jumbotron -->
     <div class="jumbotron-container">
-        <div class="col-8 m-auto">
-            <div class="row jumbotron-contents justify-content-center align-items-center col-7">
+        <div class="col-lg-8 col-md-10 col-sm-12 m-auto">
+            <div class="row jumbotron-contents justify-content-center align-items-center col-lg-7 col-md-6 col-sm-3">
                 <h1 class="jumbotron_title">Cosa vuoi mangiare?</h1>
                 <p class="jumbotron_subtitle">Con Deliveboo puoi mangiare quello che vuoi, quando vuoi, dove vuoi</p>
                 <div class="col">

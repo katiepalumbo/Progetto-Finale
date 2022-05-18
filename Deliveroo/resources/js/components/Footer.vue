@@ -2,32 +2,33 @@
 
     <div class="footer_container py-2">
 
-        <div class="col-10 m-auto footer_top">
+        <div class="col-lg-10 col-md-8 col-sm-6 m-auto footer_top">
             <div class="row footer_lists justify-content-center">
-                <div class="col-3 m-3 footer-block">
+                <div class="col-lg-3 col-md-6 col-sm-12 m-3 footer-block">
                     <h4 class="mb-3">Discover Deliveboo</h4>
                     <ul class="footer-menu">
                         <li class="my-1" v-for="(item, index) in discoverItems" :key="index"><a href="#">{{item.name}}</a></li>
                     </ul>
                 </div>
-                <div class="col-3 m-3 footer-block">
+                <div class="col-lg-3 col-md-6 col-sm-12 m-3 footer-block">
                     <h4 class="mb-3">Legal</h4>
-                    <ul>
-                    <li v-for="(item, index) in legalItems" :key="index"><a href="#">{{item.name}}</a></li>
+                    <ul class="footer-menu">
+                    <li class="my-1" v-for="(item, index) in legalItems" :key="index"><a href="#">{{item.name}}</a></li>
                     </ul>
                 </div>
-                <div class="col-3 m-3 footer-block">
+                <div class="col-lg-3 col-md-6 col-sm-12 m-3 footer-block">
                     <h4 class="mb-3">Help</h4>
-                    <ul>
-                        <li v-for="(item, index) in helpItems" :key="index"><a href="#">{{item.name}}</a></li>
+                    <ul class="footer-menu">
+                        <li class="my-1" v-for="(item, index) in helpItems" :key="index"><a href="#">{{item.name}}</a></li>
                     </ul>
                 </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-8 m-auto">
+                <div class="col-lg-8 col-md-6 col-sm-12 m-auto">
                     <p class="copyright mt-1"><span><i class="fa-regular fa-copyright copyright_icon"></i></span> Copyright 2022 | Powered by Team 7</p>
                 </div>
+
             </div> 
 
         </div>
@@ -165,6 +166,9 @@ export default {
         a {
             text-decoration: none;
             color: $body-bg;
+            &:hover {
+                color: $purple;
+            }
             
         }
 

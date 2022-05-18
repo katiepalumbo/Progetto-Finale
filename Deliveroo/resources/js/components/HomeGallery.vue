@@ -1,7 +1,7 @@
 <template>
   <div class="container home-gallery-container">
         <div class="row mt-5 row-cols-10 m-auto">
-            <div class="col-5">
+            <div class="col-lg-5 col-md-6 col-sm-12">
                 <div class='row'>
                     <router-link class="col-11 img-container casalinga" :to="{name: 'menu'}">
                         <h1 class="overlay-text">Cucina Casalinga</h1>
@@ -15,7 +15,7 @@
                 </div> -->
             </div>
             
-            <div class="col-7">
+            <div class="col-lg-7 col-md-6 col-sm-12">
                 <div class='row'>
                     <router-link class="col-11 img-container dolci" :to="{name: 'menu'}">
                         <h1 class="overlay-text">Dessert, gelati, dolci</h1>
@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="row mt-5 row-cols-10 m-auto">
-            <div class="col-7">
+            <div class="col-lg-7 col-md-6 col-sm-12">
                 <div class='row'>
                     <router-link class="col-11 img-container bevande" :to="{name: 'menu'}">
                         <h1 class="overlay-text">Bevande</h1>
@@ -44,7 +44,7 @@
                 </div> -->
             </div>
             
-            <div class="col-5">
+            <div class="col-lg-5 col-md-6 col-sm-12">
                 <div class='row'>
                     <router-link class="col-11 img-container pane" :to="{name: 'menu'}">
                         <h1 class="overlay-text">Lievitati</h1>

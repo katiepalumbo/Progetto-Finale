@@ -1,9 +1,9 @@
 <template>
     <div class="container-fluid container-header">
         <div class="row">
-            <div class="col-10 m-auto">
+            <div class="col-lg-10 col-md-8 col-sm-6 m-auto">
                 <nav class="py-2 box-nav">
-                    <ul class="nav">
+                    <ul class="nav ">
                         <li>
                             <img class="logo img-fluid" src="../assets/images/LOGO_DELIVEBOO.png" alt="logo">
                         </li>
@@ -55,7 +55,7 @@ export default {
         position: fixed;
         z-index: 4;
         top: 0;
-        max-height: 70px;
+        height: 70px;
         border-bottom: 1px $body-bg solid;
 
         .box-nav {
