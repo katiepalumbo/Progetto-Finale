@@ -20,7 +20,7 @@
             </div>
 
             <div class="my_box-title">
-                <h1 class="menu-title">Benvenuto nella sezione ristoranti!</h1>
+                <h1 class="menu-title">Benvenuti nella sezione ristoranti!</h1>
                 <span class="menu-text">Seleziona un ristorante per scoprire il menù!</span>
             </div>
 
@@ -130,6 +130,7 @@
 
         .my_row-menu-1 {
             width: 15%;
+            min-width: 150px;
             height: calc(100vh - 65.6px);
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
             background-clip: $body-bg;
@@ -160,12 +161,12 @@
                         flex-direction: row-reverse;
                         justify-content: space-between;
                         align-items: center;
-                        margin: 2.5px 0px;
+                        margin: 0px 0px;
                         @include title-font;
 
                         .my_input {
                             margin-right: 15px;
-                            margin-top: 2px;
+                            margin-top: 1px;
                         }
 
                     }
@@ -223,7 +224,7 @@
 
         .my_box-title {
             display: flex;
-            width: 84%;
+            width: 74%;
             flex-direction: column;
             align-items: center;
             position: absolute;
