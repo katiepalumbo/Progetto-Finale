@@ -14,7 +14,7 @@
 
                 @endif --}}
 
-                <img class="img-fluid" src="{{asset('storage/' . $item->image)}}" alt="{{$item->item_name}}">
+                <img class="img-fluid" src="{{$item->image}}" alt="{{$item->item_name}}">
 
                 <div><strong>Titolo </strong>{{$item->item_name}}</div>
                 <div><strong>Descrizione </strong>{!! $item->description !!}</div>
