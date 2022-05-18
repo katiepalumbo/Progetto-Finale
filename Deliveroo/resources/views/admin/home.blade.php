@@ -84,7 +84,7 @@
             <div class="card-img">
 
                 @if (Auth::user()->user_cover)
-                    <img class="img-fluid" src="{{ asset('storage/icon/' . Auth::user()->user_cover) }}" alt=""
+                    <img class="img-fluid" src="{{Auth::user()->user_cover}}" alt=""
                         height="500px" width="600px">
                 @else
                     <img class="img-fluid" src="{{ asset('/images/noimg.png') }}" alt=""
