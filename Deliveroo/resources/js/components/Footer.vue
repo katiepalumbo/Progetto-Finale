@@ -2,29 +2,32 @@
 
     <!-- all'interno del footer ho 2 sezioni (top e bottom) -- il top contiene i menu 
     che vengono popolati in modo dinamico con dati passati tramite props da app.vue -->
-    <div class="footer_container py-5">
+    <div class="footer_container py-2">
 
         <!-- inizio footer top con info e menu -->
         <div class="col-10 m-auto footer_top">
-            <div class="row footer_lists">
-                <div class="col-3 m-1 footer-block">
-                    <h3 class="mb-3">Discover Deliveboo</h3>
+            <div class="row footer_lists justify-content-center">
+                <div class="col-3 m-3 footer-block">
+                    <h4 class="mb-3">Discover Deliveboo</h4>
                     <ul class="footer-menu">
-                        <li v-for="(item, index) in discoverItems" :key="index">{{item.name}}</li>
+                        <li v-for="(item, index) in discoverItems" :key="index"><a href="#">{{item.name}}</a></li>
                     </ul>
                 </div>
-                <div class="col-3 m-1 footer-block">
-                    <h3 class="mb-3">Legal</h3>
+                <div class="col-3 m-3 footer-block">
+                    <h4 class="mb-3">Legal</h4>
                     <ul>
-                    <li v-for="(item, index) in legalItems" :key="index">{{item.name}}</li>
+                    <li v-for="(item, index) in legalItems" :key="index"><a href="#">{{item.name}}</a></li>
                     </ul>
                 </div>
-                <div class="col-3 m-1 footer-block">
-                    <h3 class="mb-3">Help</h3>
+                <div class="col-3 m-3 footer-block">
+                    <h4 class="mb-3">Help</h4>
                     <ul>
-                        <li v-for="(item, index) in helpItems" :key="index">{{item.name}}</li>
+                        <li v-for="(item, index) in helpItems" :key="index"><a href="#">{{item.name}}</a></li>
                     </ul>
                 </div>
+                <div class="col-10 m-auto">
+                        <p class="copyright mt-1"><span><i class="fa-regular fa-copyright copyright_icon"></i></span> Copyright 2022 | Powered by Team 7</p>
+                </div> 
 
 
 
@@ -225,25 +228,36 @@ export default {
     
 }
 
-.footer-top {
+.footer_container {
     background-color: #2e3333;
 }
 
 .footer-block {
-    background-color: orange;
-    padding: 10px;
+    background-color: #434848;
+    padding: 20px;
     max-width: 50%;
 
-    h3 {
+    h4 {
         @include title-font;
+        color: $body-bg;
     }
 
     li {
-        text-decoration: none;
+        color: $body-bg;
         list-style: none;
         @include subtitle-font;
 
+        a {
+            text-decoration: none;
+            color: $body-bg;
+        }
+
     }
+
+   
+}
+.copyright {
+        color: $body-bg;
 }
 
 

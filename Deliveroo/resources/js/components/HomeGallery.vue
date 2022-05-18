@@ -108,6 +108,7 @@ export default {
     .img-container {
         height: 150px;        
         background-size: cover;
+        text-decoration: none;
 
     }
 
@@ -145,7 +146,8 @@ export default {
         line-height: 150px;
         text-align: center;
         text-shadow: $purple;
-        text-decoration: none;
+        
+
     }
 
     .white-space {
