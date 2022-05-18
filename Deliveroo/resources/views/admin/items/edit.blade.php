@@ -27,7 +27,7 @@
 
                     @if ($item->image)
                         <h4>Immagine del piatto</h4>
-                        <img class="img-thumbnail" src="{{asset('storage/' . $item->image)}}" alt="{{$item->item_name}}">
+                        <img class="img-thumbnail" src="{{$item->image}}" alt="{{$item->item_name}}">
                     @endif
 
                     <div class="form-group">

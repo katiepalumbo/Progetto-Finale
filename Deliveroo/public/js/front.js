@@ -3408,7 +3408,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".flex[data-v-14400205] {\n  display: flex;\n}\n.flex .first-box[data-v-14400205] {\n  width: 60%;\n  padding: 0px 30px;\n  overflow-y: auto;\n}\n.flex .carrello[data-v-14400205] {\n  width: 40%;\n  height: 510px;\n  background-color: aqua;\n  margin: 10px 0px;\n}\n.flex .carrello .card-box[data-v-14400205] {\n  height: 320px;\n  overflow-y: auto;\n  margin: 10px;\n}\n.flex .carrello .card[data-v-14400205] {\n  margin: 10px;\n}\n.flex .box[data-v-14400205] {\n  width: 100%;\n  height: 30px;\n  text-align: center;\n}", ""]);
+exports.push([module.i, ".card-img-top[data-v-14400205] {\n  max-width: 50px;\n}\n.flex[data-v-14400205] {\n  display: flex;\n}\n.flex .first-box[data-v-14400205] {\n  width: 60%;\n  padding: 0px 30px;\n  overflow-y: auto;\n}\n.flex .carrello[data-v-14400205] {\n  width: 40%;\n  height: 510px;\n  background-color: aqua;\n  margin: 10px 0px;\n}\n.flex .carrello .card-box[data-v-14400205] {\n  height: 320px;\n  overflow-y: auto;\n  margin: 10px;\n}\n.flex .carrello .card[data-v-14400205] {\n  margin: 10px;\n}\n.flex .box[data-v-14400205] {\n  width: 100%;\n  height: 30px;\n  text-align: center;\n}", ""]);
 
 // exports
 
@@ -22749,7 +22749,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\maion\Desktop\Progetto-Finale\Deliveroo\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! /Users/katiepalumbo/Documents/Boolean/Assignments/Progetto-Finale/Progetto-Finale/Deliveroo/resources/js/front.js */"./resources/js/front.js");
 
 
 /***/ })
