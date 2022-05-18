@@ -12197,9 +12197,8 @@ fieldset:disabled .btn {
 
 .ms_background-img {
   background-repeat: no-repeat;
-  background: url(/images/BG_LOGIN_IMG.jpg?2151c2a431fadd4d6d9373f6259bbeb3);
-  background-size: cover;
-  background-position: 1% -80%;
+  background-image: url(/images/brooke-lark-08bOYnH_r_E-unsplash.jpg?952d10eee9165b9c99aabc0298377dd1);
+  background-position: 50% 50% !important;
 }
 
 .ms_background-color {
@@ -12212,6 +12211,12 @@ fieldset:disabled .btn {
 
 .ms_text-purple {
   color: #9561e2;
+}
+
+.ms-logo-banner {
+  height: 100% !important;
+  width: 100% !important;
+  background-color: rgba(0, 0, 0, 0.7) !important;
 }
 
 .contanier-form {

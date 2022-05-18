@@ -6,6 +6,12 @@
 
 require('./bootstrap');
 
+// {
+//   "require" : {
+//     "braintree/braintree_php" : "6.8.0"
+//   }
+// }
+
 window.Vue = require('vue');
 
 /**
