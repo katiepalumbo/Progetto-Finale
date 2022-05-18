@@ -2196,6 +2196,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Header',
   data: function data() {
@@ -2315,7 +2316,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
 //
 //
 //
@@ -3210,7 +3210,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Op
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
 
 // module
-exports.push([module.i, "*[data-v-721742ac] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #f6f1fb;\n}\n.filtraggio-container .filtraggio-title[data-v-721742ac] {\n  width: 90%;\n  margin: auto 15px;\n}\n.filtraggio-container .filtraggio-title h3[data-v-721742ac] {\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  margin-bottom: 25px;\n}\n.filtraggio-container .type-button[data-v-721742ac] {\n  background-color: #9561e2;\n  text-transform: uppercase;\n  font-size: 0.8em;\n  font-weight: 700;\n  border: none;\n  color: #EAF0F2;\n  padding: 10px 30px;\n  max-width: 70%;\n}", ""]);
+exports.push([module.i, "*[data-v-721742ac] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #f6f1fb;\n}\n.filtraggio-container .filtraggio-title[data-v-721742ac] {\n  width: 90%;\n  margin: auto 15px;\n}\n.filtraggio-container .filtraggio-title h1[data-v-721742ac] {\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  margin-bottom: 25px;\n}\n.filtraggio-container .type-button[data-v-721742ac] {\n  background-color: #9561e2;\n  text-transform: uppercase;\n  font-size: 0.8em;\n  font-weight: 700;\n  border: none;\n  color: #EAF0F2;\n  padding: 10px 30px;\n  max-width: 70%;\n}", ""]);
 
 // exports
 
@@ -3291,7 +3291,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Op
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
 
 // module
-exports.push([module.i, ".forum-intro-text-container[data-v-bc51a144] {\n  min-height: 150px;\n  background-color: #FF4718;\n}\n.forum-intro-text-container .forum-intro-text[data-v-bc51a144] {\n  color: #f6f1fb;\n  text-align: left;\n  padding: 40px 0 10px 0;\n  width: 80%;\n  margin: auto;\n}\n.forum-intro-text-container .forum-intro-text .all_caps_title[data-v-bc51a144] {\n  text-transform: uppercase;\n  font-size: 0.6em;\n  font-weight: 600;\n  letter-spacing: 3px;\n}\n.forum-intro-text-container .forum-intro-text h3[data-v-bc51a144] {\n  font-weight: 700;\n}\n.forum-intro-text-container .orange_divider[data-v-bc51a144] {\n  width: 80%;\n  height: 2px;\n  background-color: #f6993f;\n  align-self: flex-start;\n}", ""]);
+exports.push([module.i, ".forum-intro-text-container[data-v-bc51a144] {\n  min-height: 150px;\n  background-color: #FF4718;\n}\n.forum-intro-text-container .forum-intro-text[data-v-bc51a144] {\n  color: #f6f1fb;\n  text-align: left;\n  padding: 40px 0 10px 0;\n  width: 80%;\n  margin: auto;\n}\n.forum-intro-text-container .forum-intro-text .all_caps_title[data-v-bc51a144] {\n  text-transform: uppercase;\n  font-size: 0.8em;\n  font-weight: 600;\n  letter-spacing: 3px;\n}\n.forum-intro-text-container .forum-intro-text h1[data-v-bc51a144] {\n  font-weight: 700;\n}\n.forum-intro-text-container .orange_divider[data-v-bc51a144] {\n  width: 80%;\n  height: 2px;\n  background-color: #f6993f;\n  align-self: flex-start;\n}", ""]);
 
 // exports
 
@@ -4856,7 +4856,7 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "filtraggio-container col-11 mx-auto my-5" },
+    { staticClass: "filtraggio-container col-10 mx-auto my-5" },
     [
       _vm._m(0),
       _vm._v(" "),
@@ -4910,7 +4910,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "filtraggio-title" }, [
-      _c("h3", [_vm._v("Ti serve ancora qualche idea?")]),
+      _c("h1", { staticClass: "my-3" }, [
+        _vm._v("Ti serve ancora qualche idea?"),
+      ]),
     ])
   },
 ]
@@ -5026,23 +5028,7 @@ var render = function () {
     _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-10 offset-1" }, [
         _c("nav", { staticClass: "py-2 box-nav" }, [
-          _c("ul", { staticClass: "nav" }, [
-            _c(
-              "li",
-              { staticClass: "nav-item" },
-              [
-                _c(
-                  "router-link",
-                  {
-                    staticClass: "text-white nav-link logo-header",
-                    attrs: { "aria-current": "page", to: "" },
-                  },
-                  [_vm._v("Deliveboo")]
-                ),
-              ],
-              1
-            ),
-          ]),
+          _vm._m(0),
           _vm._v(" "),
           _c(
             "ul",
@@ -5069,7 +5055,7 @@ var render = function () {
                 )
               }),
               _vm._v(" "),
-              _vm._m(0),
+              _vm._m(1),
             ],
             2
           ),
@@ -5079,6 +5065,23 @@ var render = function () {
   ])
 }
 var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("ul", { staticClass: "nav" }, [
+      _c("li", { staticClass: "nav-item" }, [
+        _c(
+          "a",
+          {
+            staticClass: "text-white nav-link logo-header",
+            attrs: { href: "/home" },
+          },
+          [_vm._v("Deliveboo")]
+        ),
+      ]),
+    ])
+  },
   function () {
     var _vm = this
     var _h = _vm.$createElement
@@ -5313,16 +5316,14 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "forum-intro-text-container" }, [
-    _c("div", { staticClass: "col-5" }, [
+    _c("div", { staticClass: "col-11" }, [
       _c("div", { staticClass: "row forum-intro-text" }, [
         _c("h6", { staticClass: "all_caps_title" }, [
           _vm._v(_vm._s(_vm.text.small)),
         ]),
         _vm._v(" "),
-        _c("h3", [_vm._v(_vm._s(_vm.text.big))]),
+        _c("h1", [_vm._v(_vm._s(_vm.text.big))]),
       ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-12 orange_divider" }),
     ]),
   ])
 }

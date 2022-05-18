@@ -2,12 +2,11 @@
     <!-- inizio forums intro text -- può essere riusato se si utilizzano 
     le props da main per popolare il testo in caso ci fosse bisogno -->
     <div class="forum-intro-text-container">
-            <div class="col-5">
+            <div class="col-11">
                 <div class="row forum-intro-text">
                     <h6 class="all_caps_title">{{text.small}}</h6>
-                    <h3>{{text.big}}</h3>
+                    <h1>{{text.big}}</h1>
                 </div>
-            <div class="col-12 orange_divider"></div>
         </div>
     </div>
   
@@ -48,7 +47,7 @@ export default {
             @include all-caps-title;
         }
 
-        h3 {
+        h1 {
             font-weight: 700;
         }
 

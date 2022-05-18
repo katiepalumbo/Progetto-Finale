@@ -5,7 +5,8 @@
                 <nav class="py-2 box-nav">
                     <ul class="nav">
                         <li class="nav-item">
-                            <router-link class="text-white nav-link logo-header" aria-current="page" to="">Deliveboo</router-link>
+                            <!-- LINK NON FUNZIONANTE -- DEVE RIPORTARE ALLA HOME -->
+                            <a class="text-white nav-link logo-header" href="/home">Deliveboo</a>
                         </li>
                     </ul>
                     <ul class="nav">
