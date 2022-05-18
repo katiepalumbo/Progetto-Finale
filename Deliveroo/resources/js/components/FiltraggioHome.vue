@@ -1,7 +1,7 @@
 <template>
-  <div class="filtraggio-container col-11 mx-auto my-5">
+  <div class="filtraggio-container col-10 mx-auto my-5">
       <div class="filtraggio-title">
-          <h3>Ti serve ancora qualche idea?</h3>
+          <h1 class="my-3">Ti serve ancora qualche idea?</h1>
       </div>
         <div class="row">
             <div class="col m-auto">
@@ -74,7 +74,7 @@ export default {
         width: 90%;
         margin: auto 15px;
 
-        h3 {
+        h1 {
             @include title-font;
             margin-bottom: 25px;
 

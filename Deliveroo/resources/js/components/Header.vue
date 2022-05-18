@@ -1,11 +1,15 @@
 <template>
     <div class="container-fluid container-header">
         <div class="row">
-            <div class="col-10 offset-1">
+            <div class="col-lg-10 col-md-11 col-sm-12 m-auto">
                 <nav class="py-2 box-nav">
-                    <ul class="nav">
+                    <ul class="nav ">
+                        <li>
+                            <img class="logo img-fluid" src="../assets/images/LOGO_DELIVEBOO.png" alt="logo">
+                        </li>
                         <li class="nav-item">
-                            <router-link class="text-white nav-link logo-header" aria-current="page" to="">Deliveboo</router-link>
+                            <!-- LINK NON FUNZIONANTE -- DEVE RIPORTARE ALLA HOME -->
+                            <a class="text-white nav-link logo-header" href="/home">Deliveboo</a>
                         </li>
                     </ul>
                     <ul class="nav">
@@ -51,12 +55,18 @@ export default {
         position: fixed;
         z-index: 4;
         top: 0;
+        height: 70px;
+        border-bottom: 1px $body-bg solid;
 
         .box-nav {
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
+
+            .logo {
+                max-height: 50px;
+            }
 
             .logo-header {
                 font-size: 21px;

@@ -158,16 +158,15 @@ class UsersTableSeeder extends Seeder
 
             $newUser->restaurant_name = $user["restaurant_name"];
             $newUser->user_cover = $user["user_cover"];
-            $newUser->name = $faker->word();
+            $newUser->name = $faker->firstName();
             $newUser->email = $faker->email();
             $newUser->password = Hash::make('testtest');
-            $newUser->user_last_name = $faker->word();
+            $newUser->user_last_name = $faker->lastName();
             $newUser->user_cell_number = $faker->numerify('##########');
             $newUser->user_tax_code = $faker->numerify('###########');
             $newUser->user_street = $faker->streetName();
             $newUser->user_city = $faker->city();
             $newUser->user_zip_code = $faker->numerify('#####');
-            $newUser->restaurant_name = $faker->word();
             $newUser->slug = Str::slug($newUser->restaurant_name);
             $counter = 1;
             while (User::where('slug', $newUser->slug)->first()) {

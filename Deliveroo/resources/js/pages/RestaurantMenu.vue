@@ -1,91 +1,96 @@
 <template>
-    <div>
-        <div class="row m-5">
-            <h2>Nome ristorante</h2>
-            <div class="card col-12">
-                <div class="card-body" v-if="users != null">
-                    <h5 class="card-title">{{users.restaurant_name}}</h5>
-                    <img class="card-img-top" :src="`${users.user_cover}`">
+    <div class="my_container-check">
+
+        <div class="my_check-left">
+            <div class="my_container-info ms-4" v-if="users != null">
+
+                <img class="my_img-info " :src="`${users.user_cover}`" />
+                <div class="my_box-info">
+                    <h2 class="my_info-name">{{users.restaurant_name}}</h2>
+                    <span class="my_info-city">{{users.user_city}}</span>
+                    <span class="my_info-text">
+                        <span>Descrizione</span>
+                        {{users.description}}
+                    </span>
+                </div>
+                
+            </div>
+    
+            <div class="my_container-items">
+ 
+                <div v-for="item in items" :key="item.id" class="my_card-items">
+
+                    <div class="my_item-img">
+                        <img :src="`${item.image}`" alt="">
+                    </div>
+
+                    <div class="my_item-info">
+                        <h4 class="title-info">{{item.item_name}}</h4>
+                        <p class="info-item">{{item.description}}</p>
+                        <div>
+                            <span class="price-item">{{item.price}}€</span>
+                            <button type="submit" @click="addToCart(item.id)" class="btn btn-add">Aggiungi</button>
+                        </div>
+                    </div>
+                        
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="my_container-cart">
+
+            <div class="box-title">
+                <h2 class="my_title-cart">Carrello</h2>
+            </div>
+            
+            <div class="my_box-cart">
+                <div v-for="dato in dati2" :key="dato.name">
+                    <div class="my_card-cart" v-if="dato.visible = 1">
+
+                        <div class="box-cart-img">
+                            <!-- <img src="https://c0.wallpaperflare.com/preview/603/618/344/osechi-syogatsu-new-year-january.jpg" alt=""> -->
+                            <img :src="dato.image" alt="">
+                        </div>
+
+                        <div class="box-cart-info">
+
+                            <h4>{{dato.item_name}}</h4>
+                            <span class="cart-price" v-if="dato.quantity != 1">{{dato.price}}.00€</span>
+                            <span class="cart-price" v-else>{{dato.price}}€</span>
+
+                        </div>
+
+                        <div class="box-cart-btn">
+
+                            <button type="button" class="btn-quantity" id="subtract" @click="decrease(dato.id)">-</button>
+                            <span class="quantity">{{dato.quantity}}</span>
+                            <button type="button" class="btn-quantity border-top" id="add" @click="increase(dato.id)">+</button>
+
+                            <div class="box-btn-delate">
+                                <button type="submit" @click="delate(dato.id)" class="btn-delate btn">x</button>
+                            </div> 
+
+                        </div>
+
+                    </div>
                 </div>
             </div>
 
-            <h1>{{newCart}}</h1>
-            <button type="button" class="btn btn-danger col col-2" id="add" @click="clear()" @onclick="window.location.reload()">PULISCI CARRELLO</button>
-            <div class="flex">
-
-                <div action="" class="row first-box" >
-                    <div class="p-2 col-4" v-for="item in items" :key="item.id">
-                        <div class="card p-4">
-                            <!--<img class="card-img-top" :src=>-->
-                            <h1>{{item.item_name}}</h1>
-                            <span class="py-2">{{item.description}}</span>
-                            <h4 class="py-2">{{item.price}}</h4>
-                            <img :src="`${item.image}`" alt="">
-                            <span>AGGIUNGI PIATTO</span>
-                            <button type="submit" @click="addToCart(item.id)" class="btn btn-warning">test</button>
-
-                            <!-- <input class="form-check-input box" type="checkbox" v-model="cart" :value="item.id" :id="'item_' + item.id"> -->
-
-
-                        </div>
-                    </div>
-                    <!-- <div>
-                        <button type="submit" class="btn btn-warning mt-4">AGGIUNGI PIATTI AL CARRELLO</button>
-                    </div> -->
-                </div>
-
-                <div class="carrello">
-                    <h1 class="m-2">carrello</h1>
-                    <!-- <div class="card-box" v-if="dati != []">
-                        <div class="card" v-for="dato in dati" :key="dato.name">
-                            <div v-if="dato.visible = 1">
-                                <h3>{{dato.item_name}}</h3>
-                                <h5>{{dato.price}}</h5>
-                            </div>
-                        </div>
-
-                    </div> -->
-
-                    <div class="card-box">
-                        <div class="card" v-for="dato in dati2" :key="dato.name">
-                        <div ></div>
-                            <div v-if="dato.visible = 1">
-                                <h3>{{dato.item_name}}</h3>
-
-                                <h5 v-if="dato.quantity != 1">{{dato.price}}.00€</h5>
-                                <h5 v-else>{{dato.price}}</h5>
-
-                                <h5>{{dato.quantity}}</h5>
-                                <button type="submit" @click="delate(dato.id)" class="btn btn-danger">delate</button>
-
-                                <button type="button" class="btn btn-danger" id="subtract" @click="decrease(dato.id)">-</button>
-                                <button type="button" class="btn btn-danger" id="add" @click="increase(dato.id)">+</button>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <h1 class="mt-4">Totale</h1>
-
-                    <h3 v-if="totale != 0">{{totale}}.00</h3>
-                    <h3 v-else>{{newTotale}}.00</h3>
-
-                    <router-link class="btn btn-primary"  :to="{name: 'checkout', params:{cart: newCart, price: totale}}">vai al pagamento</router-link>
-                </div>
-
+            <div class="box-checkout">
+                <h3 class="tot">Totale</h3>
+                <div class="line"></div>
+                <span v-if="totale != 0">{{totale}}.00€</span>
+                <span v-else>{{newTotale}}.00€</span>
+                <button type="button" class="btn btn-svuota" id="add" @click="clear()" @onclick="window.location.reload()">Svuota</button>
             </div>
 
-
-
+            <router-link class="btn btn-checkout"  :to="{name: 'checkout', params:{cart: newCart, price: totale}}">Vai al pagamento</router-link>
         </div>
     </div>
 </template>
 
 <script>
-
-
-
 export default {
     name: 'RestaurantMenu',
     data: function(){
@@ -359,42 +364,358 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    @import '../../sass/_variables.scss';
 
-.card-img-top {
-    max-width: 50px;
-}
-.flex{
-    display: flex;
+    .my_container-check {
+        margin-top: 65.5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
 
-    .first-box{
-        width: 60%;
-        padding: 0px 30px;
-        overflow-y: auto;
-    }
-    .carrello{
-        width: 40%;
-        height: 510px;
-        background-color: aqua;
-
-        margin: 10px 0px;
-
-        .card-box{
-            height: 320px;
-            overflow-y: auto;
-            margin: 10px;
+        .my_check-left {
+            width: 70%;
+            margin-top: 20px;
         }
 
-        .card{
-            margin: 10px;
+        .my_container-info {
+            width: 92%;
+            height: 250px;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 
+            .my_img-info {
+                width: 270px;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .my_box-info {
+                display: flex;
+                flex-direction: column;
+                margin-left: 25px;
+                margin-top: 30px;
+
+                .my_info-name {
+                    @include title-font;
+                    text-transform: uppercase;
+                    color: $darkOrange;
+                }
+
+                .my_info-city {
+                    @include subtitle-font;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    margin-top: 10px;
+                    color: $purple;
+                }
+
+                .my_info-text {
+                    @include subtitle-font;
+                    margin-top: 25px;
+                    width: 90%;
+                    color: $purple;
+                    display: flex;
+                    flex-direction: column;
+
+                    span {
+                        color: $darkOrange; 
+                        @include title-font;
+                        margin-bottom: 0px;
+                    }
+                }
+
+            }    
+        }
+
+        .my_container-items {
+            width: 93.5%;
+            margin-left: 15px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .my_card-items {
+                min-width: 413px;
+                min-height: 130px;
+                max-width: 413px;
+                max-height: 150px;
+                margin: 10px 13px;
+                border-radius: 10px;
+                overflow: hidden;
+                display: flex;
+                flex-direction: row;
+                box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+
+                .my_item-img {
+                    width: 120px;
+                    height: 100%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .my_item-info {
+                    width: 60%;
+                    height: 100%;
+                    margin-left: 20px;
+
+                    .title-info {
+                        margin-bottom: 0px;
+                        @include title-font;
+                        color: $darkOrange;
+                        margin-top: 10px;
+                    }
+
+                    .info-item {
+                        margin-bottom: 0px;
+                        margin-top: 7px;
+                        font-size: 14px;
+                        @include subtitle-font;
+                        color: $purple;
+                    }
+
+                    div {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        margin-top: 10px;
+                        margin-bottom: 5px;
+
+                        .price-item {
+                            margin-bottom: 0px;
+                            font-size: 14px;
+                            @include subtitle-font;
+                            color: $purple;
+                        }
+
+                        .btn-add {
+                            width: fit-content;
+                            margin-left: 40px;
+                            margin-bottom: 3px;
+                            background-color: #FF4718;
+                            border-radius: 4px;
+                            color: #ffffff;
+                            font-size: 13px;
+                            font-family: "Raleway", sans-serif;
+                            font-weight: 700;
+                            &:hover {
+                                background-color: #be2d05;
+                            }
+                        }   
+                    }
+                }
+            }
+        }
+
+        .my_container-cart {
+            margin-top: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 25%;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+            height: fit-content;
+            min-height: 20vh;
+            max-height: 80vh;
+            margin-bottom: 50px;
+            position: sticky;
+            top: 85.5px;
+            bottom: 30px;
+            margin-left: 10px;
+
+
+            .box-title {
+                display: flex;
+                justify-content: center;
+                border-bottom: 1px solid $purple;
+                height: 50px;
+                width: 95%;
+                margin-bottom: 15px;
+
+                .my_title-cart {
+                    margin-top: 10px;
+                    color: $darkOrange;
+                    @include title-font;
+                }
+            }
+            
+
+            .my_box-cart {
+                width: 91%;
+                max-height: 310px;
+                border-radius: 5px;
+                overflow-y: scroll;
+                display: flex;
+                flex-direction: column;
+                box-shadow: -1px 7px 11px -10px rgba(0, 0, 0, 0.2);
+                &::-webkit-scrollbar {
+                    width: 4px;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background-color: #7b787c;
+                    border-radius: 10px;
+                }
+                
+
+                .my_card-cart {
+                    position: relative;
+                    margin-top: 15px;
+                    margin-bottom: 10px;
+                    width: 94%;
+                    height: 72px;
+                    display: flex;
+                    flex-direction: row;
+                    box-shadow: 0px 0px 13px -2px rgba(0, 0, 0, 0.2);
+                    
+
+                    .box-cart-img {
+                        width: 95px;
+                        height: 100%;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .box-cart-info {
+                        width: 80%;
+                        display: flex;
+                        flex-direction: column;
+                        margin-left: 10px;
+                        margin-top: 12px;
+
+                        h4 {
+                            @include title-font;
+                            font-size: 14px;
+                            color: $purple;
+                            margin-bottom: 0;
+                        }
+
+                        .cart-price {
+                            color: $darkOrange;
+                            margin-top: 10px;
+                        }
+
+                    }
+
+                    .box-cart-btn {
+                        height: 100%;
+                        position: relative;
+                        display: flex;
+                        align-items: flex-end;
+                        flex-direction: column;
+
+                        .btn-quantity {
+                            background-color: rgba($color: #9461e2, $alpha: 0.5);
+                            border: 0px;
+                            display:inline-block;
+                            cursor:pointer;
+                            color:#ffffff;
+                            font-family:Arial;
+                            font-size:17px;
+                            width: 40px;
+                            height: 50%;
+                            &:hover {
+                                background-color: #7048ab;
+                            }
+                        }
+
+                        .quantity {
+                            position: absolute;
+                            top: 19px;
+                            right: 50px;
+                            color: $darkOrange;
+                            @include title-font;
+                            font-weight: 400;
+                            font-size: 21px;
+                        }
+
+                        .box-btn-delate {
+                            position: absolute;
+                            top: -11px;
+                            right: -11px;
+
+                            .btn-delate {
+                                border-radius:28px;
+                                display:inline-block;
+                                cursor:pointer;
+                                font-family:Arial;
+                                font-size:14px;
+                                padding:1px 8px;
+                                text-decoration:none;
+                                background-color: $darkOrange;
+                            }                      
+                        }
+                    }
+                }
+            }
+
+            .box-checkout {
+                height: 70px;
+                width: 94%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-top: 5px;
+
+                .tot {
+                    color: $darkOrange;
+                    @include title-font;
+                    font-weight: 400;
+                    padding-right: 10px;
+                }
+
+                .line {
+                    height: 40px;
+                    margin-bottom: 4px;
+                    width: 1px;
+                    background-color: $darkOrange;
+                }
+
+                span {
+                    color: $purple;
+                    @include title-font;
+                    font-weight: 400;
+                    margin-left: 15px;
+                    margin-bottom: 5px;
+                }
+            }
+
+            .btn-checkout {
+                width: 99.7%;
+                background-color: #9461e2;
+                border-radius: 5px;
+                color: #ffffff;
+                @include title-font;
+                &:hover {
+                    background-color: #7048ab;
+                }
+            }
+
+            .btn-svuota {
+                width: 25%;
+                margin-left: 80px;
+                background-color: $darkOrange;
+                border-radius: 5px;
+                color: #ffffff;
+                @include title-font;
+                &:hover {
+                    background-color: #be2d05;
+                }
+            }
         }
     }
-
-    .box{
-        width: 100%;
-        height: 30px;
-        text-align: center;
-    }
-}
 
 </style>
