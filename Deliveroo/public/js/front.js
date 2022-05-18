@@ -2009,93 +2009,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //qua ci sono i dati che vengono importati da app.vue 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'MyFooter',
@@ -2172,6 +2085,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
 //
 //
 //
@@ -3271,7 +3187,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Op
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
 
 // module
-exports.push([module.i, "*[data-v-55d28a50] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #f6f1fb;\n}\n.home-gallery-container[data-v-55d28a50] {\n  max-width: 80%;\n  margin: auto;\n  position: relative;\n  align-items: center;\n  justify-content: center;\n}\n.home-gallery-container .img-container[data-v-55d28a50] {\n  height: 150px;\n  background-size: cover;\n  text-decoration: none;\n}\n.home-gallery-container .casalinga[data-v-55d28a50] {\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/tomato-basil.jpg */ "./resources/js/assets/images/tomato-basil.jpg")) + ");\n}\n.home-gallery-container .dolci[data-v-55d28a50] {\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/pink-cake.jpg */ "./resources/js/assets/images/pink-cake.jpg")) + ");\n}\n.home-gallery-container .bevande[data-v-55d28a50] {\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/coke.jpg */ "./resources/js/assets/images/coke.jpg")) + ");\n  background-position: center;\n}\n.home-gallery-container .pane[data-v-55d28a50] {\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/pane.jpg */ "./resources/js/assets/images/pane.jpg")) + ");\n  background-position: center;\n}\n.home-gallery-container .overlay-text[data-v-55d28a50] {\n  color: white;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  padding: auto;\n  background-color: transparent;\n  height: 100%;\n  width: 100%;\n  line-height: 150px;\n  text-align: center;\n  text-shadow: #9561e2;\n}\n.home-gallery-container .white-space[data-v-55d28a50] {\n  min-height: 100px;\n}", ""]);
+exports.push([module.i, "*[data-v-55d28a50] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #f6f1fb;\n}\n.home-gallery-container[data-v-55d28a50] {\n  max-width: 80%;\n  margin: auto;\n  position: relative;\n  align-items: center;\n  justify-content: center;\n}\n.home-gallery-container .img-container[data-v-55d28a50] {\n  height: 150px;\n  background-size: cover;\n  text-decoration: none;\n}\n.home-gallery-container .casalinga[data-v-55d28a50] {\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/tomato-basil.jpg */ "./resources/js/assets/images/tomato-basil.jpg")) + ");\n}\n.home-gallery-container .dolci[data-v-55d28a50] {\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/pink-cake.jpg */ "./resources/js/assets/images/pink-cake.jpg")) + ");\n}\n.home-gallery-container .bevande[data-v-55d28a50] {\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/drink.jpg */ "./resources/js/assets/images/drink.jpg")) + ");\n  background-position: center;\n}\n.home-gallery-container .pane[data-v-55d28a50] {\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/pane.jpg */ "./resources/js/assets/images/pane.jpg")) + ");\n  background-position: center;\n}\n.home-gallery-container .overlay-text[data-v-55d28a50] {\n  color: white;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  padding: auto;\n  background-color: transparent;\n  height: 100%;\n  width: 100%;\n  line-height: 150px;\n  text-align: center;\n  text-shadow: #9561e2;\n}\n.home-gallery-container .white-space[data-v-55d28a50] {\n  min-height: 100px;\n}", ""]);
 
 // exports
 
@@ -3312,7 +3228,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Op
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
 
 // module
-exports.push([module.i, ".jumbotron-container[data-v-e395661a] {\n  min-height: 450px;\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/food.jpg */ "./resources/js/assets/images/food.jpg")) + ");\n  background-size: cover;\n  margin-top: 66px;\n}\n.jumbotron-container .jumbotron-contents[data-v-e395661a] {\n  vertical-align: middle;\n  transform: translateY(50%);\n  transform: translateX(100%);\n  font-size: xx-large;\n  padding: 10px;\n}\n.jumbotron-container .jumbotron-contents .jumbotron_title[data-v-e395661a] {\n  font-size: 95px;\n  font-weight: 700;\n  color: #9561e2;\n  margin-top: 15px;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.jumbotron-container .jumbotron-contents .jumbotron_subtitle[data-v-e395661a] {\n  font-size: 16px;\n  font-family: \"Tenor Sans\", sans-serif;\n  color: #9538f2;\n}\n.jumbotron-container .jumbotron-contents .button[data-v-e395661a] {\n  display: inline-block;\n  background-color: #9538f2;\n  padding: 6px 16px;\n  text-decoration: none;\n  font-weight: bold;\n  color: #fff;\n  border-radius: 5px;\n  transition: all 0.3s;\n  margin-left: 10px;\n  font-size: 12px;\n  font-weight: 700;\n}\n.jumbotron-container .jumbotron-contents .button[data-v-e395661a]:hover {\n  color: #f6993f;\n}\n.jumbotron-container .jumbotron-contents .button span[data-v-e395661a] {\n  padding-left: 10px;\n}", ""]);
+exports.push([module.i, ".jumbotron-container[data-v-e395661a] {\n  min-height: 450px;\n  background-image: url(" + escape(__webpack_require__(/*! ../assets/images/food.jpg */ "./resources/js/assets/images/food.jpg")) + ");\n  background-size: cover;\n  margin-top: 66px;\n}\n.jumbotron-container .jumbotron-contents[data-v-e395661a] {\n  vertical-align: middle;\n  transform: translateY(50%);\n  transform: translateX(100%);\n  font-size: xx-large;\n  padding: 10px;\n}\n.jumbotron-container .jumbotron-contents .jumbotron_title[data-v-e395661a] {\n  font-size: 95px;\n  font-weight: 700;\n  color: #9561e2;\n  margin-top: 15px;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.jumbotron-container .jumbotron-contents .jumbotron_subtitle[data-v-e395661a] {\n  font-size: 16px;\n  font-family: \"Tenor Sans\", sans-serif;\n  margin-left: 15px;\n  color: #9538f2;\n}\n.jumbotron-container .jumbotron-contents .button[data-v-e395661a] {\n  display: inline-block;\n  background-color: #9538f2;\n  padding: 6px 16px;\n  text-decoration: none;\n  font-weight: bold;\n  color: #fff;\n  border-radius: 5px;\n  transition: all 0.3s;\n  margin-left: 10px;\n  font-size: 12px;\n  font-weight: 700;\n}\n.jumbotron-container .jumbotron-contents .button[data-v-e395661a]:hover {\n  color: #f6993f;\n}\n.jumbotron-container .jumbotron-contents .button span[data-v-e395661a] {\n  padding-left: 10px;\n}", ""]);
 
 // exports
 
@@ -3352,7 +3268,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Op
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
 
 // module
-exports.push([module.i, "*[data-v-6bed6bba] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #FF4718;\n}\n.article_card[data-v-6bed6bba] {\n  max-height: 300px;\n  width: 25vw;\n  overflow: hidden;\n  margin: 5px 0;\n}\n.article_card .img-container img[data-v-6bed6bba] {\n  max-height: 200px;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  padding-bottom: 2px;\n  border-bottom: 2px solid transparent;\n}\n.article_card .img-container img[data-v-6bed6bba]:hover {\n  border-bottom: 2px solid #9561e2;\n  cursor: pointer;\n}\n.article_card .article_title[data-v-6bed6bba] {\n  font-size: 1.2em;\n  margin-top: 10px;\n  font-weight: 600;\n  padding-top: 2px;\n  color: #f6f1fb;\n}", ""]);
+exports.push([module.i, "*[data-v-6bed6bba] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #FF4718;\n}\n.restaurant_card[data-v-6bed6bba] {\n  max-height: 300px;\n  width: 25vw;\n  overflow: hidden;\n  margin: 5px 0;\n}\n.restaurant_card .img-container img[data-v-6bed6bba] {\n  max-height: 200px;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  padding-bottom: 2px;\n  transition: 0.8s;\n}\n.restaurant_card .img-container img[data-v-6bed6bba]:hover {\n  color: #9561e2;\n  cursor: pointer;\n  transform: translateY(2px) translateX(2px);\n  box-shadow: #4e1f7c 0px 0px 0px;\n  transform: scale(1.1);\n}\n.restaurant_card .restaurant_name[data-v-6bed6bba] {\n  font-size: 1.4em;\n  margin-top: 5px;\n  margin-bottom: 30px;\n  font-weight: 600;\n  padding-top: 2px;\n  color: #f6f1fb;\n}\n.restaurant_card .restaurant_name[data-v-6bed6bba]:hover {\n  color: #9561e2;\n  cursor: pointer;\n}", ""]);
 
 // exports
 
@@ -4982,10 +4898,10 @@ var render = function () {
             0
           ),
         ]),
-        _vm._v(" "),
-        _vm._m(0),
       ]),
     ]),
+    _vm._v(" "),
+    _vm._m(0),
   ])
 }
 var staticRenderFns = [
@@ -4993,12 +4909,14 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-10 m-auto" }, [
-      _c("p", { staticClass: "copyright mt-1" }, [
-        _c("span", [
-          _c("i", { staticClass: "fa-regular fa-copyright copyright_icon" }),
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-8 m-auto" }, [
+        _c("p", { staticClass: "copyright mt-1" }, [
+          _c("span", [
+            _c("i", { staticClass: "fa-regular fa-copyright copyright_icon" }),
+          ]),
+          _vm._v(" Copyright 2022 | Powered by Team 7"),
         ]),
-        _vm._v(" Copyright 2022 | Powered by Team 7"),
       ]),
     ])
   },
@@ -5026,7 +4944,7 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container-fluid container-header" }, [
     _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-10 offset-1" }, [
+      _c("div", { staticClass: "col-10" }, [
         _c("nav", { staticClass: "py-2 box-nav" }, [
           _vm._m(0),
           _vm._v(" "),
@@ -5070,6 +4988,12 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("ul", { staticClass: "nav" }, [
+      _c("li", [
+        _c("img", {
+          attrs: { src: "assets/images/LOGO_DELIVEBOO.png", alt: "logo" },
+        }),
+      ]),
+      _vm._v(" "),
       _c("li", { staticClass: "nav-item" }, [
         _c(
           "a",
@@ -5136,19 +5060,6 @@ var render = function () {
           ],
           1
         ),
-        _vm._v(" "),
-        _vm._m(0),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "row mt-1" },
-          [
-            _c("router-link", { attrs: { to: { name: "menu" } } }, [
-              _vm._v("Vedi i ristoranti consigliati"),
-            ]),
-          ],
-          1
-        ),
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "col-7" }, [
@@ -5168,19 +5079,6 @@ var render = function () {
                 ]),
               ]
             ),
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _vm._m(1),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "row" },
-          [
-            _c("router-link", { attrs: { to: { name: "menu" } } }, [
-              _vm._v("Vedi i ristoranti consigliati"),
-            ]),
           ],
           1
         ),
@@ -5204,19 +5102,6 @@ var render = function () {
           ],
           1
         ),
-        _vm._v(" "),
-        _vm._m(2),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "row" },
-          [
-            _c("router-link", { attrs: { to: { name: "menu" } } }, [
-              _vm._v("Vedi i ristoranti consigliati"),
-            ]),
-          ],
-          1
-        ),
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "col-5" }, [
@@ -5235,65 +5120,13 @@ var render = function () {
           ],
           1
         ),
-        _vm._v(" "),
-        _vm._m(3),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "row" },
-          [
-            _c("router-link", { attrs: { to: { name: "menu" } } }, [
-              _vm._v("Vedi i ristoranti consigliati"),
-            ]),
-          ],
-          1
-        ),
       ]),
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "row white-space" }),
   ])
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row mt-1" }, [
-      _c("h5", [_vm._v("Ti piacerebbe un piatto come lo fa mammá?")]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row mt-1" }, [
-      _c("h5", { staticClass: "text-right" }, [
-        _vm._v("Gelati, dolci e dessert per tutti i gusti"),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row mt-1" }, [
-      _c("h5", [
-        _vm._v("Hai sete? Perché non aggiungere una bevanda al tuo ordine?"),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row mt-1" }, [
-      _c("h5", { staticClass: "text-right" }, [
-        _vm._v("Se manca pane a tavola è come non aver mangiato"),
-      ]),
-    ])
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -5351,33 +5184,40 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "jumbotron-container" }, [
     _c("div", { staticClass: "col-8 m-auto" }, [
-      _c("div", { staticClass: "row jumbotron-contents col-7" }, [
-        _c("h1", { staticClass: "jumbotron_title" }, [
-          _vm._v("Cosa ti prendi?"),
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "jumbotron_subtitle" }, [
-          _vm._v(
-            "Con Deliveboo puoi mangiare quello che vuoi, quando vuoi, dove vuoi"
-          ),
-        ]),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "col" },
-          [
-            _c(
-              "router-link",
-              {
-                staticClass: "text-white button",
-                attrs: { to: { name: "menu" } },
-              },
-              [_vm._v("INIZIA SUBITO!")]
+      _c(
+        "div",
+        {
+          staticClass:
+            "row jumbotron-contents justify-content-center align-items-center col-7",
+        },
+        [
+          _c("h1", { staticClass: "jumbotron_title" }, [
+            _vm._v("Cosa vuoi mangiare?"),
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "jumbotron_subtitle" }, [
+            _vm._v(
+              "Con Deliveboo puoi mangiare quello che vuoi, quando vuoi, dove vuoi"
             ),
-          ],
-          1
-        ),
-      ]),
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "col" },
+            [
+              _c(
+                "router-link",
+                {
+                  staticClass: "text-white button",
+                  attrs: { to: { name: "menu" } },
+                },
+                [_vm._v("INIZIA SUBITO!")]
+              ),
+            ],
+            1
+          ),
+        ]
+      ),
     ]),
   ])
 }
@@ -5505,7 +5345,7 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "col article_card mx-auto" },
+    { staticClass: "col restaurant_card mx-auto" },
     [
       _c(
         "router-link",
@@ -5517,7 +5357,7 @@ var render = function () {
         ]
       ),
       _vm._v(" "),
-      _c("p", { staticClass: "article_title" }, [
+      _c("p", { staticClass: "restaurant_name" }, [
         _vm._v(_vm._s(_vm.item.name)),
       ]),
     ],
@@ -21396,14 +21236,14 @@ module.exports = g;
 
 /***/ }),
 
-/***/ "./resources/js/assets/images/coke.jpg":
-/*!*********************************************!*\
-  !*** ./resources/js/assets/images/coke.jpg ***!
-  \*********************************************/
+/***/ "./resources/js/assets/images/drink.jpg":
+/*!**********************************************!*\
+  !*** ./resources/js/assets/images/drink.jpg ***!
+  \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/coke.jpg?416db6664a0c19d8db2dd0278247b245";
+module.exports = "/images/drink.jpg?08bbb4e39908db4fed70f325defc002c";
 
 /***/ }),
 

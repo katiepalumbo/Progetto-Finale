@@ -1,10 +1,10 @@
 <template>
     <!-- qua uso le props da main per poter popolare le due gallerie diverse -->
-     <div class="col article_card mx-auto">
+     <div class="col restaurant_card mx-auto">
         <router-link class="img-container" :to="{name: 'menu'}">
             <img :src="`${item.url}`" :alt="`${item.name}`">
         </router-link>
-        <p class="article_title">{{item.name}}</p>
+        <p class="restaurant_name">{{item.name}}</p>
         <!-- <p class="article_date">{{item.date}}</p>
         <p class="article_preview">{{item.text}}</p> -->
     </div>
@@ -38,9 +38,9 @@ export default {
     
 }
 
-//article card rules
+//restaurant card rules
 
-.article_card {
+.restaurant_card {
     max-height: 300px;
     width: 25vw;
     overflow: hidden;
@@ -53,12 +53,19 @@ export default {
         width: 100%;
         object-fit: cover;
         padding-bottom: 2px;
-        border-bottom: 2px solid transparent;
+        transition: 0.80s;
+        //border-bottom: 2px solid transparent;
         &:hover {
-            border-bottom: 2px solid $purple;
+            color: $purple;
+            //border-bottom: 2px solid $purple;
             cursor: pointer;
+            transform: translateY(2px) translateX(2px);
+            box-shadow: #4e1f7c 0px 0px 0px;
+            transform: scale(1.1);
+            
             
         }
+        
     }
 
     }
@@ -67,12 +74,17 @@ export default {
 
 
 
-    .article_title {
-        font-size: 1.2em;
-        margin-top: 10px;
+    .restaurant_name {
+        font-size: 1.4em;
+        margin-top: 5px;
+        margin-bottom: 30px;
         font-weight: 600;
         padding-top: 2px;
         color: $body-bg;
+        &:hover {
+            color: $purple;
+            cursor: pointer;
+        }
 
     }
 

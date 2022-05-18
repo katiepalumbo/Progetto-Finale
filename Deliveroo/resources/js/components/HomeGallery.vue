@@ -7,12 +7,12 @@
                         <h1 class="overlay-text">Cucina Casalinga</h1>
                     </router-link>    
                 </div>
-                <div class="row mt-1">
+                <!-- <div class="row mt-1">
                     <h5>Ti piacerebbe un piatto come lo fa mammá?</h5>
                 </div>
                 <div class="row mt-1">
                     <router-link :to="{name: 'menu'}">Vedi i ristoranti consigliati</router-link>
-                </div>
+                </div> -->
             </div>
             
             <div class="col-7">
@@ -21,12 +21,12 @@
                         <h1 class="overlay-text">Dessert, gelati, dolci</h1>
                     </router-link>    
                 </div>
-                <div class="row mt-1">
+                <!-- <div class="row mt-1">
                     <h5 class="text-right">Gelati, dolci e dessert per tutti i gusti</h5>
                 </div>
                 <div class="row">
                     <router-link :to="{name: 'menu'}">Vedi i ristoranti consigliati</router-link>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="row mt-5 row-cols-10 m-auto">
@@ -36,12 +36,12 @@
                         <h1 class="overlay-text">Bevande</h1>
                     </router-link>    
                 </div>
-                <div class="row mt-1">
+                <!-- <div class="row mt-1">
                     <h5>Hai sete? Perché non aggiungere una bevanda al tuo ordine?</h5>
                 </div>
                 <div class="row">
                     <router-link :to="{name: 'menu'}">Vedi i ristoranti consigliati</router-link>
-                </div>
+                </div> -->
             </div>
             
             <div class="col-5">
@@ -50,12 +50,12 @@
                         <h1 class="overlay-text">Lievitati</h1>
                     </router-link>   
                 </div>
-                <div class="row mt-1">
+                <!-- <div class="row mt-1">
                     <h5 class="text-right">Se manca pane a tavola è come non aver mangiato</h5>
                 </div>
                 <div class="row">
                     <router-link :to="{name: 'menu'}">Vedi i ristoranti consigliati</router-link>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="row white-space">
@@ -123,7 +123,7 @@ export default {
     }
 
     .bevande {
-        background-image: url('../assets/images/coke.jpg');
+        background-image: url('../assets/images/drink.jpg');
         background-position: center;
         
     }

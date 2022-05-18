@@ -1,10 +1,7 @@
 <template>
 
-    <!-- all'interno del footer ho 2 sezioni (top e bottom) -- il top contiene i menu 
-    che vengono popolati in modo dinamico con dati passati tramite props da app.vue -->
     <div class="footer_container py-2">
 
-        <!-- inizio footer top con info e menu -->
         <div class="col-10 m-auto footer_top">
             <div class="row footer_lists justify-content-center">
                 <div class="col-3 m-3 footer-block">
@@ -25,97 +22,13 @@
                         <li v-for="(item, index) in helpItems" :key="index"><a href="#">{{item.name}}</a></li>
                     </ul>
                 </div>
-                <div class="col-10 m-auto">
-                        <p class="copyright mt-1"><span><i class="fa-regular fa-copyright copyright_icon"></i></span> Copyright 2022 | Powered by Team 7</p>
-                </div> 
-
-
-
-                <!-- footer text
-                <div class="col info_text">
-                    <h6 class="all_caps_footer">deliveboo</h6>
-                    <p class="footer_text_block">Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                        Cumque, illo iste optio atque molestias distinctio, 
-                        enim modi tempora asperiores rem voluptate, blanditiis iure! 
-                        Ullam fuga earum libero voluptas, dicta excepturi.</p>
-                </div>
-
-                <!-- footer menu lists - ci sono 3 in tutto -- questi menu vengono popolati dai dati in app.vue -->
-                <!--<div class="col menu_list">
-                    <h6 class="all_caps_footer">Popular Topics</h6>
-                    <!-- uso v-for per tutti i menu per popolarli in modo dinamico
-                    <ul class="menu-col" v-for="(popularTopic, a) in popularTopics" :key="a">
-                        <li><a href="#" target="_blank" rel="noopener">{{popularTopic}}</a></li>
-                    </ul>
-                </div>
-                <div class="col menu_list">
-                    <h6 class="all_caps_footer">Recent Topics</h6>
-                    <ul class="menu-col" v-for="(recentTopic, a) in recentTopics" :key="a">
-                        <li><a href="#" target="_blank" rel="noopener">{{recentTopic}}</a></li>
-                    </ul>
-                </div>
-                <div class="col menu_list">
-                    <h6 class="all_caps_footer">Latest Replies</h6>
-                    <ul class="menu-col" v-for="(latestReply, a) in latestReplies" :key="a">
-                        <li><a href="#" target="_blank" rel="noopener">{{latestReply}}</a></li>
-                    </ul>
-                </div>
-                <div class="col menu_list">
-                    <h6 class="all_caps_footer">Popular Topics</h6>
-                    
-                    <ul class="menu-col" >
-                        <li><a href="#" target="_blank" rel="noopener">Popular Topic 1</a></li>
-                        <li><a href="#" target="_blank" rel="noopener">Popular Topic 2</a></li>
-                        <li><a href="#" target="_blank" rel="noopener">Popular Topic 3</a></li>
-                        <li><a href="#" target="_blank" rel="noopener">Popular Topic 4</a></li>
-                    </ul>
-                </div> 
-                <div class="col menu_list">
-                    <h6 class="all_caps_footer">Recent Topics</h6>
-                    <ul class="menu-col" >
-                        <li><a href="#" target="_blank" rel="noopener">Recent Topic 1</a></li>
-                        <li><a href="#" target="_blank" rel="noopener">Recent Topic 2</a></li>
-                        <li><a href="#" target="_blank" rel="noopener">Recent Topic 3</a></li>
-                        <li><a href="#" target="_blank" rel="noopener">Recent Topic 4</a></li>
-                    </ul>
-                </div>
-                <div class="col menu_list mb-5">
-                    <h6 class="all_caps_footer">Latest Replies</h6>
-                    <ul class="menu-col" >
-                        <li><a href="#" target="_blank" rel="noopener">Latest Reply 1</a></li>
-                        <li><a href="#" target="_blank" rel="noopener">Latest Reply 2</a></li>
-                        <li><a href="#" target="_blank" rel="noopener">Latest Reply 3</a></li>
-                        <li><a href="#" target="_blank" rel="noopener">Latest Reply 4</a></li>
-                    </ul>
-                </div>
-
-
-            </div>
-        </div>
-
-        <!-- inizio footer bottom -->
-        <!-- <div class="footer_bottom_container">
-            <div class="col m-auto">
-                <div class="row footer_bottom">
-
-                    <!-- copyright information -->
-                   <!-- <div class="col-9 m-auto">
-                        <p class="copyright mt-1"><span><i class="fa-regular fa-copyright copyright_icon"></i></span> Copyright 2022 | Powered by Team 7</p>
-                    </div> --> 
-
-                    <!-- social media icons -->
-                    <!-- <div class="col-3">
-                        <div class="row">
-                            <ul class="menu-row footer-right">
-                                <li><a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                <li><a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>            
-                                <li><a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a></li>
-                                <li><a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a></li>
-                            </ul>
-                        </div>
-                    </div> -->
                 </div>
             </div>
+            <div class="row">
+                <div class="col-8 m-auto">
+                    <p class="copyright mt-1"><span><i class="fa-regular fa-copyright copyright_icon"></i></span> Copyright 2022 | Powered by Team 7</p>
+                </div>
+            </div> 
 
         </div>
 

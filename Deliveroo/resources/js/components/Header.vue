@@ -1,9 +1,12 @@
 <template>
     <div class="container-fluid container-header">
         <div class="row">
-            <div class="col-10 offset-1">
+            <div class="col-10">
                 <nav class="py-2 box-nav">
                     <ul class="nav">
+                        <li>
+                            <img src="assets/images/LOGO_DELIVEBOO.png" alt="logo">
+                        </li>
                         <li class="nav-item">
                             <!-- LINK NON FUNZIONANTE -- DEVE RIPORTARE ALLA HOME -->
                             <a class="text-white nav-link logo-header" href="/home">Deliveboo</a>

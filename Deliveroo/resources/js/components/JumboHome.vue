@@ -2,8 +2,8 @@
     <!-- inizio jumbotron -->
     <div class="jumbotron-container">
         <div class="col-8 m-auto">
-            <div class="row jumbotron-contents col-7">
-                <h1 class="jumbotron_title">Cosa ti prendi?</h1>
+            <div class="row jumbotron-contents justify-content-center align-items-center col-7">
+                <h1 class="jumbotron_title">Cosa vuoi mangiare?</h1>
                 <p class="jumbotron_subtitle">Con Deliveboo puoi mangiare quello che vuoi, quando vuoi, dove vuoi</p>
                 <div class="col">
                     <router-link class="text-white button"  :to="{name: 'menu'}">INIZIA SUBITO!</router-link>
@@ -66,6 +66,7 @@ export default {
         .jumbotron_subtitle {
             font-size: 16px;
             font-family: 'Tenor Sans', sans-serif;
+            margin-left: 15px;
             color: #9538f2;
         }
 
