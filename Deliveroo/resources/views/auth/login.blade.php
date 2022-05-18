@@ -1,14 +1,17 @@
-@extends('layouts.app2')
+@extends('layouts.app3')
 
 @section('content')
 
-<div class="position-relative ms_background-img mt-0 pt-0">
-<section class="vh-100 ms_background-img">
-    <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5 ">
-      <div class="row gx-lg-5 align-items-center mb-5">
 
-        <div class="col-lg-6 mb-5 mb-lg-0 ms-logo-banner" style="z-index: 10">
+
+<div class="container px-4 py-5 px-md-5 text-center text-lg-start">      
+    <div class="row gx-lg-5 align-items-center">
+
+        
+        {{-- container sinistra --}}
+        <div class="col-lg-6 mb-5 mb-lg-0">
           <h1 class="display-1 fw-bold ls-tight ms_text-orange position-absolute top-0 start-0 p-5 m-5">
+            <i class="fa-solid fa-moped"></i>
             DeliveBoo
             <br>
             <span class="display-6 ms_text-purple position-absolute">
@@ -16,8 +19,8 @@
             </span>
           </h1>
         </div>
-  
-        <div class="col-lg-5 mb-5 mb-lg-0 ps-5 ms-5">
+        
+        <div class="col-lg-5 mb-5 mb-lg-0">
           {{-- div card login --}}
           <div class="card bg-glass">
             <div class="card-body ms_background-color px-4 py-5 px-md-5 h-75">
@@ -63,7 +66,7 @@
                             </button>
                         </div>
                     </div>
-                {{--Recupera password--}}
+                {{--Recupera password --}}
                 <div class="form-group row">
                     <div class="col-md-8">
                         @if (Route::has('password.request'))
@@ -80,19 +83,16 @@
               </div>
             </div>
           </div>
+          <a class="me-5 pe-5 ms_text-orange fw-bold fs-1 text-decoration-none float-end" href="http://127.0.0.1:8000/">{{ __('torna alla home') }}</a>
         </div>
       </div>
     </div>
 
-    <div class="position-absolute bottom-25 end-0 translate-middle-y me-3 pe-3">
-        <a class="me-5 pe-5 ms_text-orange fw-bold fs-1 text-decoration-none" href="http://127.0.0.1:8000/">{{ __('torna alla home') }}</a>
-    </div>
 
     <div class="bg-black text-white position-absolute bottom-0 end-0 d-flex w-100 flex-row-reverse">
             <span class="me-4">Copyright DeliveBoo all rights deserved - website by us</span>
     </div>
-
-  </section>
 </div>
+
   
 @endsection
