@@ -286,7 +286,8 @@ export default {
                     // console.log(this.element)
                     // console.log(this.price)
 
-                    this.totale -= this.price;
+                    //this.totale -= this.price;
+                    this.totale -= (this.price/this.element);
                     console.log(this.totale);
 
                     if (localStorage.totale) {

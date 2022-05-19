@@ -6,13 +6,14 @@
            <div class="my_row-menu-1">
 
                <form action="" class="my_box" @submit.prevent="filteredType()">
+                   <h3 class="col-10 mb-5 mx-3">Seleziona una o più tipologie</h3>
                     <div class="my_box-input" v-for="typex in types" :key="typex.id">
                         <div class="my_input-item checkbox path">
                             <input class="my_input" type="checkbox" v-model="selected" :value="typex.id" :id="'typex_' + typex.id">
                             <label class="my_label-input" :for="'typex_' + typex.id">{{typex.name}}</label>
                         </div>
                     </div>
-                    <div class="box-btn">
+                    <div class="box-btn mt-3">
                         <button type="submit" class="btn-header">Cerca</button>
                     </div>
                </form>
@@ -144,6 +145,11 @@
                 width: 100%;
                 display: flex;
                 flex-direction: column;
+
+                h3 {
+                    @include title-font;
+                    color: $purple;
+                }
                 
                 .my_box-input {
                     width: 100%;

@@ -7,14 +7,14 @@
 
                 <h1>Visualizza </h1>
 
-                {{-- @if ($item->image)
+                @if ($item->image)
                     <img class="img-fluid" src="{{asset('storage/' . $item->image)}}" alt="{{$item->item_name}}">
                 @else
                      <img class="img-fluid" src="{{asset('img/fallback_img.jpg.png')}}" alt="{{$item->item_name}}">
 
-                @endif --}}
+                @endif
 
-                <img class="img-fluid" src="{{$item->image}}" alt="{{$item->item_name}}">
+                {{-- <img class="img-fluid" src="{{$item->image}}" alt="{{$item->item_name}}"> --}}
 
                 <div><strong>Titolo </strong>{{$item->item_name}}</div>
                 <div><strong>Descrizione </strong>{!! $item->description !!}</div>

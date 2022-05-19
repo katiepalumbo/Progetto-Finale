@@ -2806,6 +2806,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Menu",
@@ -3125,8 +3126,9 @@ __webpack_require__.r(__webpack_exports__);
           this.dati2[index].quantity = this.test;
           this.dati2[index].price = this.test2; // console.log(this.element)
           // console.log(this.price)
+          //this.totale -= this.price;
 
-          this.totale -= this.price;
+          this.totale -= this.price / this.element;
           console.log(this.totale);
 
           if (localStorage.totale) {
@@ -3439,7 +3441,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Op
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
 
 // module
-exports.push([module.i, ".my_container-menu {\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  position: relative;\n}\n.my_container-menu .my_row-menu-1 {\n  width: 15%;\n  min-width: 150px;\n  height: calc(100vh - 65.6px);\n  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);\n  background-clip: #f6f1fb;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 65.6px;\n}\n.my_container-menu .my_row-menu-1 .my_box {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n}\n.my_container-menu .my_row-menu-1 .my_box .my_box-input {\n  width: 100%;\n}\n.my_container-menu .my_row-menu-1 .my_box .my_box-input .my_label-input {\n  font-size: 13px;\n  color: #FF4718;\n  margin-top: 2px;\n  margin-left: 20px;\n  cursor: pointer;\n}\n.my_container-menu .my_row-menu-1 .my_box .my_box-input .my_input-item {\n  display: flex;\n  flex-direction: row-reverse;\n  justify-content: space-between;\n  align-items: center;\n  margin: 0px 0px;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.my_container-menu .my_row-menu-1 .my_box .my_box-input .my_input-item .my_input {\n  margin-right: 15px;\n  margin-top: 1px;\n}\n.my_container-menu .my_row-menu-1 .my_box .box-btn {\n  height: 40px;\n}\n.my_container-menu .my_row-menu-1 .my_box .btn-header {\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  margin-left: 20px;\n  margin-bottom: 3px;\n  margin-top: 5px;\n  background-color: #9561e2;\n  border-radius: 4px;\n  border: 0px;\n  padding: 7px 10px;\n  color: #ffffff;\n  font-size: 13px;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.my_container-menu .my_row-menu-1 .my_box .btn-header:hover {\n  background-color: #7048ab;\n}\n.my_container-menu .my_row-menu-2 {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  margin-top: 150px;\n  margin-bottom: 40px;\n  position: relative;\n  top: 0;\n  width: 85%;\n  align-self: flex-end;\n}\n.my_container-menu .my_row-menu-2 .my_box-items {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  margin-top: 26px;\n  flex-wrap: wrap;\n  width: 100%;\n  align-self: flex-end;\n}\n.my_container-menu .my_row-menu-2 .my_col-menu {\n  padding: 10px 10px;\n}\n.my_container-menu .my_box-title {\n  display: flex;\n  width: 74%;\n  flex-direction: column;\n  align-items: center;\n  position: absolute;\n  top: 90px;\n  right: 0;\n}\n.my_container-menu .my_box-title .menu-title {\n  color: #9538f2;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.my_container-menu .my_box-title .menu-text {\n  color: #FF4718;\n  font-family: \"Tenor Sans\", sans-serif;\n}", ""]);
+exports.push([module.i, ".my_container-menu {\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  position: relative;\n}\n.my_container-menu .my_row-menu-1 {\n  width: 15%;\n  min-width: 150px;\n  height: calc(100vh - 65.6px);\n  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);\n  background-clip: #f6f1fb;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 65.6px;\n}\n.my_container-menu .my_row-menu-1 .my_box {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n}\n.my_container-menu .my_row-menu-1 .my_box h3 {\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  color: #9561e2;\n}\n.my_container-menu .my_row-menu-1 .my_box .my_box-input {\n  width: 100%;\n}\n.my_container-menu .my_row-menu-1 .my_box .my_box-input .my_label-input {\n  font-size: 13px;\n  color: #FF4718;\n  margin-top: 2px;\n  margin-left: 20px;\n  cursor: pointer;\n}\n.my_container-menu .my_row-menu-1 .my_box .my_box-input .my_input-item {\n  display: flex;\n  flex-direction: row-reverse;\n  justify-content: space-between;\n  align-items: center;\n  margin: 0px 0px;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.my_container-menu .my_row-menu-1 .my_box .my_box-input .my_input-item .my_input {\n  margin-right: 15px;\n  margin-top: 1px;\n}\n.my_container-menu .my_row-menu-1 .my_box .box-btn {\n  height: 40px;\n}\n.my_container-menu .my_row-menu-1 .my_box .btn-header {\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  margin-left: 20px;\n  margin-bottom: 3px;\n  margin-top: 5px;\n  background-color: #9561e2;\n  border-radius: 4px;\n  border: 0px;\n  padding: 7px 10px;\n  color: #ffffff;\n  font-size: 13px;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.my_container-menu .my_row-menu-1 .my_box .btn-header:hover {\n  background-color: #7048ab;\n}\n.my_container-menu .my_row-menu-2 {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  margin-top: 150px;\n  margin-bottom: 40px;\n  position: relative;\n  top: 0;\n  width: 85%;\n  align-self: flex-end;\n}\n.my_container-menu .my_row-menu-2 .my_box-items {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  margin-top: 26px;\n  flex-wrap: wrap;\n  width: 100%;\n  align-self: flex-end;\n}\n.my_container-menu .my_row-menu-2 .my_col-menu {\n  padding: 10px 10px;\n}\n.my_container-menu .my_box-title {\n  display: flex;\n  width: 74%;\n  flex-direction: column;\n  align-items: center;\n  position: absolute;\n  top: 90px;\n  right: 0;\n}\n.my_container-menu .my_box-title .menu-title {\n  color: #9538f2;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n}\n.my_container-menu .my_box-title .menu-text {\n  color: #FF4718;\n  font-family: \"Tenor Sans\", sans-serif;\n}", ""]);
 
 // exports
 
@@ -5806,6 +5808,10 @@ var render = function () {
             },
           },
           [
+            _c("h3", { staticClass: "col-10 mb-5 mx-3" }, [
+              _vm._v("Seleziona una o più tipologie"),
+            ]),
+            _vm._v(" "),
             _vm._l(_vm.types, function (typex) {
               return _c("div", { key: typex.id, staticClass: "my_box-input" }, [
                 _c("div", { staticClass: "my_input-item checkbox path" }, [
@@ -5901,7 +5907,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "box-btn" }, [
+    return _c("div", { staticClass: "box-btn mt-3" }, [
       _c("button", { staticClass: "btn-header", attrs: { type: "submit" } }, [
         _vm._v("Cerca"),
       ]),
@@ -22953,7 +22959,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/katiepalumbo/Documents/Boolean/Assignments/Progetto-Finale/Progetto-Finale/Deliveroo/resources/js/front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! /Users/katiepalumbo/Documents/Boolean/Assignments/Progetto-Finale/Progetto-Finale-1/Deliveroo/resources/js/front.js */"./resources/js/front.js");
 
 
 /***/ })

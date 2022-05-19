@@ -12213,6 +12213,12 @@ fieldset:disabled .btn {
   color: #9561e2;
 }
 
+.login_all {
+  background-image: url(/images/BG_LOGIN_IMG.jpg?2151c2a431fadd4d6d9373f6259bbeb3) !important;
+  background-position: center;
+  margin-bottom: -50px;
+}
+
 .contanier-form {
   display: flex;
 }
