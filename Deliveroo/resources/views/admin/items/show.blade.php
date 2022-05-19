@@ -8,9 +8,9 @@
                 <h1>Visualizza </h1>
 
                 @if ($item->image)
-                    <img class="img-fluid" src="{{asset('storage/' . $item->image)}}" alt="{{$item->item_name}}">
+                    <img class="img-fluid img_piatto" src="{{asset('storage/' . $item->image)}}" alt="{{$item->item_name}}">
                 @else
-                     <img class="img-fluid" src="{{asset('img/fallback_img.jpg.png')}}" alt="{{$item->item_name}}">
+                     <img class="img-fluid img_piatto" src="{{$item->image}}" alt="{{$item->item_name}}">
 
                 @endif
 

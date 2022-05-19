@@ -6,7 +6,6 @@
             <div class="col-md-12">
 
                 <h1>Modifica piatto</h1>
-                <h4 class="mx-3 mt-3">Gli elementi contrassegnati dal simbolo * sono campi obbligatori</h4>
 
                 <form method="POST" action={{route('admin.items.update', $item->id)}} enctype="multipart/form-data">
 
@@ -20,6 +19,7 @@
 
                         </select>
                     </div>
+                    <h4 class="mt-3">Gli elementi contrassegnati dal simbolo * sono campi obbligatori</h4>
 
 
 
@@ -27,7 +27,13 @@
 
                     @if ($item->image)
                         <h4>Immagine del piatto</h4>
-                        <img class="img-thumbnail" src="{{$item->image}}" alt="{{$item->item_name}}">
+
+                        @if ($item->image)
+                            <img class="img-fluid img_piatto" src="{{asset('storage/' . $item->image)}}" alt="{{$item->item_name}}">
+                        @else
+                            <img class="img-fluid img_piatto" src="{{$item->image}}" alt="{{$item->item_name}}">
+                        @endif
+                        {{-- <img class="img-thumbnail" src="{{$item->image}}" alt="{{$item->item_name}}"> --}}
                     @endif
 
                     <div class="form-group">
@@ -47,6 +53,9 @@
 
                         </select>
                     </div>
+
+                    
+
 
                     <div class="form-group">
                       <label for="item_name">Nome del piatto *</label>

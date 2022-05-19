@@ -12436,6 +12436,16 @@ fieldset:disabled .btn {
   height: calc(100% + 16px);
 }
 
+.img_piatto {
+  max-height: 150px;
+  border-radius: 5%;
+}
+
+.img_piatto {
+  max-height: 150px;
+  border-radius: 5%;
+}
+
 .ms_banner {
   background-color: #FF4718;
   height: 120px;

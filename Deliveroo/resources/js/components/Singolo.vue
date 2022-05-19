@@ -4,7 +4,9 @@
         <router-link :to="{name: 'restaurant', params:{slug: slug}}">
 
              <div class="my_card-header">
-                <img :src="user_cover" alt="rover" />
+                <img v-if="'storage/' + user_cover" :src="'storage/' + user_cover" alt="uploaded-image">
+                <img v-else :src="user_cover"  alt="url-image">
+                <!-- <img :src="user_cover" alt="rover" /> -->
             </div>
 
             <div class="my_card-body">

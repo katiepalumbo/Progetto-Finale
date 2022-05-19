@@ -2359,6 +2359,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Singolo",
   props: ['title', 'type', 'slug', 'user_cover'],
@@ -5479,7 +5481,14 @@ var render = function () {
         { attrs: { to: { name: "restaurant", params: { slug: _vm.slug } } } },
         [
           _c("div", { staticClass: "my_card-header" }, [
-            _c("img", { attrs: { src: _vm.user_cover, alt: "rover" } }),
+             true
+              ? _c("img", {
+                  attrs: {
+                    src: "storage/" + _vm.user_cover,
+                    alt: "uploaded-image",
+                  },
+                })
+              : undefined,
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "my_card-body" }, [
