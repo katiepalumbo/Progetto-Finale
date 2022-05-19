@@ -5481,14 +5481,7 @@ var render = function () {
         { attrs: { to: { name: "restaurant", params: { slug: _vm.slug } } } },
         [
           _c("div", { staticClass: "my_card-header" }, [
-             true
-              ? _c("img", {
-                  attrs: {
-                    src: "storage/" + _vm.user_cover,
-                    alt: "uploaded-image",
-                  },
-                })
-              : undefined,
+            _c("img", { attrs: { src: _vm.user_cover, alt: "rover" } }),
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "my_card-body" }, [
