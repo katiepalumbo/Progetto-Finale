@@ -10,11 +10,11 @@
             
             {{-- container sinistra --}}
             <div class="col-lg-6 mb-5 mb-lg-0">
-            <h1 class="display-1 fw-bold ls-tight ms_text-orange position-absolute top-0 start-0 p-5 m-5">
+            <h1 class="display-1 bg-light fw-bold ls-tight ms_text-orange position-absolute top-0 start-0 p-5 m-5">
                 <i class="fa-solid fa-moped"></i>
                 DeliveBoo
                 <br>
-                <span class="display-6 ms_text-purple position-absolute">
+                <span class="display-6 bg-light ms_text-purple position-absolute">
                     - area ristoratore -
                 </span>
             </h1>
