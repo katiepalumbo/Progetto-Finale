@@ -12207,10 +12207,13 @@ fieldset:disabled .btn {
 
 .ms_text-orange {
   color: #f6993f;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
 }
 
 .ms_text-purple {
   color: #9561e2;
+  font-family: "Tenor Sans", sans-serif;
 }
 
 .login_all {

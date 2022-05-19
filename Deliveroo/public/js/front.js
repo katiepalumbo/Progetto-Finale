@@ -2624,6 +2624,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -3240,7 +3241,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Op
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&family=Tenor+Sans&display=swap);", ""]);
 
 // module
-exports.push([module.i, "*[data-v-721742ac] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #f6f1fb;\n}\n.filtraggio-container .filtraggio-title[data-v-721742ac] {\n  width: 90%;\n  margin: auto 15px;\n}\n.filtraggio-container .filtraggio-title h1[data-v-721742ac] {\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  margin-bottom: 25px;\n}\n.filtraggio-container .type-button[data-v-721742ac] {\n  background-color: #9561e2;\n  text-transform: uppercase;\n  font-size: 0.8em;\n  font-weight: 700;\n  border: none;\n  color: #EAF0F2;\n  padding: 10px 30px;\n  max-width: 70%;\n}", ""]);
+exports.push([module.i, "*[data-v-721742ac] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  background-color: #f6f1fb;\n}\n.filtraggio-container .filtraggio-title[data-v-721742ac] {\n  width: 90%;\n  margin: auto 15px;\n}\n.filtraggio-container .filtraggio-title h1[data-v-721742ac] {\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 700;\n  margin-bottom: 25px;\n}\n.filtraggio-container .type-button[data-v-721742ac] {\n  background-color: #9561e2;\n  text-transform: uppercase;\n  font-size: 0.8em;\n  font-weight: 700;\n  border: none;\n  color: #EAF0F2;\n  padding: 10px 30px;\n  width: 200px;\n}\n.filtraggio-container .type-button[data-v-721742ac]:hover {\n  color: #f6993f;\n}", ""]);
 
 // exports
 
@@ -4960,13 +4961,13 @@ var render = function () {
               return _c("div", { key: typex.id, staticClass: "col" }, [
                 _c(
                   "div",
-                  { staticClass: "row d-inline-flex" },
+                  { staticClass: "row row-cols-10 d-inline-flex" },
                   [
                     _c(
                       "router-link",
                       {
                         staticClass:
-                          "form-check-label btn type-button mx-5 my-2",
+                          "form-check-label col btn type-button mx-5 my-2",
                         attrs: {
                           to: { name: "menu" },
                           for: "typex_" + typex.id,

@@ -7,9 +7,9 @@
             <div class="col m-auto">
                <form action="" class="row" @submit.prevent="filteredType()">
                     <div class="col"  v-for="typex in types" :key="typex.id">
-                        <div class="row d-inline-flex">
+                        <div class="row row-cols-10 d-inline-flex">
                             <!-- <input  class="form-check-input row" type="checkbox" v-model="selected" :value="typex.id" :id="'typex_' + typex.id"> -->
-                            <router-link class="form-check-label btn type-button mx-5 my-2" :to="{name: 'menu'}" :for="'typex_' + typex.id">{{typex.name}}</router-link>
+                            <router-link class="form-check-label col btn type-button mx-5 my-2" :to="{name: 'menu'}" :for="'typex_' + typex.id">{{typex.name}}</router-link>
                         </div>
                     </div>
                     <!-- <div>
@@ -86,7 +86,11 @@ export default {
     .type-button {
         background-color: $purple;
         @include all-caps-button;
-        max-width: 70%;
+        //max-width: 70%;
+        width: 200px;
+        &:hover {
+            color: $orange;
+        }
     }
 }
 
