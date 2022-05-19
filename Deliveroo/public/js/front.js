@@ -5481,7 +5481,14 @@ var render = function () {
         { attrs: { to: { name: "restaurant", params: { slug: _vm.slug } } } },
         [
           _c("div", { staticClass: "my_card-header" }, [
-            _c("img", { attrs: { src: _vm.user_cover, alt: "rover" } }),
+            _vm.user_cover.startswith(_vm.https)
+              ? _c("img", { attrs: { src: _vm.user_cover, alt: "url-img" } })
+              : _c("img", {
+                  attrs: {
+                    src: __webpack_require__(/*! ../assets/images/cake.jpg */ "./resources/js/assets/images/cake.jpg"),
+                    alt: "file-img",
+                  },
+                }),
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "my_card-body" }, [
@@ -21550,6 +21557,17 @@ module.exports = g;
 /***/ (function(module, exports) {
 
 module.exports = "/images/LOGO_DELIVEBOO.png?a2c2b17dfd26b5c04a792d5c575117e9";
+
+/***/ }),
+
+/***/ "./resources/js/assets/images/cake.jpg":
+/*!*********************************************!*\
+  !*** ./resources/js/assets/images/cake.jpg ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/cake.jpg?c45999f9a08420fe62c8bc773f03a658";
 
 /***/ }),
 

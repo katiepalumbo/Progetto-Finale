@@ -5,16 +5,26 @@
     box-sizing: border-box;
 }
 
+// .container_sinistra {
+//     background-color: white;
+//     min-height: 100px;
+//     min-width: 200px;
+// }
+
 .ms_background-color {
     background: linear-gradient(45deg, #ff8e0d, #ffaf1e);
 }
 
 .ms_text-orange {
     color: $orange;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    
 }
 
 .ms_text-purple {
     color: $purple;
+    font-family: 'Tenor Sans', sans-serif;
 }
 
 .login_all {
