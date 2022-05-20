@@ -5386,7 +5386,7 @@ var render = function () {
             "row jumbotron-contents justify-content-center align-items-center col-lg-7 col-md-6 col-sm-3",
         },
         [
-          _c("h1", { staticClass: "jumbotron_title" }, [
+          _c("h1", { staticClass: "jumbotron_title mt-5" }, [
             _vm._v("Cosa vuoi mangiare?"),
           ]),
           _vm._v(" "),

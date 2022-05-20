@@ -75,7 +75,7 @@
 
             </div>
 
-<div class="row mt-3">
+<div class="row">
     {{-- colonna di sinistra img user --}}
     <div class="col-sm-12 col-md-6 mb-5">
 
