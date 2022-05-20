@@ -184,6 +184,7 @@ export default {
 }
     .container {
         margin-top: 80px;
+        min-height: 500px;
         
         
 
